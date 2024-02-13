@@ -101,7 +101,33 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
               </div>
             </div>
           </div>
-
+          <div class="game-info">
+            <div class="game-info__title">Прессинг</div>
+            <div class="info-score">
+              <div class="info-score__item">9</div>
+              :
+              <div class="info-score__item">9</div>
+            </div>
+          </div>
+          <div class="game-info">
+            <div class="game-info__title">Забивных матчей</div>
+            <div class="info-score">
+              <div class="info-score__item">9</div>
+              :
+              <div class="info-score__item">9</div>
+            </div>
+          </div>
+          <div class="game-info">
+            <div class="game-info__title">Кол-во матчей в месяц</div>
+            <div class="info-score">
+              <div class="info-score__item">9</div>
+              :
+              <div class="info-score__item">9</div>
+            </div>
+          </div>
+          <div class="game-info">
+            <div class="game-info__title">Голосование</div>
+          </div>
         </div>
       </div>
 
@@ -110,6 +136,50 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 </template>
 
 <style lang="scss" scoped>
+.game-info {
+  border-radius: 2px;
+  background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+  padding: 0px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: calc((100% - 400px - 8px) / 4);
+
+  &__title {
+    overflow: hidden;
+    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 128%;
+  }
+}
+
+.info-score {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 128%;
+
+  &__item {
+    padding: 4px;
+    height: 24px;
+    color: var(--Neutral-1, #E9EAEC);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 132%;
+    border-radius: 2px;
+    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .game-timeline {
   display: flex;
   gap: 2px;
@@ -182,6 +252,9 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
   backdrop-filter: blur(4px);
   padding: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
 
   &__column {
     display: flex;
@@ -193,6 +266,8 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     }
   }
 }
+
+
 
 .game-meta {
   border-radius: 2px;
