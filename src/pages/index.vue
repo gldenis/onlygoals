@@ -321,7 +321,6 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     }
 
     &--team-2 {
-
       background: var(--Secondary-Other-D1, linear-gradient(180deg, #654CC8 0%, rgba(101, 76, 200, 0.00) 100%));
       height: 80%;
     }
