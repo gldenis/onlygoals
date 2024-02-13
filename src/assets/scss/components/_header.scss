@@ -63,6 +63,7 @@
         &-wrapper {
             display: flex;
             flex-direction: column;
+            gap: 4px;
         }
 
         &-inner {
@@ -92,6 +93,11 @@
     align-items: center;
     margin-left: auto;
     gap: 4px;
+    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
 }
 
 .lang-switcher {
