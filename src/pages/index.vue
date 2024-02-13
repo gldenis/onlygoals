@@ -89,7 +89,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
                   <img src="@/assets/img/content/real-madrid.png" alt="">
                 </div>
                 <div class="game-meta__inner">
-                  <div class="game-meta__name">Real Madrid</div>
+                  <div class="game-meta__name">Manchester United</div>
                   <div class="game-meta__last-games-status last-games-status__list">
                     <div class="last-games-status__item last-games-status__item--lose"></div>
                     <div class="last-games-status__item last-games-status__item--win"></div>
@@ -97,6 +97,81 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
                     <div class="last-games-status__item last-games-status__item--win"></div>
                     <div class="last-games-status__item last-games-status__item--win"></div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="game-data">
+              <div class="game-info game-info--goals">
+                <div class="info-score">
+                  <div class="info-score__item">9</div>
+                  :
+                  <div class="info-score__item">9</div>
+                </div>
+
+                <div class="game-info__title">Авторы
+                  голов:</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">Jude Bellingham</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">Radek Vitek</div>
+                  </div>
+                </div>
+                <div class="info-score">
+                  <div class="info-score__item">F</div>
+                  :
+                  <div class="info-score__item">4</div>
+                </div>
+              </div>
+              <div class="game-info game-info--schema">
+                <div class="game-info__title">Схема</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-chance">
+              <div class="game-info game-info--chance">
+                <div class="game-info__title">Шанс на гол</div>
+                <div class="game-info__chance">
+                  <div class="progress">
+                    <div class="progress__value progress__value--team-1"></div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress__value progress__value--team-2"></div>
+                  </div>
+                </div>
+                <div class="info-score">
+                  <div class="info-score__item">9</div>
+                  :
+                  <div class="info-score__item">9</div>
+                </div>
+              </div>
+              <div class="game-info game-info--chance">
+                <div class="game-info__title">Ш. Промах</div>
+                <div class="game-info__chance">
+                  <div class="progress">
+                    <div class="progress__value progress__value--team-1"></div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress__value progress__value--team-2"></div>
+                  </div>
+                </div>
+                <div class="info-score">
+                  <div class="info-score__item">9</div>
+                  :
+                  <div class="info-score__item">9</div>
                 </div>
               </div>
             </div>
@@ -127,6 +202,11 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
           </div>
           <div class="game-info">
             <div class="game-info__title">Голосование</div>
+            <div class="info-score">
+              <div class="info-score__item">35%</div>
+              :
+              <div class="info-score__item">35%</div>
+            </div>
           </div>
         </div>
       </div>
@@ -136,7 +216,82 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 </template>
 
 <style lang="scss" scoped>
+.progress {
+  width: 53px;
+  height: 4px;
+  background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+  border-radius: 2px;
+
+  &__value {
+    height: 100%;
+    border-radius: 2px;
+
+    &--team-1 {
+      width: 33%;
+      background: #49C79A;
+    }
+
+    &--team-2 {
+      width: 66%;
+      background: #6F63FF;
+    }
+  }
+}
+
+.game-chance {
+  display: flex;
+  gap: 2px;
+}
+
+.game-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__item {
+    max-width: 86px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__team {
+    width: 2px;
+    height: 16px;
+
+    &--team-1 {
+      background: var(--2, #49C79A);
+    }
+
+    &--team-2 {
+      background: var(--Secondary-5, #6F63FF);
+    }
+
+  }
+
+  &__author {
+    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 128%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.game-data {
+  display: flex;
+  gap: 2px;
+}
+
+.game-schema {
+  border-radius: 2px;
+  background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
 .game-info {
+  height: 44px;
   border-radius: 2px;
   background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
   padding: 0px 8px;
@@ -145,6 +300,24 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   align-items: center;
   gap: 8px;
   width: calc((100% - 400px - 8px) / 4);
+
+  &--chance {
+    width: calc((100% - 2px) / 2);
+  }
+
+  &--goals {
+    width: calc((100% - 2px) - 33%);
+  }
+
+  &--schema {
+    width: calc((100% - 2px) - 66%);
+  }
+
+  &__chance {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 
   &__title {
     overflow: hidden;
@@ -254,6 +427,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   padding: 2px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 2px;
 
   &__column {
@@ -281,6 +455,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 
   &__part {
     display: flex;
+    width: 157px;
     gap: 8px;
     align-items: center;
 
@@ -329,6 +504,8 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   &__list {
     display: flex;
     gap: 6px;
+    height: 15px;
+    align-items: center;
   }
 
   &__item {
