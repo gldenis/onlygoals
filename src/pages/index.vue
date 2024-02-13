@@ -95,6 +95,10 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 </template>
 
 <style lang="scss" scoped>
+.games {
+  margin-top: 40px;
+}
+
 .game-card {
   border-radius: 4px;
   background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
