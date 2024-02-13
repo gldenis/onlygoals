@@ -1,0 +1,30 @@
+.hero {
+    padding-top: 20px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 132%;
+        text-transform: uppercase;
+        color: var(--neutral-1);
+    }
+
+    &__slogan {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--neutral-1);
+        max-width: 500px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+        margin-top: 32px;
+    }
+}

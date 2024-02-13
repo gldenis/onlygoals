@@ -1,0 +1,109 @@
+.header {
+    height: 72px;
+    background: #fff;
+    width: 100%;
+    padding: 14px 0;
+    backdrop-filter: blur(8px);
+    background: rgba(19, 25, 31, 0.8);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    &__profile-link {
+        border-radius: 24px;
+        width: 40px;
+        height: 40px;
+        background: #099853;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bolt {
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 2px;
+        width: 119px;
+        height: 40px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 132%;
+        text-align: center;
+        color: var(--gray-1);
+
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background:linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
+            -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-right: 8px;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-inner {
+            display: flex;
+        }
+    }
+
+    &__separator {
+        width: 1px;
+        height: 28px;
+        background: var(--neutral-left-12);
+    }
+}
+
+.logo {
+    &-text {
+        font-family: var(--font4);
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 102%;
+        color: var(--text-color);
+    }
+}
+
+.header-games {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 4px;
+}
+
+.lang-switcher {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--neutral-left-68);
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}

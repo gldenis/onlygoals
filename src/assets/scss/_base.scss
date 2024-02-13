@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page__body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url("@/assets/img/main-bg.png") top center / cover no-repeat, #191B22;
+    background-attachment: fixed;
+    display: flex;
+    height: max-content;
+    scrollbar-gutter: stable;
+    font-family: var(--font-family);
+    font-size: $font-size;
+    font-weight: 400;
+    color: var(--text-color);
+
+    &--overflow {
+        height: 100vh;
+        overflow: hidden;
+        scrollbar-gutter: stable;
+    }
+}
+
+.page {
+    background: #232326;
+}
+
+.container {
+    max-width: 1232px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
+
+    &--centered-x {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.page-content {
+    flex-grow: 1;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: $desktop) {
+    .page-content {
+        padding-top: calc(var(--header-height) + 60px);
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .page-content {
+        padding-top: calc(var(--header-height) + 32px);
+    }
+}
+
+@media screen and (max-width: $mobile-xs) {
+    .container {
+        padding: 0 16px;
+    }
+}
