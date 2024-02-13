@@ -65,7 +65,6 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
                   <div class="last-games-status__item last-games-status__item--win"></div>
                 </div>
               </div>
-              <div class="game-meta__current-score">3</div>
             </div>
             <div class="game-meta__current-score current-score">
               <div class="current-score__item">3</div>
@@ -121,6 +120,10 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 
     &--revert {
       flex-direction: row-reverse;
+
+      .last-games-status__list {
+        justify-content: flex-end;
+      }
     }
   }
 
