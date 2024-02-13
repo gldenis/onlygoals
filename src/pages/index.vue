@@ -326,6 +326,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     }
   }
 }
+
 .progress {
   width: 53px;
   height: 4px;
