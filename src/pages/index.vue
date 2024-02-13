@@ -122,6 +122,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     position: relative;
     display: flex;
     align-items: center;
+    transition: .2s;
   }
 
   &__value {
