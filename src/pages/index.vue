@@ -176,38 +176,118 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
               </div>
             </div>
           </div>
-          <div class="game-info">
-            <div class="game-info__title">Прессинг</div>
-            <div class="info-score">
-              <div class="info-score__item">9</div>
-              :
-              <div class="info-score__item">9</div>
+          <div class="game-card__column">
+            <div class="game-info">
+              <div class="game-info__title">Прессинг</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Забивных матчей</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Кол-во матчей в месяц</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+
+            <div class="game-info">
+              <div class="game-info__title">Забив после 80/90 мин</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Шанс контратаки</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Характер</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+
+            <div class="game-info">
+              <div class="game-info__title">Интенсивность</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Удары в створ ворот</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Кол-во матчей в месяц</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
             </div>
           </div>
-          <div class="game-info">
-            <div class="game-info__title">Забивных матчей</div>
-            <div class="info-score">
-              <div class="info-score__item">9</div>
-              :
-              <div class="info-score__item">9</div>
+
+          <div class="game-card__column game-card__column--charts">
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-chart">
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-1"></div>
+                </div>
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-info__chart">
+
+              </div>
             </div>
           </div>
-          <div class="game-info">
-            <div class="game-info__title">Кол-во матчей в месяц</div>
-            <div class="info-score">
-              <div class="info-score__item">9</div>
-              :
-              <div class="info-score__item">9</div>
-            </div>
-          </div>
-          <div class="game-info">
-            <div class="game-info__title">Голосование</div>
-            <div class="info-score">
-              <div class="info-score__item">35%</div>
-              :
-              <div class="info-score__item">35%</div>
-            </div>
-          </div>
+
+
         </div>
       </div>
 
@@ -216,6 +296,37 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 </template>
 
 <style lang="scss" scoped>
+.game-chart {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  gap: 8px;
+
+  &__item {
+    max-width: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__value {
+    width: 100%;
+    margin-top: auto;
+    border-radius: 2px;
+    opacity: 0.6;
+
+    &--team-1 {
+      background: linear-gradient(180deg, #49C79A 0%, rgba(73, 199, 154, 0.00) 100%);
+      height: 20%;
+    }
+
+    &--team-2 {
+
+      background: var(--Secondary-Other-D1, linear-gradient(180deg, #654CC8 0%, rgba(101, 76, 200, 0.00) 100%));
+      height: 80%;
+    }
+  }
+}
 .progress {
   width: 53px;
   height: 4px;
@@ -299,7 +410,13 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  width: calc((100% - 400px - 8px) / 4);
+  width: calc((100% - 4px) / 3);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 
   &--chance {
     width: calc((100% - 2px) / 2);
@@ -317,6 +434,14 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+
+  &--chart {
+    width: 100%;
+    padding: 8px 8px 0px 8px;
+    height: 67px;
+    display: flex;
+    align-items: flex-start;
   }
 
   &__title {
@@ -353,6 +478,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     justify-content: center;
   }
 }
+
 .game-timeline {
   display: flex;
   gap: 2px;
@@ -416,6 +542,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     }
   }
 }
+
 .games {
   margin-top: 40px;
 }
@@ -432,16 +559,20 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 
   &__column {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 2px;
+    width: 594px;
 
     &--wide {
+      flex-direction: column;
       width: 400px;
+    }
+
+    &--charts {
+      width: 166px;
     }
   }
 }
-
-
 
 .game-meta {
   border-radius: 2px;
@@ -524,6 +655,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
     }
   }
 }
+
 .hero-tiles {
   display: flex;
   flex-wrap: wrap;
@@ -577,7 +709,4 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
   }
 }
 
-.game-card {
-
-}
 </style>
