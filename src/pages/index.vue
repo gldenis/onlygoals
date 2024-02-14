@@ -5,6 +5,7 @@ import IconStar from '@/components/icons/IconStar.vue'
 import AppStories from '@/components/AppStories.vue'
 import IconCardLock from '@/components/icons/IconCardLock.vue'
 import PremiumNotification from '@/components/PremiumNotification.vue'
+import SupportModal from '@/components/SupportModal.vue'
 </script>
 
 <template>
@@ -917,6 +918,7 @@ import PremiumNotification from '@/components/PremiumNotification.vue'
 
     </section>
     <PremiumNotification />
+    <SupportModal />
   </main>
 </template>
 
@@ -958,6 +960,8 @@ import PremiumNotification from '@/components/PremiumNotification.vue'
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
+    padding: 7px 12px;
+    width: max-content;
   }
 }
 
