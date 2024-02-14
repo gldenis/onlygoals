@@ -1,0 +1,52 @@
+.game-info {
+    height: 44px;
+    border-radius: 2px;
+    background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+    padding: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: calc((100% - 4px) / 3);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &--chance {
+        width: calc((100% - 2px) / 2);
+    }
+
+    &--goals {
+        width: calc((100% - 2px) - 33%);
+    }
+
+    &--schema {
+        width: calc((100% - 2px) - 66%);
+    }
+
+    &__chance {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &--chart {
+        width: 100%;
+        padding: 8px 8px 0px 8px;
+        height: 67px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__title {
+        overflow: hidden;
+        color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+        text-overflow: ellipsis;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 128%;
+    }
+}

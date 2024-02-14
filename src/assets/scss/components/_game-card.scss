@@ -1,0 +1,41 @@
+.game-card {
+    border-radius: 4px;
+    background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
+    backdrop-filter: blur(4px);
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2px;
+    position: relative;
+
+    &__column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        width: 594px;
+
+        &--wide {
+            flex-direction: column;
+            width: 400px;
+        }
+
+        &--charts {
+            width: 166px;
+        }
+    }
+
+    &__favorite {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        opacity: 0.5;
+        background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    }
+}
