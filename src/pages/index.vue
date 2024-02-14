@@ -4,6 +4,7 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 import IconStar from '@/components/icons/IconStar.vue'
 import AppStories from '@/components/AppStories.vue'
 import IconCardLock from '@/components/icons/IconCardLock.vue'
+import PremiumNotification from '@/components/PremiumNotification.vue'
 </script>
 
 <template>
@@ -915,6 +916,7 @@ import IconCardLock from '@/components/icons/IconCardLock.vue'
       </div>
 
     </section>
+    <PremiumNotification />
   </main>
 </template>
 

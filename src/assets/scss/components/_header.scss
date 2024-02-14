@@ -5,6 +5,9 @@
     padding: 14px 0;
     backdrop-filter: blur(8px);
     background: rgba(19, 25, 31, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 4;
 
     &__container {
         display: flex;
