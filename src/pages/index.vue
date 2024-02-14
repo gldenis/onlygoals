@@ -3,6 +3,7 @@
 import IconCharts from '@/components/icons/hero/IconCharts.vue'
 import IconStar from '@/components/icons/IconStar.vue'
 import AppStories from '@/components/AppStories.vue'
+import IconCardLock from '@/components/icons/IconCardLock.vue'
 </script>
 
 <template>
@@ -299,7 +300,7 @@ import AppStories from '@/components/AppStories.vue'
     </div>
     <AppStories />
     <section class="games">
-      <div class="container">
+      <div class="container games__container">
         <div class="game-card">
           <div class="game-card__column game-card__column--wide">
             <div class="game-timeline">
@@ -540,6 +541,377 @@ import AppStories from '@/components/AppStories.vue'
             <IconStar />
           </div>
         </div>
+        <div class="game-card game-card--sliced">
+          <div class="game-card__column game-card__column--wide">
+            <div class="game-timeline">
+              <div class="game-timeline__item">
+                <div class="game-timeline__value" style="width: 100%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 10%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-2" style="left: 30%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 50%;"></div>
+              </div>
+              <div class="game-timeline__item">
+                <div class="game-timeline__value game-timeline__value--current" style="width: 50%;"></div>
+                <div class="game-timeline__current-time"></div>
+              </div>
+            </div>
+            <div class="game-meta">
+              <div class="game-meta__part">
+                <div class="game-meta__logo">
+                  <img src="@/assets/img/content/real-madrid.png" alt="">
+                </div>
+                <div class="game-meta__inner">
+                  <div class="game-meta__name">Real Madrid</div>
+                  <div class="game-meta__last-games-status last-games-status__list">
+                    <div class="last-games-status__item last-games-status__item--lose"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--draw"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="game-meta__current-score current-score">
+                <div class="current-score__item">3</div>
+                :
+                <div class="current-score__item">2</div>
+              </div>
+              <div class="game-meta__part game-meta__part--revert">
+                <div class="game-meta__logo">
+                  <img src="@/assets/img/content/real-madrid.png" alt="">
+                </div>
+                <div class="game-meta__inner">
+                  <div class="game-meta__name">Manchester United</div>
+                  <div class="game-meta__last-games-status last-games-status__list">
+                    <div class="last-games-status__item last-games-status__item--lose"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--draw"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="game-data">
+              <div class="game-info game-info--goals">
+                <div class="info-score">
+                  <div class="info-score__item">9</div>
+                  :
+                  <div class="info-score__item">9</div>
+                </div>
+
+                <div class="game-info__title">Авторы
+                  голов:</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">Jude Bellingham</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">Radek Vitek</div>
+                  </div>
+                </div>
+                <div class="info-score">
+                  <div class="info-score__item">F</div>
+                  :
+                  <div class="info-score__item">4</div>
+                </div>
+              </div>
+              <div class="game-info game-info--schema">
+                <div class="game-info__title">Схема</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="game-card__column">
+            <div class="game-info">
+              <div class="game-info__title">Прессинг</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Забивных матчей</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Кол-во матчей в месяц</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+
+            <div class="game-info">
+              <div class="game-info__title">Забив после 80/90 мин</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Шанс контратаки</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Характер</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-card__column game-card__column--charts">
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-chart">
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-1"></div>
+                </div>
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-info__chart">
+
+              </div>
+            </div>
+          </div>
+          <div class="game-card__favorite">
+            <IconStar />
+          </div>
+        </div>
+        <div class="game-card game-card--sliced game-card--unavailable">
+          <div class="game-card__column game-card__column--wide">
+            <div class="game-timeline">
+              <div class="game-timeline__item">
+                <div class="game-timeline__value" style="width: 100%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 10%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-2" style="left: 30%;"></div>
+                <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 50%;"></div>
+              </div>
+              <div class="game-timeline__item">
+                <div class="game-timeline__value game-timeline__value--current" style="width: 50%;"></div>
+                <div class="game-timeline__current-time"></div>
+              </div>
+            </div>
+            <div class="game-meta">
+              <div class="game-meta__part">
+                <div class="game-meta__logo">
+                  <img src="@/assets/img/content/real-madrid.png" alt="">
+                </div>
+                <div class="game-meta__inner">
+                  <div class="game-meta__name">Real Madrid</div>
+                  <div class="game-meta__last-games-status last-games-status__list">
+                    <div class="last-games-status__item last-games-status__item--lose"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--draw"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="game-meta__current-score current-score">
+                <div class="current-score__item">3</div>
+                :
+                <div class="current-score__item">2</div>
+              </div>
+              <div class="game-meta__part game-meta__part--revert">
+                <div class="game-meta__logo">
+                  <img src="@/assets/img/content/real-madrid.png" alt="">
+                </div>
+                <div class="game-meta__inner">
+                  <div class="game-meta__name">Manchester United</div>
+                  <div class="game-meta__last-games-status last-games-status__list">
+                    <div class="last-games-status__item last-games-status__item--lose"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--draw"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                    <div class="last-games-status__item last-games-status__item--win"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="game-data">
+              <div class="game-info game-info--goals">
+                <div class="info-score">
+                  <div class="info-score__item">9</div>
+                  :
+                  <div class="info-score__item">9</div>
+                </div>
+
+                <div class="game-info__title">Авторы
+                  голов:</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">Jude Bellingham</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">Radek Vitek</div>
+                  </div>
+                </div>
+                <div class="info-score">
+                  <div class="info-score__item">F</div>
+                  :
+                  <div class="info-score__item">4</div>
+                </div>
+              </div>
+              <div class="game-info game-info--schema">
+                <div class="game-info__title">Схема</div>
+                <div class="game-goals">
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-1"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                  <div class="game-goals__item">
+                    <div class="game-goals__team game-goals__team--team-2"></div>
+                    <div class="game-goals__author">9-9-9-9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="game-card__column">
+            <div class="game-info">
+              <div class="game-info__title">Прессинг</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Забивных матчей</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Кол-во матчей в месяц</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+
+            <div class="game-info">
+              <div class="game-info__title">Забив после 80/90 мин</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Шанс контратаки</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="game-info__title">Характер</div>
+              <div class="info-score">
+                <div class="info-score__item">9</div>
+                :
+                <div class="info-score__item">9</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-card__column game-card__column--charts">
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-chart">
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-1"></div>
+                </div>
+                <div class="game-chart__item">
+                  <div class="game-chart__value game-chart__value--team-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="game-info game-info--chart">
+              <div class="game-info__content">
+                <div class="game-info__title">Голосование</div>
+                <div class="info-score">
+                  <div class="info-score__item">35%</div>
+                  :
+                  <div class="info-score__item">35%</div>
+                </div>
+              </div>
+              <div class="game-info__chart">
+
+              </div>
+            </div>
+          </div>
+          <div class="game-card__favorite">
+            <IconStar />
+          </div>
+
+          <div class="unavailable-card">
+            <div class="unavailable-card__icon">
+              <IconCardLock />
+            </div>
+            <div class="unavailable-card__content">
+              <div class="unavailable-card__title">Функции разблокируются
+                после регистрации</div>
+              <button class="btn btn--primary unavailable-card__btn">Зарегистрироваться</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -547,6 +919,58 @@ import AppStories from '@/components/AppStories.vue'
 </template>
 
 <style lang="scss" scoped>
+.unavailable-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    color: var(--Neutral-1, #E9EAEC);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    width: 192px;
+  }
+
+  &__btn {
+    height: 32px;
+    border-radius: var(--20, 20px);
+    background: var(--Green-5, #099853);
+    color: var(--Neutral-1, #E9EAEC);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+  }
+}
+
+main {
+  padding-bottom: 100px;
+}
+
+.games {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 .section-title {
   color: var(--Neutral-1, #E9EAEC);
   font-size: 16px;
@@ -785,4 +1209,14 @@ import AppStories from '@/components/AppStories.vue'
   }
 }
 
+.game-card--sliced {
+  .game-info--chart {
+    height: 44px;
+    align-items: center;
+
+    .info-score__item {
+      height: 17px;
+    }
+  }
+}
 </style>
