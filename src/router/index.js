@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/home-auth',
+      name: 'home-auth',
+      component: () => import('@/pages/index-auth.vue')
+    },
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('@/pages/profile.vue')
