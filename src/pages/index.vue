@@ -965,9 +965,7 @@ import SupportModal from '@/components/SupportModal.vue'
   }
 }
 
-main {
-  padding-bottom: 100px;
-}
+
 
 .games {
   &__container {
