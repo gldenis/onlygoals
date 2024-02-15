@@ -559,9 +559,6 @@ import SupportModal from '@/components/SupportModal.vue'
             </div>
             <div class="game-meta">
               <div class="game-meta__part">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
                 <div class="game-meta__inner">
                   <div class="game-meta__name">Real Madrid</div>
                   <div class="game-meta__last-games-status last-games-status__list">
@@ -579,9 +576,7 @@ import SupportModal from '@/components/SupportModal.vue'
                 <div class="current-score__item">2</div>
               </div>
               <div class="game-meta__part game-meta__part--revert">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
+
                 <div class="game-meta__inner">
                   <div class="game-meta__name">Manchester United</div>
                   <div class="game-meta__last-games-status last-games-status__list">
@@ -739,9 +734,7 @@ import SupportModal from '@/components/SupportModal.vue'
             </div>
             <div class="game-meta">
               <div class="game-meta__part">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
+
                 <div class="game-meta__inner">
                   <div class="game-meta__name">Real Madrid</div>
                   <div class="game-meta__last-games-status last-games-status__list">
@@ -759,9 +752,7 @@ import SupportModal from '@/components/SupportModal.vue'
                 <div class="current-score__item">2</div>
               </div>
               <div class="game-meta__part game-meta__part--revert">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
+
                 <div class="game-meta__inner">
                   <div class="game-meta__name">Manchester United</div>
                   <div class="game-meta__last-games-status last-games-status__list">
