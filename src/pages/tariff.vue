@@ -4,6 +4,7 @@ import IconCheck from '@/components/icons/IconCheck.vue'
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import AppGuide from '@/components/AppGuide.vue'
 import BaseCounter from '@/components/BaseCounter.vue'
+import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 </script>
 
 <template>
@@ -86,7 +87,13 @@ import BaseCounter from '@/components/BaseCounter.vue'
               <button class="btn btn--primary btn--small">Купить</button>
             </div>
             <div class="tariff__info-bottom">
-
+              <div class="tariff__add">
+                <div>
+                  <IconBoltFilled /> 31
+                </div>
+                <div class="tariff__add-btn">+</div>
+              </div>
+              <div class="tariff__notice">Активировать 10 дней</div>
             </div>
           </div>
           <div class="tariff-features">
@@ -193,6 +200,48 @@ main {
 }
 
 .tariff {
+  &__add {
+    border-radius: var(--24, 24px);
+    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    display: flex;
+    height: 40px;
+    padding: 10px 4px 10px var(--8, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--8, 8px);
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 128%; /* 20.48px */
+  }
+
+  &__add-btn {
+    border-radius: var(--20, 20px);
+    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+    display: flex;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  &__notice {
+    color: var(--Green-5, #099853);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+    border-radius: var(--24, 24px);
+    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+    height: 40px;
+    min-width: 40px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+  }
   &__coins {
     display: flex;
     flex-direction: column;
@@ -269,16 +318,23 @@ main {
 
   &__info {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
     min-height: 132px;
+    gap: 24px;
 
     &-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 90px;
+      gap: 12px;
+      width: 100%;
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 12px;
       width: 100%;
     }
