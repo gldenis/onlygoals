@@ -3,6 +3,7 @@
 import IconCheck from '@/components/icons/IconCheck.vue'
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import AppGuide from '@/components/AppGuide.vue'
+import BaseCounter from '@/components/BaseCounter.vue'
 </script>
 
 <template>
@@ -12,10 +13,12 @@ import AppGuide from '@/components/AppGuide.vue'
         <div class="tariff__item">
           <div class="tariff__title">Бесплатный тариф</div>
           <div class="tariff__info">
-            <div class="tariff__price">$0</div>
-            <div class="tariff__status">
-              <IconCheck />
-              Активен
+            <div class="tariff__info-top">
+              <div class="tariff__price">$0</div>
+              <div class="tariff__status">
+                <IconCheck />
+                Активен
+              </div>
             </div>
           </div>
           <div class="tariff-features">
@@ -72,10 +75,18 @@ import AppGuide from '@/components/AppGuide.vue'
           <div class="tariff__discount">Активна до 24 января 2024 года</div>
           <div class="tariff__title">Премиум подписка</div>
           <div class="tariff__info">
-            <div class="tariff__price">$90</div>
-            <div class="tariff__status">
-              <IconCheck />
-              Активен
+            <div class="tariff__info-top">
+              <div class="tariff__price">$90</div>
+              <BaseCounter />
+
+              <div class="tariff__coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="tariff__coins-item" loading="lazy" width="16" height="16">
+                <img src="@/assets/img/usdt.png" alt="" class="tariff__coins-item" loading="lazy" width="16" height="16">
+              </div>
+              <button class="btn btn--primary btn--small">Купить</button>
+            </div>
+            <div class="tariff__info-bottom">
+
             </div>
           </div>
           <div class="tariff-features">
@@ -182,6 +193,12 @@ main {
 }
 
 .tariff {
+  &__coins {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: auto;
+  }
   &__discount {
     color: var(--Neutral-1, #E9EAEC);
     text-align: center;
@@ -215,20 +232,26 @@ main {
     background: var(--Neutral-8, #24262D);
     position: relative;
 
-    &--premium:before {
-      display: block;
-      content: '';
-      top: -28px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 28px 1px 1px;
-      position: absolute;
-      background: linear-gradient(90deg, #2C47F0 23.96%, #FC8641 48.96%, #B93BEB 77.6%);
-      -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      border-radius: 8px;
+    &--premium {
+      & > * {
+        z-index: 1;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        top: -28px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 28px 1px 1px;
+        position: absolute;
+        background: linear-gradient(90deg, #2C47F0 23.96%, #FC8641 48.96%, #B93BEB 77.6%);
+        -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        border-radius: 8px;
+      }
     }
   }
 
@@ -248,7 +271,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 90px;
+    width: 100%;
+    min-height: 132px;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 90px;
+      gap: 12px;
+      width: 100%;
+    }
   }
 
   &__price {
