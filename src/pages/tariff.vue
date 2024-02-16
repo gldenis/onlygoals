@@ -226,6 +226,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    color: #099853;
   }
 
   &__notice {

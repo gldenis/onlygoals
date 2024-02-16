@@ -6,6 +6,7 @@ import AppStories from '@/components/AppStories.vue'
 import IconCardLock from '@/components/icons/IconCardLock.vue'
 import PremiumNotification from '@/components/PremiumNotification.vue'
 import SupportModal from '@/components/SupportModal.vue'
+import IconHat from '@/components/icons/IconHat.vue'
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import SupportModal from '@/components/SupportModal.vue'
             и моментальные обновления всех футбольных матчей</p>
           <div class="hero__buttons">
             <button class="btn btn--primary">Регистрация</button>
-            <button class="btn btn--accent">Институт голов</button>
+            <button class="btn btn--accent"><IconHat width="20" height="20"/> Институт голов</button>
           </div>
         </div>
         <div class="hero__right hero-tiles">

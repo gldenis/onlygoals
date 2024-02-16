@@ -4,7 +4,10 @@
     &__container {
         display: flex;
         justify-content: space-between;
+        gap: 32px;
     }
+
+
 
     &__title {
         font-weight: 900;
@@ -35,6 +38,7 @@
     flex-wrap: wrap;
     gap: 8px;
     max-width: 416px;
+    align-self: flex-start;
 
     &__item {
         border-radius: 8px;
@@ -79,6 +83,39 @@
             font-weight: 800;
             font-size: 16px;
             line-height: 128%;
+        }
+    }
+}
+
+
+@media screen and (max-width: $laptop) {
+    .hero {
+        &__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .hero {
+        &__container {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .hero-tiles {
+        flex-wrap: nowrap;
+        gap: 4px;
+        min-width: 100%;
+
+        &__item {
+            width: calc((100% - 12px) / 4);
+            &--wide {
+                display: none;
+            }
         }
     }
 }
