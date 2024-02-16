@@ -78,7 +78,7 @@ import IconBall from '@/components/icons/IconBall.vue'
 
       <div class="header__separator"></div>
 
-      <RouterLink to="/profile" class="header__bolt">
+      <RouterLink to="/tariff" class="header__bolt">
         <IconBolt />
         Функции
       </RouterLink>
