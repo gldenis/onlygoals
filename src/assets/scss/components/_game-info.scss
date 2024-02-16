@@ -48,5 +48,30 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 128%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media screen and (max-width: $mobile-xs) {
+    .game-info {
+        width: calc((100% - 2px) / 2);
+
+        &--goals {
+            width: 100%;
+        }
+
+        &--schema {
+            width: 100%;
+        }
+
+        &--chance {
+            width: 100%;
+        }
+
+        &--chart {
+            width: 100%;
+        }
     }
 }

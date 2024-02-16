@@ -57,6 +57,41 @@
     }
 }
 
+.game-meta {
+    border-radius: 2px;
+    padding: 0 4px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+
+    &__part {
+        display: flex;
+        width: 157px;
+        gap: 8px;
+        align-items: center;
+
+        &--revert {
+            flex-direction: row-reverse;
+
+            .last-games-status__list {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__name {
+        overflow: hidden;
+        color: var(--Neutral-1, #E9EAEC);
+        text-overflow: ellipsis;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 132%;
+    }
+}
+
 @media screen and (max-width: $desktop) {
     .game-card__column {
         order: 3;
@@ -92,5 +127,52 @@
 
     .game-info--chart {
         width: calc((100% - 2px) / 2);
+    }
+}
+
+@media screen and (max-width: $mobile-xs) {
+    .game-card__column {
+        width: 100%;
+        order: 2;
+
+        &--wide {
+            width: 100%;
+            order: 1;
+        }
+        &--charts {
+            order: 3;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .game {
+        &-meta {
+            display: grid;
+            height: auto;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr auto;
+
+            &__current-score {
+                grid-row: span 2;
+            }
+        }
+        &-data {
+            flex-direction: column;
+        }
+
+        &-chance {
+            flex-direction: column;
+        }
+    }
+
+
+
+    .game-meta__part--revert {
+        flex-direction: row;
+        .last-games-status__list {
+            justify-content: flex-start;
+        }
+
     }
 }

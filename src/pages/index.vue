@@ -1123,40 +1123,7 @@ import IconHat from '@/components/icons/IconHat.vue'
   margin-top: 40px;
 }
 
-.game-meta {
-  border-radius: 2px;
-  padding: 0 4px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4px;
-  background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
 
-  &__part {
-    display: flex;
-    width: 157px;
-    gap: 8px;
-    align-items: center;
-
-    &--revert {
-      flex-direction: row-reverse;
-
-      .last-games-status__list {
-        justify-content: flex-end;
-      }
-    }
-  }
-
-  &__name {
-    overflow: hidden;
-    color: var(--Neutral-1, #E9EAEC);
-    text-overflow: ellipsis;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 132%;
-  }
-}
 
 .current-score {
   display: flex;
