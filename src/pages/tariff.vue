@@ -68,7 +68,8 @@ import AppGuide from '@/components/AppGuide.vue'
             </div>
           </div>
         </div>
-        <div class="tariff__item">
+        <div class="tariff__item tariff__item--premium">
+          <div class="tariff__discount">Активна до 24 января 2024 года</div>
           <div class="tariff__title">Премиум подписка</div>
           <div class="tariff__info">
             <div class="tariff__price">$90</div>
@@ -181,6 +182,22 @@ main {
 }
 
 .tariff {
+  &__discount {
+    color: var(--Neutral-1, #E9EAEC);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    position: absolute;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -28px;
+    left: 0;
+    width: 100%;
+  }
   &__list {
     display: flex;
     gap: 32px;
@@ -196,6 +213,23 @@ main {
     border-radius: 8px;
     border: 1px solid var(--green-other-32, rgba(31, 168, 78, 0.32));
     background: var(--Neutral-8, #24262D);
+    position: relative;
+
+    &--premium:before {
+      display: block;
+      content: '';
+      top: -28px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 28px 1px 1px;
+      position: absolute;
+      background: linear-gradient(90deg, #2C47F0 23.96%, #FC8641 48.96%, #B93BEB 77.6%);
+      -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      border-radius: 8px;
+    }
   }
 
   &__course {
