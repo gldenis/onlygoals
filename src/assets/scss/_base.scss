@@ -76,6 +76,12 @@ main {
     }
 }
 
+@media screen and (max-width: $mobile) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
 @media screen and (max-width: $mobile-xs) {
     .container {
         padding: 0 16px;

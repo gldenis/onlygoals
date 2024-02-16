@@ -41,7 +41,6 @@
 
     &--unavailable {
         position: relative;
-        height: 108px;
 
         &:before {
             content: '';
@@ -55,5 +54,43 @@
             backdrop-filter: blur(4px);
             z-index: 2;
         }
+    }
+}
+
+@media screen and (max-width: $desktop) {
+    .game-card__column {
+        order: 3;
+        width: 100%;
+
+        &--wide {
+            order: 1;
+            width: calc((100% - 2px) / 3 * 2);
+        }
+        &--charts {
+            order: 2;
+            width: calc((100% - 2px) / 3);
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .game-card__column {
+        width: 100%;
+        order: 2;
+
+        &--wide {
+            width: 100%;
+            order: 1;
+        }
+        &--charts {
+            order: 3;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .game-info--chart {
+        width: calc((100% - 2px) / 2);
     }
 }
