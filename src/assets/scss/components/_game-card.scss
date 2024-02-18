@@ -41,6 +41,7 @@
 
     &--unavailable {
         position: relative;
+        min-height: 108px;
 
         &:before {
             content: '';
@@ -56,6 +57,8 @@
         }
     }
 }
+
+
 
 .game-meta {
     border-radius: 2px;
@@ -91,6 +94,193 @@
         line-height: 132%;
     }
 }
+
+.game-chart {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    gap: 8px;
+
+    &__item {
+        max-width: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__value {
+        width: 100%;
+        margin-top: auto;
+        border-radius: 2px;
+        opacity: 0.6;
+
+        &--team-1 {
+            background: linear-gradient(180deg, #49C79A 0%, rgba(73, 199, 154, 0.00) 100%);
+            height: 20%;
+        }
+
+        &--team-2 {
+            background: var(--Secondary-Other-D1, linear-gradient(180deg, #654CC8 0%, rgba(101, 76, 200, 0.00) 100%));
+            height: 80%;
+        }
+    }
+}
+
+.game-chance {
+    display: flex;
+    gap: 2px;
+}
+
+.game-goals {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__item {
+        max-width: 86px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__team {
+        width: 2px;
+        height: 16px;
+        flex-shrink: 0;
+
+        &--team-1 {
+            background: var(--2, #49C79A);
+        }
+
+        &--team-2 {
+            background: var(--Secondary-5, #6F63FF);
+        }
+
+    }
+
+    &__author {
+        color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 128%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.game-data {
+    display: flex;
+    gap: 2px;
+}
+
+.game-schema {
+    border-radius: 2px;
+    background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+
+
+.last-games-status {
+    &__list {
+        display: flex;
+        gap: 6px;
+        height: 15px;
+        align-items: center;
+    }
+
+    &__item {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+
+        &--win {
+            background: var(--green-5);;
+        }
+        &--lose {
+            background: var(--cd3d00);
+        }
+        &--draw{
+            background: var(--gray-3);
+        }
+    }
+}
+
+.game-card--sliced {
+    .game-info--chart {
+        height: 44px;
+        align-items: center;
+
+        .info-score__item {
+            height: 17px;
+        }
+    }
+}
+
+.unavailable-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__title {
+        color: var(--Neutral-1, #E9EAEC);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 132%;
+        width: 192px;
+    }
+
+    &__btn {
+        height: 32px;
+        border-radius: var(--20, 20px);
+        background: var(--Green-5, #099853);
+        color: var(--Neutral-1, #E9EAEC);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 132%; /* 17.16px */
+        padding: 7px 12px;
+        width: max-content;
+    }
+}
+
+.progress {
+    width: 53px;
+    height: 4px;
+    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border-radius: 2px;
+
+    &__value {
+        height: 100%;
+        border-radius: 2px;
+
+        &--team-1 {
+            width: 33%;
+            background: #49C79A;
+        }
+
+        &--team-2 {
+            width: 66%;
+            background: #6F63FF;
+        }
+    }
+}
+
 
 @media screen and (max-width: $desktop) {
     .game-card__column {

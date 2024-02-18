@@ -2,19 +2,35 @@
 
 import IconPremiumNotification from '@/components/icons/IconPremiumNotification.vue'
 import IconArrowDown from '@/components/icons/IconArrowDown.vue'
+import { ref } from 'vue'
+
+const notificationIsShowed = ref(true)
+const hideNotification = () => {
+  notificationIsShowed.value = false
+}
+const showNotification = () => {
+  notificationIsShowed.value = true
+}
 </script>
 
 <template>
   <div class="premium-notification">
-    <div class="premium-notification__left">
-      <IconPremiumNotification />
-      <IconArrowDown />
+    <template v-if="notificationIsShowed">
+      <div class="premium-notification__left">
+        <IconPremiumNotification />
+        <IconArrowDown class="premium-notification__trigger max-phablet" @click="hideNotification"/>
+      </div>
+      <div class="premium-notification__text">
+        Заканчивается премиум <br>
+        Осталось: 9 дней
+      </div>
+      <button class="btn premium-notification__btn">Купить еще</button>
+      <IconArrowDown class="premium-notification__trigger min-phablet" @click="hideNotification"/>
+    </template>
+    <div v-else class="premium-notification__days">
+      <IconArrowDown class="premium-notification__trigger" @click="showNotification"/>
+      9
     </div>
-    <div class="premium-notification__text">
-      Заканчивается премиум <br>
-      Осталось: 9 дней
-    </div>
-    <button class="btn premium-notification__btn">Купить еще</button>
   </div>
 </template>
 
@@ -74,6 +90,51 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
     font-size: 13px;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
+  }
+
+  &__days {
+    color: var(--Neutral-9, #191B22);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 140%; /* 15.4px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__trigger {
+    cursor: pointer;
+    color: rgba(25, 27, 34, 0.68);
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .premium-notification {
+    bottom: 106px;
+    right: 0;
+    left: auto;
+    transform: none;
+    width: max-content;
+    border-radius: 8px 0px 0px 8px;
+
+    &__trigger {
+      transform: rotate(-90deg);
+    }
+
+    &__days {
+      flex-direction: row;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 128%; /* 19.2px */
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 </style>

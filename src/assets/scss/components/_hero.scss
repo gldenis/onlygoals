@@ -7,8 +7,6 @@
         gap: 32px;
     }
 
-
-
     &__title {
         font-weight: 900;
         font-size: 32px;
@@ -23,6 +21,7 @@
         line-height: 150%;
         color: var(--neutral-1);
         max-width: 500px;
+        margin-top: 4px;
     }
 
     &__buttons {
@@ -55,6 +54,13 @@
         &--wide {
             width: 200px;
             flex-direction: row;
+            padding: 16px;
+            column-gap: 0;
+
+            .hero-tiles__title {
+                -webkit-line-clamp: 3;
+                text-align: left;
+            }
         }
     }
 
@@ -88,6 +94,7 @@
             font-weight: 800;
             font-size: 16px;
             line-height: 128%;
+            text-transform: lowercase;
         }
     }
 }
@@ -106,6 +113,11 @@
     .hero {
         &__container {
             flex-direction: column;
+        }
+
+        &__buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 }

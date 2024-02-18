@@ -19,7 +19,7 @@
     url('@/assets/fonts/Mulish/Mulish-Bold.woff2') format('woff2'),
     url('@/assets/fonts/Mulish/Mulish-Bold.woff') format('woff'),
     url('@/assets/fonts/Mulish/Mulish-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -45,7 +45,7 @@
     url('@/assets/fonts/Mulish/Mulish-ExtraBold.woff2') format('woff2'),
     url('@/assets/fonts/Mulish/Mulish-ExtraBold.woff') format('woff'),
     url('@/assets/fonts/Mulish/Mulish-ExtraBold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -58,7 +58,7 @@
     url('@/assets/fonts/Mulish/Mulish-BoldItalic.woff2') format('woff2'),
     url('@/assets/fonts/Mulish/Mulish-BoldItalic.woff') format('woff'),
     url('@/assets/fonts/Mulish/Mulish-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -71,7 +71,7 @@
     url('@/assets/fonts/Mulish/Mulish-ExtraBoldItalic.woff2') format('woff2'),
     url('@/assets/fonts/Mulish/Mulish-ExtraBoldItalic.woff') format('woff'),
     url('@/assets/fonts/Mulish/Mulish-ExtraBoldItalic.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }

@@ -1,0 +1,37 @@
+.info-score {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 128%;
+
+    &--large {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    &__item {
+        padding: 4px;
+        height: 24px;
+        color: var(--Neutral-1, #E9EAEC);
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 132%;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+
+        &--large {
+            border-radius: 4px;
+            font-size: 15px;
+            line-height: 128%;
+            height: 28px;
+            width: 25px;
+        }
+    }
+}
