@@ -88,6 +88,7 @@ import IconStar from '@/components/icons/IconStar.vue'
               <div class="game-goals__author">9-9-9-9</div>
             </div>
           </div>
+          <div class="game-info__add">+3</div>
         </div>
       </div>
     </div>

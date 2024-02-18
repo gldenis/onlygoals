@@ -1,11 +1,10 @@
 <script setup>
 
-import IconSupportChat from '@/components/icons/IconSupportChat.vue'
 </script>
 
 <template>
   <div class="support">
-    <IconSupportChat />
+    <img src="@/assets/img/support.png" alt="">
   </div>
 </template>
 
