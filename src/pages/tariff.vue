@@ -272,7 +272,7 @@ main {
   }
 
   &__item {
-    width: 378px;
+    max-width: 378px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -375,6 +375,7 @@ main {
 
     svg {
       margin: 10px 10px 10px 0;
+      flex-shrink: 0;
     }
 
     &-info {
@@ -386,7 +387,46 @@ main {
       font-weight: 600;
       line-height: 140%; /* 15.4px */
       margin-top: 8px;
-      width: max-content;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .tariff {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__course {
+      max-width: 324px;
+    }
+
+    &__item {
+      width: calc((100% - 32px) / 2);
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .tariff {
+    &__item {
+      max-width: 378px;
+      width: 100%;
+
+      &--premium {
+        margin-top: 28px;
+      }
+    }
+
+    &__info {
+      min-height: 0;
+    }
+
+    &__course {
+      max-width: 378px;
     }
   }
 }
