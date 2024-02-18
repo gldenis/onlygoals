@@ -163,7 +163,6 @@ import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 
 <style scoped lang="scss">
 
-
 main {
   padding-top: 40px;
 }

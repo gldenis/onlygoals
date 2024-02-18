@@ -8,7 +8,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   <main>
     <div class="container">
       <div class="page-head">
-        <h1 class="title">Okeymaxim@gmail.com</h1>
+        <h1 class="page-head__title">Okeymaxim@gmail.com</h1>
         <div class="page-head__separator"></div>
         <div class="lang-switcher">
           <div class="lang-switcher__trigger">
@@ -195,32 +195,13 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   gap: 24px;
 }
 
-.page-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
 
-  &__separator {
-    flex-grow: 1;
-    opacity: 0.12;
-    height: 1px;
-    background: var(--Neutral-Left-L1, linear-gradient(to left, #FFF 0%, rgba(255, 255, 255, 0.00) 100%));
-  }
-}
 
 main {
   padding-top: 40px;
 }
 
-.title {
-  color: var(--gray-1, #E9EAEC);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 132%; /* 42.24px */
-  text-transform: uppercase;
-}
+
 
 @media screen and (max-width: $laptop) {
   .referral-container {

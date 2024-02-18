@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/tariff',
       name: 'tariff',
       component: () => import('@/pages/tariff.vue')
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: () => import('@/pages/help.vue')
     }
   ]
 })
