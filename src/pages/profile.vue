@@ -1,6 +1,7 @@
 <script setup>
 
 import IconArrowDown from '@/components/icons/IconArrowDown.vue'
+import IconLetter from '@/components/icons/IconLetter.vue'
 </script>
 
 <template>
@@ -43,7 +44,10 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
               <div class="referral__title">curtis.weaver@example.com</div>
               <div class="referral__info">
                 <div class="referral__pending">Ожидание верификации</div>
-                <div class="referral__resending">Отправить снова</div>
+                <div class="referral__resending">
+                  <IconLetter />
+                  Отправить снова
+                </div>
               </div>
             </div>
             <div class="referral__item">
@@ -61,13 +65,13 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
         </div>
       </div>
     </div>
-
   </main>
 </template>
 
 <style scoped lang="scss">
 .referral-banner {
   position: relative;
+  width: 320px;
 
   &__text {
     width: 160px;
@@ -121,6 +125,7 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
     display: flex;
     align-items: center;
     gap: 16px;
+    text-align: right;
   }
 
   &__date {
@@ -166,8 +171,13 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
     min-width: 32px;
     padding: 7px 12px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
   }
 }
+
 .referral-container {
   display: flex;
   gap: 32px;
@@ -179,8 +189,8 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
   border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   background: var(--Neutral-8, #24262D);
   padding: 24px;
-  width: 848px;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 24px;
 }
@@ -210,5 +220,51 @@ main {
   font-weight: 900;
   line-height: 132%; /* 42.24px */
   text-transform: uppercase;
+}
+
+@media screen and (max-width: $laptop) {
+  .referral-container {
+    flex-direction: column;
+  }
+
+  .page-head {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .title {
+      width: 100%;
+    }
+
+    &__separator {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .referral {
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    &__info {
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  .referral-banner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-head {
+    .title {
+      word-break: break-word;
+    }
+  }
 }
 </style>
