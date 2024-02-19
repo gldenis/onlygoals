@@ -236,7 +236,7 @@ const share = async () => {
 
       <Teleport to="body" >
         <div v-show="storyModalIsOpened" class="modal" >
-          <div class="modal__overlay"></div>
+          <div class="modal__overlay" @click="closeStory"></div>
           <div class="modal__content">
             <button class="btn btn--icon modal__close" @click="closeStory">
               <IconClose />
