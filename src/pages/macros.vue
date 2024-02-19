@@ -99,4 +99,19 @@ import BaseSwitch from '@/components/ui/BaseSwitch.vue'
     border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .page-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .page-head {
+    &__left {
+      flex-wrap: wrap;
+    }
+  }
+}
 </style>
