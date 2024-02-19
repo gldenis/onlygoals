@@ -43,6 +43,10 @@
         //}
     }
 
+    &--gray {
+        background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    }
+
     &--accent {
         border: 1px solid transparent;
         background: var(--accent);

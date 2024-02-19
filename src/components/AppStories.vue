@@ -3,10 +3,15 @@ import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { nextTick, ref } from 'vue'
+import { ref } from 'vue'
 import IconSwiperNext from '@/components/icons/IconSwiperNext.vue'
 import IconSwiperPrev from '@/components/icons/IconSwiperPrev.vue'
 import IconStoriesTrigger from '@/components/icons/IconStoriesTrigger.vue'
+import IconStarFilled from '@/components/icons/IconStarFilled.vue'
+import IconShareBtn from '@/components/icons/IconShareBtn.vue'
+import IconStar from '@/components/icons/IconStar.vue'
+import IconClose from '@/components/icons/IconClose.vue'
+import IconPlay from '@/components/icons/IconPlay.vue'
 
 const modules = [Navigation]
 const prev = ref(null)
@@ -29,17 +34,26 @@ const storiesOpened = ref(true)
 const toggleStories = () => {
   storiesOpened.value = !storiesOpened.value
 }
+
+const storyModalIsOpened = ref(true)
+const openStory = () => {
+  storyModalIsOpened.value  = true
+}
+
+const closeStory = () => {
+  storyModalIsOpened.value  = false
+}
 </script>
 
 <template>
   <section class="stories">
     <div class="container">
-      <template v-if="storiesOpened">
+      <template v-if="!storiesOpened">
         <div class="stories-line">
           <div class="stories-line__item"></div>
           <div class="stories-line__item"></div>
           <div class="stories-line__item"></div>
-          <div v-for="item of 11" class="stories-line__item stories-line__item--watched"></div>
+          <div v-for="item of 11" :key="item" class="stories-line__item stories-line__item--watched"></div>
 
           <div class="stories-line__trigger" @click="toggleStories">
             <IconStoriesTrigger />
@@ -51,15 +65,18 @@ const toggleStories = () => {
               @slideChange="onSlideChange"
               :modules="modules"
               :loop="false"
-              slides-per-view="11.5"
+              slidesPerView="auto"
               space-between="4px"
               :navigation="{
                 nextEl: next,
                 prevEl: prev,
               }"
       >
-        <SwiperSlide v-for="story of 20" :key="story">
-          <div class="stories__item">
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <div class="stories__favorite-btn">
+              <IconStarFilled />
+            </div>
             <img class="stories__poster"
                  src="@/assets/img/stories/story-1.png"
                  alt=""
@@ -68,6 +85,133 @@ const toggleStories = () => {
                  height="100">
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <div class="stories__favorite-btn">
+              <IconStarFilled />
+            </div>
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-2.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-3.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-4.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-5.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-6.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-7.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-8.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-9.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-10.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-11.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-1.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="stories__item" @click="openStory">
+            <img class="stories__poster"
+                 src="@/assets/img/stories/story-2.png"
+                 alt=""
+                 loading="lazy"
+                 width="100"
+                 height="100">
+          </div>
+        </SwiperSlide>
+
+
+
+
         <div class="swiper-navigation">
           <div ref="prev" v-show="!isStart" class="stories__btn stories__btn--prev">
             <IconSwiperPrev />
@@ -80,6 +224,32 @@ const toggleStories = () => {
           <IconStoriesTrigger />
         </div>
       </Swiper>
+
+      <Teleport to="body" >
+        <div v-if="storyModalIsOpened" class="modal" >
+          <div class="modal__overlay"></div>
+          <div class="modal__content">
+            <button class="btn btn--icon modal__close" @click="closeStory">
+              <IconClose />
+            </button>
+            <div class="story-modal">
+              <div class="story-modal__favorite">
+                <button class="btn btn--icon btn--gray">
+                  <IconStar width="20" height="20"/>
+                </button>
+                999
+              </div>
+              <button class="btn btn--icon story-modal__share">
+                <IconShareBtn />
+              </button>
+              <button class="btn btn--small btn--gray story-modal__control">
+                <IconPlay />
+              </button>
+              <img src="@/assets/img/stories/story-modal.png" alt="">
+            </div>
+          </div>
+        </div>
+      </Teleport>
     </div>
   </section>
 </template>
@@ -129,7 +299,25 @@ const toggleStories = () => {
   }
 }
 
+.swiper-slide {
+  width: 100px;
+  height: 100px;
+}
+
 .stories {
+
+  &__favorite-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--24, 24px);
+    background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__list {
     position: relative;
@@ -143,6 +331,10 @@ const toggleStories = () => {
 
   &__item {
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
   }
 
   &__poster {
@@ -175,6 +367,118 @@ const toggleStories = () => {
       left: 0;
       background: linear-gradient(270deg, rgba(29, 31, 38, 0.00) -0.6%, #1D1F26 99.4%);
     }
+  }
+}
+
+.story-modal {
+  position: relative;
+  max-width: 100%;
+
+  &__control {
+    border-radius: 40px;
+    background: var(--dark-neutral-968, rgba(19, 24, 32, 0.68));
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 2px;
+      background: linear-gradient(30deg, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
+      -webkit-mask: linear-gradient(30deg, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 24px;
+    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    color: #FFF;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    gap: 8px;
+  }
+
+  &__share {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    border-radius: 24px;
+    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px 0;
+
+
+  &__overlay {
+    background: var(--Dark-9, rgba(22, 29, 36, 0.80));
+    backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__content {
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+  }
+
+  &__close {
+    cursor: pointer;
+    border-radius: var(--24, 24px);
+    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+
+}
+
+@media screen and (max-width: $phablet) {
+  .swiper-slide {
+    width: 80px;
+    height: 80px;
   }
 }
 </style>
