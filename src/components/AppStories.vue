@@ -226,7 +226,7 @@ const closeStory = () => {
       </Swiper>
 
       <Teleport to="body" >
-        <div v-if="storyModalIsOpened" class="modal" >
+        <div v-show="storyModalIsOpened" class="modal" >
           <div class="modal__overlay"></div>
           <div class="modal__content">
             <button class="btn btn--icon modal__close" @click="closeStory">
