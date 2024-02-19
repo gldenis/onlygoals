@@ -12,6 +12,7 @@ import IconShareBtn from '@/components/icons/IconShareBtn.vue'
 import IconStar from '@/components/icons/IconStar.vue'
 import IconClose from '@/components/icons/IconClose.vue'
 import IconPlay from '@/components/icons/IconPlay.vue'
+import { useRoute } from 'vue-router'
 
 const modules = [Navigation]
 const prev = ref(null)
@@ -42,6 +43,14 @@ const openStory = () => {
 
 const closeStory = () => {
   storyModalIsOpened.value  = false
+}
+
+const route = useRoute()
+const share = async () => {
+  console.log(navigator)
+  await navigator?.share({
+    url: route.fullPath,
+  })
 }
 </script>
 
@@ -239,7 +248,7 @@ const closeStory = () => {
                 </button>
                 999
               </div>
-              <button class="btn btn--icon story-modal__share" @click="navigator?.share($route.fullPath)">
+              <button class="btn btn--icon story-modal__share" @click="share">
                 <IconShareBtn />
               </button>
               <button class="btn btn--small btn--gray story-modal__control">
