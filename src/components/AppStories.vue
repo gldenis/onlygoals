@@ -239,7 +239,7 @@ const closeStory = () => {
                 </button>
                 999
               </div>
-              <button class="btn btn--icon story-modal__share" @click="navigator.share($route.fullPath)">
+              <button class="btn btn--icon story-modal__share" @click="navigator?.share($route.fullPath)">
                 <IconShareBtn />
               </button>
               <button class="btn btn--small btn--gray story-modal__control">
