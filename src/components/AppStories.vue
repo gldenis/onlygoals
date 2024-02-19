@@ -35,7 +35,7 @@ const toggleStories = () => {
   storiesOpened.value = !storiesOpened.value
 }
 
-const storyModalIsOpened = ref(true)
+const storyModalIsOpened = ref(false)
 const openStory = () => {
   storyModalIsOpened.value  = true
 }
