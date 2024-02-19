@@ -144,6 +144,7 @@ main {
       border-radius: var(--8, 8px);
       opacity: 0.9;
       width: 100%;
+      height: auto;
     }
   }
 }
@@ -193,6 +194,12 @@ main {
       border-left: 2px solid var(--neutral-left-84, rgba(255, 255, 255, 0.84));
       color: var(--Neutral-1, #E9EAEC);
     }
+  }
+}
+
+@media screen and (max-width: $laptop){
+  .help-nav {
+    display: none;
   }
 }
 </style>
