@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/help',
       name: 'help',
       component: () => import('@/pages/help.vue')
+    },
+    {
+      path: '/macros',
+      name: 'macros',
+      component: () => import('@/pages/macros.vue')
     }
   ]
 })

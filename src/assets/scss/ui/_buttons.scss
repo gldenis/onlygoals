@@ -14,11 +14,7 @@
     line-height: 156%;
     color: var(--neutral-1);
 
-    &--icon {
-        padding: 16px;
-        width: 40px;
-        height: 40px;
-    }
+
 
     &--small {
         height: 40px;
@@ -91,5 +87,11 @@
         background: rgba(255, 255, 255, 0.20);
         color: rgba(255,255,255, 0.92);
         flex-shrink: 0;
+    }
+
+    &--icon {
+        padding: 4px;
+        width: 40px;
+        height: 40px;
     }
 }

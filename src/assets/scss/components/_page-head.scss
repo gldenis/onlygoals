@@ -19,4 +19,16 @@
         height: 1px;
         background: var(--Neutral-Left-L1, linear-gradient(to left, #FFF 0%, rgba(255, 255, 255, 0.00) 100%));
     }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
