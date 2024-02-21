@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    max-height: 100vh;
     padding: 40px 0;
 
 
@@ -48,5 +48,17 @@
 .modal {
     &--macros &__close {
         display: none;
+    }
+
+    &--macros &__content {
+        max-height: 100vh;
+        overflow: auto;
+        scrollbar-width: none;
+        overflow-scrolling: contain;
+        padding: 80px 0;
+
+        &::-webkit-scrollbar {
+            display: none;  /* Safari and Chrome */
+        }
     }
 }

@@ -54,7 +54,6 @@ const selectedTask = ref(null)
   flex-direction: column;
   gap: 24px;
   width: 800px;
-  height: 800px;
   border-radius: 24px;
   background: var(--Neutral-8, #24262D);
   box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
