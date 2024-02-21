@@ -1,10 +1,21 @@
 <script setup>
 
 import IconStar from '@/components/icons/IconStar.vue'
+import IconCardLock from '@/components/icons/IconCardLock.vue'
+
+defineProps({
+  unavailable: {
+    type: Boolean
+  }
+})
+
+import { useAuthStore } from '@/stores/auth.js'
+
+const authStore = useAuthStore()
 </script>
 
 <template>
-  <div class="game-card game-card--sliced">
+  <div class="game-card game-card--sliced" :class="[unavailable ? 'game-card--unavailable' : '']">
     <div class="game-card__column game-card__column--wide">
       <div class="game-timeline">
         <div class="game-timeline__item">
@@ -178,6 +189,17 @@ import IconStar from '@/components/icons/IconStar.vue'
     </div>
     <div class="game-card__favorite">
       <IconStar />
+    </div>
+
+    <div v-if="unavailable" class="unavailable-card">
+      <div class="unavailable-card__icon">
+        <IconCardLock />
+      </div>
+      <div class="unavailable-card__content">
+        <div class="unavailable-card__title">Функции разблокируются
+          после регистрации</div>
+        <button class="btn btn--primary unavailable-card__btn" @click="authStore.registrationFormIsOpened = true">Зарегистрироваться</button>
+      </div>
     </div>
   </div>
 </template>

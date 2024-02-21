@@ -4,8 +4,8 @@ import IconAgain from '@/components/icons/IconAgain.vue'
 import IconEdit from '@/components/icons/IconEdit.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
 import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
-import IconShare from '@/components/icons/IconShare.vue'
 import BaseSwitch from '@/components/ui/BaseSwitch.vue'
+import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 </script>
 
 <template>
@@ -28,7 +28,7 @@ import BaseSwitch from '@/components/ui/BaseSwitch.vue'
             в день <IconBoltFilled width="12" height="12"/>
           </div>
           <button class="btn btn--small page-head__btn">
-            <IconShare />
+            <IconAnalytics />
             Аналитика
           </button>
         </div>

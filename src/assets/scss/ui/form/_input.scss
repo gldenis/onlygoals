@@ -1,0 +1,25 @@
+.form-field {
+    &__input {
+        width: 100%;
+        border-radius: var(--24, 8px);
+        background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
+        height: var(--56, 56px);
+        padding: 13px var(--20, 20px);
+        overflow: hidden;
+        color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+        font-size: 14px;
+        font-weight: 600;
+
+        &::placeholder {
+            color: rgb(157, 162, 173);
+        }
+    }
+
+    &__error {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 132%;
+        color: #ff472e;
+        margin-top: 4px;
+    }
+}

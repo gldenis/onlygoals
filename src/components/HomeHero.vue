@@ -3,6 +3,9 @@
 import IconCharts from '@/components/icons/hero/IconCharts.vue'
 import IconAcces from '@/components/icons/hero/IconAcces.vue'
 import IconHat from '@/components/icons/hero/IconHat.vue'
+import { useAuthStore } from '@/stores/auth.js'
+
+const authStore = useAuthStore()
 </script>
 
 <template>
@@ -13,7 +16,7 @@ import IconHat from '@/components/icons/hero/IconHat.vue'
         <p class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
           и моментальные обновления всех футбольных матчей</p>
         <div class="hero__buttons">
-          <button class="btn btn--primary">Регистрация</button>
+          <button class="btn btn--primary" @click="authStore.registrationFormIsOpened = true">Регистрация</button>
           <button class="btn btn--accent"><IconHat width="20" height="20"/> Институт голов</button>
         </div>
       </div>

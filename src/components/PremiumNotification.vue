@@ -24,7 +24,7 @@ const showNotification = () => {
         Заканчивается премиум <br>
         Осталось: 9 дней
       </div>
-      <button class="btn premium-notification__btn">Купить еще</button>
+      <RouterLink to="/tariff" class="btn premium-notification__btn">Купить еще</RouterLink>
       <IconArrowDown class="premium-notification__trigger min-phablet" @click="hideNotification"/>
     </template>
     <div v-else class="premium-notification__days">

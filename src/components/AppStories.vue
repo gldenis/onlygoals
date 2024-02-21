@@ -441,48 +441,7 @@ const share = async () => {
   }
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 40px 0;
 
-
-  &__overlay {
-    background: var(--Dark-9, rgba(22, 29, 36, 0.80));
-    backdrop-filter: blur(4px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  &__content {
-    z-index: 2;
-    position: relative;
-    max-width: 100%;
-  }
-
-  &__close {
-    cursor: pointer;
-    border-radius: var(--24, 24px);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-  }
-
-
-}
 
 @media screen and (max-width: $phablet) {
   .swiper-slide {

@@ -11,9 +11,9 @@ import IconMacross from '@/components/icons/IconMacross.vue'
 import IconBall from '@/components/icons/IconBall.vue'
 import IconSettings from '@/components/icons/IconSettings.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
-import { ref } from 'vue'
+import BaseDropdown from '@/components/ui/BaseDropdown.vue'
+import MacrosDropdown from '@/components/MacrosDropdown.vue'
 
-const openedDropdown = ref(false)
 </script>
 
 <template>
@@ -41,13 +41,7 @@ const openedDropdown = ref(false)
             </div>
           </div>
         </div>
-        <div class="dropdown">
-          <div class="dropdown__trigger dropdown__trigger--available header__macros">
-            <IconMacross />
-            <span class="max-phablet" >Макросы</span>
-            <IconArrowDown class="max-phablet" />
-          </div>
-        </div>
+        <MacrosDropdown />
         <button class="dropdown__trigger dropdown__trigger--icon header__settings">
           <IconSettings />
         </button>
@@ -57,120 +51,186 @@ const openedDropdown = ref(false)
       <div class="header__separator"></div>
 
       <div class="header__center">
-        <div class="dropdown">
-          <div class="dropdown__trigger" @click="openedDropdown = true">
+        <BaseDropdown>
+          <template v-slot:trigger>
             <IconLock />
             Категории
             <IconArrowDown />
-          </div>
-          <div class="dropdown__body" :class="{ 'dropdown__body--opened': openedDropdown}" tabindex="1"
-               @blur="openedDropdown = false">
-            <OverlayScrollbarsComponent defer :options="{
-                                                          overflow: {
-                                                            x: 'hidden',
-                                                          },
-                                                        }">
-              <div class="dropdown-list">
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
+          </template>
+          <template v-slot:body>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
               </div>
-            </OverlayScrollbarsComponent>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="dropdown__trigger">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+            </div>
+          </template>
+        </BaseDropdown>
+        <BaseDropdown locked>
+          <template v-slot:trigger>
             <IconLock />
             Все лиги
             <IconArrowDown />
-          </div>
-          <div class="dropdown__body">
-            <OverlayScrollbarsComponent defer :options="{
-                                                          overflow: {
-                                                            x: 'hidden',
-                                                          },
-                                                        }">
-              <div class="dropdown-list">
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
-                <div class="dropdown-list__item">
-                  <BaseCheckbox label="title" />
-                </div>
+          </template>
+          <template v-slot:body>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
               </div>
-            </OverlayScrollbarsComponent>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="dropdown__trigger">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+            </div>
+          </template>
+        </BaseDropdown>
+        <BaseDropdown locked>
+          <template v-slot:trigger>
             <IconLock />
             Показатели
             <IconArrowDown />
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="dropdown__trigger">
+          </template>
+          <template v-slot:body>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+            </div>
+          </template>
+        </BaseDropdown>
+        <BaseDropdown locked>
+          <template v-slot:trigger>
             <IconLock />
             История
             <IconArrowDown />
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="dropdown__trigger dropdown__trigger--icon">
+          </template>
+          <template v-slot:body>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+              <div class="dropdown-list__item">
+                <BaseCheckbox label="title" />
+              </div>
+            </div>
+          </template>
+        </BaseDropdown>
+        <BaseDropdown>
+          <template v-slot:trigger>
             <IconSort />
-          </div>
-        </div>
+          </template>
+          <template v-slot:body>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item">
+                По дате
+              </div>
+              <div class="dropdown-list__item">
+                Другая сортировка
+              </div>
+            </div>
+          </template>
+        </BaseDropdown>
+
       </div>
 
       <div class="header__separator"></div>

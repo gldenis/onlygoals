@@ -2,28 +2,29 @@
 defineProps({
   label: {
     type: String
+  },
+  modelValue: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
 
 <template>
   <label class="custom-checkbox">
-    <input type="checkbox" class="custom-checkbox__input">
+    <input type="checkbox" class="custom-checkbox__input" @change="$emit('update:modelValue', $event.target.value)" :value="modelValue" v-bind="$attrs">
     <span class="custom-checkbox__box"></span>
     <span v-if="label">{{ label }}</span>
+    <slot></slot>
   </label>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .custom-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px;
-  user-select: none;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 150%; /* 21px */
+
 
   &__input {
     display: none;
@@ -37,6 +38,7 @@ defineProps({
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     &:hover {
       border: 1.5px solid #E9EAEC;
