@@ -7,6 +7,9 @@ import RegistrationForm from '@/components/RegistrationForm.vue'
 import { useAuthStore } from '@/stores/auth.js'
 import { useMacrosStore } from '@/stores/macros.js'
 import MacrosCreate from '@/components/MacrosCreate.vue'
+import MacrosEdit from '@/components/MacrosEdit.vue'
+import MacrosView from '@/components/MacrosView.vue'
+import MacrosViewItem from '@/components/MacrosViewItem.vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
@@ -27,7 +30,22 @@ const macrosStore = useMacrosStore()
   </teleport>
   <teleport to="body">
     <BaseModal class="modal--macros" v-if="macrosStore.createModalIsOpened" @close="macrosStore.createModalIsOpened = false">
-      <MacrosCreate />
+      <MacrosCreate @cancel="macrosStore.createModalIsOpened = false" />
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal class="modal--macros" v-if="macrosStore.editModalIsOpened" @close="macrosStore.editModalIsOpened = false">
+      <MacrosEdit @cancel="macrosStore.editModalIsOpened = false" />
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal class="modal--macros" v-if="macrosStore.viewModalIsOpened" @close="macrosStore.viewModalIsOpened = false">
+      <MacrosView />
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal class="modal--macros" v-if="macrosStore.viewItemModalIsOpened" @close="macrosStore.viewItemModalIsOpened = false">
+      <MacrosViewItem />
     </BaseModal>
   </teleport>
 

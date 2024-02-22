@@ -1,0 +1,21 @@
+.header-points {
+    border-radius: 24px;
+    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    padding: 4px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &__btn {
+        width: 32px;
+        height: 32px;
+        background: #000;
+        border-radius: 50%;
+        background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #099853;
+    }
+}

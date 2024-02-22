@@ -1,7 +1,6 @@
 <script setup>
 import BaseSelect from '@/components/ui/BaseSelect.vue'
 import { ref } from 'vue'
-import MacrosBannerPremium from '@/components/MacrosBannerPremium.vue'
 import MacrosParams from '@/components/MacrosParams.vue'
 
 const tasks = ref([
@@ -24,14 +23,13 @@ const tasks = ref([
 ])
 
 const selectedTask = ref(null)
-
 const emit = defineEmits(['cancel'])
 </script>
 
 <template>
 <div class="macros">
   <div class="macros__head">
-    <div class="macros__title">Создать макрос</div>
+    <div class="macros__title">Редактирование макроса</div>
     <div class="macros__actions">
       <button class="btn btn--small btn--gray" @click="emit('cancel')">Cancel</button>
       <button class="btn btn--small btn--primary" @click="emit('cancel')">Save</button>
@@ -45,7 +43,6 @@ const emit = defineEmits(['cancel'])
       <input type="text" class="macros-data__count" placeholder="Кол-во">
     </div>
   </div>
-  <MacrosBannerPremium />
   <MacrosParams editable />
 </div>
 </template>
