@@ -247,7 +247,7 @@
 
     &__btn {
         height: toRem(32);
-        border-radius: var(--20, 20px);
+        border-radius: toRem(20);
         background: var(--Green-5, #099853);
         color: var(--Neutral-1, #E9EAEC);
         font-size: toRem(13);

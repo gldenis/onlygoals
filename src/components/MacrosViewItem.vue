@@ -54,7 +54,7 @@ const editMacros = () => {
 <style scoped lang="scss">
 .macros-watcher {
   height: toRem(40);
-  padding: 0px var(--8, 8px);
+  padding: 0 toRem(8);
   border-radius: toRem(8);
   background: var(--green-other-12, rgba(31, 168, 78, 0.16));
   display: flex;
@@ -70,7 +70,7 @@ const editMacros = () => {
     line-height: 128%; /* 15.36px */
 
     svg {
-      margin-bottom: -3px;
+      margin-bottom: - toRem(3);
     }
   }
 }

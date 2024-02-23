@@ -128,12 +128,12 @@ const toggleStep = step => {
 .guide-steps {
   border-radius: toRem(8);
   background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
-  padding: var(--8, 8px) 0;
-  margin-top: 36px;
+  padding: toRem(8) 0;
+  margin-top: toRem(36);
 
   &__item {
     display: flex;
-    padding: 4px 16px;
+    padding: toRem(4) toRem(16);
     flex-direction: column;
     border-bottom: toRem(1) solid rgba(25, 27, 34, 0.32);
 
@@ -153,8 +153,8 @@ const toggleStep = step => {
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: toRem(20);
+    height: toRem(20);
   }
 
   &__title {
@@ -166,12 +166,12 @@ const toggleStep = step => {
   }
 
   &__content {
-    padding-left: 36px;
+    padding-left: toRem(36);
     display: none;
     flex-direction: column;
     gap: toRem(8);
     align-items: flex-start;
-    padding-bottom: 8px;
+    padding-bottom: toRem(8);
 
     &--opened {
       display: flex;
@@ -187,12 +187,12 @@ const toggleStep = step => {
 
   &__btn {
     color: var(--Yellow-5, var(--Yellow, #E3861A));
-    height: 30px;
+    height: toRem(30);
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
-    border-radius: var(--20, 20px);
+    border-radius: toRem(20);
     background: var(--yellow-other-12, rgba(227, 134, 26, 0.12));
   }
 }
@@ -200,18 +200,18 @@ const toggleStep = step => {
 .guide {
   border-radius: toRem(8);
   background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   padding: toRem(16);
 
   &__progress {
     border-radius: toRem(8);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    height: 12px;
-    margin-top: 20px;
+    height: toRem(12);
+    margin-top: toRem(20);
 
     &-value {
-      border-radius: var(--8, 8px) 0px 0px var(--8, 8px);
+      border-radius: toRem(8) 0 0 toRem(8);
       background: var(--Green-5, #099853);
       height: 100%;
       width: 30%;

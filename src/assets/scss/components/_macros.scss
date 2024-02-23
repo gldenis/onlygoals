@@ -6,15 +6,15 @@
     min-height: toRem(572);
     border-radius: toRem(24);
     background: var(--Neutral-8, #24262D);
-    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
-    padding: 24px;
+    padding: toRem(24);
 
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap:toRem(20);
+        gap: toRem(20);
     }
 
     &__head-part {
@@ -25,7 +25,7 @@
 
     &__actions {
         display: flex;
-        gap:toRem(20);
+        gap: toRem(20);
     }
 
     &__title {
@@ -185,7 +185,7 @@
         width: toRem(55);
 
         svg {
-            margin-bottom: -toRem(3.36);
+            margin-bottom: - toRem(3.36);
         }
     }
 }

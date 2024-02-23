@@ -71,15 +71,15 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 <style scoped lang="scss">
 .referral-banner {
   position: relative;
-  width: 320px;
+  width: toRem(320);
 
   &__text {
-    width: 160px;
+    width: toRem(160);
     padding: toRem(16);
     border-radius: toRem(8);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
 
-    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     color: var(--Dark-Neutral-1, #EEE);
     font-size: toRem(18);
@@ -89,20 +89,20 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   }
 
   &__btn {
-    width: 160px;
-    margin-top: 20px;
+    width: toRem(160);
+    margin-top: toRem(20);
   }
 
   &__img {
     position: absolute;
     top: 0;
-    left: 108px;
+    left: toRem(108);
   }
 }
 
 .referral {
   &__item {
-    padding: 16px 0;
+    padding: toRem(16) 0;
     border-top: toRem(1) solid #131820;
     display: flex;
     align-items: center;
@@ -140,7 +140,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     height: toRem(32);
     min-width: toRem(32);
     padding: toRem(7) toRem(12);
-    border-radius: var(--20, 20px);
+    border-radius: toRem(20);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     color: var(--Green-5, #099853);
     text-align: center;
@@ -165,7 +165,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
-    border-radius: 20px;
+    border-radius: toRem(20);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     height: toRem(32);
     min-width: toRem(32);
@@ -181,14 +181,14 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 .referral-container {
   display: flex;
   gap: toRem(32);
-  margin-top: 40px;
+  margin-top: toRem(40);
 }
 
 .referrals {
   border-radius: toRem(8);
   border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   background: var(--Neutral-8, #24262D);
-  padding: 24px;
+  padding: toRem(24);
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -198,7 +198,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
 
 main {
-  padding-top: 40px;
+  padding-top: toRem(40);
 }
 
 

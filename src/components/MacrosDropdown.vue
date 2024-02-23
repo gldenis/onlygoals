@@ -72,13 +72,13 @@ const macrosStore = useMacrosStore()
 
   &__body {
     position: absolute;
-    top: -8px;
+    top: - toRem(8);
     border-radius: toRem(8);
     border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
-    width: 160px;
+    width: toRem(160);
     /* Dropdown */
-    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ const macrosStore = useMacrosStore()
     font-weight: 400;
     line-height: 150%; /* 21px */
     cursor: pointer;
-    padding: 8px 0;
+    padding: toRem(8) 0;
     border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
     border-bottom: toRem(1) solid transparent;
     position: relative;
@@ -119,7 +119,7 @@ const macrosStore = useMacrosStore()
       width: calc(100% + 16px);
       left: 0;
       top: 0;
-      margin-left: -8px;
+      margin-left: - toRem(8);
       inset: 0;
       padding: toRem(1);
       background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
@@ -144,12 +144,12 @@ const macrosStore = useMacrosStore()
 .macros {
   &__btn {
     display: flex;
-    height: 31px;
+    height: toRem(31);
     padding: toRem(7) toRem(12);
     justify-content: center;
     align-items: center;
     gap: toRem(8);
-    border-radius: var(--20, 20px);
+    border-radius: toRem(20);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     color: var(--Green-5, #099853);
     text-align: center;

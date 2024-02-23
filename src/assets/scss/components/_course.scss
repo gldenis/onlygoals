@@ -70,7 +70,7 @@
         line-height: 152%;
         text-transform: uppercase;
         display: flex;
-        min-height: 80px;
+        min-height: toRem(80);
         align-items: center;
         justify-content: center;
         gap: toRem(16);

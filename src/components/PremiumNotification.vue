@@ -44,9 +44,9 @@ const showNotification = () => {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 8px 8px 0px 0px;
+  border-radius: toRem(8) toRem(8) 0 0;
   background: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   overflow: hidden;
 
@@ -75,7 +75,7 @@ const showNotification = () => {
 
   &__text {
     color: var(--Neutral-9, #191B22);
-    font-size: 11px;
+    font-size: toRem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */
   }
@@ -94,7 +94,7 @@ const showNotification = () => {
 
   &__days {
     color: var(--Neutral-9, #191B22);
-    font-size: 11px;
+    font-size: toRem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */
     display: flex;
@@ -114,12 +114,12 @@ const showNotification = () => {
 
 @media screen and (max-width: $phablet) {
   .premium-notification {
-    bottom: 106px;
+    bottom: toRem(106);
     right: 0;
     left: auto;
     transform: none;
     width: max-content;
-    border-radius: 8px 0px 0px 8px;
+    border-radius: toRem(8) 0 0 toRem(8);
 
     &__trigger {
       transform: rotate(-90deg);

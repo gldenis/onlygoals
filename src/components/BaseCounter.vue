@@ -33,8 +33,8 @@ const decrement = () => {
   line-height: 128%; /* 19.2px */
 
   &__btn {
-    width: 20px;
-    height: 20px;
+    width: toRem(20);
+    height: toRem(20);
     border-radius: 50%;
     display: flex;
     align-items: center;

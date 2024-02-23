@@ -1518,7 +1518,7 @@ import GameCard from '@/components/GameCard.vue'
   display: flex;
   align-items: center;
   gap: toRem(16);
-  margin: 20px 0;
+ margin: toRem(20) 0;
 
   &:before, &:after {
     display: block;
@@ -1526,17 +1526,17 @@ import GameCard from '@/components/GameCard.vue'
     height: toRem(1);
     flex-grow: 1;
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
-    background-size: 4px 1px;
+    background-size: toRem(4) toRem(1);
   }
 }
 
 .games {
-  margin-top: 20px;
+  margin-top: toRem(20);
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap:toRem(20);
+    gap: toRem(20);
   }
 }
 
@@ -1546,7 +1546,7 @@ import GameCard from '@/components/GameCard.vue'
     align-items: center;
 
     .info-score__item {
-      height: 17px;
+      height: toRem(17);
     }
   }
 }

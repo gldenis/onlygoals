@@ -1,7 +1,7 @@
 .form {
     border-radius: toRem(24);
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     width: toRem(400);
     padding: toRem(52) toRem(32) toRem(32);
@@ -10,7 +10,7 @@
     gap: toRem(32);
     font-size: toRem(14);
     font-weight: 600;
-    line-height: 20px; /* 142.857% */
+    line-height: toRem(20); /* 142.857% */
 
     &__group {
         display: flex;
@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap:toRem(20);
+        gap: toRem(20);
     }
 
     &__title {
@@ -38,6 +38,6 @@
         text-align: right;
         font-size: toRem(14);
         font-weight: 600;
-        line-height: 20px; /* 142.857% */
+        line-height: toRem(20); /* 142.857% */
     }
 }

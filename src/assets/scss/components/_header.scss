@@ -151,7 +151,7 @@
 @media screen and (max-width: $phablet) {
     .header {
         &__logo {
-            margin-left: -toRem(25);
+            margin-left: - toRem(25);
         }
 
         &__left-wrapper {

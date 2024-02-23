@@ -65,8 +65,8 @@ defineEmits(['toggle'])
   content: "";
   position: absolute;
   left: 4px;
-  height: 20px;
-  width: 20px;
+  height: toRem(20);
+  width: toRem(20);
   border-radius: 9999px;
   background-color: white;
   transition: transform 0.1s ease-in-out;

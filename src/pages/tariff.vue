@@ -164,7 +164,7 @@ import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 <style scoped lang="scss">
 
 main {
-  padding-top: 40px;
+  padding-top: toRem(40);
 }
 
 .course-banner {
@@ -182,7 +182,7 @@ main {
     font-size: toRem(16);
     font-weight: 800;
     line-height: 128%; /* 20.48px */
-    width: 160px;
+    width: toRem(160);
   }
 
   &__btn {
@@ -193,8 +193,8 @@ main {
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     position: absolute;
-    bottom: 16px;
-    right: 16px;
+    bottom: toRem(16);
+    right: toRem(16);
   }
 }
 
@@ -204,10 +204,10 @@ main {
     border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     display: flex;
     height: toRem(40);
-    padding: 10px 4px 10px var(--8, 8px);
+    padding: toRem(10) toRem(4) toRem(10) toRem(8);
     justify-content: center;
     align-items: center;
-    gap: var(--8, 8px);
+    gap: toRem(8);
     color: #FFF;
     font-size: toRem(16);
     font-style: normal;
@@ -216,7 +216,7 @@ main {
   }
 
   &__add-btn {
-    border-radius: var(--20, 20px);
+    border-radius: toRem(20);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     display: flex;
     width: toRem(32);
@@ -260,7 +260,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: -28px;
+    top: - toRem(28);
     left: 0;
     width: 100%;
   }
@@ -271,8 +271,8 @@ main {
   }
 
   &__item {
-    max-width: 378px;
-    padding: 24px;
+    max-width: toRem(378);
+    padding: toRem(24);
     display: flex;
     flex-direction: column;
     gap: toRem(24);
@@ -289,11 +289,11 @@ main {
       &:before {
         display: block;
         content: '';
-        top: -28px;
+        top: - toRem(28);
         right: 0;
         bottom: 0;
         left: 0;
-        padding: 28px 1px 1px;
+        padding: toRem(28) toRem(1) toRem(1);
         position: absolute;
         background: linear-gradient(90deg, #2C47F0 23.96%, #FC8641 48.96%, #B93BEB 77.6%);
         -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
@@ -320,7 +320,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 132px;
+    min-height: toRem(132);
     gap: toRem(24);
 
     &-top {
@@ -364,16 +364,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 56px;
+    min-height: toRem(56);
     border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
     color: var(--Neutral-1, #E9EAEC);
     font-size: toRem(14);
     font-weight: 500;
     line-height: 140%; /* 19.6px */
-    padding: 8px 0;
+    padding: toRem(8) 0;
 
     svg {
-      margin: 10px 10px 10px 0;
+      margin: toRem(10) toRem(10) toRem(10) 0;
       flex-shrink: 0;
     }
 
@@ -382,10 +382,10 @@ main {
       padding: toRem(4);
       background: var(--green-other-12, rgba(31, 168, 78, 0.16));
       color: var(--Green-5, #099853);
-      font-size: 11px;
+      font-size: toRem(11);
       font-weight: 600;
       line-height: 140%; /* 15.4px */
-      margin-top: 8px;
+      margin-top: toRem(8);
       display: inline-block;
     }
   }
@@ -399,7 +399,7 @@ main {
     }
 
     &__course {
-      max-width: 324px;
+      max-width: toRem(324);
     }
 
     &__item {
@@ -412,11 +412,11 @@ main {
 @media screen and (max-width: $laptop) {
   .tariff {
     &__item {
-      max-width: 378px;
+      max-width: toRem(378);
       width: 100%;
 
       &--premium {
-        margin-top: 28px;
+        margin-top: toRem(28);
       }
     }
 
@@ -425,7 +425,7 @@ main {
     }
 
     &__course {
-      max-width: 378px;
+      max-width: toRem(378);
     }
   }
 }

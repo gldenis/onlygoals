@@ -46,7 +46,7 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 
 <style scoped lang="scss">
 .page-head {
-  margin-top: 40px;
+  margin-top: toRem(40);
 
   &__again {
     border-radius: toRem(24);
@@ -66,12 +66,12 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 .games {
   display: flex;
   flex-direction: column;
-  gap:toRem(20);
-  margin-top: 40px;
+  gap: toRem(20);
+  margin-top: toRem(40);
 
   &__btn {
     display: block;
-    margin-top: 60px;
+    margin-top: toRem(60);
     margin-left: auto;
     margin-right: auto;
     border-radius: toRem(24);
@@ -91,8 +91,8 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 .page-head {
   &__info {
     display: flex;
-    height: 48px;
-    padding: var(--8, 8px) var(--12, 12px);
+    height: toRem(48);
+    padding: 8px var(--12, 12px);
     align-items: center;
     gap: toRem(4);
     border-radius: toRem(8);

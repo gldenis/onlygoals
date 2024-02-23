@@ -104,10 +104,10 @@ const emit = defineEmits(['close'])
 
 <style scoped lang="scss">
 .course {
-  margin-top: 52px;
+  margin-top: toRem(52);
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: toRem(52);
 
   &__separator {
     height: toRem(1);
@@ -129,7 +129,7 @@ const emit = defineEmits(['close'])
   &__item {
     width: calc((100% - 4px) / 2);
     min-height: toRem(52);
-    padding: 10px 12px;
+    padding: toRem(10) toRem(12);
     display: flex;
     align-items: center;
     gap: toRem(8);
@@ -158,7 +158,7 @@ const emit = defineEmits(['close'])
   background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
 
   /* Dropdown */
-  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
 
   &__header {
@@ -180,7 +180,7 @@ const emit = defineEmits(['close'])
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 28.8px */
-    margin-top: 52px;
+    margin-top: toRem(52);
 
     h3 {
       color: var(--Neutral-1, #E9EAEC);
@@ -204,7 +204,7 @@ const emit = defineEmits(['close'])
 
   &__title {
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 44px;
+    font-size: toRem(44);
     font-style: normal;
     font-weight: 800;
     line-height: 120%; /* 52.8px */

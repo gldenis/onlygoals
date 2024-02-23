@@ -87,7 +87,7 @@ onClickOutside(select, () => open.value = false)
     padding: toRem(4);
 
     /* Dropdown */
-    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     overflow: hidden;
   }

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:toRem(20);
+    gap: toRem(20);
 
     &__title {
         color: var(--gray-1, #E9EAEC);
@@ -23,12 +23,12 @@
     &__left {
         display: flex;
         align-items: center;
-        gap:toRem(20);
+        gap: toRem(20);
     }
 
     &__right {
         display: flex;
         align-items: center;
-        gap:toRem(20);
+        gap: toRem(20);
     }
 }

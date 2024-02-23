@@ -82,7 +82,7 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
     display: flex;
     flex-wrap: wrap;
     gap: toRem(12);
-    margin-top: 20px;
+    margin-top: toRem(20);
   }
 
   &__link {
@@ -100,18 +100,18 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 }
 
 main {
-  padding-top: 40px;
+  padding-top: toRem(40);
 }
 
 .help-item {
-  padding: 20px;
+  padding: toRem(20);
   border-radius: toRem(8);
   background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
+  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
-  gap:toRem(20);
+  gap: toRem(20);
 
   &__trigger {
     border-radius: toRem(24);
@@ -134,7 +134,7 @@ main {
   &__content {
     display: flex;
     flex-direction: column;
-    gap:toRem(20);
+    gap: toRem(20);
     color: var(--Neutral-1, #E9EAEC);
     font-size: toRem(16);
     font-weight: 500;
@@ -158,7 +158,7 @@ main {
 
 .help__wrapper {
   display: flex;
-  margin-top: 40px;
+  margin-top: toRem(40);
   gap: toRem(40);
   align-items: flex-start;
 }
@@ -167,10 +167,10 @@ main {
   border-radius: toRem(8);
   border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
-  width: 292px;
+  width: toRem(292);
   flex-shrink: 0;
   position: sticky;
-  top: 112px;
+  top: toRem(112);
 
   &__item {
     padding: toRem(16);
@@ -178,8 +178,8 @@ main {
     align-items: center;
     justify-content: space-between;
     border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
-    border-left: 2px solid transparent;
-    margin-left: -1px;
+    border-left: toRem(2) solid transparent;
+    margin-left: - toRem(1);
     color: rgba(255, 255, 255, 0.68);
     font-size: toRem(16);
     font-weight: 500;
@@ -191,7 +191,7 @@ main {
     }
 
     &--current {
-      border-left: 2px solid var(--neutral-left-84, rgba(255, 255, 255, 0.84));
+      border-left: toRem(2) solid var(--neutral-left-84, rgba(255, 255, 255, 0.84));
       color: var(--Neutral-1, #E9EAEC);
     }
   }
