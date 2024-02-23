@@ -25,10 +25,10 @@ const decrement = () => {
 .counter {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: toRem(4);
   color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
   text-overflow: ellipsis;
-  font-size: 15px;
+  font-size: toRem(15);
   font-weight: 700;
   line-height: 128%; /* 19.2px */
 

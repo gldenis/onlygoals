@@ -1,12 +1,15 @@
 * {
     box-sizing: border-box;
 }
+html {
+    font-size: 14.4px;
+}
 
 #app {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 72px;
+    padding-top: toRem(72);
 }
 
 .page__body {
@@ -35,10 +38,10 @@
 }
 
 .container {
-    max-width: 1264px;
+    max-width: toRem(1264);
     margin-left: auto;
     margin-right: auto;
-    padding: 0 32px;
+    padding: 0 toRem(32);
 
     &--centered-x {
         display: flex;
@@ -49,13 +52,13 @@
 
 .page-content {
     flex-grow: 1;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: toRem(60);
+    padding-bottom: toRem(60);
     max-width: 100%;
 }
 
 main {
-    padding-bottom: 100px;
+    padding-bottom: toRem(100);
 }
 
 .max-phablet {
@@ -72,24 +75,24 @@ main {
 
 @media screen and (max-width: $desktop) {
     .page-content {
-        padding-top: calc(var(--header-height) + 60px);
+        padding-top: calc(var(--header-height) + toRem(60));
     }
 }
 
 @media screen and (max-width: $mobile) {
     .page-content {
-        padding-top: calc(var(--header-height) + 32px);
+        padding-top: calc(var(--header-height) + toRem(32));
     }
 }
 
 @media screen and (max-width: $mobile) {
     .container {
-        padding: 0 20px;
+        padding: 0 toRem(20);
     }
 }
 
 @media screen and (max-width: $mobile-xs) {
     .container {
-        padding: 0 16px;
+        padding: 0 toRem(16);
     }
 }

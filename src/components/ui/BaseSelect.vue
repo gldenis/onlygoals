@@ -60,20 +60,20 @@ onClickOutside(select, () => open.value = false)
   position: relative;
   color: var(--Neutral-1, #FFF);
   text-overflow: ellipsis;
-  font-size: 13px;
+  font-size: toRem(13);
   font-weight: 700;
   line-height: 132%; /* 17.16px */
 
   &__trigger {
     cursor: pointer;
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     display: flex;
-    height: 40px;
-    padding: 10px 16px;
+    height: toRem(40);
+    padding: toRem(10) toRem(16);
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: toRem(8);
     overflow: hidden;
   }
 
@@ -82,23 +82,23 @@ onClickOutside(select, () => open.value = false)
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
-    border-radius: 8px;
+    border-radius: toRem(8);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    padding: 4px;
+    padding: toRem(4);
 
     /* Dropdown */
-    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     overflow: hidden;
   }
 
   &__option {
     cursor: pointer;
-    height: 40px;
+    height: toRem(40);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
     box-sizing: border-box;
     position: relative;
 

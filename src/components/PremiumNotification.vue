@@ -37,7 +37,7 @@ const showNotification = () => {
 <style scoped lang="scss">
 .premium-notification {
   display: flex;
-  gap: 8px;
+  gap: toRem(8);
   align-items: center;
   padding: 8px 12px;
   position: fixed;
@@ -46,7 +46,7 @@ const showNotification = () => {
   transform: translateX(-50%);
   border-radius: 8px 8px 0px 0px;
   background: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-  box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   overflow: hidden;
 
@@ -60,15 +60,15 @@ const showNotification = () => {
     left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: toRem(100);
+    height: toRem(100);
     z-index: -1;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: toRem(4);
     align-items: center;
     color: #191B22;
   }
@@ -81,13 +81,13 @@ const showNotification = () => {
   }
 
   &__btn {
-    padding: 7px 12px;
-    height: 32px;
-    border-radius: var(--24, 24px);
+    padding: toRem(7) toRem(12);
+    height: toRem(32);
+    border-radius: toRem(24);
     background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
     color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
@@ -127,7 +127,7 @@ const showNotification = () => {
 
     &__days {
       flex-direction: row;
-      font-size: 15px;
+      font-size: toRem(15);
       font-weight: 700;
       line-height: 128%; /* 19.2px */
 

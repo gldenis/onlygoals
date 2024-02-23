@@ -75,14 +75,14 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
   &__text {
     width: 160px;
-    padding: 16px;
-    border-radius: var(--8, 8px);
+    padding: toRem(16);
+    border-radius: toRem(8);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
 
-    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     color: var(--Dark-Neutral-1, #EEE);
-    font-size: 18px;
+    font-size: toRem(18);
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 28.8px */
@@ -103,19 +103,19 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 .referral {
   &__item {
     padding: 16px 0;
-    border-top: 1px solid #131820;
+    border-top: toRem(1) solid #131820;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &:last-child {
-      border-bottom: 1px solid #131820;
+      border-bottom: toRem(1) solid #131820;
     }
   }
 
   &__title {
     color: var(--Dark-Neutral-1, #EEE);
-    font-size: 15px;
+    font-size: toRem(15);
     font-style: normal;
     font-weight: 700;
     line-height: 128%; /* 19.2px */
@@ -124,27 +124,27 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   &__info {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: toRem(16);
     text-align: right;
   }
 
   &__date {
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 13px;
+    font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
 
   &__bonus {
-    height: 32px;
-    min-width: 32px;
-    padding: 7px 12px;
+    height: toRem(32);
+    min-width: toRem(32);
+    padding: toRem(7) toRem(12);
     border-radius: var(--20, 20px);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     color: var(--Green-5, #099853);
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
@@ -152,7 +152,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
   &__pending {
     color: var(--Yellow-5, var(--Yellow, #E3861A));
-    font-size: 13px;
+    font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
@@ -161,38 +161,38 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   &__resending {
     color: var(--Neutral-1, #FFF);
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     border-radius: 20px;
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    height: 32px;
-    min-width: 32px;
-    padding: 7px 12px;
+    height: toRem(32);
+    min-width: toRem(32);
+    padding: toRem(7) toRem(12);
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: toRem(8);
     flex-shrink: 0;
   }
 }
 
 .referral-container {
   display: flex;
-  gap: 32px;
+  gap: toRem(32);
   margin-top: 40px;
 }
 
 .referrals {
-  border-radius: var(--8, 8px);
-  border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+  border-radius: toRem(8);
+  border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   background: var(--Neutral-8, #24262D);
   padding: 24px;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  gap: 24px;
+  gap: toRem(24);
 }
 
 
@@ -227,7 +227,7 @@ main {
     &__item {
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
+      gap: toRem(16);
     }
 
     &__info {

@@ -73,7 +73,7 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 .help-recommended {
   &__title {
     color: var(--White, #FFF);
-    font-size: 24px;
+    font-size: toRem(24);
     font-weight: 800;
     line-height: 132%; /* 31.68px */
   }
@@ -81,18 +81,18 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: toRem(12);
     margin-top: 20px;
   }
 
   &__link {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    min-width: 40px;
-    padding: 10px 16px;
+    min-width: toRem(40);
+    padding: toRem(10) toRem(16);
     color: var(--Neutral-1, #FFF);
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
@@ -105,16 +105,16 @@ main {
 
 .help-item {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: toRem(8);
   background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap:toRem(20);
 
   &__trigger {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 
@@ -126,7 +126,7 @@ main {
 
   &__title {
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 24px;
+    font-size: toRem(24);
     font-weight: 800;
     line-height: 132%; /* 31.68px */
   }
@@ -134,14 +134,14 @@ main {
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap:toRem(20);
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 16px;
+    font-size: toRem(16);
     font-weight: 500;
     line-height: 150%; /* 24px */
 
     img {
-      border-radius: var(--8, 8px);
+      border-radius: toRem(8);
       opacity: 0.9;
       width: 100%;
       height: auto;
@@ -152,20 +152,20 @@ main {
 .help-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: toRem(8);
   flex-grow: 1;
 }
 
 .help__wrapper {
   display: flex;
   margin-top: 40px;
-  gap: 40px;
+  gap: toRem(40);
   align-items: flex-start;
 }
 
 .help-nav {
-  border-radius: var(--8, 8px);
-  border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+  border-radius: toRem(8);
+  border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
   width: 292px;
   flex-shrink: 0;
@@ -173,15 +173,15 @@ main {
   top: 112px;
 
   &__item {
-    padding: 16px;
+    padding: toRem(16);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
     border-left: 2px solid transparent;
     margin-left: -1px;
     color: rgba(255, 255, 255, 0.68);
-    font-size: 16px;
+    font-size: toRem(16);
     font-weight: 500;
     line-height: 128%; /* 20.48px */
     cursor: pointer;

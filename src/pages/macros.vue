@@ -49,16 +49,16 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
   margin-top: 40px;
 
   &__again {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 
   &__btn {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
     color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
@@ -66,7 +66,7 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 .games {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap:toRem(20);
   margin-top: 40px;
 
   &__btn {
@@ -74,17 +74,17 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 
   &__bonus {
     color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-    font-size: 12px;
+    font-size: toRem(12);
     font-style: normal;
     font-weight: 500;
     line-height: 128%; /* 15.36px */
-    width: 55px;
+    width: toRem(55);
   }
 }
 
@@ -94,9 +94,9 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
     height: 48px;
     padding: var(--8, 8px) var(--12, 12px);
     align-items: center;
-    gap: 4px;
-    border-radius: var(--8, 8px);
-    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    gap: toRem(4);
+    border-radius: toRem(8);
+    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 }
 

@@ -1505,25 +1505,25 @@ import GameCard from '@/components/GameCard.vue'
 
 <style lang="scss" scoped>
 .page-auth__stories {
-  margin-top: 12px;
+  margin-top: toRem(12);
 }
 
 .section-title {
   color: var(--Neutral-1, #E9EAEC);
-  font-size: 16px;
+  font-size: toRem(16);
   font-style: normal;
   font-weight: 800;
   line-height: 128%;
   text-align: center;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: toRem(16);
   margin: 20px 0;
 
   &:before, &:after {
     display: block;
     content: '';
-    height: 1px;
+    height: toRem(1);
     flex-grow: 1;
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
     background-size: 4px 1px;
@@ -1536,13 +1536,13 @@ import GameCard from '@/components/GameCard.vue'
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap:toRem(20);
   }
 }
 
 .game-card--sliced {
   .game-info--chart {
-    height: 44px;
+    height: toRem(44);
     align-items: center;
 
     .info-score__item {

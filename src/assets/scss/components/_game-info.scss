@@ -1,18 +1,18 @@
 .game-info {
-    height: 44px;
-    border-radius: 2px;
+    height: toRem(44);
+    border-radius: toRem(2);
     background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
-    padding: 0px 8px;
+    padding: 0 toRem(8);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: toRem(8);
     width: calc((100% - 4px) / 3);
 
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: toRem(4);
     }
 
     &--chance {
@@ -30,13 +30,13 @@
     &__chance {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: toRem(4);
     }
 
     &--chart {
         width: 100%;
-        padding: 8px 8px 0px 8px;
-        height: 67px;
+        padding: toRem(8) toRem(8) 0 toRem(8);
+        height: toRem(67);
         display: flex;
         align-items: flex-start;
     }
@@ -45,7 +45,7 @@
         overflow: hidden;
         color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
         text-overflow: ellipsis;
-        font-size: 12px;
+        font-size: toRem(12);
         font-weight: 500;
         line-height: 128%;
         display: -webkit-box;
@@ -56,15 +56,15 @@
     &__add {
         color: var(--Green-5, #099853);
         text-align: center;
-        font-size: 13px;
+        font-size: toRem(13);
         font-weight: 700;
         line-height: 132%; /* 17.16px */
-        width: 24px;
-        height: 24px;
+        width: toRem(24);
+        height: toRem(24);
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 2px;
+        border-radius: toRem(2);
         background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     }
 }

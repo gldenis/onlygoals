@@ -2,43 +2,43 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 32px;
-    padding: 18px 32px;
-    height: 52px;
+    border-radius: toRem(32);
+    padding: toRem(18) toRem(32);
+    height: toRem(52);
     box-sizing: border-box;
     transition: .3s;
-    gap: 12px;
+    gap: toRem(12);
     text-align: center;
     font-weight: 600;
-    font-size: 18px;
+    font-size: toRem(18);
     line-height: 156%;
     color: var(--neutral-1);
 
 
 
     &--small {
-        height: 40px;
-        gap: 12px;
-        font-size: 13px;
-        padding: 10px 16px;
+        height: toRem(40);
+        gap: toRem(12);
+        font-size: toRem(13);
+        padding: toRem(10) toRem(16);
     }
 
     &--primary {
         background: var(--green-5);
-        border: 1px solid transparent;
+        border: toRem(1) solid transparent;
 
         //&:hover {
-        //    border: 1px solid rgba(255, 255, 255, 0.20);
+        //    border: toRem(1) solid rgba(255, 255, 255, 0.20);
         //    box-shadow: 0px 8px 16px 0px rgba(65, 70, 207, 0.64);
         //}
     }
 
     &--secondary {
         background: #009DBD;
-        border: 1px solid transparent;
+        border: toRem(1) solid transparent;
 
         //&:hover {
-        //    border: 1px solid rgba(255, 255, 255, 0.20);
+        //    border: toRem(1) solid rgba(255, 255, 255, 0.20);
         //    box-shadow: 0px 8px 16px 0px rgba(0, 157, 189, 0.64);
         //}
     }
@@ -48,17 +48,17 @@
     }
 
     &--accent {
-        border: 1px solid transparent;
+        border: toRem(1) solid transparent;
         background: var(--accent);
 
         //&:hover {
-        //    border: 1px solid rgba(255, 255, 255, 0.20);
+        //    border: toRem(1) solid rgba(255, 255, 255, 0.20);
         //    box-shadow: 0px 8px 16px 0px rgba(35, 156, 98, 0.64);
         //}
     }
 
     &--outlined {
-        border: 2px solid rgba(222, 224, 227, 0.92);
+        border: toRem(2) solid rgba(222, 224, 227, 0.92);
 
         &:hover {
             background: rgba(255, 255, 255, 0.20);
@@ -72,8 +72,8 @@
             content: "";
             position: absolute;
             inset: 0;
-            border-radius: 24px;
-            padding: 2px;
+            border-radius: toRem(24);
+            padding: toRem(2);
             background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
             -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -98,20 +98,20 @@
 
     &--again {
         display: flex;
-        width: 52px;
-        height: 52px;
+        width: toRem(52);
+        height: toRem(52);
         justify-content: center;
         align-items: center;
         padding: 0;
-        border-radius: 8px;
+        border-radius: toRem(8);
         background: rgba(255, 255, 255, 0.20);
         color: rgba(255,255,255, 0.92);
         flex-shrink: 0;
     }
 
     &--icon {
-        padding: 4px;
-        width: 40px;
-        height: 40px;
+        padding: toRem(4);
+        width: toRem(40);
+        height: toRem(40);
     }
 }

@@ -53,9 +53,9 @@ const selectedParams = reactive({
 
   &__box {
     width: 16px;
-    height: 16px;
+    height: toRem(16);
     border-radius: 50%;
-    border: 2px solid #C2C2C2;
+    border: toRem(2) solid #C2C2C2;
     position: absolute;
     top: 6px;
     right: 6px;

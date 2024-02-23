@@ -1,33 +1,33 @@
 .form {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
-    width: 400px;
-    padding: 52px 32px 32px;
+    width: toRem(400);
+    padding: toRem(52) toRem(32) toRem(32);
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    font-size: 14px;
+    gap: toRem(32);
+    font-size: toRem(14);
     font-weight: 600;
     line-height: 20px; /* 142.857% */
 
     &__group {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: toRem(16);
     }
 
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap:toRem(20);
     }
 
     &__title {
         color: var(--Neutral-1, #E9EAEC);
-        font-size: 32px;
+        font-size: toRem(32);
         font-style: normal;
         font-weight: 800;
         line-height: 132%; /* 42.24px */
@@ -36,7 +36,7 @@
     &__link {
         color: #246BFD;
         text-align: right;
-        font-size: 14px;
+        font-size: toRem(14);
         font-weight: 600;
         line-height: 20px; /* 142.857% */
     }

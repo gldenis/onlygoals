@@ -18,8 +18,8 @@ import IconLock from '@/components/icons/IconLock.vue'
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  gap: 20px;
-  border-radius: 8px;
+  gap:toRem(20);
+  border-radius: toRem(8);
   background: var(--Balance, linear-gradient(89deg, #3F45CE 23.96%, #EF6F38 48.96%, #7841BD 77.6%));
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -31,7 +31,7 @@ import IconLock from '@/components/icons/IconLock.vue'
     overflow: hidden;
     color: var(--Neutral-1, #E9EAEC);
     text-overflow: ellipsis;
-    font-size: 16px;
+    font-size: toRem(16);
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 24px */

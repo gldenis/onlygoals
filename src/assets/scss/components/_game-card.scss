@@ -1,36 +1,36 @@
 .game-card {
-    border-radius: 4px;
+    border-radius: toRem(4);
     background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
     backdrop-filter: blur(4px);
-    padding: 2px;
+    padding: toRem(2);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 2px;
+    gap: toRem(2);
     position: relative;
 
     &__column {
         display: flex;
         flex-wrap: wrap;
-        gap: 2px;
-        width: 594px;
+        gap: toRem(2);
+        width: toRem(594);
 
         &--wide {
             flex-direction: column;
-            width: 400px;
+            width: toRem(400);
         }
 
         &--charts {
-            width: 166px;
+            width: toRem(166);
         }
     }
 
     &__favorite {
         position: absolute;
-        top: 4px;
-        right: 4px;
-        width: 24px;
-        height: 24px;
+        top: toRem(4);
+        right: toRem(4);
+        width: toRem(24);
+        height: toRem(24);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,7 +41,7 @@
 
     &--unavailable {
         position: relative;
-        min-height: 108px;
+        min-height: toRem(108);
 
         &:before {
             content: '';
@@ -50,7 +50,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            border-radius: 8px;
+            border-radius: toRem(8);
             background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
             backdrop-filter: blur(4px);
             z-index: 2;
@@ -61,19 +61,19 @@
 
 
 .game-meta {
-    border-radius: 2px;
+    border-radius: toRem(2);
     padding: 0 4px;
     height: 38px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4px;
+    gap: toRem(4);
     background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
 
     &__part {
         display: flex;
-        width: 157px;
-        gap: 8px;
+        width: toRem(157);
+        gap: toRem(8);
         align-items: center;
 
         &--revert {
@@ -89,7 +89,7 @@
         overflow: hidden;
         color: var(--Neutral-1, #E9EAEC);
         text-overflow: ellipsis;
-        font-size: 13px;
+        font-size: toRem(13);
         font-weight: 700;
         line-height: 132%;
     }
@@ -97,12 +97,12 @@
 
 .game-chart {
     height: 100%;
-    width: 100px;
+    width: toRem(100);
     display: flex;
-    gap: 8px;
+    gap: toRem(8);
 
     &__item {
-        max-width: 20px;
+        max-width: toRem(20);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -111,7 +111,7 @@
     &__value {
         width: 100%;
         margin-top: auto;
-        border-radius: 2px;
+        border-radius: toRem(2);
         opacity: 0.6;
 
         &--team-1 {
@@ -128,24 +128,24 @@
 
 .game-chance {
     display: flex;
-    gap: 2px;
+    gap: toRem(2);
 }
 
 .game-goals {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: toRem(4);
 
     &__item {
-        max-width: 86px;
+        max-width: toRem(86);
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: toRem(8);
     }
 
     &__team {
-        width: 2px;
-        height: 16px;
+        width: toRem(2);
+        height: toRem(16);
         flex-shrink: 0;
 
         &--team-1 {
@@ -160,7 +160,7 @@
 
     &__author {
         color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-        font-size: 12px;
+        font-size: toRem(12);
         font-weight: 500;
         line-height: 128%;
         white-space: nowrap;
@@ -171,11 +171,11 @@
 
 .game-data {
     display: flex;
-    gap: 2px;
+    gap: toRem(2);
 }
 
 .game-schema {
-    border-radius: 2px;
+    border-radius: toRem(2);
     background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
 }
 
@@ -184,14 +184,14 @@
 .last-games-status {
     &__list {
         display: flex;
-        gap: 6px;
-        height: 15px;
+        gap: toRem(6);
+        height: toRem(15);
         align-items: center;
     }
 
     &__item {
-        width: 4px;
-        height: 4px;
+        width: toRem(4);
+        height: toRem(4);
         border-radius: 50%;
 
         &--win {
@@ -208,11 +208,11 @@
 
 .game-card--sliced {
     .game-info--chart {
-        height: 44px;
+        height: toRem(44);
         align-items: center;
 
         .info-score__item {
-            height: 17px;
+            height: toRem(17);
         }
     }
 }
@@ -224,50 +224,50 @@
     bottom: 0;
     left: 0;
     z-index: 3;
-    padding: 10px 16px;
+    padding: toRem(10) toRem(16);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: toRem(16);
 
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: toRem(16);
     }
 
     &__title {
         color: var(--Neutral-1, #E9EAEC);
-        font-size: 13px;
+        font-size: toRem(13);
         font-style: normal;
         font-weight: 700;
         line-height: 132%;
-        width: 192px;
+        width: toRem(192);
     }
 
     &__btn {
-        height: 32px;
+        height: toRem(32);
         border-radius: var(--20, 20px);
         background: var(--Green-5, #099853);
         color: var(--Neutral-1, #E9EAEC);
-        font-size: 13px;
+        font-size: toRem(13);
         font-style: normal;
         font-weight: 700;
         line-height: 132%; /* 17.16px */
-        padding: 7px 12px;
+        padding: toRem(7) toRem(12);
         width: max-content;
     }
 }
 
 .progress {
-    width: 53px;
-    height: 4px;
+    width: toRem(53);
+    height: toRem(4);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    border-radius: 2px;
+    border-radius: toRem(2);
 
     &__value {
         height: 100%;
-        border-radius: 2px;
+        border-radius: toRem(2);
 
         &--team-1 {
             width: 33%;

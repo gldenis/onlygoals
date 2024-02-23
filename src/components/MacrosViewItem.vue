@@ -53,18 +53,18 @@ const editMacros = () => {
 
 <style scoped lang="scss">
 .macros-watcher {
-  height: 40px;
+  height: toRem(40);
   padding: 0px var(--8, 8px);
-  border-radius: var(--8, 8px);
+  border-radius: toRem(8);
   background: var(--green-other-12, rgba(31, 168, 78, 0.16));
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: toRem(10);
 
   &__text {
-    max-width: 55px;
+    max-width: toRem(55);
     color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-    font-size: 12px;
+    font-size: toRem(12);
     font-style: normal;
     font-weight: 500;
     line-height: 128%; /* 15.36px */

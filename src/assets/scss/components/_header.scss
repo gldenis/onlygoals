@@ -1,9 +1,9 @@
 .header {
-    height: 72px;
+    height: toRem(72);
     background: #fff;
     width: 100%;
-    padding: 14px 0;
-    backdrop-filter: blur(8px);
+    padding: toRem(14) 0;
+    backdrop-filter: blur(toRem(8));
     background: rgba(19, 25, 31, 0.8);
     position: fixed;
     top: 0;
@@ -13,13 +13,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 8px;
+        gap: toRem(8);
     }
 
     &__profile-link {
-        border-radius: 24px;
-        width: 40px;
-        height: 40px;
+        border-radius: toRem(24);
+        width: toRem(40);
+        height: toRem(40);
         background: #099853;
         display: flex;
         align-items: center;
@@ -27,28 +27,27 @@
     }
 
     &__bolt {
-        border-radius: 24px;
+        border-radius: toRem(24);
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        padding: 2px;
-        width: 119px;
-        height: 40px;
+        gap: toRem(8);
+        padding: toRem(2);
+        width: toRem(119);
+        height: toRem(40);
         font-weight: 700;
-        font-size: 13px;
+        font-size: toRem(13);
         line-height: 132%;
         text-align: center;
         color: var(--gray-1);
-
         position: relative;
 
         &::before {
             content: "";
             position: absolute;
             inset: 0;
-            border-radius: 24px;
-            padding: 2px;
+            border-radius: toRem(24);
+            padding: toRem(2);
             background:linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
             -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -60,13 +59,13 @@
     &__left {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding-right: 3px;
+        gap: toRem(8);
+        padding-right: toRem(3);
 
         &-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: toRem(4);
         }
 
         &-inner {
@@ -77,18 +76,18 @@
     &__center {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: toRem(8);
     }
 
     &__right {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: toRem(8);
     }
 
     &__separator {
-        width: 1px;
-        height: 28px;
+        width: toRem(1);
+        height: toRem(28);
         background: var(--neutral-left-12);
     }
 
@@ -101,7 +100,7 @@
     &-text {
         font-family: var(--font4);
         font-weight: 700;
-        font-size: 23px;
+        font-size: toRem(23);
         line-height: 102%;
         color: var(--text-color);
     }
@@ -111,9 +110,9 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 4px;
+    gap: toRem(4);
     color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-    font-size: 11px;
+    font-size: toRem(11);
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
@@ -121,7 +120,7 @@
 
 .lang-switcher {
     font-weight: 600;
-    font-size: 11px;
+    font-size: toRem(11);
     line-height: 140%;
     text-align: center;
     color: var(--neutral-left-68);
@@ -129,7 +128,7 @@
     &__trigger {
         display: flex;
         align-items: center;
-        gap: 4px;
+        gap: toRem(4);
     }
 }
 
@@ -152,7 +151,7 @@
 @media screen and (max-width: $phablet) {
     .header {
         &__logo {
-            margin-left: -25px;
+            margin-left: -toRem(25);
         }
 
         &__left-wrapper {
@@ -160,8 +159,8 @@
         }
 
         &__bolt {
-            width: 40px;
-            height: 40px;
+            width: toRem(40);
+            height: toRem(40);
 
             span {
                 display: none;
@@ -169,9 +168,9 @@
         }
 
         &__macros {
-            width: 40px;
-            height: 40px;
-            padding: 4px;
+            width: toRem(40);
+            height: toRem(40);
+            padding: toRem(4px);
         }
     }
 }

@@ -4,10 +4,10 @@
         border-radius: var(--24, 8px);
         background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
         height: var(--56, 56px);
-        padding: 13px var(--20, 20px);
+        padding: toRem(13) toRem(20);
         overflow: hidden;
         color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-        font-size: 14px;
+        font-size: toRem(14);
         font-weight: 600;
 
         &::placeholder {
@@ -17,9 +17,9 @@
 
     &__error {
         font-weight: 700;
-        font-size: 12px;
+        font-size: toRem(12);
         line-height: 132%;
         color: #ff472e;
-        margin-top: 4px;
+        margin-top: toRem(4);
     }
 }

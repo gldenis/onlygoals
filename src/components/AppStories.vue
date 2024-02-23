@@ -272,7 +272,7 @@ const share = async () => {
   padding: 4px var(--8, 8px);
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: toRem(2);
   position: relative;
 
   &__trigger {
@@ -296,12 +296,12 @@ const share = async () => {
 
   &__item {
     height: 3px;
-    width: 80px;
+    width: toRem(80);
     border-radius: 3px;
     background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
 
     &--watched {
-      height: 1px;
+      height: toRem(1);
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
       background-size: 4px 1px;
     }
@@ -309,8 +309,8 @@ const share = async () => {
 }
 
 .swiper-slide {
-  width: 100px;
-  height: 100px;
+  width: toRem(100);
+  height: toRem(100);
 }
 
 .stories {
@@ -318,10 +318,10 @@ const share = async () => {
   &__favorite-btn {
     width: 20px;
     height: 20px;
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
     position: absolute;
-    top: 4px;
+    top: toRem(4);
     left: 4px;
     display: flex;
     align-items: center;
@@ -330,10 +330,10 @@ const share = async () => {
 
   &__list {
     position: relative;
-    border-radius: 4px;
+    border-radius: toRem(4);
     background: rgba(19, 25, 31, 0.80);
     backdrop-filter: blur(4px);
-    padding: 8px;
+    padding: toRem(8);
     position: relative;
     user-select: none;
   }
@@ -351,7 +351,7 @@ const share = async () => {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: toRem(4);
   }
 
   &__btn {
@@ -362,9 +362,9 @@ const share = async () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
+    width: toRem(80);
     height: 116px;
-    border-radius: 8px;
+    border-radius: toRem(8);
 
 
     &--next {
@@ -387,9 +387,9 @@ const share = async () => {
     border-radius: 40px;
     background: var(--dark-neutral-968, rgba(19, 24, 32, 0.68));
     display: flex;
-    width: 80px;
+    width: toRem(80);
     height: 80px;
-    padding: 4px;
+    padding: toRem(4);
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -403,7 +403,7 @@ const share = async () => {
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      padding: 2px;
+      padding: toRem(2);
       background: linear-gradient(30deg, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
       -webkit-mask: linear-gradient(30deg, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -415,24 +415,24 @@ const share = async () => {
     position: absolute;
     top: 20px;
     left: 20px;
-    border-radius: 24px;
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     color: #FFF;
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     display: flex;
     align-items: center;
     padding-right: 16px;
-    gap: 8px;
+    gap: toRem(8);
   }
 
   &__share {
     position: absolute;
     top: 80px;
     left: 20px;
-    border-radius: 24px;
+    border-radius: toRem(24);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 
@@ -445,7 +445,7 @@ const share = async () => {
 
 @media screen and (max-width: $phablet) {
   .swiper-slide {
-    width: 80px;
+    width: toRem(80);
     height: 80px;
   }
 }

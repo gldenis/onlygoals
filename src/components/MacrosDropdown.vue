@@ -58,12 +58,12 @@ const macrosStore = useMacrosStore()
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    border-radius: 24px;
-    padding: 10px 16px;
+    gap: toRem(8);
+    border-radius: toRem(24);
+    padding: toRem(10) toRem(16);
     background: var(--neutral-left-12);
     font-weight: 700;
-    font-size: 13px;
+    font-size: toRem(13);
     line-height: 132%;
     cursor: pointer;
     color: var(--neutral-right-68);
@@ -73,22 +73,22 @@ const macrosStore = useMacrosStore()
   &__body {
     position: absolute;
     top: -8px;
-    border-radius: var(--8, 8px);
-    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border-radius: toRem(8);
+    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
     width: 160px;
     /* Dropdown */
-    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    padding: 8px;
+    padding: toRem(8);
 
     &--opened {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: toRem(8);
     }
   }
 }
@@ -100,17 +100,17 @@ const macrosStore = useMacrosStore()
     align-items: center;
     justify-content: space-between;
     color: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
-    font-size: 14px;
+    font-size: toRem(14);
     font-weight: 400;
     line-height: 150%; /* 21px */
     cursor: pointer;
     padding: 8px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid transparent;
+    border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
+    border-bottom: toRem(1) solid transparent;
     position: relative;
 
     &:last-child {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
     }
 
     &:hover:before{
@@ -121,7 +121,7 @@ const macrosStore = useMacrosStore()
       top: 0;
       margin-left: -8px;
       inset: 0;
-      padding: 1px;
+      padding: toRem(1);
       background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
       -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -130,7 +130,7 @@ const macrosStore = useMacrosStore()
 
     span {
       color: var(--neutral-left-32, rgba(255, 255, 255, 0.32));
-      font-size: 12px;
+      font-size: toRem(12);
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -145,15 +145,15 @@ const macrosStore = useMacrosStore()
   &__btn {
     display: flex;
     height: 31px;
-    padding: 7px 12px;
+    padding: toRem(7) toRem(12);
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: toRem(8);
     border-radius: var(--20, 20px);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     color: var(--Green-5, #099853);
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */

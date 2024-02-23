@@ -3,14 +3,14 @@
 
     &__value {
         color: rgb(246, 248, 250);
-        font-size: 24px;
+        font-size: toRem(24);
         font-weight: 700;
         line-height: 132%;
     }
 
     &__old {
         color: rgb(255, 71, 46);
-        font-size: 20px;
+        font-size: toRem(20);
         font-weight: 300;
         line-height: 132%;
         text-decoration-line: line-through;
@@ -19,46 +19,46 @@
 .banner {
     display: flex;
     justify-content: space-between;
-    padding: 32px;
-    border-radius: 8px;
-    gap: 24px;
-    backdrop-filter: blur(8px);
+    padding: toRem(32);
+    border-radius: toRem(8);
+    gap: toRem(24);
+    backdrop-filter: blur(toRem(8));
     background-color: rgba(0, 0, 0, 0.6);
     background-image: url('@/assets/img/unlock-top.png'), url('@/assets/img/unlock-bottom.png');
-    background-size: 100% 8px, 100% 8px;
+    background-size: 100% toRem(8), 100% toRem(8);
     background-repeat: no-repeat;
     background-position: top center, bottom center;
 
     &__left {
         display: flex;
-        gap: 24px;
+        gap: toRem(24);
         align-items: center;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: toRem(8);
     }
 
     &__title {
         color: rgba(255, 255, 255, 0.92);
-        font-size: 20px;
+        font-size: toRem(20);
         font-weight: 700;
         line-height: 132%;
     }
 
     &__description {
         color: rgb(157, 162, 173);
-        font-size: 18px;
+        font-size: toRem(18);
         font-weight: 500;
         line-height: 146%;
-        max-width: 270px;
+        max-width: toRem(270);
     }
 
     &__right {
         display: flex;
-        gap: 20px;
+        gap: toRem(20);
         align-items: center;
     }
 }

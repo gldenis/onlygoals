@@ -110,7 +110,7 @@ const emit = defineEmits(['close'])
   gap: 52px;
 
   &__separator {
-    height: 1px;
+    height: toRem(1);
     background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
   }
 }
@@ -122,18 +122,18 @@ const emit = defineEmits(['close'])
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 4px;
+    gap: toRem(4);
     flex-wrap: wrap;
   }
 
   &__item {
     width: calc((100% - 4px) / 2);
-    min-height: 52px;
+    min-height: toRem(52);
     padding: 10px 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    border-radius: 8px;
+    gap: toRem(8);
+    border-radius: toRem(8);
     background: linear-gradient(270deg, rgba(31, 168, 78, 0.00) 0%, rgba(31, 168, 78, 0.10) 100%);
   }
 }
@@ -141,11 +141,11 @@ const emit = defineEmits(['close'])
 .course-part {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: toRem(32);
 
   &__title {
     color: var(--White, #FFF);
-    font-size: 32px;
+    font-size: toRem(32);
     font-style: normal;
     font-weight: 800;
     line-height: 132%; /* 42.24px */
@@ -153,12 +153,12 @@ const emit = defineEmits(['close'])
 }
 .guide {
   max-width: 800px;
-  padding: 32px;
-  border-radius: var(--24, 24px);
+  padding: toRem(32);
+  border-radius: toRem(24);
   background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
 
   /* Dropdown */
-  box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+  box-shadow: -toRem(20) toRem(20) toRem(60) -toRem(16) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
 
   &__header {
@@ -174,9 +174,9 @@ const emit = defineEmits(['close'])
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: toRem(32);
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 18px;
+    font-size: toRem(18);
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 28.8px */
@@ -184,7 +184,7 @@ const emit = defineEmits(['close'])
 
     h3 {
       color: var(--Neutral-1, #E9EAEC);
-      font-size: 32px;
+      font-size: toRem(32);
       font-style: normal;
       font-weight: 800;
       line-height: 132%; /* 42.24px */
@@ -193,7 +193,7 @@ const emit = defineEmits(['close'])
     img {
       width: 100%;
       height: auto;
-      border-radius: var(--8, 8px);
+      border-radius: toRem(8);
       opacity: 0.9;
     }
 

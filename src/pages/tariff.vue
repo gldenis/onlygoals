@@ -168,28 +168,28 @@ main {
 }
 
 .course-banner {
-  border-radius: var(--8, 8px);
+  border-radius: toRem(8);
   background: url("@/assets/img/course-banner.jpg") -60.176px -585.702px / 171.351% 601.44% no-repeat, linear-gradient(106deg, rgba(60, 71, 169, 0.80) 22.57%, rgba(57, 172, 165, 0.80) 77.43%);
   background-blend-mode: overlay, normal;
   height: 120px;
-  padding: 16px;
+  padding: toRem(16);
   position: relative;
   width: 100%;
-  margin-top: 32px;
+  margin-top: toRem(32);
 
   &__title {
     color: #FFF;
-    font-size: 16px;
+    font-size: toRem(16);
     font-weight: 800;
     line-height: 128%; /* 20.48px */
     width: 160px;
   }
 
   &__btn {
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
     color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     position: absolute;
@@ -200,16 +200,16 @@ main {
 
 .tariff {
   &__add {
-    border-radius: var(--24, 24px);
-    border: 1px solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border-radius: toRem(24);
+    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
     display: flex;
-    height: 40px;
+    height: toRem(40);
     padding: 10px 4px 10px var(--8, 8px);
     justify-content: center;
     align-items: center;
     gap: var(--8, 8px);
     color: #FFF;
-    font-size: 16px;
+    font-size: toRem(16);
     font-style: normal;
     font-weight: 800;
     line-height: 128%; /* 20.48px */
@@ -219,44 +219,44 @@ main {
     border-radius: var(--20, 20px);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
     display: flex;
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
+    width: toRem(32);
+    height: toRem(32);
+    min-width: toRem(32);
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: toRem(24);
     color: #099853;
   }
 
   &__notice {
     color: var(--Green-5, #099853);
     text-align: center;
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
-    border-radius: var(--24, 24px);
+    border-radius: toRem(24);
     background: var(--green-other-12, rgba(31, 168, 78, 0.16));
-    height: 40px;
-    min-width: 40px;
-    padding: 10px 16px;
+    height: toRem(40);
+    min-width: toRem(40);
+    padding: toRem(10) toRem(16);
     justify-content: center;
     align-items: center;
   }
   &__coins {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: toRem(4);
     margin-left: auto;
   }
   &__discount {
     color: var(--Neutral-1, #E9EAEC);
     text-align: center;
-    font-size: 14px;
+    font-size: toRem(14);
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 19.6px */
     position: absolute;
-    height: 28px;
+    height: toRem(28);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,7 +266,7 @@ main {
   }
   &__list {
     display: flex;
-    gap: 32px;
+    gap: toRem(32);
     align-items: flex-start;
   }
 
@@ -275,9 +275,9 @@ main {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    border-radius: 8px;
-    border: 1px solid var(--green-other-32, rgba(31, 168, 78, 0.32));
+    gap: toRem(24);
+    border-radius: toRem(8);
+    border: toRem(1) solid var(--green-other-32, rgba(31, 168, 78, 0.32));
     background: var(--Neutral-8, #24262D);
     position: relative;
 
@@ -299,7 +299,7 @@ main {
         -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
-        border-radius: 8px;
+        border-radius: toRem(8);
       }
     }
   }
@@ -310,7 +310,7 @@ main {
 
   &__title {
     color: #FFF;
-    font-size: 24px;
+    font-size: toRem(24);
     font-style: normal;
     font-weight: 800;
     line-height: 132%; /* 31.68px */
@@ -321,13 +321,13 @@ main {
     flex-direction: column;
     width: 100%;
     min-height: 132px;
-    gap: 24px;
+    gap: toRem(24);
 
     &-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: toRem(12);
       width: 100%;
     }
 
@@ -335,14 +335,14 @@ main {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: toRem(12);
       width: 100%;
     }
   }
 
   &__price {
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 32px;
+    font-size: toRem(32);
     font-weight: 900;
     line-height: 132%; /* 42.24px */
     text-transform: uppercase;
@@ -351,9 +351,9 @@ main {
   &__status {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: toRem(8);
     color: var(--Green-5, #099853);
-    font-size: 13px;
+    font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
@@ -365,9 +365,9 @@ main {
     align-items: center;
     justify-content: space-between;
     min-height: 56px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
     color: var(--Neutral-1, #E9EAEC);
-    font-size: 14px;
+    font-size: toRem(14);
     font-weight: 500;
     line-height: 140%; /* 19.6px */
     padding: 8px 0;
@@ -378,8 +378,8 @@ main {
     }
 
     &-info {
-      border-radius: 4px;
-      padding: 4px;
+      border-radius: toRem(4);
+      padding: toRem(4);
       background: var(--green-other-12, rgba(31, 168, 78, 0.16));
       color: var(--Green-5, #099853);
       font-size: 11px;

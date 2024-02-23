@@ -23,7 +23,7 @@ defineProps({
 .custom-checkbox {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: toRem(8);
 
 
   &__input {
@@ -34,7 +34,7 @@ defineProps({
     border: 1.5px solid #C1C3C6;
     width: 14px;
     height: 14px;
-    border-radius: 2px;
+    border-radius: toRem(2);
     display: flex;
     align-items: center;
     justify-content: center;
