@@ -2,6 +2,8 @@
 
 import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 import IconLetter from '@/components/icons/IconLetter.vue'
+import IconPlus from '@/components/icons/IconPlus.vue'
+import BannerVerification from '@/components/BannerVerification.vue'
 </script>
 
 <template>
@@ -23,25 +25,32 @@ import IconLetter from '@/components/icons/IconLetter.vue'
       <div class="referral-container">
         <div class="referrals">
           <div class="referrals__head">
-            <div class="referral__title">Мои рефералы (32)</div>
+            <div class="referral__title referral__title--head">Мои рефералы (32)</div>
+            <div class="referral__limit">Лимит в сутки: <span>2 из 10</span></div>
           </div>
           <div class="referral__list">
             <div class="referral__item">
               <div class="referral__title">curtis.weaver@example.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
-                <div class="referral__bonus">3 дня премиум</div>
+                <div class="referral__bonus">
+                  <IconPlus width="16" height="16" />
+                  3 дня премиум
+                </div>
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">curtis.weaver@example.com</div>
+              <div class="referral__title">nathan.roberts@example.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
-                <div class="referral__bonus">3 дня премиум</div>
+                <div class="referral__bonus">
+                  <IconPlus width="16" height="16" />
+                  3 дня премиум
+                </div>
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">curtis.weaver@example.com</div>
+              <div class="referral__title">tim.jennings@example.com</div>
               <div class="referral__info">
                 <div class="referral__pending">Ожидание верификации</div>
                 <div class="referral__resending">
@@ -51,7 +60,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">curtis.weaver@example.com</div>
+              <div class="referral__title">willie.jennings@example.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
               </div>
@@ -65,6 +74,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
         </div>
       </div>
     </div>
+    <BannerVerification />
   </main>
 </template>
 
@@ -121,6 +131,10 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     font-style: normal;
     font-weight: 700;
     line-height: 128%; /* 19.2px */
+
+    &--head {
+      font-size: toRem(16);
+    }
   }
 
   &__info {
@@ -140,7 +154,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
   &__bonus {
     height: toRem(32);
-    min-width: toRem(32);
+    min-width: toRem(180);
     padding: toRem(7) toRem(12);
     border-radius: toRem(20);
     background: rgba(31, 168, 78, 0.16);
@@ -150,6 +164,10 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 
   &__pending {
@@ -170,13 +188,25 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     border-radius: toRem(20);
     background: rgba(255, 255, 255, 0.12);
     height: toRem(32);
-    min-width: toRem(32);
+    min-width: toRem(180);
     padding: toRem(7) toRem(12);
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: toRem(8);
     flex-shrink: 0;
+  }
+
+  &__limit {
+    color: rgba(255, 255, 255, 0.32);
+    font-size: toRem(13);
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+
+    span {
+      color: #eee;
+    }
   }
 }
 
@@ -195,6 +225,13 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   flex-grow: 1;
   flex-direction: column;
   gap: toRem(24);
+
+  &__head {
+    height: toRem(40);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 

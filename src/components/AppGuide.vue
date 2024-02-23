@@ -228,6 +228,8 @@ const toggleStep = step => {
     display: flex;
     align-items: center;
     gap: toRem(8);
+    font-size: toRem(12);
+    font-weight: 600;
   }
 
   &__title {

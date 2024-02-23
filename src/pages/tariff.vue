@@ -183,7 +183,7 @@ main {
   &__title {
     color: #FFF;
     font-size: toRem(16);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 128%; /* 20.48px */
     width: toRem(160);
   }
@@ -271,6 +271,7 @@ main {
     display: flex;
     gap: toRem(32);
     align-items: flex-start;
+    padding: 0 toRem(28);
   }
 
   &__item {
@@ -315,7 +316,7 @@ main {
     color: #FFF;
     font-size: toRem(24);
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 132%; /* 31.68px */
   }
 
@@ -373,7 +374,7 @@ main {
     font-size: toRem(14);
     font-weight: 500;
     line-height: 140%; /* 19.6px */
-    padding: toRem(8) 0;
+    padding: toRem(10) 0;
 
     svg {
       margin: toRem(10) toRem(10) toRem(10) 0;

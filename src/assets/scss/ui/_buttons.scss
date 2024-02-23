@@ -90,6 +90,11 @@
         }
     }
 
+    &--light {
+        background: rgba(255, 255, 255, 0.84);
+        color: rgba(25, 27, 34, 0.68);
+    }
+
     &--transparent {
         &:hover {
             color: #fff;
