@@ -4,8 +4,10 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 import IconAcces from '@/components/icons/hero/IconAcces.vue'
 import IconHat from '@/components/icons/hero/IconHat.vue'
 import { useAuthStore } from '@/stores/auth.js'
+import { useGuideStore } from '@/stores/guide.js'
 
 const authStore = useAuthStore()
+const guideStore = useGuideStore()
 </script>
 
 <template>
@@ -17,7 +19,7 @@ const authStore = useAuthStore()
           и моментальные обновления всех футбольных матчей</p>
         <div class="hero__buttons">
           <button class="btn btn--primary" @click="authStore.registrationFormIsOpened = true">Регистрация</button>
-          <button class="btn btn--accent"><IconHat width="20" height="20"/> Институт голов</button>
+          <button class="btn btn--accent" @click="guideStore.guideModalIsOpened = true" ><IconHat width="20" height="20"/> Институт голов</button>
         </div>
       </div>
       <div class="hero__right hero-tiles">

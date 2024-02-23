@@ -10,9 +10,12 @@ import MacrosCreate from '@/components/MacrosCreate.vue'
 import MacrosEdit from '@/components/MacrosEdit.vue'
 import MacrosView from '@/components/MacrosView.vue'
 import MacrosViewItem from '@/components/MacrosViewItem.vue'
+import { useGuideStore } from '@/stores/guide.js'
+import GuideItem from '@/components/GuideItem.vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
+const guideStore = useGuideStore()
 </script>
 
 <template>
@@ -46,6 +49,11 @@ const macrosStore = useMacrosStore()
   <teleport to="body">
     <BaseModal class="modal--macros" v-if="macrosStore.viewItemModalIsOpened" @close="macrosStore.viewItemModalIsOpened = false">
       <MacrosViewItem />
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal class="modal--macros" v-if="guideStore.guideModalIsOpened" @close="guideStore.guideModalIsOpened = false">
+      <GuideItem @close="guideStore.guideModalIsOpened = false"/>
     </BaseModal>
   </teleport>
 
