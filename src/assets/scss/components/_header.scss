@@ -94,6 +94,14 @@
     &__settings {
         display: none;
     }
+
+    &__logo {
+        width: toRem(44);
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .logo {

@@ -23,6 +23,16 @@
         }
     }
 
+    &__trigger-icon {
+        width: toRem(20);
+        height: auto;
+    }
+
+    &__trigger-arrow {
+        width: toRem(12);
+        height: auto;
+    }
+
     &__body {
         position: absolute;
         top: calc(100% + 2px);

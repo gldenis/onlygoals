@@ -23,7 +23,7 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
         <RouterLink to="/" class="logo header__logo">
           <picture>
             <source media="(max-width: 640px)" srcset="@/assets/img/logo-mobile.svg">
-            <img src="@/assets/img/logo.svg" alt="">
+            <img src="@/assets/img/logo.svg" alt="" width="44" height="44">
           </picture>
         </RouterLink>
         <div class="header__left-wrapper">
@@ -32,7 +32,7 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
             <div class="lang-switcher">
               <div class="lang-switcher__trigger">
                 Ру
-                <IconArrowDown />
+                <IconArrowDown class="dropdown__trigger-arrow"/>
               </div>
             </div>
             <div class="header-games">
@@ -53,9 +53,9 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
       <div class="header__center">
         <BaseDropdown>
           <template v-slot:trigger>
-            <IconLock />
+            <IconLock class="dropdown__trigger-icon" />
             Категории
-            <IconArrowDown />
+            <IconArrowDown class="dropdown__trigger-arrow"/>
           </template>
           <template v-slot:body>
             <div class="dropdown-list">
@@ -94,9 +94,9 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
         </BaseDropdown>
         <BaseDropdown locked>
           <template v-slot:trigger>
-            <IconLock />
+            <IconLock class="dropdown__trigger-icon" />
             Все лиги
-            <IconArrowDown />
+            <IconArrowDown class="dropdown__trigger-arrow"/>
           </template>
           <template v-slot:body>
             <div class="dropdown-list">
@@ -135,9 +135,9 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
         </BaseDropdown>
         <BaseDropdown locked>
           <template v-slot:trigger>
-            <IconLock />
+            <IconLock class="dropdown__trigger-icon" />
             Показатели
-            <IconArrowDown />
+            <IconArrowDown class="dropdown__trigger-arrow"/>
           </template>
           <template v-slot:body>
             <div class="dropdown-list">
@@ -176,9 +176,9 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
         </BaseDropdown>
         <BaseDropdown locked>
           <template v-slot:trigger>
-            <IconLock />
+            <IconLock class="dropdown__trigger-icon" />
             История
-            <IconArrowDown />
+            <IconArrowDown class="dropdown__trigger-arrow"/>
           </template>
           <template v-slot:body>
             <div class="dropdown-list">
