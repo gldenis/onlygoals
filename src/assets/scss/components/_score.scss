@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: toRem(2);
-    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    color: rgba(255, 255, 255, 0.68);
     font-size: toRem(12);
     font-weight: 500;
     line-height: 128%;
@@ -15,7 +15,7 @@
     &__item {
         padding: toRem(4);
         height: toRem(24);
-        color: var(--Neutral-1, #E9EAEC);
+        color: #E9EAEC;
         text-align: center;
         font-size: toRem(13);
         font-weight: 700;
@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+        background: rgba(255, 255, 255, 0.12);
 
         &--large {
             border-radius: toRem(4);

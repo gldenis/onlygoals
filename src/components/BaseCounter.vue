@@ -26,7 +26,7 @@ const decrement = () => {
   display: flex;
   align-items: center;
   gap: toRem(4);
-  color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+  color: rgba(255, 255, 255, 0.68);
   text-overflow: ellipsis;
   font-size: toRem(15);
   font-weight: 700;

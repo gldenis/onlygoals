@@ -5,7 +5,7 @@
     gap: toRem(20);
 
     &__title {
-        color: var(--gray-1, #E9EAEC);
+        color: #E9EAEC;
         font-size: toRem(32);
         font-style: normal;
         font-weight: 900;
@@ -17,7 +17,7 @@
         flex-grow: 1;
         opacity: 0.12;
         height: toRem(1);
-        background: var(--Neutral-Left-L1, linear-gradient(to left, #FFF 0%, rgba(255, 255, 255, 0.00) 100%));
+        background: linear-gradient(to left, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
     }
 
     &__left {

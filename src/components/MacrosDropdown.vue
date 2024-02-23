@@ -22,9 +22,9 @@ const macrosStore = useMacrosStore()
 <template>
 <div class="macros-dropdown" ref="dropdown">
   <div class="macros-dropdown__trigger" @click="toggleDropdown">
-    <IconMacross />
+    <IconMacross class="dropdown__trigger-icon" />
     <span class="max-phablet" >Макросы</span>
-    <IconArrowDown class="max-phablet" />
+    <IconArrowDown class="max-phablet dropdown__trigger-arrow" />
   </div>
   <div class="macros-dropdown__body" :class="{ 'macros-dropdown__body--opened': openedDropdown}">
     <RouterLink to="/macros" class="btn btn--small btn--gray" @click="openedDropdown = false">
@@ -74,11 +74,11 @@ const macrosStore = useMacrosStore()
     position: absolute;
     top: - toRem(8);
     border-radius: toRem(8);
-    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-    background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
+    border: toRem(1) solid rgba(255, 255, 255, 0.12);
+    background:  rgba(25, 27, 34, 0.84);
     width: toRem(160);
     /* Dropdown */
-    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     left: 50%;
     transform: translateX(-50%);
@@ -99,7 +99,7 @@ const macrosStore = useMacrosStore()
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
+    color: rgba(255, 255, 255, 0.84);
     font-size: toRem(14);
     font-weight: 400;
     line-height: 150%; /* 21px */
@@ -129,7 +129,7 @@ const macrosStore = useMacrosStore()
     }
 
     span {
-      color: var(--neutral-left-32, rgba(255, 255, 255, 0.32));
+      color:  rgba(255, 255, 255, 0.32);
       font-size: toRem(12);
       font-style: normal;
       font-weight: 600;
@@ -150,8 +150,8 @@ const macrosStore = useMacrosStore()
     align-items: center;
     gap: toRem(8);
     border-radius: toRem(20);
-    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
-    color: var(--Green-5, #099853);
+    background: rgba(31, 168, 78, 0.16);
+    color: #099853;
     text-align: center;
     font-size: toRem(13);
     font-style: normal;

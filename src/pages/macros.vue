@@ -50,13 +50,13 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 
   &__again {
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
   }
 
   &__btn {
     border-radius: toRem(24);
-    background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
-    color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
+    background: rgba(255, 255, 255, 0.84);
+    color: rgba(25, 27, 34, 0.68);
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
@@ -75,11 +75,11 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
     margin-left: auto;
     margin-right: auto;
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
   }
 
   &__bonus {
-    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    color: rgba(255, 255, 255, 0.68);
     font-size: toRem(12);
     font-style: normal;
     font-weight: 500;
@@ -92,11 +92,11 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
   &__info {
     display: flex;
     height: toRem(48);
-    padding: 8px var(--12, 12px);
+    padding: toRem(8) toRem(12);
     align-items: center;
     gap: toRem(4);
     border-radius: toRem(8);
-    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border: toRem(1) solid rgba(255, 255, 255, 0.12);
   }
 }
 

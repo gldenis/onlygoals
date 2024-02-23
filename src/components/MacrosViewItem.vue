@@ -56,14 +56,14 @@ const editMacros = () => {
   height: toRem(40);
   padding: 0 toRem(8);
   border-radius: toRem(8);
-  background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+  background: rgba(31, 168, 78, 0.16);
   display: flex;
   align-items: center;
   gap: toRem(10);
 
   &__text {
     max-width: toRem(55);
-    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    color: rgba(255, 255, 255, 0.68);
     font-size: toRem(12);
     font-style: normal;
     font-weight: 500;

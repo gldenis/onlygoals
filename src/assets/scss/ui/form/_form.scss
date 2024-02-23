@@ -1,7 +1,7 @@
 .form {
     border-radius: toRem(24);
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     width: toRem(400);
     padding: toRem(52) toRem(32) toRem(32);
@@ -26,7 +26,7 @@
     }
 
     &__title {
-        color: var(--Neutral-1, #E9EAEC);
+        color: #E9EAEC;
         font-size: toRem(32);
         font-style: normal;
         font-weight: 800;

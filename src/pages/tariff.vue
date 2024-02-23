@@ -5,6 +5,7 @@ import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import AppGuide from '@/components/AppGuide.vue'
 import BaseCounter from '@/components/BaseCounter.vue'
 import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
+import IconPlus from '@/components/icons/IconPlus.vue'
 </script>
 
 <template>
@@ -91,7 +92,9 @@ import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
                 <div>
                   <IconBoltFilled /> 31
                 </div>
-                <div class="tariff__add-btn">+</div>
+                <div class="tariff__add-btn">
+                  <IconPlus width="16" height="16" />
+                </div>
               </div>
               <div class="tariff__notice">Активировать 10 дней</div>
             </div>
@@ -187,8 +190,8 @@ main {
 
   &__btn {
     border-radius: toRem(24);
-    background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
-    color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
+    background: rgba(255, 255, 255, 0.84);
+    color: rgba(25, 27, 34, 0.68);
     font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
@@ -201,7 +204,7 @@ main {
 .tariff {
   &__add {
     border-radius: toRem(24);
-    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border: toRem(1) solid rgba(255, 255, 255, 0.12);
     display: flex;
     height: toRem(40);
     padding: toRem(10) toRem(4) toRem(10) toRem(8);
@@ -217,7 +220,7 @@ main {
 
   &__add-btn {
     border-radius: toRem(20);
-    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+    background: rgba(31, 168, 78, 0.16);
     display: flex;
     width: toRem(32);
     height: toRem(32);
@@ -229,13 +232,13 @@ main {
   }
 
   &__notice {
-    color: var(--Green-5, #099853);
+    color: #099853;
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     border-radius: toRem(24);
-    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+    background: rgba(31, 168, 78, 0.16);
     height: toRem(40);
     min-width: toRem(40);
     padding: toRem(10) toRem(16);
@@ -249,7 +252,7 @@ main {
     margin-left: auto;
   }
   &__discount {
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     text-align: center;
     font-size: toRem(14);
     font-style: normal;
@@ -277,8 +280,8 @@ main {
     flex-direction: column;
     gap: toRem(24);
     border-radius: toRem(8);
-    border: toRem(1) solid var(--green-other-32, rgba(31, 168, 78, 0.32));
-    background: var(--Neutral-8, #24262D);
+    border: toRem(1) solid rgba(31, 168, 78, 0.32);
+    background: #24262D;
     position: relative;
 
     &--premium {
@@ -341,7 +344,7 @@ main {
   }
 
   &__price {
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(32);
     font-weight: 900;
     line-height: 132%; /* 42.24px */
@@ -352,7 +355,7 @@ main {
     display: flex;
     align-items: center;
     gap: toRem(8);
-    color: var(--Green-5, #099853);
+    color: #099853;
     font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
@@ -366,7 +369,7 @@ main {
     justify-content: space-between;
     min-height: toRem(56);
     border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(14);
     font-weight: 500;
     line-height: 140%; /* 19.6px */
@@ -380,8 +383,8 @@ main {
     &-info {
       border-radius: toRem(4);
       padding: toRem(4);
-      background: var(--green-other-12, rgba(31, 168, 78, 0.16));
-      color: var(--Green-5, #099853);
+      background: rgba(31, 168, 78, 0.16);
+      color: #099853;
       font-size: toRem(11);
       font-weight: 600;
       line-height: 140%; /* 15.4px */

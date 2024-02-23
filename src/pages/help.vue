@@ -72,7 +72,7 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 <style scoped lang="scss">
 .help-recommended {
   &__title {
-    color: var(--White, #FFF);
+    color: #fff;
     font-size: toRem(24);
     font-weight: 800;
     line-height: 132%; /* 31.68px */
@@ -87,10 +87,10 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 
   &__link {
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     min-width: toRem(40);
     padding: toRem(10) toRem(16);
-    color: var(--Neutral-1, #FFF);
+    color: #fff;
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
@@ -106,8 +106,8 @@ main {
 .help-item {
   padding: toRem(20);
   border-radius: toRem(8);
-  background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ main {
 
   &__trigger {
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
   }
 
   &__head {
@@ -125,7 +125,7 @@ main {
   }
 
   &__title {
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(24);
     font-weight: 800;
     line-height: 132%; /* 31.68px */
@@ -135,7 +135,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: toRem(20);
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(16);
     font-weight: 500;
     line-height: 150%; /* 24px */
@@ -165,8 +165,8 @@ main {
 
 .help-nav {
   border-radius: toRem(8);
-  border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
+  border: toRem(1) solid rgba(255, 255, 255, 0.12);
+  background:  rgba(25, 27, 34, 0.32);
   width: toRem(292);
   flex-shrink: 0;
   position: sticky;
@@ -191,8 +191,8 @@ main {
     }
 
     &--current {
-      border-left: toRem(2) solid var(--neutral-left-84, rgba(255, 255, 255, 0.84));
-      color: var(--Neutral-1, #E9EAEC);
+      border-left: toRem(2) solid rgba(255, 255, 255, 0.84);
+      color: #E9EAEC;
     }
   }
 }

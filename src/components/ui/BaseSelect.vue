@@ -58,7 +58,7 @@ onClickOutside(select, () => open.value = false)
 .custom-select {
   user-select: none;
   position: relative;
-  color: var(--Neutral-1, #FFF);
+  color: #fff;
   text-overflow: ellipsis;
   font-size: toRem(13);
   font-weight: 700;
@@ -67,7 +67,7 @@ onClickOutside(select, () => open.value = false)
   &__trigger {
     cursor: pointer;
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     display: flex;
     height: toRem(40);
     padding: toRem(10) toRem(16);
@@ -83,11 +83,11 @@ onClickOutside(select, () => open.value = false)
     top: calc(100% + 4px);
     left: 0;
     border-radius: toRem(8);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     padding: toRem(4);
 
     /* Dropdown */
-    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     overflow: hidden;
   }

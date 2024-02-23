@@ -20,7 +20,7 @@ import IconLock from '@/components/icons/IconLock.vue'
   padding: toRem(16) toRem(24);
   gap: toRem(20);
   border-radius: toRem(8);
-  background: var(--Balance, linear-gradient(89deg, #3F45CE 23.96%, #EF6F38 48.96%, #7841BD 77.6%));
+  background: linear-gradient(89deg, #3F45CE 23.96%, #EF6F38 48.96%, #7841BD 77.6%);
   box-shadow: 0 toRem(4px) toRem(4px) 0 rgba(0, 0, 0, 0.25);
 
   &__icon {
@@ -29,7 +29,7 @@ import IconLock from '@/components/icons/IconLock.vue'
 
   &__text {
     overflow: hidden;
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     text-overflow: ellipsis;
     font-size: toRem(16);
     font-style: normal;

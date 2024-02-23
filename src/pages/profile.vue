@@ -60,7 +60,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
         </div>
         <div class="referral-banner">
           <div class="referral-banner__text">Премиум +3 дня за каждого друга</div>
-          <button class="btn btn--primary referral-banner__btn">Пригласить</button>
+          <button class="btn btn--primary btn--small referral-banner__btn">Пригласить</button>
           <img src="@/assets/img/referral-banner.png" alt="" class="referral-banner__img" loading="lazy" width="212" height="282">
         </div>
       </div>
@@ -77,12 +77,12 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     width: toRem(160);
     padding: toRem(16);
     border-radius: toRem(8);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
 
-    box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
-    color: var(--Dark-Neutral-1, #EEE);
-    font-size: toRem(18);
+    color: #eee;
+    font-size: toRem(16);
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 28.8px */
@@ -114,7 +114,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   }
 
   &__title {
-    color: var(--Dark-Neutral-1, #EEE);
+    color: #eee;
     font-size: toRem(15);
     font-style: normal;
     font-weight: 700;
@@ -129,7 +129,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   }
 
   &__date {
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
@@ -141,8 +141,8 @@ import IconLetter from '@/components/icons/IconLetter.vue'
     min-width: toRem(32);
     padding: toRem(7) toRem(12);
     border-radius: toRem(20);
-    background: var(--green-other-12, rgba(31, 168, 78, 0.16));
-    color: var(--Green-5, #099853);
+    background: rgba(31, 168, 78, 0.16);
+    color: #099853;
     text-align: center;
     font-size: toRem(13);
     font-style: normal;
@@ -151,7 +151,7 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   }
 
   &__pending {
-    color: var(--Yellow-5, var(--Yellow, #E3861A));
+    color:  #E3861A;
     font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
@@ -159,14 +159,14 @@ import IconLetter from '@/components/icons/IconLetter.vue'
   }
 
   &__resending {
-    color: var(--Neutral-1, #FFF);
+    color: #fff;
     text-align: center;
     font-size: toRem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     border-radius: toRem(20);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     height: toRem(32);
     min-width: toRem(32);
     padding: toRem(7) toRem(12);
@@ -186,8 +186,8 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
 .referrals {
   border-radius: toRem(8);
-  border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  background: var(--Neutral-8, #24262D);
+  border: toRem(1) solid rgba(255, 255, 255, 0.12);
+  background: #24262D;
   padding: toRem(24);
   display: flex;
   flex-grow: 1;

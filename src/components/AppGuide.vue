@@ -127,7 +127,7 @@ const toggleStep = step => {
 <style scoped lang="scss">
 .guide-steps {
   border-radius: toRem(8);
-  background: var(--neutral-right-32, rgba(25, 27, 34, 0.32));
+  background:  rgba(25, 27, 34, 0.32);
   padding: toRem(8) 0;
   margin-top: toRem(36);
 
@@ -159,7 +159,7 @@ const toggleStep = step => {
 
   &__title {
     flex-grow: 1;
-    color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+    color: rgba(255, 255, 255, 0.68);
     font-size: toRem(16);
     font-weight: 500;
     line-height: 128%; /* 20.48px */
@@ -179,40 +179,40 @@ const toggleStep = step => {
   }
 
   &__text {
-    color: var(--neutral-left-32, rgba(255, 255, 255, 0.32));
+    color:  rgba(255, 255, 255, 0.32);
     font-size: toRem(12);
     font-weight: 500;
     line-height: 128%; /* 15.36px */
   }
 
   &__btn {
-    color: var(--Yellow-5, var(--Yellow, #E3861A));
+    color:  #E3861A;
     height: toRem(30);
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     border-radius: toRem(20);
-    background: var(--yellow-other-12, rgba(227, 134, 26, 0.12));
+    background: rgba(227, 134, 26, 0.12);
   }
 }
 
 .guide {
   border-radius: toRem(8);
-  background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   padding: toRem(16);
 
   &__progress {
     border-radius: toRem(8);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     height: toRem(12);
     margin-top: toRem(20);
 
     &-value {
       border-radius: toRem(8) 0 0 toRem(8);
-      background: var(--Green-5, #099853);
+      background: #099853;
       height: 100%;
       width: 30%;
     }

@@ -1,6 +1,6 @@
 .header-points {
     border-radius: toRem(24);
-    border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    border: toRem(1) solid rgba(255, 255, 255, 0.12);
     padding: toRem(4);
     height: toRem(40);
     display: flex;
@@ -12,7 +12,7 @@
         height: toRem(32);
         background: #000;
         border-radius: 50%;
-        background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+        background: rgba(31, 168, 78, 0.16);
         display: flex;
         align-items: center;
         justify-content: center;

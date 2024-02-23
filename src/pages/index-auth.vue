@@ -1509,7 +1509,7 @@ import GameCard from '@/components/GameCard.vue'
 }
 
 .section-title {
-  color: var(--Neutral-1, #E9EAEC);
+  color: #E9EAEC;
   font-size: toRem(16);
   font-style: normal;
   font-weight: 800;

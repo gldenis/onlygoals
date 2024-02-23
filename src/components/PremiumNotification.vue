@@ -45,8 +45,8 @@ const showNotification = () => {
   left: 50%;
   transform: translateX(-50%);
   border-radius: toRem(8) toRem(8) 0 0;
-  background: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
-  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   overflow: hidden;
 
@@ -74,7 +74,7 @@ const showNotification = () => {
   }
 
   &__text {
-    color: var(--Neutral-9, #191B22);
+    color: #191B22;
     font-size: toRem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */
@@ -84,8 +84,8 @@ const showNotification = () => {
     padding: toRem(7) toRem(12);
     height: toRem(32);
     border-radius: toRem(24);
-    background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
-    color: var(--neutral-right-68, rgba(25, 27, 34, 0.68));
+    background: rgba(255, 255, 255, 0.84);
+    color: rgba(25, 27, 34, 0.68);
     text-align: center;
     font-size: toRem(13);
     font-weight: 700;
@@ -93,7 +93,7 @@ const showNotification = () => {
   }
 
   &__days {
-    color: var(--Neutral-9, #191B22);
+    color: #191B22;
     font-size: toRem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */

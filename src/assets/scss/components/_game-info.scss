@@ -43,7 +43,7 @@
 
     &__title {
         overflow: hidden;
-        color: var(--neutral-left-68, rgba(255, 255, 255, 0.68));
+        color: rgba(255, 255, 255, 0.68);
         text-overflow: ellipsis;
         font-size: toRem(12);
         font-weight: 500;
@@ -54,7 +54,7 @@
     }
 
     &__add {
-        color: var(--Green-5, #099853);
+        color: #099853;
         text-align: center;
         font-size: toRem(13);
         font-weight: 700;
@@ -65,7 +65,7 @@
         align-items: center;
         justify-content: center;
         border-radius: toRem(2);
-        background: var(--green-other-12, rgba(31, 168, 78, 0.16));
+        background: rgba(31, 168, 78, 0.16);
     }
 }
 

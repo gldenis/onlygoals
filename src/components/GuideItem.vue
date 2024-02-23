@@ -111,7 +111,7 @@ const emit = defineEmits(['close'])
 
   &__separator {
     height: toRem(1);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -144,7 +144,7 @@ const emit = defineEmits(['close'])
   gap: toRem(32);
 
   &__title {
-    color: var(--White, #FFF);
+    color: #fff;
     font-size: toRem(32);
     font-style: normal;
     font-weight: 800;
@@ -155,10 +155,10 @@ const emit = defineEmits(['close'])
   max-width: 800px;
   padding: toRem(32);
   border-radius: toRem(24);
-  background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.12);
 
   /* Dropdown */
-  box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
+  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
 
   &__header {
@@ -175,7 +175,7 @@ const emit = defineEmits(['close'])
     display: flex;
     flex-direction: column;
     gap: toRem(32);
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(18);
     font-style: normal;
     font-weight: 500;
@@ -183,7 +183,7 @@ const emit = defineEmits(['close'])
     margin-top: toRem(52);
 
     h3 {
-      color: var(--Neutral-1, #E9EAEC);
+      color: #E9EAEC;
       font-size: toRem(32);
       font-style: normal;
       font-weight: 800;
@@ -203,7 +203,7 @@ const emit = defineEmits(['close'])
   }
 
   &__title {
-    color: var(--Neutral-1, #E9EAEC);
+    color: #E9EAEC;
     font-size: toRem(44);
     font-style: normal;
     font-weight: 800;

@@ -6,7 +6,7 @@
     &__item {
         height: toRem(4);
         border-radius: toRem(2);
-        background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+        background: rgba(255, 255, 255, 0.12);
         width: calc((100% - 2px) / 2);
         position: relative;
         display: flex;
@@ -19,7 +19,7 @@
 
         &--current {
             opacity: 0.4;
-            background: var(--Neutral-Left-R1, linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%));
+            background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
         }
     }
 
@@ -27,7 +27,7 @@
         position: absolute;
         height: toRem(6);
         width: toRem(2);
-        background: var(--Neutral-1, #E9EAEC);
+        background: #E9EAEC;
         left: 50%;
         top: 50%;
         transform: translateY(-50%);
@@ -40,25 +40,25 @@
         transition: .3s;
 
         &--team-1 {
-            background: var(--2, #49C79A);
+            background: #49C79A;
         }
 
         &--team-2 {
-            background: var(--Secondary-5, #6F63FF);
+            background: #6F63FF;
         }
     }
 
     &:hover {
         .game-timeline__value {
             opacity: 1;
-            background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
+            background: rgba(255, 255, 255, 0.84);
         }
         .game-timeline__goal {
             width: toRem(12);
             height: toRem(12);
             transform: rotate(-135deg);
             border-radius: toRem(2);
-            border: toRem(1) solid var(--Neutral-1, #E9EAEC);
+            border: toRem(1) solid #E9EAEC;
         }
     }
 }

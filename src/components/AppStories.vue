@@ -285,7 +285,7 @@ const share = async () => {
     position: absolute;
     right: 0;
     top: 0;
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     cursor: pointer;
     z-index: 3;
 
@@ -319,7 +319,7 @@ const share = async () => {
     width: toRem(20);
     height: toRem(20);
     border-radius: toRem(24);
-    background: var(--neutral-left-84, rgba(255, 255, 255, 0.84));
+    background: rgba(255, 255, 255, 0.84);
     position: absolute;
     top: toRem(4);
     left: toRem(4);
@@ -384,7 +384,7 @@ const share = async () => {
 
   &__control {
     border-radius: toRem(40);
-    background: var(--dark-neutral-968, rgba(19, 24, 32, 0.68));
+    background: rgba(19, 24, 32, 0.68);
     display: flex;
     width: toRem(80);
     height: toRem(80);
@@ -415,7 +415,7 @@ const share = async () => {
     top: toRem(20);
     left: toRem(20);
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
     color: #FFF;
     text-align: center;
     font-size: toRem(13);
@@ -432,7 +432,7 @@ const share = async () => {
     top: toRem(80);
     left: toRem(20);
     border-radius: toRem(24);
-    background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+    background: rgba(255, 255, 255, 0.12);
   }
 
   img {

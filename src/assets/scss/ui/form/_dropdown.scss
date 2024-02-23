@@ -37,15 +37,27 @@
         position: absolute;
         top: calc(100% + 2px);
         border-radius: toRem(8);
-        border: toRem(1) solid var(--neutral-left-12, rgba(255, 255, 255, 0.12));
-        background: var(--neutral-right-84, rgba(25, 27, 34, 0.84));
+        border: toRem(1) solid rgba(255, 255, 255, 0.12);
+        background:  rgba(25, 27, 34, 0.84);
         width: toRem(220);
         /* Dropdown */
-        box-shadow: - toRem(20) toRem(20) toRem(60) - toRem(16) rgba(24, 24, 41, 0.52);
-        backdrop-filter: blur(20px);
+        box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+
         left: 50%;
         transform: translateX(-50%);
         display: none;
+
+        &:before {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            backdrop-filter: blur(20px);
+        }
+
 
         &--opened {
             display: block;
