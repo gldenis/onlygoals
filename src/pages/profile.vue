@@ -95,6 +95,8 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 
   &__img {
     position: absolute;
+    width: toRem(212);
+    height: auto;
     top: 0;
     left: toRem(108);
   }

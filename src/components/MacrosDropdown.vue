@@ -90,6 +90,18 @@ const macrosStore = useMacrosStore()
       flex-direction: column;
       gap: toRem(8);
     }
+
+    &:before {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      backdrop-filter: blur(20px);
+      z-index: -1;
+    }
   }
 }
 
