@@ -6,6 +6,7 @@ import AppGuide from '@/components/AppGuide.vue'
 import BaseCounter from '@/components/BaseCounter.vue'
 import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
+import ReferralBanner from '@/components/ReferralBanner.vue'
 </script>
 
 <template>
@@ -161,6 +162,7 @@ import IconPlus from '@/components/icons/IconPlus.vue'
         </div>
       </div>
     </div>
+    <ReferralBanner class="page-tariff__referral-banner" />
   </main>
 </template>
 
@@ -392,6 +394,33 @@ main {
       margin-top: toRem(8);
       display: inline-block;
     }
+  }
+}
+
+.page-tariff__referral-banner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: toRem(44);
+    content: '';
+    display: block;
+    width: toRem(520);
+    height: toRem(520);
+    border-radius: 50%;
+    opacity: 0.32;
+    z-index: -1;
+    background: conic-gradient(from 0deg at 50% 50%, #3073FA 0.9259677026420832deg, #EF8641 121.87499642372131deg, #C4648F 232.49999284744263deg, #933CEA 333.9734101295471deg);
+    filter: blur(30px);
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .page-tariff__referral-banner {
+    display: none;
   }
 }
 

@@ -4,6 +4,7 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 import IconLetter from '@/components/icons/IconLetter.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import BannerVerification from '@/components/BannerVerification.vue'
+import ReferralBanner from '@/components/ReferralBanner.vue'
 </script>
 
 <template>
@@ -67,11 +68,7 @@ import BannerVerification from '@/components/BannerVerification.vue'
             </div>
           </div>
         </div>
-        <div class="referral-banner">
-          <div class="referral-banner__text">Премиум +3 дня за каждого друга</div>
-          <button class="btn btn--primary btn--small referral-banner__btn">Пригласить</button>
-          <img src="@/assets/img/referral-banner.png" alt="" class="referral-banner__img" loading="lazy" width="212" height="282">
-        </div>
+        <ReferralBanner />
       </div>
     </div>
     <BannerVerification />
@@ -79,38 +76,7 @@ import BannerVerification from '@/components/BannerVerification.vue'
 </template>
 
 <style scoped lang="scss">
-.referral-banner {
-  position: relative;
-  width: toRem(320);
 
-  &__text {
-    width: toRem(160);
-    padding: toRem(16);
-    border-radius: toRem(8);
-    background: rgba(255, 255, 255, 0.12);
-
-    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
-    backdrop-filter: blur(20px);
-    color: #eee;
-    font-size: toRem(16);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 160%; /* 28.8px */
-  }
-
-  &__btn {
-    width: toRem(160);
-    margin-top: toRem(20);
-  }
-
-  &__img {
-    position: absolute;
-    width: toRem(212);
-    height: auto;
-    top: 0;
-    left: toRem(108);
-  }
-}
 
 .referral {
   &__item {
@@ -274,11 +240,6 @@ main {
       text-align: left;
       align-items: flex-start;
     }
-  }
-
-  .referral-banner {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .page-head {
