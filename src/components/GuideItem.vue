@@ -210,4 +210,12 @@ const emit = defineEmits(['close'])
     line-height: 120%; /* 52.8px */
   }
 }
+
+@media screen and (max-width: $phablet) {
+  .course-includes {
+    &__item {
+      width: 100%;
+    }
+  }
+}
 </style>

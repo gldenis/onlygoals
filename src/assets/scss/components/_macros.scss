@@ -158,12 +158,14 @@
         font-size: toRem(13);
         font-weight: 700;
         line-height: 132%; /* 17.16px */
+        flex-shrink: 0;
     }
 
     &__progress {
         display: flex;
         align-items: center;
         gap: toRem(8);
+        flex-shrink: 0;
     }
 
     &__percent {
@@ -183,6 +185,7 @@
         font-weight: 500;
         line-height: 128%; /* 15.36px */
         width: toRem(55);
+        flex-shrink: 0;
 
         svg {
             margin-bottom: - toRem(3.36);
@@ -287,7 +290,7 @@
 
 @media screen and (max-width: $tablet) {
     .macros {
-        width: calc(100% - 8px);
+        width: calc(100vw - 8px);
     }
 
     .macros-params {
@@ -315,5 +318,32 @@
             width: auto;
             min-width: toRem(266);
         }
+    }
+}
+
+
+@media screen and (max-width: $phablet) {
+    .macros-list {
+        &__condition {
+            display: none;
+        }
+
+        &__percent {
+            overflow: hidden;
+            color: #E9EAEC;
+            text-align: center;
+            text-overflow: ellipsis;
+            font-size: toRem(15);
+            font-weight: 700;
+            line-height: 128%; /* 19.2px */
+        }
+
+        &__cost {
+            display: none;
+        }
+    }
+
+    .macros-create__btn {
+        display: none;
     }
 }

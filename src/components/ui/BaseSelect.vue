@@ -90,6 +90,7 @@ onClickOutside(select, () => open.value = false)
     box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     overflow: hidden;
+    z-index: 1;
   }
 
   &__option {

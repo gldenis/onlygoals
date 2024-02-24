@@ -27,10 +27,10 @@ const macrosStore = useMacrosStore()
     <IconArrowDown class="max-phablet dropdown__trigger-arrow" />
   </div>
   <div class="macros-dropdown__body" :class="{ 'macros-dropdown__body--opened': openedDropdown}">
-    <RouterLink to="/macros" class="btn btn--small btn--gray" @click="openedDropdown = false">
+    <button class="btn btn--small btn--gray" @click="macrosStore.viewModalIsOpened = true">
       <IconAnalytics />
       Аналитика
-    </RouterLink>
+    </button>
     <div class="dropdown-macros__list">
       <div class="dropdown-macros__item">
         Макрос 1
