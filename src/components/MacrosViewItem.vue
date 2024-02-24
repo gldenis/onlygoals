@@ -15,6 +15,10 @@ const editMacros = () => {
   macrosStore.editModalIsOpened = true
   macrosStore.viewItemModalIsOpened = false
 }
+
+import { useWindowSize } from '@vueuse/core'
+
+const { width: viewPortWidth } = useWindowSize()
 </script>
 
 <template>
@@ -29,7 +33,7 @@ const editMacros = () => {
     <div class="macros__head-part">
       <button class="btn btn btn--small btn--outlined-gradient">
         <IconHat width="20" height="20" />
-        Доступен урок (15:43)
+        {{ viewPortWidth > 640 ? 'Доступен урок (15:43)' : 'урок' }}
         <IconPlay width="12" height="12" />
       </button>
     </div>
@@ -62,12 +66,13 @@ const editMacros = () => {
   gap: toRem(10);
 
   &__text {
-    max-width: toRem(55);
+    width: toRem(60);
     color: rgba(255, 255, 255, 0.68);
     font-size: toRem(12);
     font-style: normal;
     font-weight: 500;
     line-height: 128%; /* 15.36px */
+    flex-shrink: 0;
 
     svg {
       margin-bottom: - toRem(3);

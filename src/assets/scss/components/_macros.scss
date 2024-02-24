@@ -63,7 +63,7 @@
         inset: 0;
         border-radius: toRem(8);
         padding: toRem(2);
-        background: linear-gradient(to top, rgba(255,255,255, 0), rgba(255,255,255, .12));
+        background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .12));
         -webkit-mask: linear-gradient(to top, #fff, #fff) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -73,9 +73,9 @@
 
     &__name {
         border-radius: toRem(8);
-        background:  rgba(25, 27, 34, 0.32);
+        background: rgba(25, 27, 34, 0.32);
         height: toRem(40);
-        padding: toRem(10)toRem( 8) toRem(10) toRem(16);
+        padding: toRem(10) toRem(8) toRem(10) toRem(16);
         overflow: hidden;
         color: #E9EAEC;
         font-size: toRem(14);
@@ -98,6 +98,7 @@
         align-items: center;
         gap: toRem(12);
     }
+
     &__task {
         width: toRem(252);
     }
@@ -246,7 +247,7 @@
 
     &__value {
         overflow: hidden;
-        color:  rgba(255, 255, 255, 0.32);
+        color: rgba(255, 255, 255, 0.32);
         text-overflow: ellipsis;
         font-size: toRem(13);
         font-style: normal;
@@ -256,7 +257,7 @@
 
     &__efficiency {
         overflow: hidden;
-        color:  rgba(255, 255, 255, 0.32);
+        color: rgba(255, 255, 255, 0.32);
         text-overflow: ellipsis;
         font-size: toRem(13);
         font-weight: 700;
@@ -265,7 +266,7 @@
 
     &__proportion {
         overflow: hidden;
-        color:  rgba(255, 255, 255, 0.32);
+        color: rgba(255, 255, 255, 0.32);
         text-overflow: ellipsis;
         font-size: toRem(13);
         font-weight: 700;
@@ -355,7 +356,11 @@
 
     .macros__footer {
         .btn {
-        display: flex;
+            display: flex;
+        }
     }
+
+    .macros {
+
     }
 }
