@@ -38,6 +38,14 @@
         font-weight: 700;
         line-height: 132%; /* 31.68px */
     }
+
+    &__footer {
+        margin-top: auto;
+
+        .btn {
+            width: 100%;
+        }
+    }
 }
 
 .macros-data {
@@ -121,11 +129,7 @@
         border-radius: toRem(24);
         background: rgba(31, 168, 78, 0.16);
         color: #099853;
-        text-align: center;
-        font-size: toRem(13);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 132%; /* 17.16px */
+
     }
 }
 
@@ -343,7 +347,15 @@
         }
     }
 
-    .macros-create__btn {
-        display: none;
+    .macros-create {
+        &__btn {
+            display: none;
+        }
+    }
+
+    .macros__footer {
+        .btn {
+        display: flex;
+    }
     }
 }

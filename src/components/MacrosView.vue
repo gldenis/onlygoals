@@ -26,7 +26,7 @@ const viewMacros = () => {
     <div class="macros__head-part">
       <IconMacross width="32" height="32" />
       <div class="macros__title">Макросы</div>
-      <button class="btn btn--small macros-create__btn" @click="createMacros">
+      <button class="btn btn--small macros-create__btn max-phablet" @click="createMacros">
         <IconPlusInCircle />
         Новый макрос
       </button>
@@ -56,6 +56,12 @@ const viewMacros = () => {
         в день <IconBoltFilled width="12" height="12" />
       </div>
     </div>
+  </div>
+  <div class="macros__footer min-phablet">
+    <button class="btn macros-create__btn " @click="createMacros">
+      <IconPlusInCircle />
+      Новый макрос
+    </button>
   </div>
 </div>
 </template>
