@@ -77,6 +77,10 @@ main {
     .page-content {
         padding-top: calc(var(--header-height) + toRem(60));
     }
+
+    html {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: $mobile) {
@@ -94,5 +98,11 @@ main {
 @media screen and (max-width: $mobile-xs) {
     .container {
         padding: 0 toRem(16);
+    }
+}
+
+@media screen and (max-width: $mobile-xs) {
+    html {
+        font-size: 12.8px;
     }
 }
