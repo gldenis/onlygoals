@@ -74,6 +74,7 @@
     .banner {
         &__right {
             justify-content: space-between;
+            flex-direction: column;
         }
     }
 }
