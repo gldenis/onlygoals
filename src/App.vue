@@ -38,7 +38,7 @@ const guideStore = useGuideStore()
   </teleport>
   <teleport to="body">
     <BaseModal class="modal--macros" v-if="macrosStore.editModalIsOpened" @close="macrosStore.editModalIsOpened = false">
-      <MacrosEdit @cancel="macrosStore.editModalIsOpened = false" />
+      <MacrosEdit @cancel="macrosStore.editModalIsOpened = false;macrosStore.viewItemModalIsOpened = true" />
     </BaseModal>
   </teleport>
   <teleport to="body">

@@ -16,6 +16,11 @@ const editMacros = () => {
   macrosStore.viewItemModalIsOpened = false
 }
 
+const goAgain = () => {
+  macrosStore.viewItemModalIsOpened = false
+  macrosStore.viewModalIsOpened = true
+}
+
 import { useWindowSize } from '@vueuse/core'
 
 const { width: viewPortWidth } = useWindowSize()
@@ -25,7 +30,7 @@ const { width: viewPortWidth } = useWindowSize()
 <div class="macros">
   <div class="macros__head">
     <div class="macros__head-part">
-      <button class="btn btn--small btn--icon">
+      <button class="btn btn--small btn--icon" @click="goAgain">
         <IconAgain />
       </button>
       <div class="macros__title">Имя макроса</div>
