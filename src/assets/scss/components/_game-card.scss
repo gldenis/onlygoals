@@ -61,6 +61,7 @@
 
 
 .game-meta {
+    width: 100%;
     border-radius: toRem(2);
     padding: 0 4px;
     height: 38px;
@@ -139,6 +140,7 @@
 .game-chance {
     display: flex;
     gap: toRem(2);
+    width: 100%;
 }
 
 .game-goals {
@@ -182,6 +184,7 @@
 .game-data {
     display: flex;
     gap: toRem(2);
+    width: 100%;
 }
 
 .game-schema {

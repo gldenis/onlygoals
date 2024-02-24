@@ -160,6 +160,8 @@
     .header {
         &__logo {
             margin-left: - toRem(25);
+            width: toRem(65);
+            height: toRem(40);
         }
 
         &__left-wrapper {
