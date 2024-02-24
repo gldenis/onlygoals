@@ -146,12 +146,35 @@
             display: none;
         }
 
-        &__center {
-            display: none;
-        }
-
         &__settings {
             display: flex;
+        }
+    }
+
+    .header-filter {
+        display: none;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: toRem(16) toRem(24);
+        position: fixed;
+        top: toRem(72);
+        width: 100%;
+        left: 0;
+
+        &--opened {
+            display: flex;
+        }
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            backdrop-filter: blur(16px);
+            background: rgba(19, 25, 31, 0.8);
         }
     }
 }

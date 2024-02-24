@@ -13,7 +13,9 @@ import IconSettings from '@/components/icons/IconSettings.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import BaseDropdown from '@/components/ui/BaseDropdown.vue'
 import MacrosDropdown from '@/components/MacrosDropdown.vue'
+import { ref } from 'vue'
 
+const openedFilter = ref(false)
 </script>
 
 <template>
@@ -42,7 +44,7 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
           </div>
         </div>
         <MacrosDropdown />
-        <button class="dropdown__trigger dropdown__trigger--icon header__settings">
+        <button class="dropdown__trigger dropdown__trigger--icon header__settings" @click="openedFilter = !openedFilter">
           <IconSettings />
         </button>
       </div>
@@ -50,7 +52,7 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
 
       <div class="header__separator"></div>
 
-      <div class="header__center">
+      <div class="header__center header-filter" :class="{ 'header-filter--opened': openedFilter }">
         <BaseDropdown>
           <template v-slot:trigger>
             <IconLock class="dropdown__trigger-icon" />
