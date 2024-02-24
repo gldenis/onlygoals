@@ -8,6 +8,10 @@ const props = defineProps({
   locked: {
     type: Boolean,
     default: false
+  },
+  triggerClass: {
+    type: String,
+    default: ''
   }
 })
 const dropdown = ref()
@@ -23,7 +27,7 @@ const toggleDropdown = () => {
 
 <template>
   <div class="dropdown" ref="dropdown">
-    <div class="dropdown__trigger" @click="toggleDropdown">
+    <div class="dropdown__trigger" :class="triggerClass" @click="toggleDropdown">
       <slot name="trigger"></slot>
     </div>
     <div class="dropdown__body"

@@ -215,7 +215,7 @@ import MacrosDropdown from '@/components/MacrosDropdown.vue'
             </div>
           </template>
         </BaseDropdown>
-        <BaseDropdown>
+        <BaseDropdown trigger-class="dropdown__trigger--icon">
           <template v-slot:trigger>
             <IconSort />
           </template>

@@ -25,6 +25,8 @@ import IconLock from '@/components/icons/IconLock.vue'
 
   &__icon {
     flex-shrink: 0;
+    width: toRem(32);
+    height: toRem(32);
   }
 
   &__text {
@@ -40,6 +42,17 @@ import IconLock from '@/components/icons/IconLock.vue'
 
   &__btn {
     flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .banner-premium {
+    flex-wrap: wrap;
+
+    &__text {
+      flex-grow: 1;
+      max-width: calc(100% - toRem(52));
+    }
   }
 }
 </style>

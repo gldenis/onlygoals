@@ -171,4 +171,14 @@ const macrosStore = useMacrosStore()
     line-height: 132%; /* 17.16px */
   }
 }
+
+@media screen and (max-width: $phablet) {
+  .macros-dropdown {
+    &__trigger {
+      padding: 4px;
+      width: toRem(40);
+      height: toRem(40);
+    }
+  }
+}
 </style>

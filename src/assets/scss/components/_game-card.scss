@@ -98,6 +98,7 @@
 
     &__name {
         overflow: hidden;
+        white-space: nowrap;
         color: #E9EAEC;
         text-overflow: ellipsis;
         font-size: toRem(13);

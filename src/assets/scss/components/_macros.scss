@@ -283,3 +283,37 @@
         border: toRem(1) solid rgba(31, 168, 78, 0.32);
     }
 }
+
+
+@media screen and (max-width: $tablet) {
+    .macros {
+        width: calc(100% - 8px);
+    }
+
+    .macros-params {
+        &__item {
+            width: calc((100% - 4px) / 2);
+            padding: toRem(8);
+            gap: toRem(8);
+
+        }
+    }
+
+    .macros-data {
+        flex-wrap: wrap;
+
+        &__separator {
+            display: none;
+        }
+
+        &__params {
+            flex-grow: 1;
+        }
+
+        &__task {
+            flex-grow: 1;
+            width: auto;
+            min-width: toRem(266);
+        }
+    }
+}
