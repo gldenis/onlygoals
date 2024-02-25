@@ -14,8 +14,12 @@ import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import BaseDropdown from '@/components/ui/BaseDropdown.vue'
 import MacrosDropdown from '@/components/MacrosDropdown.vue'
 import { ref } from 'vue'
+import BaseSelect from '@/components/ui/BaseSelect.vue'
+import LangSwitcher from '@/components/LangSwitcher.vue'
 
 const openedFilter = ref(false)
+const sortOption = [{ name: 'По дате', value: 'date' }, { name: 'Другая сортировка', value: 'other' }]
+const selectedSort = ref(sortOption[0])
 </script>
 
 <template>
@@ -31,12 +35,7 @@ const openedFilter = ref(false)
         <div class="header__left-wrapper">
           <div class="logo-text">OnlyGoals</div>
           <div class="header__left-inner">
-            <div class="lang-switcher">
-              <div class="lang-switcher__trigger">
-                Ру
-                <IconArrowDown class="dropdown__trigger-arrow"/>
-              </div>
-            </div>
+            <LangSwitcher />
             <div class="header-games">
               <IconBall />
               375 (21)
@@ -217,7 +216,7 @@ const openedFilter = ref(false)
             </div>
           </template>
         </BaseDropdown>
-        <BaseDropdown trigger-class="dropdown__trigger--icon">
+        <BaseDropdown trigger-class="dropdown__trigger--icon header__sort--desktop">
           <template v-slot:trigger>
             <IconSort />
           </template>
@@ -232,6 +231,14 @@ const openedFilter = ref(false)
             </div>
           </template>
         </BaseDropdown>
+
+        <div class="sort__wrapper max-phablet">
+          <BaseSelect :options="sortOption" v-model="selectedSort">
+            <template #icon>
+              <IconSort />
+            </template>
+          </BaseSelect>
+        </div>
 
       </div>
 

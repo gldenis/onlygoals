@@ -24,8 +24,9 @@ const mappedSelectedOption = computed(() => {
   return (selectedOption.value?.name || selectedOption.value) || props.placeholder
 })
 
-const selectedOption = ref(null)
+const selectedOption = ref(props.modelValue)
 const toggleOptionSelect = option => {
+  console.log(option)
   selectedOption.value = option
   emit('update:modelValue', option)
   open.value = false
@@ -38,8 +39,9 @@ onClickOutside(select, () => open.value = false)
 <template>
   <div class="custom-select" ref="select">
     <div class="custom-select__trigger" @click="open = !open">
+      <slot name="icon"></slot>
       {{ mappedSelectedOption }}
-      <IconArrowDown width="20" height="20" />
+      <IconArrowDown class="custom-select__arrow" width="20" height="20" />
     </div>
     <div v-show="open" class="custom-select__list">
       <div
@@ -71,10 +73,16 @@ onClickOutside(select, () => open.value = false)
     display: flex;
     height: toRem(40);
     padding: toRem(10) toRem(16);
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: toRem(8);
     overflow: hidden;
+  }
+
+  &__arrow {
+    margin-left: auto;
+    width: toRem(20);
+    height: toRem(20);
   }
 
   &__list {

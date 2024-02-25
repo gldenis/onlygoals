@@ -6,9 +6,21 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import { createI18n } from 'vue-i18n'
+
+import ru from "./locales/ru.json"
+import en from "./locales/en.json"
+
+const i18n = createI18n({
+  legacy: false, // you must set `false`, to use Composition API
+  locale: 'ru', // set locale
+  fallbackLocale: 'ru',
+  messages: { ru, en }
+})
 
 const app = createApp(App)
 
+app.use(i18n)
 app.use(createPinia())
 app.use(router)
 

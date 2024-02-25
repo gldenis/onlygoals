@@ -39,12 +39,13 @@
         border-radius: toRem(8);
         border: toRem(1) solid rgba(255, 255, 255, 0.12);
         background:  rgba(25, 27, 34, 0.84);
-        width: toRem(220);
+        max-width: toRem(220);
+        min-width: 100%;
+        width: max-content;
         /* Dropdown */
         box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
 
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
         display: none;
 
         &:before {
