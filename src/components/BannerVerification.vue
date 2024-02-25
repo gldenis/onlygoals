@@ -1,13 +1,24 @@
 <script setup>
 
+import BaseModal from '@/components/BaseModal.vue'
+import { useAuthStore } from '@/stores/auth.js'
+import VerificationForm from '@/components/VerificationForm.vue'
+
+const authStore = useAuthStore()
 </script>
 
 <template>
 <div class="banner-verification">
   <div class="banner-verification__text">Пройдите верификацию для активации функций</div>
-  <button class="btn btn--light btn--small banner-verification__btn">Пройти верификацию</button>
+  <button class="btn btn--light btn--small banner-verification__btn" @click="authStore.verificationFormIsOpened = true">Пройти верификацию</button>
   <img src="@/assets/img/banner-verification.png" alt="" class="banner-verification__img" width="192" height="192" loading="lazy">
 </div>
+
+  <teleport to="body">
+    <BaseModal v-if="authStore.verificationFormIsOpened" @close="authStore.verificationFormIsOpened = false">
+      <VerificationForm />
+    </BaseModal>
+  </teleport>
 </template>
 
 <style scoped lang="scss">

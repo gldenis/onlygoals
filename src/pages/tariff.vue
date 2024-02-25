@@ -397,7 +397,7 @@ main {
   }
 }
 
-.page-tariff__referral-banner {
+:deep(.page-tariff__referral-banner) {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -419,7 +419,7 @@ main {
 }
 
 @media screen and (max-width: $desktop) {
-  .page-tariff__referral-banner {
+  :deep(.page-tariff__referral-banner) {
     display: none;
   }
 }

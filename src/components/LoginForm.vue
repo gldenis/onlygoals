@@ -30,6 +30,11 @@ const toRegistration = () => {
   authStore.loginFormIsOpened = false
   authStore.registrationFormIsOpened = true
 }
+
+const toRestorePassword = () => {
+  authStore.loginFormIsOpened = false
+  authStore.restorePasswordFormIsOpened = true
+}
 </script>
 
 <template>
@@ -49,7 +54,7 @@ const toRegistration = () => {
                  v-bind="passwordAttrs"
                  placeholder="Пароль"
                  :error="errors.password"/>
-      <a href="#" class="form__link">Забыли пароль?</a>
+      <a href="#" class="form__link" @click.prevent="toRestorePassword">Забыли пароль?</a>
     </div>
     <button class="btn btn--primary">Войти</button>
   </form>

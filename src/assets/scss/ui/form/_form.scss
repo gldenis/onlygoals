@@ -31,6 +31,10 @@
         font-style: normal;
         font-weight: 800;
         line-height: 132%; /* 42.24px */
+
+        &--centered {
+            text-align: center;
+        }
     }
 
     &__link {
@@ -39,5 +43,16 @@
         font-size: toRem(14);
         font-weight: 600;
         line-height: toRem(20); /* 142.857% */
+    }
+
+    &__text {
+        color: #E9EAEC;
+        font-size: toRem(14);
+        font-weight: 500;
+        line-height: 140%; /* 19.6px */
+
+        &--centered {
+            text-align: center;
+        }
     }
 }

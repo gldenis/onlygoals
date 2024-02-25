@@ -12,6 +12,7 @@ import MacrosView from '@/components/MacrosView.vue'
 import MacrosViewItem from '@/components/MacrosViewItem.vue'
 import { useGuideStore } from '@/stores/guide.js'
 import GuideItem from '@/components/GuideItem.vue'
+import RestorePasswordForm from '@/components/RestorePasswordForm.vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
@@ -24,6 +25,15 @@ const guideStore = useGuideStore()
   <teleport to="body">
     <BaseModal v-if="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
       <LoginForm />
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal v-if="authStore.restorePasswordFormIsOpened"
+               @close="authStore.restorePasswordFormIsOpened = false"
+               @cancel="authStore.restorePasswordFormIsOpened = false; authStore.loginFormIsOpened = true;"
+               :show-again-btn="true"
+    >
+      <RestorePasswordForm />
     </BaseModal>
   </teleport>
   <teleport to="body">

@@ -5,6 +5,12 @@ import IconLetter from '@/components/icons/IconLetter.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import BannerVerification from '@/components/BannerVerification.vue'
 import ReferralBanner from '@/components/ReferralBanner.vue'
+import BaseModal from '@/components/BaseModal.vue'
+import { useAuthStore } from '@/stores/auth.js'
+import ChangeEmailForm from '@/components/forms/ChangeEmailForm.vue'
+import ChangePasswordForm from '@/components/forms/ChangePasswordForm.vue'
+import LangSwitcher from '@/components/LangSwitcher.vue'
+const authStore = useAuthStore()
 </script>
 
 <template>
@@ -13,14 +19,9 @@ import ReferralBanner from '@/components/ReferralBanner.vue'
       <div class="page-head">
         <h1 class="page-head__title">Okeymaxim@gmail.com</h1>
         <div class="page-head__separator"></div>
-        <div class="lang-switcher">
-          <div class="lang-switcher__trigger">
-            Ру
-            <IconArrowDown />
-          </div>
-        </div>
-        <button class="btn btn--small btn--outlined">Change Email</button>
-        <button class="btn btn--small btn--outlined">Change Password</button>
+        <LangSwitcher />
+        <button class="btn btn--small btn--outlined" @click="authStore.changeEmailFormIsOpened = true">Change Email</button>
+        <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
       </div>
 
       <div class="referral-container">
@@ -72,6 +73,17 @@ import ReferralBanner from '@/components/ReferralBanner.vue'
       </div>
     </div>
     <BannerVerification />
+
+    <teleport to="body">
+      <BaseModal v-if="authStore.changeEmailFormIsOpened" @close="authStore.changeEmailFormIsOpened = false">
+        <ChangeEmailForm />
+      </BaseModal>
+    </teleport>
+    <teleport to="body">
+      <BaseModal v-if="authStore.changePasswordFormIsOpened" @close="authStore.changePasswordFormIsOpened = false">
+        <ChangePasswordForm />
+      </BaseModal>
+    </teleport>
   </main>
 </template>
 
