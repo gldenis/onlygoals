@@ -13,7 +13,7 @@ import ReferralBanner from '@/components/ReferralBanner.vue'
   <main>
     <div class="container">
       <div class="tariff__list">
-        <div class="tariff__item">
+        <div class="tariff__item tariff__item--base">
           <div class="tariff__title">Бесплатный тариф</div>
           <div class="tariff__info">
             <div class="tariff__info-top">
@@ -247,12 +247,14 @@ main {
     justify-content: center;
     align-items: center;
   }
+
   &__coins {
     display: flex;
     flex-direction: column;
     gap: toRem(4);
     margin-left: auto;
   }
+
   &__discount {
     color: #E9EAEC;
     text-align: center;
@@ -269,6 +271,7 @@ main {
     left: 0;
     width: 100%;
   }
+
   &__list {
     display: flex;
     gap: toRem(32);
@@ -286,6 +289,26 @@ main {
     border: toRem(1) solid rgba(31, 168, 78, 0.32);
     background: #24262D;
     position: relative;
+
+    &--base {
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        left: 0;
+        content: '';
+        display: block;
+        aspect-ratio: 1;
+        width: 100%;
+        position: absolute;
+        border-radius: 378px;
+        opacity: 0.24;
+        background: #1FA84E;
+        filter: blur(64px);
+        top: 0;
+        transform: translateY(-50%);
+      }
+    }
 
     &--premium {
       & > * {
