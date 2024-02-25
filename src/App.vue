@@ -13,10 +13,13 @@ import MacrosViewItem from '@/components/MacrosViewItem.vue'
 import { useGuideStore } from '@/stores/guide.js'
 import GuideItem from '@/components/GuideItem.vue'
 import RestorePasswordForm from '@/components/RestorePasswordForm.vue'
+import ModalPayment from '@/components/ModalPayment.vue'
+import { useModalStore } from '@/stores/modal.js'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
 const guideStore = useGuideStore()
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -64,6 +67,11 @@ const guideStore = useGuideStore()
   <teleport to="body">
     <BaseModal class="modal--macros" v-if="guideStore.guideModalIsOpened" @close="guideStore.guideModalIsOpened = false">
       <GuideItem @close="guideStore.guideModalIsOpened = false"/>
+    </BaseModal>
+  </teleport>
+  <teleport to="body">
+    <BaseModal v-if="modalStore.paymentModalIsOpened" @close="modalStore.paymentModalIsOpened = false">
+      <ModalPayment />
     </BaseModal>
   </teleport>
 

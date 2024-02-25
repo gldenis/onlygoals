@@ -9,11 +9,11 @@
 
     &__value {
         box-sizing: border-box;
-        border-radius: 4px 0px 0px 4px;
+        border-radius: toRem(4) 0 0 toRem(4);
         background: linear-gradient(90.00deg, rgba(255, 71, 46, 0.16),rgba(255, 71, 46, 0.32) 100%);
-        padding: 10px 20px;
+        padding: toRem(10) toRem(20);
         color: rgb(255, 255, 255);
-        font-size: 45px;
+        font-size: toRem(45);
         font-weight: 700;
         line-height: toRem(52);
         text-align: center;
@@ -38,14 +38,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-radius: 0px 4px 4px 0px;
+        border-radius: 0 toRem(4) toRem(4) 0;
         background: rgb(255, 71, 46);
         color: rgb(246, 248, 250);
-        font-size: 10px;
+        font-size: toRem(10);
         font-weight: 700;
         line-height: 152%;
         text-transform: uppercase;
-        padding: 10px 20px;
+        padding: toRem(10) toRem(20);
 
         span {
             color: rgba(255, 255, 255, 0.92);
@@ -61,11 +61,11 @@
     gap: toRem(8);
 
     &__item {
-        padding: 10px 20px;
+        padding: toRem(10) toRem(20);
         border-radius: toRem(4);
         background: rgba(255, 255, 255, 0.16);
         color: rgb(246, 248, 250);
-        font-size: 10px;
+        font-size: toRem(10);
         font-weight: 700;
         line-height: 152%;
         text-transform: uppercase;
@@ -90,7 +90,7 @@
 
     &__duration {
         svg {
-            margin-right: 8px;
+            margin-right: toRem(8);
         }
     }
 }

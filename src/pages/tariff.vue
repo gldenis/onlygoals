@@ -7,6 +7,9 @@ import BaseCounter from '@/components/BaseCounter.vue'
 import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import ReferralBanner from '@/components/ReferralBanner.vue'
+import { useModalStore } from '@/stores/modal.js'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -86,7 +89,7 @@ import ReferralBanner from '@/components/ReferralBanner.vue'
                 <img src="@/assets/img/bitcoin.png" alt="" class="tariff__coins-item" loading="lazy" width="16" height="16">
                 <img src="@/assets/img/usdt.png" alt="" class="tariff__coins-item" loading="lazy" width="16" height="16">
               </div>
-              <button class="btn btn--primary btn--small">Купить</button>
+              <button class="btn btn--primary btn--small" @click="modalStore.paymentModalIsOpened = true">Купить</button>
             </div>
             <div class="tariff__info-bottom">
               <div class="tariff__add">

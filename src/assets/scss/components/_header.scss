@@ -167,11 +167,14 @@
 
         &--opened {
             display: flex;
+            border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
         }
     }
 
     .sort__wrapper {
         display: block;
+        padding-top: toRem(16);
+        border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
     }
 
     .header__sort--desktop {
