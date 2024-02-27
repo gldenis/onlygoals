@@ -26,7 +26,7 @@ const recaptchaError = (reason) => {
     <div class="container landing__container">
       <div class="landing__left">
         <RouterLink to="/" class="landing__logo">
-          <img src="@/assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
+          <img src="../assets/img/logo-landing1.png" alt="" loading="lazy" width="199" height="40">
         </RouterLink>
         <div class="hero__text">
           <h1 class="hero__title">Атомы футбола</h1>
@@ -61,7 +61,7 @@ const recaptchaError = (reason) => {
         <form class="landing-form" @submit.prevent>
           <div class="landing-form__top">
             <div class="landing-form__pic">
-              <img src="@/assets/img/landing-form1.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
+              <img src="../assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
             </div>
             <div class="landing-form__content">
               <div class="landing-form__title">Гол в один клик</div>
