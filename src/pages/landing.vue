@@ -56,7 +56,7 @@ const recaptchaError = (reason) => {
         <form class="landing-form" @submit.prevent>
           <div class="landing-form__top">
             <div class="landing-form__pic">
-              <img class="landing-form__img" src="@/assets/img/landing-form.png" alt="" loading="lazy" width="103" height="138">
+              <img src="@/assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
             </div>
             <div class="landing-form__content">
               <div class="landing-form__title">Гол в один клик</div>
