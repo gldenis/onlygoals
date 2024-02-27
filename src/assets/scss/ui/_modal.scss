@@ -9,12 +9,12 @@
     justify-content: center;
     align-items: center;
     max-height: 100vh;
-    padding: toRem(40) 0;
-
+    padding: toRem(80) 0;
+    background: rgba(22, 29, 36, 0.80);
+    backdrop-filter: blur(4px);
+    overflow: auto;
 
     &__overlay {
-        background: rgba(22, 29, 36, 0.80);
-        backdrop-filter: blur(4px);
         position: absolute;
         top: 0;
         right: 0;
@@ -27,6 +27,8 @@
         position: relative;
         max-width: 100%;
         width: auto;
+        margin: auto;
+
     }
 
     &__close {
@@ -60,17 +62,5 @@
 .modal {
     &--macros &__close {
         display: none;
-    }
-
-    &--macros &__content {
-        max-height: 100vh;
-        overflow: auto;
-        scrollbar-width: none;
-        overflow-scrolling: contain;
-        padding: toRem(80) 0;
-
-        &::-webkit-scrollbar {
-            display: none;  /* Safari and Chrome */
-        }
     }
 }

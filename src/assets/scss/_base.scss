@@ -32,6 +32,11 @@ html {
         overflow: hidden;
         scrollbar-gutter: stable;
     }
+
+    &:has(.modal--opened) {
+        overflow-y: hidden;
+        scrollbar-gutter: stable;
+    }
 }
 
 .page {
