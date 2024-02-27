@@ -26,6 +26,7 @@ html {
     font-size: $font-size;
     font-weight: 400;
     color: var(--text-color);
+    scrollbar-gutter: stable;
 
     &--overflow {
         height: 100vh;
@@ -36,6 +37,7 @@ html {
     &:has(.modal--opened) {
         overflow-y: hidden;
         scrollbar-gutter: stable;
+        padding-right: 17px;
     }
 }
 
