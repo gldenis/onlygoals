@@ -25,6 +25,9 @@ const recaptchaError = (reason) => {
   <main>
     <div class="container landing__container">
       <div class="landing__left">
+        <RouterLink to="/" class="landing__logo">
+          <img src="@/assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
+        </RouterLink>
         <div class="hero__text">
           <h1 class="hero__title">Атомы футбола</h1>
           <div class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
@@ -82,7 +85,7 @@ const recaptchaError = (reason) => {
               3 дня премиум <br>
               при регистрации
             </div>
-            <button class="btn btn--primary">
+            <button class="btn btn--primary landing-form__btn">
               Зарегистрироваться
             </button>
           </div>
@@ -110,22 +113,39 @@ const recaptchaError = (reason) => {
 
 <style scoped lang="scss">
 main {
-  padding: toRem(40) 0;
+  padding: 0;
 }
 
 .landing {
   &__container {
-    height: calc(100vh - 155px);
+    padding-top: toRem(40);
+    padding-bottom: toRem(40);
+    min-height: 100vh;
+    gap: toRem(32);
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__left {
-    width: toRem(640);
+    max-width: toRem(640);
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: toRem(65);
+    flex-shrink: 1;
+  }
+
+  &__logo {
+    width: toRem(199);
+    height: toRem(40);
+    margin-left: - toRem(25);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__right {
@@ -137,8 +157,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: toRem(8);
+    flex-shrink: 0;
   }
 }
+
 :deep(.stories .container) {
   padding: 0;
 }
@@ -183,6 +205,49 @@ main {
     display: flex;
     flex-direction: column;
     gap: toRem(20);
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .landing {
+    &__left {
+      max-width: calc(100% - toRem(432));
+    }
+  }
+
+  .landing-form {
+    &__pic {
+      padding-left: 0;
+    }
+
+    &__top,
+    &__bottom {
+      grid-template-columns: toRem(120) 1fr;
+    }
+
+    &__btn {
+      width: max-content;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop-small) {
+  .landing {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      max-width: toRem(420);
+    }
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .landing {
+    &__left {
+      max-width: 100%;
+    }
   }
 }
 </style>
