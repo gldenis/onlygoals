@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 14.4px;
-    //font-size: 16px;
+    //font-size: 14.4px;
+    font-size: 16px;
 }
 
 #app {
@@ -107,6 +107,10 @@ main {
 
     html {
         font-size: 16px;
+    }
+
+    .container {
+        padding: 0 toRem(20);
     }
 }
 

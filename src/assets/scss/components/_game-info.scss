@@ -90,3 +90,27 @@
 //        }
 //    }
 //}
+
+
+@media screen and (max-width: $desktop) and (min-width: $phablet) {
+    .game-timeline {
+        grid-column: 1/2;
+        height: auto;
+    }
+    .game-meta {
+        grid-column: 1/2;
+    }
+    .game-data {
+        grid-column: 1/2;
+    }
+    .game-chance {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        flex-direction: column;
+
+    }
+
+    .game-info--chance {
+        width: 100%;
+    }
+}

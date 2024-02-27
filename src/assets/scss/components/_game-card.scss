@@ -296,14 +296,18 @@
 }
 
 
-@media screen and (max-width: $desktop) {
+@media screen and (max-width: $desktop) and (min-width: $phablet) {
     .game-card__column {
-        order: 3;
-        width: 100%;
+        order: 2;
+        width: 60%;
 
         &--wide {
             order: 1;
-            width: calc((100% - 2px) / 3 * 2);
+            //width: calc((100% - 2px) / 3 * 2);
+            width: 100%;
+            display: grid;
+            grid-template-columns: 60% 39%;
+            grid-template-rows: auto auto auto;
         }
         &--charts {
             order: 2;
@@ -312,7 +316,7 @@
     }
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $phablet) {
     .game-card__column {
         width: 100%;
         order: 2;
@@ -333,50 +337,3 @@
         width: calc((100% - 2px) / 2);
     }
 }
-
-/*@media screen and (max-width: $mobile-xs) {
-    .game-card__column {
-        width: 100%;
-        order: 2;
-
-        &--wide {
-            width: 100%;
-            order: 1;
-        }
-        &--charts {
-            order: 3;
-            width: 100%;
-            flex-direction: column;
-        }
-    }
-
-    .game {
-        &-meta {
-            display: grid;
-            height: auto;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr auto;
-
-            &__current-score {
-                grid-row: span 2;
-            }
-        }
-        &-data {
-            flex-direction: column;
-        }
-
-        &-chance {
-            flex-direction: column;
-        }
-    }
-
-
-
-    .game-meta__part--revert {
-        flex-direction: row;
-        .last-games-status__list {
-            justify-content: flex-start;
-        }
-
-    }
-}*/
