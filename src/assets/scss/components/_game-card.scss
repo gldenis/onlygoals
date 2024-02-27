@@ -404,3 +404,21 @@
         width: calc((100% - 2px) / 2);
     }
 }
+
+
+.game-card {
+    &--small {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "main "
+        "add"
+        "charts"
+    ;
+
+        .game-info--chart {
+            width: calc((100% - toRem(2)) / 2);
+        }
+
+    }
+}

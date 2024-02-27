@@ -5,6 +5,8 @@ import IconCharts from '@/components/icons/hero/IconCharts.vue'
 import IconAcces from '@/components/icons/hero/IconAcces.vue'
 import AppStories from '@/components/AppStories.vue'
 import vueRecaptcha from 'vue3-recaptcha2'
+import GameCardSmall from '@/components/GameCardSmall.vue'
+import GameCardSmallSliced from '@/components/GameCardSmallSliced.vue'
 
 const recaptchaVerified = (response) => {
 }
@@ -87,14 +89,35 @@ const recaptchaError = (reason) => {
         </form>
         <AppStories />
       </div>
+      <div class="landing__right">
+        <GameCardSmall />
+        <GameCardSmallSliced />
+        <GameCardSmallSliced />
+        <GameCardSmallSliced />
+        <GameCardSmallSliced />
+      </div>
     </div>
   </main>
 </template>
 
+<style lang="scss">
+.landing {
+  #app {
+    padding: 0;
+  }
+}
+</style>
+
 <style scoped lang="scss">
+main {
+  padding: toRem(40) 0;
+}
+
 .landing {
   &__container {
     height: calc(100vh - 155px);
+    display: flex;
+    justify-content: space-between;
   }
 
   &__left {
@@ -103,6 +126,17 @@ const recaptchaError = (reason) => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  &__right {
+    width: toRem(400);
+    padding: toRem(8);
+    border-radius: toRem(8) toRem(8) 0 0;
+    background: linear-gradient(180deg, rgba(104, 109, 122, 0.24) 0.01%, rgba(41, 43, 51, 0.60) 100%);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(8);
   }
 }
 :deep(.stories .container) {
