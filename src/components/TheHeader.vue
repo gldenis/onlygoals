@@ -33,7 +33,9 @@ const selectedSort = ref(sortOption[0])
           </picture>
         </RouterLink>
         <div class="header__left-wrapper">
-          <div class="logo-text">OnlyGoals</div>
+          <div class="logo-text">
+            <img src="@/assets/img/only-goals.png" alt="" width="122" height="24">
+          </div>
           <div class="header__left-inner">
             <LangSwitcher />
             <div class="header-games">

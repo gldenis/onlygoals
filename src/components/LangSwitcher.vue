@@ -16,7 +16,7 @@ const selectLang = (lang) => {
 import { useI18n } from 'vue-i18n'
 
 const getFlagByLocales = locale => {
-  return new URL(`../assets/img/flag/${locale}.png`, import.meta.url)
+  return new URL(`../assets/img/flag/${locale}.png`, import.meta.url).href
 }
 
 const { locale: currentLocale } = useI18n()

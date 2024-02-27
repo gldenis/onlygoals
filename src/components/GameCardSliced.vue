@@ -31,6 +31,9 @@ const authStore = useAuthStore()
       </div>
       <div class="game-meta">
         <div class="game-meta__part">
+          <div class="game-meta__logo">
+            <img src="@/assets/img/content/real-madrid.png" alt="">
+          </div>
           <div class="game-meta__inner">
             <div class="game-meta__name">Real Madrid</div>
             <div class="game-meta__last-games-status last-games-status__list">
