@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 import BaseModal from '@/components/BaseModal.vue'
 import LoginForm from '@/components/LoginForm.vue'
@@ -15,16 +15,33 @@ import GuideItem from '@/components/GuideItem.vue'
 import RestorePasswordForm from '@/components/RestorePasswordForm.vue'
 import ModalPayment from '@/components/ModalPayment.vue'
 import { useModalStore } from '@/stores/modal.js'
+import { computed, defineAsyncComponent } from 'vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
 const guideStore = useGuideStore()
 const modalStore = useModalStore()
+
+const defaultLayout = defineAsyncComponent(() =>
+  import('@/layouts/default.vue')
+)
+
+const emptyLayout = defineAsyncComponent(() =>
+  import('@/layouts/empty.vue')
+)
+
+const layouts = {
+  default: defaultLayout,
+  empty: emptyLayout
+}
+
+const route = useRoute()
+const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
 </script>
 
 <template>
-  <TheHeader />
-  <RouterView />
+  <component :is="layout" />
+
   <teleport to="body">
     <BaseModal :opened="authStore.loginFormIsOpened" v-if="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
       <LoginForm />
@@ -74,7 +91,6 @@ const modalStore = useModalStore()
       <ModalPayment />
     </BaseModal>
   </teleport>
-
 </template>
 
 <style scoped lang="scss">

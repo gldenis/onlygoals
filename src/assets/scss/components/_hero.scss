@@ -96,6 +96,10 @@
             text-transform: lowercase;
         }
     }
+
+    &--row {
+        max-width: max-content;
+    }
 }
 
 

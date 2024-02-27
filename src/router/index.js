@@ -7,6 +7,9 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      meta: {
+        bodyClass: 'home'
+      },
       component: HomeView
     },
     {
@@ -17,6 +20,9 @@ const router = createRouter({
     {
       path: '/profile',
       name: 'profile',
+      meta: {
+        bodyClass: 'profile'
+      },
       component: () => import('@/pages/profile.vue')
     },
     {
@@ -33,8 +39,30 @@ const router = createRouter({
       path: '/macros',
       name: 'macros',
       component: () => import('@/pages/macros.vue')
+    },
+    {
+      path: '/landing',
+      name: 'landing',
+      meta: {
+        layout: 'empty',
+        bodyClass: 'landing'
+      },
+      component: () => import('@/pages/landing.vue')
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to?.meta.bodyClass) {
+    document.querySelector('body').classList.add(to?.meta.bodyClass)
+  }
+
+  if (from?.meta.bodyClass) {
+    document.querySelector('body').classList.remove(from?.meta.bodyClass)
+  }
+
+  next()
+})
+
 
 export default router
