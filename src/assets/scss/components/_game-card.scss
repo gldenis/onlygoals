@@ -343,7 +343,7 @@
 @media screen and (max-width: $phablet) {
     .game-card {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fit);
+        grid-template-rows: auto;
         grid-template-areas:
         "main "
         "chance"
@@ -356,6 +356,10 @@
                 height: toRem(67);
             }
         }
+    }
+
+    .game-meta__part {
+        width: (165 / 418 * 100%);
     }
 }
 

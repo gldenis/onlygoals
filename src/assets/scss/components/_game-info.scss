@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     gap: toRem(8);
-    width: calc((100% - 4px) / 3);
+    width: calc((100% - toRem(4)) / 3);
 
     &__content {
         display: flex;
@@ -20,11 +20,12 @@
     }
 
     &--goals {
-        width: calc((100% - 2px) - 37%);
+        width: (236 / 386 * 100%);
+        gap: toRem(4);
     }
 
     &--schema {
-        width: calc((100% - 2px) - 63%);
+        width: (148 / 386 * 100%);
     }
 
     &__chance {
@@ -80,7 +81,11 @@
 @media screen and (max-width: $phablet) {
     .game-info {
         &--chance {
-            width: calc((100% - 2px) / 2);
+            width: calc((100% - toRem(2)) / 2);
+        }
+
+        &--chart {
+            width: calc((100% - toRem(2)) / 2);
         }
     }
 }
