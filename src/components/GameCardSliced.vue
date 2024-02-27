@@ -16,7 +16,7 @@ const authStore = useAuthStore()
 
 <template>
   <div class="game-card game-card--sliced" :class="[unavailable ? 'game-card--unavailable' : '']">
-    <div class="game-card__column game-card__column--wide">
+    <div class="game-card__column game-card__main game-card__column--wide">
       <div class="game-timeline">
         <div class="game-timeline__item">
           <div class="game-timeline__value" style="width: 100%;"></div>
@@ -106,7 +106,7 @@ const authStore = useAuthStore()
         </div>
       </div>
     </div>
-    <div class="game-card__column">
+    <div class="game-card__column game-card__add">
       <div class="game-info">
         <div class="game-info__title">Прессинг</div>
         <div class="info-score">
@@ -157,7 +157,7 @@ const authStore = useAuthStore()
         </div>
       </div>
     </div>
-    <div class="game-card__column game-card__column--charts">
+    <div class="game-card__column game-card__charts game-card__column--charts">
       <div class="game-info game-info--chart">
         <div class="game-info__content">
           <div class="game-info__title">Голосование</div>

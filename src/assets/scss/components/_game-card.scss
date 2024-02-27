@@ -3,25 +3,24 @@
     background:  rgba(25, 27, 34, 0.84);
     backdrop-filter: blur(4px);
     padding: toRem(2);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    display: grid;
     gap: toRem(2);
     position: relative;
+    grid-template-columns: (400 / 1196 * 100%) (596 / 1196 * 100%) (198 / 1196 * 100%);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "main add charts"
+        "chance add charts"
+    ;
 
     &__column {
         display: flex;
         flex-wrap: wrap;
         gap: toRem(2);
-        width: toRem(594);
+        width: 100%;
 
         &--wide {
             flex-direction: column;
-            width: toRem(400);
-        }
-
-        &--charts {
-            width: toRem(166);
         }
     }
 
@@ -56,9 +55,21 @@
             z-index: 2;
         }
     }
+
+
+    &__main {
+        grid-area: main;
+    }
+    &__add {
+        grid-area: add;
+    }
+    &__chance {
+        grid-area: chance;
+    }
+    &__charts {
+        grid-area: charts;
+    }
 }
-
-
 
 .game-meta {
     width: 100%;
@@ -73,7 +84,8 @@
 
     &__part {
         display: flex;
-        width: toRem(157);
+        width: (156 / 400 * 100%);
+        flex-shrink: 0;
         gap: toRem(8);
         align-items: center;
 
@@ -89,11 +101,16 @@
     &__logo {
         max-width: toRem(28);
         max-height: toRem(28);
+        flex-shrink: 0;
 
         img {
             max-width: 100%;
             max-height: 100%;
         }
+    }
+
+    &__inner {
+        max-width: calc(100% - toRem(36));
     }
 
     &__name {
@@ -104,6 +121,7 @@
         font-size: toRem(13);
         font-weight: 700;
         line-height: 132%;
+        max-width: 100%;
     }
 }
 
@@ -138,11 +156,7 @@
     }
 }
 
-.game-chance {
-    display: flex;
-    gap: toRem(2);
-    width: 100%;
-}
+
 
 .game-goals {
     display: flex;
@@ -192,8 +206,6 @@
     border-radius: toRem(2);
     background: linear-gradient(249deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
 }
-
-
 
 .last-games-status {
     &__list {
@@ -295,26 +307,77 @@
     }
 }
 
+@media screen and (max-width: $desktop) {
+    .game-card {
+        grid-template-columns: (463 / 1089 * 100%) (463 / 1089 * 100%) (160 / 1089 * 100%);
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "main add charts"
+            "chance add charts"
+        ;
+    }
+}
 
-@media screen and (max-width: $desktop) and (min-width: $phablet) {
-    .game-card__column {
-        order: 2;
-        width: 60%;
+@media screen and (max-width: $laptop-small) {
+    .game-card {
+        grid-template-columns: 1fr min(toRem(280), (280 / 700 * 100%));
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "main chance"
+            "add charts"
+        ;
 
-        &--wide {
-            order: 1;
-            //width: calc((100% - 2px) / 3 * 2);
-            width: 100%;
-            display: grid;
-            grid-template-columns: 60% 39%;
-            grid-template-rows: auto auto auto;
-        }
-        &--charts {
-            order: 2;
-            width: calc((100% - 2px) / 3);
+        &--sliced {
+            grid-template-areas:
+                "main charts"
+                "add charts"
+            ;
+
+            .game-info--chart {
+                height: auto;
+            }
         }
     }
 }
+
+@media screen and (max-width: $phablet) {
+    .game-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit);
+        grid-template-areas:
+        "main "
+        "chance"
+        "add"
+        "charts"
+    ;
+
+        &--sliced {
+            .game-info--chart {
+                height: toRem(67);
+            }
+        }
+    }
+}
+
+//@media screen and (max-width: $desktop) and (min-width: $phablet) {
+//    .game-card__column {
+//        order: 2;
+//        width: 60%;
+//
+//        &--wide {
+//            order: 1;
+//            //width: calc((100% - 2px) / 3 * 2);
+//            width: 100%;
+//            display: grid;
+//            grid-template-columns: 60% 39%;
+//            grid-template-rows: auto auto auto;
+//        }
+//        &--charts {
+//            order: 2;
+//            width: calc((100% - 2px) / 3);
+//        }
+//    }
+//}
 
 @media screen and (max-width: $phablet) {
     .game-card__column {
