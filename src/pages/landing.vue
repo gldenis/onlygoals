@@ -39,6 +39,10 @@ const recaptchaError = (reason) => {
               анализа</div>
             <div class="hero-tiles__value">100+</div>
           </div>
+          <div class="hero-tiles__item hero-tiles__item--wide">
+            <div class="hero-tiles__title">Обновление данных каждые</div>
+            <div class="hero-tiles__value">10 <span>сек</span></div>
+          </div>
           <div class="hero-tiles__item">
             <IconCharts />
             <div class="hero-tiles__title">Наглядные графики</div>
@@ -90,14 +94,18 @@ const recaptchaError = (reason) => {
             </button>
           </div>
         </form>
-        <AppStories />
+        <AppStories class="stories__left" />
       </div>
       <div class="landing__right">
-        <GameCardSmall />
-        <GameCardSmallSliced />
-        <GameCardSmallSliced />
-        <GameCardSmallSliced />
-        <GameCardSmallSliced />
+        <h2 class="last-games__title">Последние игры</h2>
+        <div class="games-container">
+          <GameCardSmall />
+          <AppStories class="stories__right" />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+        </div>
       </div>
     </div>
   </main>
@@ -105,6 +113,8 @@ const recaptchaError = (reason) => {
 
 <style lang="scss">
 .landing {
+  overflow-x: hidden;
+  width: 100%;
   #app {
     padding: 0;
   }
@@ -115,8 +125,24 @@ const recaptchaError = (reason) => {
 main {
   padding: 0;
 }
+.last-games__title {
+  display: none;
+}
+.stories {
+  &__right {
+    display: none;
+  }
+}
+
+.hero-tiles__item--wide {
+  &:nth-of-type(2) {
+    display: none;
+  }
+}
 
 .landing {
+
+
   &__container {
     padding-top: toRem(40);
     padding-bottom: toRem(40);
@@ -150,15 +176,19 @@ main {
 
   &__right {
     width: toRem(400);
-    padding: toRem(8);
-    border-radius: toRem(8) toRem(8) 0 0;
-    background: linear-gradient(180deg, rgba(104, 109, 122, 0.24) 0.01%, rgba(41, 43, 51, 0.60) 100%);
-    backdrop-filter: blur(8px);
-    display: flex;
-    flex-direction: column;
-    gap: toRem(8);
-    flex-shrink: 0;
+
   }
+}
+
+.games-container {
+  padding: toRem(8);
+  border-radius: toRem(8) toRem(8) 0 0;
+  background: linear-gradient(180deg, rgba(104, 109, 122, 0.24) 0.01%, rgba(41, 43, 51, 0.60) 100%);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(8);
+  flex-shrink: 0;
 }
 
 :deep(.stories .container) {
@@ -248,6 +278,38 @@ main {
     &__left {
       max-width: 100%;
     }
+
+    &__right {
+      width: 100%;
+    }
   }
+
+  .games-container {
+    background: none;
+    padding: 0;
+    gap: toRem(20);
+  }
+  .stories {
+    &__left {
+      display: none;
+    }
+    &__right {
+      display: block;
+    }
+  }
+
+  .hero-tiles {
+    flex-wrap: wrap;
+
+    &__item--wide {
+      display: flex;
+      width: calc((100% - toRem(4) ) / 2);
+
+      &:nth-of-type(2) {
+        display: flex;
+      }
+    }
+  }
+
 }
 </style>
