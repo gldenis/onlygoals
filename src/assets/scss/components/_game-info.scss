@@ -32,6 +32,12 @@
         display: flex;
         flex-direction: column;
         gap: toRem(4);
+        flex-grow: 1;
+        align-items: flex-end;
+
+        .progress {
+            width: 100%;
+        }
     }
 
     &--chart {
@@ -73,7 +79,7 @@
 @media screen and (max-width: $laptop-small) {
     .game-info {
         &--chance {
-            width: max-content;
+            width: 100%;
         }
     }
 }

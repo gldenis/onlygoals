@@ -103,25 +103,46 @@
 }
 
 
-@media screen and (max-width: $laptop) {
+
+@media screen and (max-width: $desktop) {
     .hero {
         &__buttons {
-            flex-direction: column;
-            align-items: flex-start;
+            display: none;
+        }
+
+        &__slogan {
+            display: none;
+        }
+
+        &__container {
+            align-items: center;
+        }
+    }
+
+    .hero-tiles {
+        gap: toRem(4);
+        max-width: toRem(540) ;
+
+        &__item {
+            width: calc((100% - (toRem(12)))/ 4);
+            &--wide {
+                display: none;
+            }
         }
     }
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $phablet) {
     .hero {
         &__container {
             flex-direction: column;
+            align-items: flex-start;
         }
+    }
 
-        &__buttons {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+    .hero-tiles {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -130,6 +151,8 @@
         flex-wrap: nowrap;
         gap: toRem(4);
         min-width: 100%;
+        width: 100%;
+
 
         &__item {
             width: calc((100% - 12px) / 4);
