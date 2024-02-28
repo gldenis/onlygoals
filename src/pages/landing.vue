@@ -274,6 +274,10 @@ main {
     }
   }
 
+  .hero__slogan {
+    display: flex;
+  }
+
   .landing-form {
     &__pic {
       padding-left: 0;
@@ -288,9 +292,24 @@ main {
       width: max-content;
     }
   }
+
+  .hero-tiles {
+    max-width: 100%;
+
+    &__item {
+      width: toRem(100);
+      &--wide {
+        width: toRem(208);
+
+        &:nth-of-type(2) {
+          display: flex;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: $laptop-small) {
+@media screen and (max-width: $laptop) {
   .landing {
     &__container {
       flex-direction: column;
@@ -337,7 +356,7 @@ main {
   }
 }
 
-@media screen and (max-width: $laptop-small) and (min-width: $phablet) {
+@media screen and (max-width: $laptop) and (min-width: $phablet) {
   .hero-tiles__item {
     width: calc((100% - (toRem(16))) / 3);
     &--wide {
