@@ -1,6 +1,7 @@
 <script setup>
 
 import IconStar from '@/components/icons/IconStar.vue'
+import IconBallEvent from '@/components/icons/IconBallEvent.vue'
 </script>
 
 <template>
@@ -9,9 +10,42 @@ import IconStar from '@/components/icons/IconStar.vue'
       <div class="game-timeline">
         <div class="game-timeline__item">
           <div class="game-timeline__value" style="width: 100%;"></div>
-          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 10%;"></div>
-          <div class="game-timeline__goal game-timeline__goal--team-2" style="left: 30%;"></div>
-          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 50%;"></div>
+          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 10%;">
+            <div class="game-timeline-event">
+              <div class="game-timeline-event__icon game-timeline-event__icon--team-1">
+                <IconBallEvent />
+              </div>
+              <div class="game-timeline-event__time">13:26</div>
+              <div class="game-timeline-event__author">
+                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <div class="game-timeline-event__author-name">Jude Bellingham</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-timeline__goal game-timeline__goal--team-2" style="left: 30%;">
+            <div class="game-timeline-event">
+              <div class="game-timeline-event__icon game-timeline-event__icon--team-2">
+                <IconBallEvent />
+              </div>
+              <div class="game-timeline-event__time">13:26</div>
+              <div class="game-timeline-event__author">
+                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <div class="game-timeline-event__author-name">Jude Bellingham</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 50%;">
+            <div class="game-timeline-event">
+              <div class="game-timeline-event__icon game-timeline-event__icon--team-1">
+                <IconBallEvent />
+              </div>
+              <div class="game-timeline-event__time">13:26</div>
+              <div class="game-timeline-event__author">
+                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <div class="game-timeline-event__author-name">Jude Bellingham</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="game-timeline__item">
           <div class="game-timeline__value game-timeline__value--current" style="width: 50%;"></div>
