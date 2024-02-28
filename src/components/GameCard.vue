@@ -67,6 +67,9 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
               <div class="last-games-status__item last-games-status__item--win"></div>
             </div>
           </div>
+          <div class="team-rate team-rate--top">
+            2
+          </div>
         </div>
         <div class="game-meta__current-score info-score info-score--large">
           <div class="info-score__item info-score__item--large">3</div>
@@ -86,6 +89,9 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
               <div class="last-games-status__item last-games-status__item--win"></div>
               <div class="last-games-status__item last-games-status__item--win"></div>
             </div>
+          </div>
+          <div class="team-rate team-rate--middle">
+            4
           </div>
         </div>
       </div>

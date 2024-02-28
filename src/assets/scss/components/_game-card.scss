@@ -72,6 +72,7 @@
 }
 
 .game-meta {
+    position: relative;
     width: 100%;
     border-radius: toRem(2);
     padding: 0 4px;
@@ -94,6 +95,12 @@
 
             .last-games-status__list {
                 justify-content: flex-end;
+            }
+
+            .team-rate {
+                border-radius: toRem(4) 0 0 0;
+                left: auto;
+                right: 0;
             }
         }
     }
@@ -155,8 +162,6 @@
         }
     }
 }
-
-
 
 .game-goals {
     display: flex;
@@ -420,5 +425,32 @@
             width: calc((100% - toRem(2)) / 2);
         }
 
+    }
+}
+
+
+.team-rate {
+    color: #E9EAEC;
+    font-size: toRem(10);
+    font-weight: 800;
+    line-height: 128%; /* 12.8px */
+    height: toRem(13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 toRem(4) 0 0;
+
+    &--top {
+        background: #0085FF;
+    }
+    &--middle {
+        background: #4D5057;
+    }
+    &--low {
+        background: #D84626;
     }
 }
