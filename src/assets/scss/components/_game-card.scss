@@ -218,6 +218,13 @@
         gap: toRem(6);
         height: toRem(15);
         align-items: center;
+        position: relative;
+
+        &:hover {
+            .average-liga {
+                display: flex;
+            }
+        }
     }
 
     &__item {
@@ -452,5 +459,93 @@
     }
     &--low {
         background: #D84626;
+    }
+}
+
+
+.average-liga {
+    border-radius: toRem(8);
+    border: toRem(1) solid rgba(255, 255, 255, 0.32);
+    background: rgba(77, 80, 87, 0.32);
+    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    backdrop-filter: blur(20px);
+    padding: toRem(8);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(4);
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    overflow: hidden;
+    //display: none;
+
+    &__head {
+    }
+
+    &__title {
+        overflow: hidden;
+        color: #E9EAEC;
+        text-overflow: ellipsis;
+        font-size: toRem(13);
+        font-weight: 400;
+        line-height: 14px; /* 107.692% */
+        white-space: nowrap;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: toRem(8);
+    }
+
+    &__value {
+        color: #E9EAEC;
+        text-align: center;
+        font-size: toRem(15);
+        font-weight: 700;
+        line-height: 128%; /* 19.2px */
+        border-radius: toRem(4);
+        background: rgba(255, 255, 255, 0.12);
+        padding: toRem(4) toRem(8);
+    }
+
+    &__chart {
+        margin-right: -toRem(8);
+    }
+
+    &__changes {
+        border-radius: toRem(4);
+        border: toRem(1) solid #099853;
+        background: rgba(31, 168, 78, 0.32);
+        box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+        backdrop-filter: blur(20px);
+        padding: toRem(2);
+        color: #E9EAEC;
+        text-align: center;
+        font-size: toRem(12);
+        font-weight: 800;
+        line-height: 128%; /* 15.36px */
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            width: toRem(60);
+            height: toRem(60);
+            background: #099853;
+            opacity: 0.3;
+            filter: blur(16px);
+            bottom: -toRem(30);
+            right: -toRem(30);
+        }
+
+        &--negative {
+            border: toRem(1) solid #D84626;
+            background: rgba(216, 70, 38, 0.32);
+
+            &:before {
+                background: #D84626;
+            }
+        }
     }
 }
