@@ -25,76 +25,78 @@ const recaptchaError = (reason) => {
   <main>
     <div class="container landing__container">
       <div class="landing__left">
-        <RouterLink to="/" class="landing__logo">
-          <img src="../assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
-        </RouterLink>
-        <div class="hero__text">
-          <h1 class="hero__title">Атомы футбола</h1>
-          <div class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
-            и моментальные обновления всех футбольных матчей</div>
-        </div>
-        <div class="hero-tiles hero-tiles--row">
-          <div class="hero-tiles__item hero-tiles__item--wide">
-            <div class="hero-tiles__title">Параметров
-              анализа</div>
-            <div class="hero-tiles__value">100+</div>
+        <div class="landing__left-wrapper">
+          <RouterLink to="/" class="landing__logo">
+            <img src="../assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
+          </RouterLink>
+          <div class="hero__text">
+            <h1 class="hero__title">Атомы футбола</h1>
+            <div class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
+              и моментальные обновления всех футбольных матчей</div>
           </div>
-          <div class="hero-tiles__item hero-tiles__item--wide">
-            <div class="hero-tiles__title">Обновление данных каждые</div>
-            <div class="hero-tiles__value">10 <span>сек</span></div>
-          </div>
-          <div class="hero-tiles__item">
-            <IconCharts />
-            <div class="hero-tiles__title">Наглядные графики</div>
-          </div>
-          <div class="hero-tiles__item">
-            <IconAcces />
-            <div class="hero-tiles__title">Быстрый
-              доступ</div>
-          </div>
-          <div class="hero-tiles__item">
-            <IconHat />
-            <div class="hero-tiles__title">Обучение по анализу</div>
-          </div>
-          <div class="hero-tiles__item">
-            <IconCharts />
-            <div class="hero-tiles__title">О нас за
-              60 минут</div>
-          </div>
-        </div>
-        <form class="landing-form" @submit.prevent>
-          <div class="landing-form__top">
-            <div class="landing-form__pic">
-              <img src="../assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
+          <div class="hero-tiles hero-tiles--row">
+            <div class="hero-tiles__item hero-tiles__item--wide">
+              <div class="hero-tiles__title">Параметров
+                анализа</div>
+              <div class="hero-tiles__value">100+</div>
             </div>
-            <div class="landing-form__content">
-              <div class="landing-form__title">Гол в один клик</div>
-              <div class="landing-form__recaptcha">
-                <vue-recaptcha v-show="true" sitekey="6Lf6QIIpAAAAAKpMIil4K90wrJE9uxDB1LqKb-cl"
-                               size="normal"
-                               theme="light"
-                               hl="ru"
-                               :loading-timeout="30000 "
-                               @verify="recaptchaVerified"
-                               @expire="recaptchaExpired"
-                               @fail="recaptchaFailed"
-                               @error="recaptchaError"
-                               ref="vueRecaptchaEl">
-                </vue-recaptcha>
+            <div class="hero-tiles__item hero-tiles__item--wide">
+              <div class="hero-tiles__title">Обновление данных каждые</div>
+              <div class="hero-tiles__value">10 <span>сек</span></div>
+            </div>
+            <div class="hero-tiles__item">
+              <IconCharts />
+              <div class="hero-tiles__title">Наглядные графики</div>
+            </div>
+            <div class="hero-tiles__item">
+              <IconAcces />
+              <div class="hero-tiles__title">Быстрый
+                доступ</div>
+            </div>
+            <div class="hero-tiles__item">
+              <IconHat />
+              <div class="hero-tiles__title">Обучение по анализу</div>
+            </div>
+            <div class="hero-tiles__item">
+              <IconCharts />
+              <div class="hero-tiles__title">О нас за
+                60 минут</div>
+            </div>
+          </div>
+          <form class="landing-form" @submit.prevent>
+            <div class="landing-form__top">
+              <div class="landing-form__pic">
+                <img src="../assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
+              </div>
+              <div class="landing-form__content">
+                <div class="landing-form__title">Гол в один клик</div>
+                <div class="landing-form__recaptcha">
+                  <vue-recaptcha v-show="true" sitekey="6Lf6QIIpAAAAAKpMIil4K90wrJE9uxDB1LqKb-cl"
+                                 size="normal"
+                                 theme="light"
+                                 hl="ru"
+                                 :loading-timeout="30000 "
+                                 @verify="recaptchaVerified"
+                                 @expire="recaptchaExpired"
+                                 @fail="recaptchaFailed"
+                                 @error="recaptchaError"
+                                 ref="vueRecaptchaEl">
+                  </vue-recaptcha>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="landing-form__bottom">
-            <div class="landing-form__text">
-              3 дня премиум <br>
-              при регистрации
+            <div class="landing-form__bottom">
+              <div class="landing-form__text">
+                3 дня премиум <br>
+                при регистрации
+              </div>
+              <button class="btn btn--primary landing-form__btn">
+                Зарегистрироваться
+              </button>
             </div>
-            <button class="btn btn--primary landing-form__btn">
-              Зарегистрироваться
-            </button>
-          </div>
-        </form>
-        <AppStories class="stories__left" />
+          </form>
+          <AppStories class="stories__left" />
+        </div>
       </div>
       <div class="landing__right">
         <h2 class="last-games__title">Последние игры</h2>
@@ -154,22 +156,29 @@ main {
 
   &__container {
     padding-top: toRem(40);
-    padding-bottom: toRem(40);
-    min-height: 100vh;
+    height: 100vh;
     gap: toRem(32);
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__left {
     max-width: toRem(640);
-    height: 100%;
+    height: calc(100vh - (toRem(80)));
+
+    flex-shrink: 1;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: toRem(40);
-    flex-shrink: 1;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: toRem(40);
+    }
   }
 
   &__logo {
@@ -198,10 +207,13 @@ main {
   flex-direction: column;
   gap: toRem(8);
   flex-shrink: 0;
-  max-height: calc(100vh - (toRem(80)));
+  height: calc(100vh - (toRem(40)));
   overflow-y: auto;
   scrollbar-width: none;
   overscroll-behavior: none;
+  position: sticky;
+  top: 40px;
+  max-height: toRem(800);
 
   &::-webkit-scrollbar {
     display: none;
@@ -283,12 +295,15 @@ main {
     &__container {
       flex-direction: column;
       gap: toRem(32);
+      height: max-content;
     }
 
 
     &__left {
       max-width: 100%;
       gap: toRem(32);
+      justify-content: flex-start;
+      height: max-content;
     }
     &__right {
       width: 100%;
@@ -318,8 +333,8 @@ main {
 
   .games-container {
     max-height: max-content;
+    height: max-content;
   }
-
 
 }
 
@@ -354,6 +369,7 @@ main {
     padding: 0;
     gap: toRem(20);
   }
+
   .stories {
     &__left {
       display: none;
@@ -365,6 +381,7 @@ main {
 
   .hero-tiles {
     flex-wrap: wrap;
+    gap: toRem(4);
 
     &__item {
       width: calc((100% - toRem(12) ) / 4);

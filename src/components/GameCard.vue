@@ -62,12 +62,8 @@ import IconChartDown from '@/components/icons/IconChartDown.vue'
           <div class="game-meta__inner">
             <div class="game-meta__name">Real Madrid</div>
             <div class="game-meta__last-games-status last-games-status__list">
-              <div class="last-games-status__item last-games-status__item--lose"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="last-games-status__item last-games-status__item--draw"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="average-liga">
+              <div class="last-games-status__item last-games-status__item--lose">
+                   <div class="average-liga">
                 <div class="average-liga__head">
                   <div class="average-liga__title">Средний показатель по лиге</div>
                 </div>
@@ -80,6 +76,68 @@ import IconChartDown from '@/components/icons/IconChartDown.vue'
                   <div class="average-liga__changes">+12%</div>
                 </div>
               </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                   <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartRise class="average-liga__chart" />
+                  <div class="average-liga__changes">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--draw">
+                   <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartRise class="average-liga__chart" />
+                  <div class="average-liga__changes">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                   <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartRise class="average-liga__chart" />
+                  <div class="average-liga__changes">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                   <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartRise class="average-liga__chart" />
+                  <div class="average-liga__changes">+12%</div>
+                </div>
+              </div>
+              </div>
+
             </div>
           </div>
           <div class="team-rate team-rate--top">
@@ -98,12 +156,21 @@ import IconChartDown from '@/components/icons/IconChartDown.vue'
           <div class="game-meta__inner">
             <div class="game-meta__name">Manchester United</div>
             <div class="game-meta__last-games-status last-games-status__list">
-              <div class="last-games-status__item last-games-status__item--lose"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="last-games-status__item last-games-status__item--draw"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="last-games-status__item last-games-status__item--win"></div>
-              <div class="average-liga">
+              <div class="last-games-status__item last-games-status__item--lose">
+                <div class="average-liga">
+                  <div class="average-liga__head">
+                    <div class="average-liga__title">Средний показатель по лиге</div>
+                  </div>
+                  <div class="average-liga__content">
+                    <div class="game-meta__logo">
+                      <img src="@/assets/img/content/real-madrid.png" alt="">
+                    </div>
+                    <div class="average-liga__value">99,9</div>
+                    <IconChartDown class="average-liga__chart" />
+                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
+                  </div>
+                </div>
+                <div class="average-liga">
                 <div class="average-liga__head">
                   <div class="average-liga__title">Средний показатель по лиге</div>
                 </div>
@@ -116,6 +183,68 @@ import IconChartDown from '@/components/icons/IconChartDown.vue'
                   <div class="average-liga__changes average-liga__changes--negative">+12%</div>
                 </div>
               </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartDown class="average-liga__chart" />
+                  <div class="average-liga__changes average-liga__changes--negative">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--draw">
+                <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartDown class="average-liga__chart" />
+                  <div class="average-liga__changes average-liga__changes--negative">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartDown class="average-liga__chart" />
+                  <div class="average-liga__changes average-liga__changes--negative">+12%</div>
+                </div>
+              </div>
+              </div>
+              <div class="last-games-status__item last-games-status__item--win">
+                <div class="average-liga">
+                <div class="average-liga__head">
+                  <div class="average-liga__title">Средний показатель по лиге</div>
+                </div>
+                <div class="average-liga__content">
+                  <div class="game-meta__logo">
+                    <img src="@/assets/img/content/real-madrid.png" alt="">
+                  </div>
+                  <div class="average-liga__value">99,9</div>
+                  <IconChartDown class="average-liga__chart" />
+                  <div class="average-liga__changes average-liga__changes--negative">+12%</div>
+                </div>
+              </div>
+              </div>
+
             </div>
           </div>
           <div class="team-rate team-rate--middle">

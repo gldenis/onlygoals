@@ -220,17 +220,20 @@
         align-items: center;
         position: relative;
 
-        &:hover {
-            .average-liga {
-                display: flex;
-            }
-        }
+
     }
 
     &__item {
         width: toRem(4);
         height: toRem(4);
         border-radius: 50%;
+        position: relative;
+
+        &:hover {
+            .average-liga {
+                display: flex;
+            }
+        }
 
         &--win {
             background: var(--green-5);
@@ -349,6 +352,16 @@
                 height: auto;
             }
         }
+
+        &--small {
+            grid-template-columns: 1fr min(toRem(280), (280 / 700 * 100%));
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "main charts"
+            "add charts"
+        ;
+
+        }
     }
 }
 
@@ -414,24 +427,6 @@
 
     .game-info--chart {
         width: calc((100% - 2px) / 2);
-    }
-}
-
-
-.game-card {
-    &--small {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "main "
-        "add"
-        "charts"
-    ;
-
-        .game-info--chart {
-            width: calc((100% - toRem(2)) / 2);
-        }
-
     }
 }
 

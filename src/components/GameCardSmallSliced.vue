@@ -130,5 +130,72 @@ import IconStar from '@/components/icons/IconStar.vue'
 </template>
 
 <style scoped lang="scss">
+.game-card--small {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+        "main "
+        "add"
+        "charts"
+;
 
+
+
+}
+
+.game-info--chart {
+
+  width: 100%;
+}
+
+@media screen and (max-width: $laptop-small) and (min-width: $phablet) {
+  .game-card--small {
+    grid-template-areas:
+        "main add"
+  ;
+  }
+
+  .game-card__add {
+    flex-direction: column;
+
+    .game-info {
+      width: 100%;
+    }
+
+
+  }
+  .game-meta {
+    height: toRem(67);
+  }
+  .game-data {
+    height: toRem(67);
+
+    .game-info {
+      height: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: $phablet) {
+  .game-card--small {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "main "
+      "chance"
+      "add"
+      "charts";
+  }
+
+  .game-card__charts {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .game-info--chart {
+    width: calc((100% - toRem(2)) / 2);
+    height: toRem(67);
+  }
+}
 </style>
