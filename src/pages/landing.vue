@@ -342,6 +342,9 @@ main {
   .hero-tiles__item {
     width: calc((100% - (toRem(16))) / 3);
     &--wide {
+      &:nth-of-type(1) {
+        display: flex;
+      }
       &:nth-of-type(2) {
         display: flex;
       }
