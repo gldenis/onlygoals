@@ -26,7 +26,7 @@ const recaptchaError = (reason) => {
     <div class="container landing__container">
       <div class="landing__left">
         <RouterLink to="/" class="landing__logo">
-          <img src="../assets/img/logo-landing1.png" alt="" loading="lazy" width="199" height="40">
+          <img src="../assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
         </RouterLink>
         <div class="hero__text">
           <h1 class="hero__title">Атомы футбола</h1>

@@ -17,7 +17,7 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
               </div>
               <div class="game-timeline-event__time">13:26</div>
               <div class="game-timeline-event__author">
-                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <img src="../assets/img/event1.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
                 <div class="game-timeline-event__author-name">Jude Bellingham</div>
               </div>
             </div>
@@ -29,7 +29,7 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
               </div>
               <div class="game-timeline-event__time">13:26</div>
               <div class="game-timeline-event__author">
-                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <img src="../assets/img/event1.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
                 <div class="game-timeline-event__author-name">Jude Bellingham</div>
               </div>
             </div>
@@ -41,7 +41,7 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
               </div>
               <div class="game-timeline-event__time">13:26</div>
               <div class="game-timeline-event__author">
-                <img src="@/assets/img/event.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
+                <img src="../assets/img/event1.png" class="game-timeline-event__author-pic" alt="" loading="lazy" width="16" height="16">
                 <div class="game-timeline-event__author-name">Jude Bellingham</div>
               </div>
             </div>
