@@ -105,6 +105,13 @@ const recaptchaError = (reason) => {
           <GameCardSmallSliced />
           <GameCardSmallSliced />
           <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
+          <GameCardSmallSliced />
         </div>
       </div>
     </div>
@@ -125,9 +132,11 @@ const recaptchaError = (reason) => {
 main {
   padding: 0;
 }
+
 .last-games__title {
   display: none;
 }
+
 .stories {
   &__right {
     display: none;
@@ -150,7 +159,7 @@ main {
     gap: toRem(32);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__left {
@@ -159,7 +168,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: toRem(65);
+    gap: toRem(40);
     flex-shrink: 1;
   }
 
@@ -189,6 +198,14 @@ main {
   flex-direction: column;
   gap: toRem(8);
   flex-shrink: 0;
+  max-height: calc(100vh - (toRem(80)));
+  overflow-y: auto;
+  scrollbar-width: none;
+  overscroll-behavior: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 :deep(.stories .container) {
@@ -265,16 +282,55 @@ main {
   .landing {
     &__container {
       flex-direction: column;
+      gap: toRem(32);
     }
 
+
     &__left {
-      max-width: toRem(420);
+      max-width: 100%;
+      gap: toRem(32);
+    }
+    &__right {
+      width: 100%;
     }
   }
 
   .landing-form__recaptcha {
     transform:scale(0.77);
     transform-origin:0 0;
+  }
+
+  .landing-form {
+    gap: toRem(20);
+
+    &__top {
+
+    }
+
+    &__title {
+      font-size: toRem(24);
+    }
+
+    &__btn {
+      font-size: toRem(15);
+    }
+  }
+
+  .games-container {
+    max-height: max-content;
+  }
+
+
+}
+
+@media screen and (max-width: $laptop-small) and (min-width: $phablet) {
+  .hero-tiles__item {
+    width: calc((100% - (toRem(16))) / 3);
+    &--wide {
+      &:nth-of-type(2) {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -310,14 +366,21 @@ main {
   .hero-tiles {
     flex-wrap: wrap;
 
-    &__item--wide {
-      display: flex;
-      width: calc((100% - toRem(4) ) / 2);
-
-      &:nth-of-type(2) {
+    &__item {
+      width: calc((100% - toRem(12) ) / 4);
+      &--wide {
         display: flex;
+        width: calc((100% - toRem(4) ) / 2);
+
+        &:nth-of-type(2) {
+          display: flex;
+        }
       }
     }
+  }
+
+  .last-games__title {
+
   }
 
 }
