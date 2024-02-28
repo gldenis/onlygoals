@@ -271,6 +271,11 @@ main {
       max-width: toRem(420);
     }
   }
+
+  .landing-form__recaptcha {
+    transform:scale(0.77);
+    transform-origin:0 0;
+  }
 }
 
 @media screen and (max-width: $phablet) {
@@ -282,6 +287,10 @@ main {
     &__right {
       width: 100%;
     }
+  }
+
+  .landing-form__top {
+    overflow-x: hidden;
   }
 
   .games-container {
