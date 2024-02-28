@@ -335,7 +335,6 @@ main {
     max-height: max-content;
     height: max-content;
   }
-
 }
 
 @media screen and (max-width: $laptop-small) and (min-width: $phablet) {
@@ -404,4 +403,6 @@ main {
   }
 
 }
+
+
 </style>

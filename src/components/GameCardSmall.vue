@@ -203,7 +203,11 @@ import IconStar from '@/components/icons/IconStar.vue'
 
 .game-info--chart {
 
-  width: 100%;
+  width: calc((100% - toRem(4)) / 2);
+}
+
+.game-card__charts {
+  flex-direction: row;
 }
 
 @media screen and (max-width: $laptop-small) {
