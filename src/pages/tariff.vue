@@ -474,19 +474,44 @@ main {
     &__item {
       max-width: toRem(378);
       width: 100%;
+    }
+
+    &__course {
+      max-width: toRem(378);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tariff {
+    &__list {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    &__item {
+      max-width: 100%;
+      width: 100%;
 
       &--premium {
         margin-top: toRem(28);
       }
     }
 
+
+
+    &__course {
+      max-width: 100%;
+    }
+
     &__info {
       min-height: 0;
     }
+  }
 
-    &__course {
-      max-width: toRem(378);
-    }
+  .course-banner {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 </style>
