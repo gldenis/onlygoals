@@ -137,6 +137,7 @@
     width: toRem(100);
     display: flex;
     gap: toRem(8);
+    justify-content: flex-end;
 
     &__item {
         max-width: toRem(20);

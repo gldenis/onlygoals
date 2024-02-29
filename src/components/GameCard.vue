@@ -586,8 +586,17 @@ import IconInfo from '@/components/icons/IconInfo.vue'
             <div class="info-score__item">35%</div>
           </div>
         </div>
-        <div class="game-info__chart">
-
+        <div class="game-info__chart-goals chart-goals">
+          <div class="chart-goals__item chart-goals__item--team-1" style="height: 100%"></div>
+          <div class="chart-goals__item chart-goals__item--team-2" style="height: 50%"></div>
+          <div class="chart-goals__item chart-goals__item--team-1" style="height: 25%"></div>
+          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
+          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
+          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
+          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
+          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
+          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
+          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
         </div>
       </div>
     </div>

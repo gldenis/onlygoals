@@ -174,3 +174,24 @@
 //        width: 100%;
 //    }
 //}
+
+
+.chart-goals {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: toRem(1);
+
+    &__item {
+        width: toRem(5);
+        border-radius: toRem(1) toRem(1) 0 0;
+
+        &--team-1 {
+            background: linear-gradient(to top, rgba(101, 76, 200, 0), #654CC8);
+        }
+
+        &--team-2 {
+            background: linear-gradient(to top, rgba(73, 199, 154, 0), #49C79A);
+        }
+    }
+}
