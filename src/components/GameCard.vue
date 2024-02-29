@@ -352,17 +352,11 @@ import IconInfo from '@/components/icons/IconInfo.vue'
         <IconGameInfo class="game-info__icon"/>
         <div class="game-info__title">Прессинг</div>
         <div class="info-score info-score--locked">
-          <div class="average-liga">
-            <div class="average-liga__head">
-              <div class="average-liga__title">Средний показатель по лиге</div>
-            </div>
-            <div class="average-liga__content">
-              <div class="game-meta__logo">
-                <img src="@/assets/img/content/real-madrid.png" alt="">
-              </div>
-              <div class="average-liga__value">99,9</div>
-              <IconChartRise class="average-liga__chart" />
-              <div class="average-liga__changes">+12%</div>
+          <div class="average-liga-lock">
+            <IconLock />
+            <div class="average-liga-lock__content">
+              <div class="average-liga-lock__text">Средний показатель</div>
+              <div class="average-liga-lock__btn">Подробнее</div>
             </div>
           </div>
           <div class="info-score__item">9
