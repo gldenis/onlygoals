@@ -16,7 +16,7 @@
     &__item {
         padding: toRem(4);
         height: toRem(24);
-        color: #E9EAEC;
+
         text-align: center;
         font-size: toRem(13);
         font-weight: 700;
@@ -26,6 +26,7 @@
         align-items: center;
         justify-content: center;
         background: rgba(255, 255, 255, 0.12);
+        position: relative;
 
         &--large {
             border-radius: toRem(4);
@@ -40,5 +41,28 @@
         .average-liga {
             display: flex;
         }
+    }
+
+    &__lock {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: toRem(2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.12);
+
+        svg {
+            width: toRem(16);
+            height: toRem(16);
+        }
+    }
+
+    &--locked .info-score__item {
+        color: transparent;
     }
 }

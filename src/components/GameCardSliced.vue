@@ -10,6 +10,7 @@ defineProps({
 })
 
 import { useAuthStore } from '@/stores/auth.js'
+import IconGameInfo from '@/components/icons/IconGameInfo.vue'
 
 const authStore = useAuthStore()
 </script>
@@ -73,7 +74,8 @@ const authStore = useAuthStore()
           </div>
 
           <div class="game-info__title">Авторы
-            голов:</div>
+            голов:
+          </div>
           <div class="game-goals">
             <div class="game-goals__item">
               <div class="game-goals__team game-goals__team--team-1"></div>
@@ -108,6 +110,7 @@ const authStore = useAuthStore()
     </div>
     <div class="game-card__column game-card__add">
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Прессинг</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -116,6 +119,7 @@ const authStore = useAuthStore()
         </div>
       </div>
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забивных матчей</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -124,6 +128,7 @@ const authStore = useAuthStore()
         </div>
       </div>
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Кол-во матчей в месяц</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -133,6 +138,7 @@ const authStore = useAuthStore()
       </div>
 
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забив после 80/90 мин</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -141,6 +147,7 @@ const authStore = useAuthStore()
         </div>
       </div>
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Шанс контратаки</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -149,6 +156,7 @@ const authStore = useAuthStore()
         </div>
       </div>
       <div class="game-info">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Характер</div>
         <div class="info-score">
           <div class="info-score__item">9</div>
@@ -200,8 +208,11 @@ const authStore = useAuthStore()
       </div>
       <div class="unavailable-card__content">
         <div class="unavailable-card__title">Функции разблокируются
-          после регистрации</div>
-        <button class="btn btn--primary unavailable-card__btn" @click="authStore.registrationFormIsOpened = true">Зарегистрироваться</button>
+          после регистрации
+        </div>
+        <button class="btn btn--primary unavailable-card__btn" @click="authStore.registrationFormIsOpened = true">
+          Зарегистрироваться
+        </button>
       </div>
     </div>
   </div>
