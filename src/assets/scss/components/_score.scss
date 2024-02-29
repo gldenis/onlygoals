@@ -73,7 +73,7 @@
 
 
 @media screen and (max-width: $phablet) {
-    .info-score {
+    .info-score:nth-child(3n) {
         &:hover {
             .average-liga {
                 left: auto;
