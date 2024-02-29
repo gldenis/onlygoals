@@ -297,6 +297,10 @@ main {
       position: relative;
       overflow: hidden;
 
+      & > * {
+        z-index: 1;
+      }
+
       &:before {
         left: 0;
         content: '';
@@ -310,6 +314,7 @@ main {
         filter: blur(64px);
         top: 0;
         transform: translateY(-50%);
+        z-index: 0;
       }
     }
 
