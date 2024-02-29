@@ -10,6 +10,7 @@ import { createI18n } from 'vue-i18n'
 
 import ru from "./locales/ru.json"
 import en from "./locales/en.json"
+import * as ConfirmDialog from 'vuejs-confirm-dialog'
 
 const i18n = createI18n({
   legacy: false, // you must set `false`, to use Composition API
@@ -18,9 +19,11 @@ const i18n = createI18n({
   messages: { ru, en }
 })
 
+
 const app = createApp(App)
 
 app.use(i18n)
+app.use(ConfirmDialog)
 app.use(createPinia())
 app.use(router)
 

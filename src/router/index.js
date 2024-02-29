@@ -48,7 +48,12 @@ const router = createRouter({
         bodyClass: 'landing'
       },
       component: () => import('@/pages/landing.vue')
-    }
+    },
+    {
+      path: '/dev',
+      name: 'dev',
+      component: () => import('@/pages/dev.vue')
+    },
   ]
 })
 
