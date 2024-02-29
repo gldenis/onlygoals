@@ -70,3 +70,20 @@
         color: transparent;
     }
 }
+
+
+@media screen and (max-width: $phablet) {
+    .info-score {
+        &:hover {
+            .average-liga {
+                left: auto;
+                right: 0;
+            }
+
+            .average-liga-lock {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
