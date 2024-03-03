@@ -2,7 +2,7 @@
 
 import BaseModal from '@/components/BaseModal.vue'
 import { useAuthStore } from '@/stores/auth.js'
-import VerificationForm from '@/components/VerificationForm.vue'
+import VerificationForm from '@/components/forms/VerificationForm.vue'
 
 const authStore = useAuthStore()
 </script>
