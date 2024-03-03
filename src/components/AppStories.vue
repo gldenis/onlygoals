@@ -265,19 +265,19 @@ const share = async () => {
 
 <style lang="scss">
 .stories-line {
-  border-radius: toRem(10);
+  border-radius: rem(10);
   background: rgba(19, 25, 31, 0.80);
   backdrop-filter: blur(4px);
-  height: toRem(20);
-  padding: toRem(4) toRem(8);
+  height: rem(20);
+  padding: rem(4) rem(8);
   display: flex;
   align-items: center;
-  gap: toRem(2);
+  gap: rem(2);
   position: relative;
 
   &__trigger {
-    width: toRem(20);
-    height: toRem(20);
+    width: rem(20);
+    height: rem(20);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -295,34 +295,34 @@ const share = async () => {
   }
 
   &__item {
-    height: toRem(3);
-    width: toRem(80);
-    border-radius: toRem(3);
+    height: rem(3);
+    width: rem(80);
+    border-radius: rem(3);
     background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
 
     &--watched {
-      height: toRem(1);
+      height: rem(1);
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
-      background-size: toRem(4) toRem(1);
+      background-size: rem(4) rem(1);
     }
   }
 }
 
 .swiper-slide {
-  width: toRem(100);
-  height: toRem(100);
+  width: rem(100);
+  height: rem(100);
 }
 
 .stories {
 
   &__favorite-btn {
-    width: toRem(20);
-    height: toRem(20);
-    border-radius: toRem(24);
+    width: rem(20);
+    height: rem(20);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.84);
     position: absolute;
-    top: toRem(4);
-    left: toRem(4);
+    top: rem(4);
+    left: rem(4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,10 +330,10 @@ const share = async () => {
 
   &__list {
     position: relative;
-    border-radius: toRem(4);
+    border-radius: rem(4);
     background: rgba(19, 25, 31, 0.80);
     backdrop-filter: blur(4px);
-    padding: toRem(8);
+    padding: rem(8);
     user-select: none;
   }
 
@@ -350,7 +350,7 @@ const share = async () => {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: toRem(4);
+    border-radius: rem(4);
   }
 
   &__btn {
@@ -361,9 +361,9 @@ const share = async () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: toRem(80);
-    height: toRem(116);
-    border-radius: toRem(8);
+    width: rem(80);
+    height: rem(116);
+    border-radius: rem(8);
 
 
     &--next {
@@ -383,12 +383,12 @@ const share = async () => {
   max-width: 100%;
 
   &__control {
-    border-radius: toRem(40);
+    border-radius: rem(40);
     background: rgba(19, 24, 32, 0.68);
     display: flex;
-    width: toRem(80);
-    height: toRem(80);
-    padding: toRem(4);
+    width: rem(80);
+    height: rem(80);
+    padding: rem(4);
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -402,7 +402,7 @@ const share = async () => {
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      padding: toRem(2);
+      padding: rem(2);
       background: linear-gradient(30deg, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
       -webkit-mask: linear-gradient(30deg, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -412,26 +412,26 @@ const share = async () => {
 
   &__favorite {
     position: absolute;
-    top: toRem(20);
-    left: toRem(20);
-    border-radius: toRem(24);
+    top: rem(20);
+    left: rem(20);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.12);
     color: #FFF;
     text-align: center;
-    font-size: toRem(13);
+    font-size: rem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     display: flex;
     align-items: center;
-    padding-right: toRem(16);
-    gap: toRem(8);
+    padding-right: rem(16);
+    gap: rem(8);
   }
 
   &__share {
     position: absolute;
-    top: toRem(80);
-    left: toRem(20);
-    border-radius: toRem(24);
+    top: rem(80);
+    left: rem(20);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.12);
   }
 
@@ -444,8 +444,8 @@ const share = async () => {
 
 @media screen and (max-width: $phablet) {
   .swiper-slide {
-    width: toRem(80);
-    height: toRem(80);
+    width: rem(80);
+    height: rem(80);
   }
 }
 </style>

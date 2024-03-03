@@ -26,36 +26,36 @@ const authStore = useAuthStore()
   position: fixed;
   right: 0;
   bottom: 0;
-  padding-right: toRem(16);
+  padding-right: rem(16);
   display: flex;
   flex-direction: column;
-  gap: toRem(20);
-  padding-bottom: toRem(40);
-  width: toRem(344);
+  gap: rem(20);
+  padding-bottom: rem(40);
+  width: rem(344);
 
   &__text {
     color: #eee;
-    font-size: toRem(16);
+    font-size: rem(16);
     font-weight: 700;
     line-height: 128%; /* 20.48px */
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.32);
-    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+    box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
-    width: toRem(200);
-    padding: toRem(16);
+    width: rem(200);
+    padding: rem(16);
   }
 
   &__btn {
-    width: toRem(200);
+    width: rem(200);
   }
 
   &__img {
-    width: toRem(192);
-    height: toRem(192);
+    width: rem(192);
+    height: rem(192);
     position: absolute;
     bottom: 0;
-    right: toRem(16);
+    right: rem(16);
   }
 }
 

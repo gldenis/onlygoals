@@ -52,17 +52,17 @@ const selectedParams = reactive({
   }
 
   &__box {
-    width: toRem(16);
-    height: toRem(16);
+    width: rem(16);
+    height: rem(16);
     border-radius: 50%;
-    border: toRem(2) solid #C2C2C2;
+    border: rem(2) solid #C2C2C2;
     position: absolute;
-    top: toRem(6);
-    right: toRem(6);
+    top: rem(6);
+    right: rem(6);
   }
 
   &__input:checked + &__box {
-    border: toRem(5) solid #099853;
+    border: rem(5) solid #099853;
     background: #fff;
   }
 }

@@ -57,12 +57,12 @@ const changeFile = (event) => {
 
 <style scoped lang="scss">
 .payment-check {
-  border-radius: toRem(8);
+  border-radius: rem(8);
   background: rgba(31, 168, 78, 0.16);
-  padding: toRem(20);
+  padding: rem(20);
   display: flex;
   flex-direction: column;
-  gap: toRem(20);
+  gap: rem(20);
 
   &__title {
     color: #099853;
@@ -82,14 +82,14 @@ const changeFile = (event) => {
   &__file-name {
     color: #E9EAEC;
     text-align: center;
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 600;
   }
 
   &__text {
     color: #E9EAEC;
     text-align: center;
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 600;
   }
 }
@@ -124,7 +124,7 @@ const changeFile = (event) => {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: toRem(16);
+  gap: rem(16);
 
   &__coin {
     color: #E9EAEC;
@@ -136,17 +136,17 @@ const changeFile = (event) => {
   }
 }
 .payment-method {
-  padding: toRem(16) 0;
-  border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
-  border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
+  padding: rem(16) 0;
+  border-top: rem(1) solid rgba(255, 255, 255, 0.12);
+  border-bottom: rem(1) solid rgba(255, 255, 255, 0.12);
   display: flex;
-  gap: toRem(8);
+  gap: rem(8);
 
   &__item {
-    width: toRem(80);
-    height: toRem(80);
+    width: rem(80);
+    height: rem(80);
     padding: 20px;
-    border-radius: toRem(8);
+    border-radius: rem(8);
     border: 2px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(4px);
 
@@ -163,19 +163,19 @@ const changeFile = (event) => {
 }
 
 .payment {
-  border-radius: toRem(24);
+  border-radius: rem(24);
   background: rgba(255, 255, 255, 0.12);
   box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
-  padding: toRem(52) toRem(32) toRem(32);
-  width: toRem(400);
+  padding: rem(52) rem(32) rem(32);
+  width: rem(400);
   display: flex;
   flex-direction: column;
-  gap: toRem(32);
+  gap: rem(32);
 
   &__title {
     color: #E9EAEC;
-    font-size: toRem(32);
+    font-size: rem(32);
     font-weight: 800;
     line-height: 132%;
     text-align: left;
@@ -183,11 +183,11 @@ const changeFile = (event) => {
 
   &__subtitle {
     color: #E9EAEC;
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 400;
     line-height: 132%;
     display: flex;
-    min-height: toRem(40);
+    min-height: rem(40);
     align-items: center;
   }
 }

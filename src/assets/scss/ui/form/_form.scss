@@ -1,58 +1,58 @@
 .form {
-    border-radius: toRem(24);
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
-    backdrop-filter: blur(20px);
-    width: toRem(400);
-    padding: toRem(52) toRem(32) toRem(32);
+  display: flex;
+  flex-direction: column;
+  border-radius: rem(24);
+  padding: rem(52) rem(32) rem(32);
+  width: rem(400);
+  box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgb(24 24 41 / 52%);
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: rem(20); /* 142.857% */
+  background: rgb(255 255 255 / 12%);
+  backdrop-filter: blur(20px);
+  gap: rem(32);
+
+  &__group {
     display: flex;
     flex-direction: column;
-    gap: toRem(32);
-    font-size: toRem(14);
+    gap: rem(16);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+
+  &__title {
+    font-weight: 800;
+    font-style: normal;
+    font-size: rem(32);
+    line-height: 132%; /* 42.24px */
+    color: #e9eaec;
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &__link {
     font-weight: 600;
-    line-height: toRem(20); /* 142.857% */
+    font-size: rem(14);
+    line-height: rem(20); /* 142.857% */
+    text-align: right;
+    color: #246bfd;
+  }
 
-    &__group {
-        display: flex;
-        flex-direction: column;
-        gap: toRem(16);
+  &__text {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 140%; /* 19.6px */
+    color: #e9eaec;
+
+    &--centered {
+      text-align: center;
     }
-
-    &__head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: toRem(20);
-    }
-
-    &__title {
-        color: #E9EAEC;
-        font-size: toRem(32);
-        font-style: normal;
-        font-weight: 800;
-        line-height: 132%; /* 42.24px */
-
-        &--centered {
-            text-align: center;
-        }
-    }
-
-    &__link {
-        color: #246BFD;
-        text-align: right;
-        font-size: toRem(14);
-        font-weight: 600;
-        line-height: toRem(20); /* 142.857% */
-    }
-
-    &__text {
-        color: #E9EAEC;
-        font-size: toRem(14);
-        font-weight: 500;
-        line-height: 140%; /* 19.6px */
-
-        &--centered {
-            text-align: center;
-        }
-    }
+  }
 }

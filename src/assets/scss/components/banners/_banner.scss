@@ -1,0 +1,81 @@
+.banner-price {
+  text-align: right;
+
+  &__value {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 132%;
+    color: rgb(246 248 250);
+  }
+
+  &__old {
+    font-weight: 300;
+    font-size: rem(20);
+    line-height: 132%;
+    text-decoration-line: line-through;
+    color: rgb(255 71 46);
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  border-radius: rem(8);
+  padding: rem(32);
+  background-image: url("@/assets/img/unlock-top.png"), url("@/assets/img/unlock-bottom.png");
+  background-position: top center, bottom center;
+  background-size: 100% rem(8), 100% rem(8);
+  background-repeat: no-repeat;
+  background-color: rgb(0 0 0 / 60%);
+  backdrop-filter: blur(rem(8));
+  gap: rem(24);
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: 132%;
+    color: rgb(255 255 255 / 92%);
+  }
+
+  &__description {
+    max-width: rem(270);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 146%;
+    color: rgb(157 162 173);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .banner {
+    &__right {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

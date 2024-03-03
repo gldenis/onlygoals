@@ -1,0 +1,38 @@
+.course-banner {
+  position: relative;
+  margin-top: rem(32);
+  border-radius: rem(8);
+  padding: rem(16);
+  width: 100%;
+  height: 120px;
+  background: url("@/assets/img/course-banner.jpg") -60.176px -585.702px / 171.351% 601.44% no-repeat, linear-gradient(106deg, rgb(60 71 169 / 80%) 22.57%, rgb(57 172 165 / 80%) 77.43%);
+  background-blend-mode: overlay, normal;
+
+  &__title {
+    width: rem(160);
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 128%; /* 20.48px */
+    color: #fff;
+  }
+
+  &__btn {
+    position: absolute;
+    right: rem(16);
+    bottom: rem(16);
+    border-radius: rem(24);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%; /* 17.16px */
+    color: rgb(25 27 34 / 68%);
+    background: rgb(255 255 255 / 84%);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .course-banner {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

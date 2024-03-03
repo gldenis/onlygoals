@@ -3,36 +3,50 @@
 @import "fonts";
 @import "base";
 
-
 // UI COMPONENTS
 @import "ui/buttons";
+@import "ui/title";
 @import "ui/modal";
 @import "ui/form/form";
 @import "ui/form/dropdown";
 @import "ui/form/input";
 
-
 // GLOBAL COMPONENTS
 @import "components/header";
 @import "components/page-head";
 @import "components/lang-switcher";
-
-
-@import "components/banner-referral";
-
+@import "components/banners/banner-referral";
+@import "components/banners/banner";
+@import "components/banners/banner-course";
 
 // PAGE HOME
-@import "components/hero";
-@import "components/timeline";
-@import "components/game-card";
-@import "components/game-info";
-@import "components/game-chance";
-@import "components/score";
-
+@import "components/hero/hero";
+@import "components/hero/hero-tiles";
+@import "components/game-card/game-card";
+@import "components/game-card/timeline";
+@import "components/game-card/game-meta";
+@import "components/game-card/game-data";
+@import "components/game-card/game-info";
+@import "components/game-card/game-chance";
+@import "components/game-card/game-chart";
+@import "components/game-card/game-goals";
+@import "components/game-card/game-shema";
+@import "components/game-card/score";
+@import "components/game-card/average-liga";
+@import "components/game-card/average-liga-lock";
+@import "components/game-card/team-rate";
 @import "components/macros";
 @import "components/header-points";
-
-
 @import "components/course";
-@import "components/course-banner";
-@import "components/banner";
+
+// PAGE TARIFF
+@import "components/tariff";
+
+// PAGE PROFILE
+@import "components/referral";
+
+// PAGE HELP
+@import "components/help";
+
+// PAGE LANDING
+@import "components/landing";

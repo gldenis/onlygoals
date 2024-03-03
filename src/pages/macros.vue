@@ -46,19 +46,19 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 
 <style scoped lang="scss">
 .page-head {
-  margin-top: toRem(40);
+  margin-top: rem(40);
 
   &__again {
-    border-radius: toRem(24);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.12);
   }
 
   &__btn {
-    border-radius: toRem(24);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.84);
     color: rgba(25, 27, 34, 0.68);
     text-align: center;
-    font-size: toRem(13);
+    font-size: rem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
@@ -66,37 +66,37 @@ import IconAnalytics from '@/components/icons/IconAnalytics.vue'
 .games {
   display: flex;
   flex-direction: column;
-  gap: toRem(20);
-  margin-top: toRem(40);
+  gap: rem(20);
+  margin-top: rem(40);
 
   &__btn {
     display: block;
-    margin-top: toRem(60);
+    margin-top: rem(60);
     margin-left: auto;
     margin-right: auto;
-    border-radius: toRem(24);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.12);
   }
 
   &__bonus {
     color: rgba(255, 255, 255, 0.68);
-    font-size: toRem(12);
+    font-size: rem(12);
     font-style: normal;
     font-weight: 500;
     line-height: 128%; /* 15.36px */
-    width: toRem(55);
+    width: rem(55);
   }
 }
 
 .page-head {
   &__info {
     display: flex;
-    height: toRem(48);
-    padding: toRem(8) toRem(12);
+    height: rem(48);
+    padding: rem(8) rem(12);
     align-items: center;
-    gap: toRem(4);
-    border-radius: toRem(8);
-    border: toRem(1) solid rgba(255, 255, 255, 0.12);
+    gap: rem(4);
+    border-radius: rem(8);
+    border: rem(1) solid rgba(255, 255, 255, 0.12);
   }
 }
 

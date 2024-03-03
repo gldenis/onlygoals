@@ -1,0 +1,31 @@
+.game-chart {
+  display: flex;
+  justify-content: flex-end;
+  width: rem(100);
+  height: 100%;
+  gap: rem(8);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: rem(20);
+  }
+
+  &__value {
+    margin-top: auto;
+    border-radius: rem(2);
+    width: 100%;
+    opacity: 0.6;
+
+    &--team-1 {
+      height: 20%;
+      background: linear-gradient(180deg, #49c79a 0%, rgb(73 199 154 / 0%) 100%);
+    }
+
+    &--team-2 {
+      height: 80%;
+      background: linear-gradient(180deg, #654cc8 0%, rgb(101 76 200 / 0%) 100%);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.team-rate {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 rem(4) 0 0;
+  padding: 0 2px;
+  height: rem(13);
+  font-weight: 800;
+  font-size: rem(10);
+  line-height: 128%; /* 12.8px */
+  color: #e9eaec;
+
+  &--top {
+    background: #0085ff;
+  }
+
+  &--middle {
+    background: #4d5057;
+  }
+
+  &--low {
+    background: #d84626;
+  }
+}

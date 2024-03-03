@@ -1,0 +1,87 @@
+.info-score {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: 128%;
+  color: rgb(255 255 255 / 68%);
+  gap: rem(2);
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(2);
+    padding: rem(4);
+    height: rem(24);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%;
+    text-align: center;
+    background: rgb(255 255 255 / 12%);
+
+    &--large {
+      border-radius: rem(4);
+      width: rem(25);
+      height: rem(28);
+      font-size: rem(15);
+      line-height: 128%;
+    }
+  }
+
+  &__lock {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(2);
+    background: rgb(255 255 255 / 12%);
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  &:hover {
+    .average-liga {
+      display: flex;
+    }
+
+    .average-liga-lock {
+      display: flex;
+    }
+  }
+
+  &--large {
+    justify-content: center;
+    gap: rem(4);
+  }
+
+  &--locked .info-score__item {
+    color: transparent;
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .game-info:nth-child(3n) .info-score {
+    &:hover {
+      .average-liga {
+        left: auto;
+        right: 0;
+      }
+
+      .average-liga-lock {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.help-recommended {
+  &__title {
+    font-weight: 800;
+    font-size: rem(24);
+    line-height: 132%; /* 31.68px */
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(20);
+    gap: rem(12);
+  }
+
+  &__link {
+    border-radius: rem(24);
+    padding: rem(10) rem(16);
+    min-width: rem(40);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%; /* 17.16px */
+    text-align: center;
+    color: #fff;
+    background: rgb(255 255 255 / 12%);
+  }
+}
+
+.help-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: rem(8);
+  padding: rem(20);
+  box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgb(24 24 41 / 52%);
+  background: rgb(255 255 255 / 12%);
+  backdrop-filter: blur(20px);
+  gap: rem(20);
+
+  &__trigger {
+    border-radius: rem(24);
+    background: rgb(255 255 255 / 12%);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: rem(24);
+    line-height: 132%; /* 31.68px */
+    color: #e9eaec;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 150%; /* 24px */
+    color: #e9eaec;
+    gap: rem(20);
+
+    img {
+      border-radius: rem(8);
+      width: 100%;
+      height: auto;
+      opacity: 0.9;
+    }
+  }
+}
+
+.help-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: rem(8);
+}
+
+.help__wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: rem(40);
+  gap: rem(40);
+}
+
+.help-nav {
+  position: sticky;
+  top: rem(112);
+  flex-shrink: 0;
+  border: rem(1) solid rgb(255 255 255 / 12%);
+  border-radius: rem(8);
+  width: rem(292);
+  background: rgb(25 27 34 / 32%);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: - rem(1);
+    border-bottom: rem(1) solid rgb(255 255 255 / 12%);
+    border-left: rem(2) solid transparent;
+    padding: rem(16);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 128%; /* 20.48px */
+    color: rgb(255 255 255 / 68%);
+    cursor: pointer;
+
+    svg {
+      //fill-opacity: 0.68;
+    }
+
+    &--current {
+      border-left: rem(2) solid rgb(255 255 255 / 84%);
+      color: #e9eaec;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .help-nav {
+    display: none;
+  }
+}

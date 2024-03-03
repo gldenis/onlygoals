@@ -58,12 +58,12 @@ const macrosStore = useMacrosStore()
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: toRem(8);
-    border-radius: toRem(24);
-    padding: toRem(10) toRem(16);
+    gap: rem(8);
+    border-radius: rem(24);
+    padding: rem(10) rem(16);
     background: var(--neutral-left-12);
     font-weight: 700;
-    font-size: toRem(13);
+    font-size: rem(13);
     line-height: 132%;
     cursor: pointer;
     color: var(--neutral-right-68);
@@ -72,23 +72,23 @@ const macrosStore = useMacrosStore()
 
   &__body {
     position: absolute;
-    top: - toRem(8);
-    border-radius: toRem(8);
-    border: toRem(1) solid rgba(255, 255, 255, 0.12);
+    top: - rem(8);
+    border-radius: rem(8);
+    border: rem(1) solid rgba(255, 255, 255, 0.12);
     background:  rgba(25, 27, 34, 0.84);
-    width: toRem(160);
+    width: rem(160);
     /* Dropdown */
-    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+    box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    padding: toRem(8);
+    padding: rem(8);
 
     &--opened {
       display: flex;
       flex-direction: column;
-      gap: toRem(8);
+      gap: rem(8);
     }
 
     &:before {
@@ -112,17 +112,17 @@ const macrosStore = useMacrosStore()
     align-items: center;
     justify-content: space-between;
     color: rgba(255, 255, 255, 0.84);
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 400;
     line-height: 150%; /* 21px */
     cursor: pointer;
-    padding: toRem(8) 0;
-    border-top: toRem(1) solid rgba(255, 255, 255, 0.12);
-    border-bottom: toRem(1) solid transparent;
+    padding: rem(8) 0;
+    border-top: rem(1) solid rgba(255, 255, 255, 0.12);
+    border-bottom: rem(1) solid transparent;
     position: relative;
 
     &:last-child {
-      border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
+      border-bottom: rem(1) solid rgba(255, 255, 255, 0.12);
     }
 
     &:hover:before{
@@ -131,9 +131,9 @@ const macrosStore = useMacrosStore()
       width: calc(100% + 16px);
       left: 0;
       top: 0;
-      margin-left: - toRem(8);
+      margin-left: - rem(8);
       inset: 0;
-      padding: toRem(1);
+      padding: rem(1);
       background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
       -webkit-mask: linear-gradient(to right, #3F45CE, #EF6F38, #7841BD) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -142,7 +142,7 @@ const macrosStore = useMacrosStore()
 
     span {
       color:  rgba(255, 255, 255, 0.32);
-      font-size: toRem(12);
+      font-size: rem(12);
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -156,16 +156,16 @@ const macrosStore = useMacrosStore()
 .macros {
   &__btn {
     display: flex;
-    height: toRem(31);
-    padding: toRem(7) toRem(12);
+    height: rem(31);
+    padding: rem(7) rem(12);
     justify-content: center;
     align-items: center;
-    gap: toRem(8);
-    border-radius: toRem(20);
+    gap: rem(8);
+    border-radius: rem(20);
     background: rgba(31, 168, 78, 0.16);
     color: #099853;
     text-align: center;
-    font-size: toRem(13);
+    font-size: rem(13);
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
@@ -176,8 +176,8 @@ const macrosStore = useMacrosStore()
   .macros-dropdown {
     &__trigger {
       padding: 4px;
-      width: toRem(40);
-      height: toRem(40);
+      width: rem(40);
+      height: rem(40);
     }
   }
 }

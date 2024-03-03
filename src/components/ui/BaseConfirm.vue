@@ -64,13 +64,13 @@ const className = computed(() => `confirm__body--${props.severity}`)
 
   &__body {
     display: flex;
-    max-width: toRem(480);
+    max-width: rem(480);
     width: 100%;
-    padding: toRem(20);
+    padding: rem(20);
     align-items: flex-start;
     justify-content: space-between;
-    gap: toRem(20);
-    border-radius: toRem(8);
+    gap: rem(20);
+    border-radius: rem(8);
     background: #4D5057;
     box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
@@ -93,23 +93,23 @@ const className = computed(() => `confirm__body--${props.severity}`)
 
   &__title {
     color: #E9EAEC;
-    font-size: toRem(16);
+    font-size: rem(16);
     font-weight: 700;
     line-height: 128%; /* 20.48px */
   }
 
   &__description {
     color: #E9EAEC;
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 700;
     line-height: 140%; /* 20.48px */
-    margin-top: toRem(4);
+    margin-top: rem(4);
   }
 
   &__action {
     display: flex;
-    gap: toRem(12);
-    margin-top: toRem(16);
+    gap: rem(12);
+    margin-top: rem(16);
   }
 
   &__close {

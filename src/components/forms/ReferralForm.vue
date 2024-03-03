@@ -56,15 +56,15 @@ const inviteType = ref('email')
 
 <style scoped lang="scss">
 .form-referral__radio {
-  border-radius: toRem(4);
+  border-radius: rem(4);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:  rgba(25, 27, 34, 0.12);
-  padding: toRem(4);
+  padding: rem(4);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: toRem(4);
-  height: toRem(40);
+  gap: rem(4);
+  height: rem(40);
 
   &-input {
     display: none;
@@ -83,7 +83,7 @@ const inviteType = ref('email')
     align-items: center;
     justify-content: center;
     color: #E9EAEC;
-    font-size: toRem(14);
+    font-size: rem(14);
     font-weight: 400;
     line-height: 150%; /* 21px */
   }

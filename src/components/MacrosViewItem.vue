@@ -62,25 +62,25 @@ const { width: viewPortWidth } = useWindowSize()
 
 <style scoped lang="scss">
 .macros-watcher {
-  height: toRem(40);
-  padding: 0 toRem(8);
-  border-radius: toRem(8);
+  height: rem(40);
+  padding: 0 rem(8);
+  border-radius: rem(8);
   background: rgba(31, 168, 78, 0.16);
   display: flex;
   align-items: center;
-  gap: toRem(10);
+  gap: rem(10);
 
   &__text {
-    width: toRem(60);
+    width: rem(60);
     color: rgba(255, 255, 255, 0.68);
-    font-size: toRem(12);
+    font-size: rem(12);
     font-style: normal;
     font-weight: 500;
     line-height: 128%; /* 15.36px */
     flex-shrink: 0;
 
     svg {
-      margin-bottom: - toRem(3);
+      margin-bottom: - rem(3);
     }
   }
 }

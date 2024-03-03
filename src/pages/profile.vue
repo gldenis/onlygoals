@@ -23,8 +23,7 @@ const authStore = useAuthStore()
         <button class="btn btn--small btn--outlined" @click="authStore.changeEmailFormIsOpened = true">Change Email</button>
         <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
       </div>
-
-      <div class="referral-container">
+      <div class="referral__wrapper">
         <div class="referrals">
           <div class="referrals__head">
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
@@ -72,6 +71,7 @@ const authStore = useAuthStore()
         <ReferralBanner />
       </div>
     </div>
+
     <BannerVerification />
 
     <teleport to="body">
@@ -88,176 +88,9 @@ const authStore = useAuthStore()
 </template>
 
 <style scoped lang="scss">
-
-
-.referral {
-  &__item {
-    padding: toRem(16) 0;
-    border-top: toRem(1) solid #131820;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &:last-child {
-      border-bottom: toRem(1) solid #131820;
-    }
-  }
-
-  &__title {
-    color: #eee;
-    font-size: toRem(15);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 128%; /* 19.2px */
-
-    &--head {
-      font-size: toRem(16);
-    }
-  }
-
-  &__info {
-    display: flex;
-    align-items: center;
-    gap: toRem(16);
-    text-align: right;
-  }
-
-  &__date {
-    color: #E9EAEC;
-    font-size: toRem(13);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 132%; /* 17.16px */
-  }
-
-  &__bonus {
-    height: toRem(32);
-    min-width: toRem(180);
-    padding: toRem(7) toRem(12);
-    border-radius: toRem(20);
-    background: rgba(31, 168, 78, 0.16);
-    color: #099853;
-    text-align: center;
-    font-size: toRem(13);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 132%; /* 17.16px */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  &__pending {
-    color:  #E3861A;
-    font-size: toRem(13);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 132%; /* 17.16px */
-  }
-
-  &__resending {
-    color: #fff;
-    text-align: center;
-    font-size: toRem(13);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 132%; /* 17.16px */
-    border-radius: toRem(20);
-    background: rgba(255, 255, 255, 0.12);
-    height: toRem(32);
-    min-width: toRem(180);
-    padding: toRem(7) toRem(12);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: toRem(8);
-    flex-shrink: 0;
-  }
-
-  &__limit {
-    color: rgba(255, 255, 255, 0.32);
-    font-size: toRem(13);
-    font-weight: 700;
-    line-height: 132%; /* 17.16px */
-
-    span {
-      color: #eee;
-    }
-  }
-}
-
-.referral-container {
-  display: flex;
-  gap: toRem(32);
-  margin-top: toRem(40);
-}
-
-.referrals {
-  border-radius: toRem(8);
-  border: toRem(1) solid rgba(255, 255, 255, 0.12);
-  background: #24262D;
-  padding: toRem(24);
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  gap: toRem(24);
-
-  &__head {
-    height: toRem(40);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-
-
 main {
-  padding-top: toRem(40);
+  padding-top: rem(40);
 }
 
 
-
-@media screen and (max-width: $laptop) {
-  .referral-container {
-    flex-direction: column;
-  }
-
-  .page-head {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    .title {
-      width: 100%;
-    }
-
-    &__separator {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: $phablet) {
-  .referral {
-    &__item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: toRem(16);
-    }
-
-    &__info {
-      flex-direction: column;
-      text-align: left;
-      align-items: flex-start;
-    }
-  }
-
-  .page-head {
-    .title {
-      word-break: break-word;
-    }
-  }
-}
 </style>

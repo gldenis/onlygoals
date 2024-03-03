@@ -1,139 +1,139 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html {
-    font-size: 14.4px;
-    //font-size: 16px;
+  font-size: 14.4px;
+
+  //font-size: 16px;
 }
 
 #app {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: toRem(72);
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(72);
+  width: 100%;
 }
 
 .page__body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: url("@/assets/img/main-bg.png") top center / cover no-repeat, #191B22;
-    background-attachment: fixed;
-    display: flex;
-    height: max-content;
-    scrollbar-gutter: stable;
-    font-family: var(--font-family);
-    font-size: $font-size;
-    font-weight: 400;
-    color: var(--text-color);
-    scrollbar-gutter: stable;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: max-content;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: $font-size;
+  color: var(--text-color);
+  background: url("@/assets/img/main-bg.png") top center / cover no-repeat, #191b22;
+  background-attachment: fixed;
+  scrollbar-gutter: stable;
 
-    &--overflow {
-        height: 100vh;
-        overflow: hidden;
-        scrollbar-gutter: stable;
-    }
+  &:has(.modal--opened) {
+    overflow-y: hidden;
+    padding-right: 17px;
+    scrollbar-gutter: stable;
+  }
 
-    &:has(.modal--opened) {
-        overflow-y: hidden;
-        scrollbar-gutter: stable;
-        padding-right: 17px;
-    }
+  &--overflow {
+    overflow: hidden;
+    height: 100vh;
+    scrollbar-gutter: stable;
+  }
 }
 
 .landing {
-    background: #24262D;
+  background: #24262d;
 }
 
 .page {
-    background: #232326;
+  background: #232326;
 }
 
 .container {
-    max-width: toRem(1264);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 toRem(32);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 rem(32);
+  max-width: rem(1264);
 
-    &--centered-x {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  &--centered-x {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .page-content {
-    flex-grow: 1;
-    padding-top: toRem(60);
-    padding-bottom: toRem(60);
-    max-width: 100%;
+  flex-grow: 1;
+  padding-top: rem(60);
+  padding-bottom: rem(60);
+  max-width: 100%;
 }
 
 main {
-    padding-bottom: toRem(100);
+  padding-bottom: rem(100);
 }
 
 .max-phablet {
-    @media screen and (max-width: $phablet) {
-        display: none;
-    }
+  @media screen and (max-width: $phablet) {
+    display: none;
+  }
 }
 
 .min-phablet {
-    @media screen and (min-width: $phablet) {
-        display: none;
-    }
+  @media screen and (min-width: $phablet) {
+    display: none;
+  }
 }
 
 .max-desktop {
-    @media screen and (max-width: $desktop) {
-        display: none;
-    }
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }
 
 .min-desktop {
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
-
 @media screen and (min-width: 1800px) {
-    html {
-        font-size: 16px;
-    }
+  html {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: $desktop) {
-    .page-content {
-        padding-top: calc(var(--header-height) + toRem(60));
-    }
+  .page-content {
+    padding-top: calc(var(--header-height) + rem(60));
+  }
 
-    .container {
-        padding: 0 toRem(20);
-    }
+  .container {
+    padding: 0 rem(20);
+  }
 }
 
 @media screen and (max-width: $mobile) {
-    .page-content {
-        padding-top: calc(var(--header-height) + toRem(32));
-    }
+  .page-content {
+    padding-top: calc(var(--header-height) + rem(32));
+  }
 }
 
 @media screen and (max-width: $mobile) {
-    .container {
-        padding: 0 toRem(20);
-    }
+  .container {
+    padding: 0 rem(20);
+  }
 }
 
 @media screen and (max-width: $mobile-xs) {
-    .container {
-        padding: 0 toRem(16);
-    }
+  .container {
+    padding: 0 rem(16);
+  }
 }
 
 @media screen and (max-width: $mobile-xs) {
-    html {
-        font-size: 12.8px;
-    }
+  html {
+    font-size: 12.8px;
+  }
 }

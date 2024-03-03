@@ -120,16 +120,6 @@ const recaptchaError = (reason) => {
   </main>
 </template>
 
-<style lang="scss">
-.landing {
-  overflow-x: hidden;
-  width: 100%;
-  #app {
-    padding: 0;
-  }
-}
-</style>
-
 <style scoped lang="scss">
 main {
   padding: 0;
@@ -155,17 +145,17 @@ main {
 
 
   &__container {
-    padding-top: toRem(40);
+    padding-top: rem(40);
     height: 100vh;
-    gap: toRem(32);
+    gap: rem(32);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__left {
-    max-width: toRem(640);
-    height: calc(100vh - (toRem(80)));
+    max-width: rem(640);
+    height: calc(100vh - (rem(80)));
 
     flex-shrink: 1;
     overflow-y: auto;
@@ -177,14 +167,14 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: toRem(40);
+      gap: rem(40);
     }
   }
 
   &__logo {
-    width: toRem(199);
-    height: toRem(40);
-    margin-left: - toRem(25);
+    width: rem(199);
+    height: rem(40);
+    margin-left: - rem(25);
 
     img {
       width: 100%;
@@ -193,27 +183,27 @@ main {
   }
 
   &__right {
-    width: toRem(400);
+    width: rem(400);
 
   }
 }
 
 .games-container {
-  padding: toRem(8);
-  border-radius: toRem(8) toRem(8) 0 0;
+  padding: rem(8);
+  border-radius: rem(8) rem(8) 0 0;
   background: linear-gradient(180deg, rgba(104, 109, 122, 0.24) 0.01%, rgba(41, 43, 51, 0.60) 100%);
   backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
-  gap: toRem(8);
+  gap: rem(8);
   flex-shrink: 0;
-  height: calc(100vh - (toRem(40)));
+  height: calc(100vh - (rem(40)));
   overflow-y: auto;
   scrollbar-width: none;
   overscroll-behavior: none;
   position: sticky;
   top: 40px;
-  max-height: toRem(800);
+  max-height: rem(800);
 
   &::-webkit-scrollbar {
     display: none;
@@ -227,33 +217,33 @@ main {
 .landing-form {
   display: flex;
   flex-direction: column;
-  gap: toRem(32);
+  gap: rem(32);
 
   &__title {
     color: #EBEBEB;
-    font-size: toRem(32);
+    font-size: rem(32);
     font-weight: 800;
     line-height: 132%; /* 42.24px */
   }
 
   &__pic {
-    padding-left: toRem(28);
+    padding-left: rem(28);
   }
 
   &__img {
-    width: toRem(103);
-    height: toRem(138);
+    width: rem(103);
+    height: rem(138);
   }
 
   &__top, &__bottom {
     display: grid;
-    grid-template-columns: toRem(208) 1fr;
+    grid-template-columns: rem(208) 1fr;
     gap: 20px;
   }
 
   &__text {
     color: #57C57C;
-    font-size: toRem(13);
+    font-size: rem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
     width: max-content;
@@ -263,14 +253,14 @@ main {
   &__content {
     display: flex;
     flex-direction: column;
-    gap: toRem(20);
+    gap: rem(20);
   }
 }
 
 @media screen and (max-width: $desktop) {
   .landing {
     &__left {
-      max-width: calc(100% - toRem(432));
+      max-width: calc(100% - rem(432));
     }
   }
 
@@ -285,7 +275,7 @@ main {
 
     &__top,
     &__bottom {
-      grid-template-columns: toRem(120) 1fr;
+      grid-template-columns: rem(120) 1fr;
     }
 
     &__btn {
@@ -297,9 +287,9 @@ main {
     max-width: 100%;
 
     &__item {
-      width: toRem(100);
+      width: rem(100);
       &--wide {
-        width: toRem(208);
+        width: rem(208);
 
         &:nth-of-type(2) {
           display: flex;
@@ -313,14 +303,14 @@ main {
   .landing {
     &__container {
       flex-direction: column;
-      gap: toRem(32);
+      gap: rem(32);
       height: max-content;
     }
 
 
     &__left {
       max-width: 100%;
-      gap: toRem(32);
+      gap: rem(32);
       justify-content: flex-start;
       height: max-content;
     }
@@ -335,18 +325,18 @@ main {
   }
 
   .landing-form {
-    gap: toRem(20);
+    gap: rem(20);
 
     &__top {
 
     }
 
     &__title {
-      font-size: toRem(24);
+      font-size: rem(24);
     }
 
     &__btn {
-      font-size: toRem(15);
+      font-size: rem(15);
     }
   }
 
@@ -358,7 +348,7 @@ main {
 
 @media screen and (max-width: $laptop) and (min-width: $phablet) {
   .hero-tiles__item {
-    width: calc((100% - (toRem(16))) / 3);
+    width: calc((100% - (rem(16))) / 3);
     &--wide {
       &:nth-of-type(1) {
         display: flex;
@@ -388,7 +378,7 @@ main {
   .games-container {
     background: none;
     padding: 0;
-    gap: toRem(20);
+    gap: rem(20);
   }
 
   .stories {
@@ -402,13 +392,13 @@ main {
 
   .hero-tiles {
     flex-wrap: wrap;
-    gap: toRem(4);
+    gap: rem(4);
 
     &__item {
-      width: calc((100% - toRem(12) ) / 4);
+      width: calc((100% - rem(12) ) / 4);
       &--wide {
         display: flex;
-        width: calc((100% - toRem(4) ) / 2);
+        width: calc((100% - rem(4) ) / 2);
 
         &:nth-of-type(2) {
           display: flex;
@@ -422,6 +412,4 @@ main {
   }
 
 }
-
-
 </style>

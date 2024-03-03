@@ -37,16 +37,16 @@ const showNotification = () => {
 <style scoped lang="scss">
 .premium-notification {
   display: flex;
-  gap: toRem(8);
+  gap: rem(8);
   align-items: center;
   padding: 8px 12px;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: toRem(8) toRem(8) 0 0;
+  border-radius: rem(8) rem(8) 0 0;
   background: rgba(255, 255, 255, 0.68);
-  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+  box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   overflow: hidden;
 
@@ -60,41 +60,41 @@ const showNotification = () => {
     left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: toRem(100);
-    height: toRem(100);
+    width: rem(100);
+    height: rem(100);
     z-index: -1;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: toRem(4);
+    gap: rem(4);
     align-items: center;
     color: #191B22;
   }
 
   &__text {
     color: #191B22;
-    font-size: toRem(11);
+    font-size: rem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */
   }
 
   &__btn {
-    padding: toRem(7) toRem(12);
-    height: toRem(32);
-    border-radius: toRem(24);
+    padding: rem(7) rem(12);
+    height: rem(32);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.84);
     color: rgba(25, 27, 34, 0.68);
     text-align: center;
-    font-size: toRem(13);
+    font-size: rem(13);
     font-weight: 700;
     line-height: 132%; /* 17.16px */
   }
 
   &__days {
     color: #191B22;
-    font-size: toRem(11);
+    font-size: rem(11);
     font-weight: 600;
     line-height: 140%; /* 15.4px */
     display: flex;
@@ -114,12 +114,12 @@ const showNotification = () => {
 
 @media screen and (max-width: $phablet) {
   .premium-notification {
-    bottom: toRem(106);
+    bottom: rem(106);
     right: 0;
     left: auto;
     transform: none;
     width: max-content;
-    border-radius: toRem(8) 0 0 toRem(8);
+    border-radius: rem(8) 0 0 rem(8);
 
     &__trigger {
       transform: rotate(-90deg);
@@ -127,7 +127,7 @@ const showNotification = () => {
 
     &__days {
       flex-direction: row;
-      font-size: toRem(15);
+      font-size: rem(15);
       font-weight: 700;
       line-height: 128%; /* 19.2px */
 

@@ -11,8 +11,8 @@
 <style scoped lang="scss">
 .support {
   position: fixed;
-  bottom: toRem(40);
-  right: toRem(40);
+  bottom: rem(40);
+  right: rem(40);
   z-index: 3;
 }
 </style>

@@ -1,66 +1,62 @@
 .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: rem(80) 0;
+  max-height: 100vh;
+  background: rgb(22 29 36 / 80%);
+  backdrop-filter: blur(4px);
+
+  &__overlay {
+    position: absolute;
     left: 0;
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 100vh;
-    padding: toRem(80) 0;
-    background: rgba(22, 29, 36, 0.80);
-    backdrop-filter: blur(4px);
-    overflow: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
 
-    &__overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+  }
 
-    &__content {
-        z-index: 2;
-        position: relative;
-        max-width: 100%;
-        width: auto;
-        margin: auto;
+  &__close {
+    position: absolute;
+    right: rem(12);
+    top: rem(12);
+    z-index: 2;
+    border-radius: rem(24);
+    width: rem(32);
+    height: rem(32);
+    background: rgb(255 255 255 / 12%);
+    cursor: pointer;
+  }
 
-    }
-
-    &__close {
-        cursor: pointer;
-        border-radius: toRem(24);
-        background: rgba(255, 255, 255, 0.12);
-        position: absolute;
-        top: toRem(12);
-        right: toRem(12);
-        z-index: 2;
-        width: toRem(32);
-        height: toRem(32);
-    }
-
-    &__again {
-        cursor: pointer;
-        border-radius: toRem(24);
-        background: rgba(255, 255, 255, 0.12);
-        position: absolute;
-        top: toRem(12);
-        left: toRem(12);
-        z-index: 2;
-        width: toRem(32);
-        height: toRem(32);
-    }
-
-
+  &__again {
+    position: absolute;
+    left: rem(12);
+    top: rem(12);
+    z-index: 2;
+    border-radius: rem(24);
+    width: rem(32);
+    height: rem(32);
+    background: rgb(255 255 255 / 12%);
+    cursor: pointer;
+  }
 }
 
-
 .modal {
-    &--macros &__close {
-        display: none;
-    }
+  &--macros &__close {
+    display: none;
+  }
 }

@@ -38,6 +38,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: toRem(20);
+  gap: rem(20);
 }
 </style>

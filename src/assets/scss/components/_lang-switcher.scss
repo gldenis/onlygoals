@@ -1,67 +1,67 @@
 .lang-switcher {
-    font-weight: 700;
-    font-size: toRem(13);
-    line-height: 140%;
-    text-align: center;
-    color: var(--neutral-left-68);
-    position: relative;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: 140%;
+  text-align: center;
+  color: var(--neutral-left-68);
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: rem(4);
+  }
+
+  &__body {
+    position: absolute;
+    left: 0;
+    top: 100%;
     z-index: 1;
+    border-radius: rem(8);
+    padding: rem(4);
+    box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgb(24 24 41 / 82%);
+    background: rgb(25 27 34 / 84%);
 
-    &__trigger {
-        display: flex;
-        align-items: center;
-        gap: toRem(4);
-        cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      backdrop-filter: blur(20px);
     }
+  }
 
-    &__body {
-        border-radius: toRem(8);
-        background: rgba(25, 27, 34, 0.84);
-        box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.82);
-        padding: toRem(4);
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: rem(1) solid rgb(255 255 255 / 12%);
+    height: rem(40);
+    box-sizing: border-box;
+    cursor: pointer;
+    gap: rem(8);
+
+    &:hover {
+      &::before {
+        content: "";
         position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            backdrop-filter: blur(20px);
-        }
+        left: -4px;
+        right: -4px;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, #3073fa -1.05%, #f2883c 49.68%, #933cea 101.97%);
+        opacity: 0.1;
+      }
     }
 
-    &__item {
-        cursor: pointer;
-        height: toRem(40);
-        gap: toRem(8);
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
-        box-sizing: border-box;
-        position: relative;
-
-        &:hover {
-            &:before {
-                position: absolute;
-                content: '';
-                top: 0;
-                left: -4px;
-                right: -4px;
-                bottom: 0;
-                opacity: 0.1;
-                background: linear-gradient(90deg, #3073FA -1.05%, #F2883C 49.68%, #933CEA 101.97%);
-            }
-        }
-
-        &:last-child {
-            border-bottom: 0;
-        }
+    &:last-child {
+      border-bottom: 0;
     }
+  }
 }

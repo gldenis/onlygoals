@@ -1,95 +1,83 @@
-$font-size: toRem(16);
-@function toRem($value) {
-    $remValue: calc($value / 16) + rem;
-    @return $remValue;
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+
+  @return $remValue;
 }
 
+$font-size: rem(16);
+
 :root {
-    --text-color: #fff;
-    --accent: #0085ff;
-
-    --gray-1: #e9eaec;
-    --gray-2: #c1c3c6;
-    --gray-3: #96999d;
-    --gray-4: #6b6e73;
-    --gray-6: #4d5057;
-    --gray-7: #2b2d34;
-    --gray-8: #24262d;
-
-    --neutral-left-12: rgba(255, 255, 255, 0.12);
-    --neutral-left-32: rgba(255, 255, 255, 0.32);
-    --neutral-left-68: rgba(255, 255, 255, 0.68);
-    --neutral-left-84: rgba(255, 255, 255, 0.84);
-
-    --neutral-right-12: rgba(25, 27, 34, 0.12);
-    --neutral-right-32: rgba(25, 27, 34, 0.32);
-    --neutral-right-68: rgba(25, 27, 34, 0.68);
-    --neutral-right-84: rgba(25, 27, 34, 0.84);
-
-    --green-1: #96d1a9;
-    --green-2: #57c57c;
-    --green-3: #32b760;
-    --green-5: #099853;
-    --green-7: #1f5531;
-    --green-8: #1f4d2f;
-    --green-9: #1f3a29;
-
-    --green-other-12: rgba(31, 168, 78, 0.16);
-    --green-other-32: rgba(31, 168, 78, 0.32);
-    --green-other-68: rgba(31, 168, 78, 0.68);
-    --green-other-84: rgba(31, 158, 75, 0.84);
-
-    --yellow-1: #e9d2ba;
-    --yellow-2: #d99b53;
-    --yellow-3: #d49042;
-    --yellow-5: #e3861a;
-    --yellow-7: #58340f;
-    --yellow-8: #4d2d0f;
-    --yellow-9: #37210f;
-
-    --yellow-other-12: rgba(227, 134, 26, 0.12);
-    --yellow-other-24: rgba(227, 134, 26, 0.24);
-    --yellow-other-84: rgba(227, 134, 26, 0.84);
-    --yellow-other-92: rgba(227, 134, 26, 0.92);
-
-    --secondary-1: #bae7e2;
-    --secondary-2: #3dc5b6;
-    --secondary-3: #009a8a;
-    --secondary-5: #6f63ff;
-    --secondary-7: #003e37;
-    --secondary-8: #00342e;
-    --secondary-9: #001f1b;
-
-    --secondary-other-12: rgba(6, 144, 174, 0.12);
-    --secondary-other-24: rgba(6, 144, 174, 0.24);
-    --secondary-other-84: rgba(6, 144, 174, 0.84);
-    --secondary-other-92: rgba(6, 144, 174, 0.92);
-
-    --primary: #b93beb;
-
-    --dark-7: rgba(22, 29, 36, 0.2);
-    --dark-8: rgba(22, 29, 36, 0.6);
-    --dark-9: rgba(22, 29, 36, 0.8);
-
-    --light-33: rgba(255, 255, 255, 0.2);
-    --light-22: rgba(255, 255, 255, 0.6);
-    --light-11: rgba(255, 255, 255, 0.8);
-
-    --secondary: #009a8a;
-    --green: #1fa84e;
-    --yellow: #e3861a;
-    --2: #49c79a;
-    --cd3d00: #cd3d00;
-
-    --font-family: "Mulish", sans-serif;
-    --second-family: "Source Sans Pro", sans-serif;
-    --third-family: "Inter", sans-serif;
-    --font3: "SF Pro Display", sans-serif;
-    --font4: "Gotham", sans-serif;
-    --font5: "PingFang SC", sans-serif;
-    --font6: "Kanit", sans-serif;
-    --font7: "SF Pro", sans-serif;
-    --font8: "Cinzel", sans-serif;
+  --text-color: #fff;
+  --accent: #0085ff;
+  --gray-1: #e9eaec;
+  --gray-2: #c1c3c6;
+  --gray-3: #96999d;
+  --gray-4: #6b6e73;
+  --gray-6: #4d5057;
+  --gray-7: #2b2d34;
+  --gray-8: #24262d;
+  --neutral-left-12: rgb(255 255 255 / 12%);
+  --neutral-left-32: rgb(255 255 255 / 32%);
+  --neutral-left-68: rgb(255 255 255 / 68%);
+  --neutral-left-84: rgb(255 255 255 / 84%);
+  --neutral-right-12: rgb(25 27 34 / 12%);
+  --neutral-right-32: rgb(25 27 34 / 32%);
+  --neutral-right-68: rgb(25 27 34 / 68%);
+  --neutral-right-84: rgb(25 27 34 / 84%);
+  --green-1: #96d1a9;
+  --green-2: #57c57c;
+  --green-3: #32b760;
+  --green-5: #099853;
+  --green-7: #1f5531;
+  --green-8: #1f4d2f;
+  --green-9: #1f3a29;
+  --green-other-12: rgb(31 168 78 / 16%);
+  --green-other-32: rgb(31 168 78 / 32%);
+  --green-other-68: rgb(31 168 78 / 68%);
+  --green-other-84: rgb(31 158 75 / 84%);
+  --yellow-1: #e9d2ba;
+  --yellow-2: #d99b53;
+  --yellow-3: #d49042;
+  --yellow-5: #e3861a;
+  --yellow-7: #58340f;
+  --yellow-8: #4d2d0f;
+  --yellow-9: #37210f;
+  --yellow-other-12: rgb(227 134 26 / 12%);
+  --yellow-other-24: rgb(227 134 26 / 24%);
+  --yellow-other-84: rgb(227 134 26 / 84%);
+  --yellow-other-92: rgb(227 134 26 / 92%);
+  --secondary-1: #bae7e2;
+  --secondary-2: #3dc5b6;
+  --secondary-3: #009a8a;
+  --secondary-5: #6f63ff;
+  --secondary-7: #003e37;
+  --secondary-8: #00342e;
+  --secondary-9: #001f1b;
+  --secondary-other-12: rgb(6 144 174 / 12%);
+  --secondary-other-24: rgb(6 144 174 / 24%);
+  --secondary-other-84: rgb(6 144 174 / 84%);
+  --secondary-other-92: rgb(6 144 174 / 92%);
+  --primary: #b93beb;
+  --dark-7: rgb(22 29 36 / 20%);
+  --dark-8: rgb(22 29 36 / 60%);
+  --dark-9: rgb(22 29 36 / 80%);
+  --light-33: rgb(255 255 255 / 20%);
+  --light-22: rgb(255 255 255 / 60%);
+  --light-11: rgb(255 255 255 / 80%);
+  --secondary: #009a8a;
+  --green: #1fa84e;
+  --yellow: #e3861a;
+  --2: #49c79a;
+  --cd3d00: #cd3d00;
+  --font-family: "Mulish", sans-serif;
+  --second-family: "Source Sans Pro", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --font3: "SF Pro Display", sans-serif;
+  --font4: "Gotham", sans-serif;
+  --font5: "PingFang SC", sans-serif;
+  --font6: "Kanit", sans-serif;
+  --font7: "SF Pro", sans-serif;
+  --font8: "Cinzel", sans-serif;
 }
 
 $desktop: 1280px;

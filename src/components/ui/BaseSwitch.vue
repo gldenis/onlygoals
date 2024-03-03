@@ -38,8 +38,8 @@ defineEmits(['toggle'])
 }
 .form-switch__input {
   position: absolute;
-  width: toRem(1);
-  height: toRem(1);
+  width: rem(1);
+  height: rem(1);
   padding: 0;
   margin: -1px;
   overflow: hidden;
@@ -55,7 +55,7 @@ defineEmits(['toggle'])
   align-items: center;
   position: relative;
   width: 42px;
-  height: toRem(28);
+  height: rem(28);
   background-color: var(--switch-off);
   flex-shrink: 0;
   border-radius: 16px;
@@ -65,8 +65,8 @@ defineEmits(['toggle'])
   content: "";
   position: absolute;
   left: 4px;
-  height: toRem(20);
-  width: toRem(20);
+  height: rem(20);
+  width: rem(20);
   border-radius: 9999px;
   background-color: white;
   transition: transform 0.1s ease-in-out;

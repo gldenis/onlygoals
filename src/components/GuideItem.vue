@@ -104,13 +104,13 @@ const emit = defineEmits(['close'])
 
 <style scoped lang="scss">
 .course {
-  margin-top: toRem(52);
+  margin-top: rem(52);
   display: flex;
   flex-direction: column;
-  gap: toRem(52);
+  gap: rem(52);
 
   &__separator {
-    height: toRem(1);
+    height: rem(1);
     background: rgba(255, 255, 255, 0.12);
   }
 }
@@ -122,18 +122,18 @@ const emit = defineEmits(['close'])
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
-    gap: toRem(4);
+    gap: rem(4);
     flex-wrap: wrap;
   }
 
   &__item {
     width: calc((100% - 4px) / 2);
-    min-height: toRem(52);
-    padding: toRem(10) toRem(12);
+    min-height: rem(52);
+    padding: rem(10) rem(12);
     display: flex;
     align-items: center;
-    gap: toRem(8);
-    border-radius: toRem(8);
+    gap: rem(8);
+    border-radius: rem(8);
     background: linear-gradient(270deg, rgba(31, 168, 78, 0.00) 0%, rgba(31, 168, 78, 0.10) 100%);
   }
 }
@@ -141,11 +141,11 @@ const emit = defineEmits(['close'])
 .course-part {
   display: flex;
   flex-direction: column;
-  gap: toRem(32);
+  gap: rem(32);
 
   &__title {
     color: #fff;
-    font-size: toRem(32);
+    font-size: rem(32);
     font-style: normal;
     font-weight: 800;
     line-height: 132%; /* 42.24px */
@@ -153,12 +153,12 @@ const emit = defineEmits(['close'])
 }
 .guide {
   max-width: 800px;
-  padding: toRem(32);
-  border-radius: toRem(24);
+  padding: rem(32);
+  border-radius: rem(24);
   background: rgba(255, 255, 255, 0.12);
 
   /* Dropdown */
-  box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+  box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
 
   &__header {
@@ -174,17 +174,17 @@ const emit = defineEmits(['close'])
   &__content {
     display: flex;
     flex-direction: column;
-    gap: toRem(32);
+    gap: rem(32);
     color: #E9EAEC;
-    font-size: toRem(18);
+    font-size: rem(18);
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 28.8px */
-    margin-top: toRem(52);
+    margin-top: rem(52);
 
     h3 {
       color: #E9EAEC;
-      font-size: toRem(32);
+      font-size: rem(32);
       font-style: normal;
       font-weight: 800;
       line-height: 132%; /* 42.24px */
@@ -193,7 +193,7 @@ const emit = defineEmits(['close'])
     img {
       width: 100%;
       height: auto;
-      border-radius: toRem(8);
+      border-radius: rem(8);
       opacity: 0.9;
     }
 
@@ -204,7 +204,7 @@ const emit = defineEmits(['close'])
 
   &__title {
     color: #E9EAEC;
-    font-size: toRem(44);
+    font-size: rem(44);
     font-style: normal;
     font-weight: 800;
     line-height: 120%; /* 52.8px */

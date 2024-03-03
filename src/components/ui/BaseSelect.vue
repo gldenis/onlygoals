@@ -62,27 +62,27 @@ onClickOutside(select, () => open.value = false)
   position: relative;
   color: #fff;
   text-overflow: ellipsis;
-  font-size: toRem(13);
+  font-size: rem(13);
   font-weight: 700;
   line-height: 132%; /* 17.16px */
 
   &__trigger {
     cursor: pointer;
-    border-radius: toRem(24);
+    border-radius: rem(24);
     background: rgba(255, 255, 255, 0.12);
     display: flex;
-    height: toRem(40);
-    padding: toRem(10) toRem(16);
+    height: rem(40);
+    padding: rem(10) rem(16);
     justify-content: flex-start;
     align-items: center;
-    gap: toRem(8);
+    gap: rem(8);
     overflow: hidden;
   }
 
   &__arrow {
     margin-left: auto;
-    width: toRem(20);
-    height: toRem(20);
+    width: rem(20);
+    height: rem(20);
   }
 
   &__list {
@@ -90,12 +90,12 @@ onClickOutside(select, () => open.value = false)
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
-    border-radius: toRem(8);
+    border-radius: rem(8);
     background: rgba(255, 255, 255, 0.12);
-    padding: toRem(4);
+    padding: rem(4);
 
     /* Dropdown */
-    box-shadow: - toRem(20) toRem(20) toRem(60) (- toRem(16)) rgba(24, 24, 41, 0.52);
+    box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
     overflow: hidden;
     z-index: 1;
@@ -103,11 +103,11 @@ onClickOutside(select, () => open.value = false)
 
   &__option {
     cursor: pointer;
-    height: toRem(40);
+    height: rem(40);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: toRem(1) solid rgba(255, 255, 255, 0.12);
+    border-bottom: rem(1) solid rgba(255, 255, 255, 0.12);
     box-sizing: border-box;
     position: relative;
 

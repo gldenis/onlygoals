@@ -1,33 +1,33 @@
 .page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+
+  &__title {
+    font-weight: 800;
+    font-style: normal;
+    font-size: rem(32);
+    line-height: 132%; /* 42.24px */
+    color: #e9eaec;
+  }
+
+  &__separator {
+    flex-grow: 1;
+    height: rem(1);
+    background: linear-gradient(to left, #fff 0%, rgb(255 255 255 / 0%) 100%);
+    opacity: 0.12;
+  }
+
+  &__left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: toRem(20);
+    gap: rem(20);
+  }
 
-    &__title {
-        color: #E9EAEC;
-        font-size: toRem(32);
-        font-style: normal;
-        font-weight: 800;
-        line-height: 132%; /* 42.24px */
-    }
-
-    &__separator {
-        flex-grow: 1;
-        opacity: 0.12;
-        height: toRem(1);
-        background: linear-gradient(to left, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-    }
-
-    &__left {
-        display: flex;
-        align-items: center;
-        gap: toRem(20);
-    }
-
-    &__right {
-        display: flex;
-        align-items: center;
-        gap: toRem(20);
-    }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
 }

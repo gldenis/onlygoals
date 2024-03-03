@@ -165,10 +165,10 @@ import IconStar from '@/components/icons/IconStar.vue'
 
   }
   .game-meta {
-    height: toRem(67);
+    height: rem(67);
   }
   .game-data {
-    height: toRem(67);
+    height: rem(67);
 
     .game-info {
       height: 100%;
@@ -194,8 +194,8 @@ import IconStar from '@/components/icons/IconStar.vue'
   }
 
   .game-info--chart {
-    width: calc((100% - toRem(2)) / 2);
-    height: toRem(67);
+    width: calc((100% - rem(2)) / 2);
+    height: rem(67);
   }
 }
 </style>

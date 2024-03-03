@@ -1,21 +1,20 @@
 .header-points {
-    border-radius: toRem(24);
-    border: toRem(1) solid rgba(255, 255, 255, 0.12);
-    padding: toRem(4);
-    height: toRem(40);
+  display: flex;
+  align-items: center;
+  border: rem(1) solid rgb(255 255 255 / 12%);
+  border-radius: rem(24);
+  padding: rem(4);
+  height: rem(40);
+  gap: rem(8);
+
+  &__btn {
     display: flex;
     align-items: center;
-    gap: toRem(8);
-
-    &__btn {
-        width: toRem(32);
-        height: toRem(32);
-        background: #000;
-        border-radius: 50%;
-        background: rgba(31, 168, 78, 0.16);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #099853;
-    }
+    justify-content: center;
+    border-radius: 50%;
+    width: rem(32);
+    height: rem(32);
+    color: #099853;
+    background: rgb(31 168 78 / 16%);
+  }
 }

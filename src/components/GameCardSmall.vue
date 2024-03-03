@@ -203,7 +203,7 @@ import IconStar from '@/components/icons/IconStar.vue'
 
 .game-info--chart {
 
-  width: calc((100% - toRem(4)) / 2);
+  width: calc((100% - rem(4)) / 2);
 }
 
 .game-card__charts {
@@ -225,7 +225,7 @@ import IconStar from '@/components/icons/IconStar.vue'
 
   .game-info--chart {
     width: 100%;
-    height: toRem(92);
+    height: rem(92);
   }
 }
 
@@ -247,8 +247,8 @@ import IconStar from '@/components/icons/IconStar.vue'
   }
 
   .game-info--chart {
-    width: calc((100% - toRem(2)) / 2);
-    height: toRem(67);
+    width: calc((100% - rem(2)) / 2);
+    height: rem(67);
   }
 }
 

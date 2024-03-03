@@ -1,0 +1,109 @@
+.hero-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  max-width: rem(416);
+  gap: rem(8);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: rem(8);
+    padding: rem(16) rem(8);
+    width: rem(100);
+    height: rem(100);
+    background: linear-gradient(180deg, rgb(255 255 255 / 4%) 0%, rgb(255 255 255 / 16%) 100%);
+    backdrop-filter: blur(rem(8));
+    gap: rem(10);
+
+    &--wide {
+      column-gap: 0;
+      flex-direction: row;
+      padding: rem(16);
+      width: rem(200);
+
+      .hero-tiles__title {
+        text-align: left;
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+    display: box;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%;
+    text-align: center;
+    text-overflow: ellipsis;
+    color: var(--neutral-1);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &__value {
+    font-weight: 900;
+    font-size: rem(32);
+    line-height: 132%;
+    white-space: nowrap;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--neutral-1);
+
+    span {
+      font-weight: 800;
+      font-size: rem(16);
+      line-height: 128%;
+      text-transform: lowercase;
+    }
+  }
+
+  &--row {
+    max-width: max-content;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .hero-tiles {
+    max-width: rem(540);
+    gap: rem(4);
+
+    &__item {
+      width: calc((100% - (rem(12)))/ 4);
+
+      &--wide {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .hero-tiles {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .hero-tiles {
+    flex-wrap: nowrap;
+    width: 100%;
+    min-width: 100%;
+    gap: rem(4);
+
+    &__item {
+      width: calc((100% - 12px) / 4);
+
+      &--wide {
+        display: none;
+      }
+    }
+  }
+}

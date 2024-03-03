@@ -1,0 +1,150 @@
+.game-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: rem(2);
+  padding: 0 rem(8);
+  width: calc((100% - rem(4)) / 3);
+  height: rem(44);
+  background: linear-gradient(249deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 8%) 100%);
+  gap: rem(8);
+
+  &__icon {
+    position: absolute;
+    left: rem(2);
+    top: rem(2);
+    width: rem(8);
+    height: rem(8);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+  }
+
+  &__chance {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: rem(4);
+
+    .progress {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: box;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 128%;
+    text-overflow: ellipsis;
+    color: rgb(255 255 255 / 68%);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(2);
+    width: rem(24);
+    height: rem(24);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%; /* 17.16px */
+    text-align: center;
+    color: #099853;
+    background: rgb(31 168 78 / 16%);
+  }
+
+  &__lock {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: rem(4);
+    padding: rem(12);
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 128%; /* 15.36px */
+    color: rgb(255 255 255 / 68%);
+    background: rgb(255 255 255 / 12%);
+    backdrop-filter: blur(4px);
+    gap: rem(12);
+
+    span {
+      flex-grow: 1;
+    }
+  }
+
+  &--chance {
+    width: calc((100% - 2px) / 2);
+  }
+
+  &--goals {
+    width: calc(236 / 386 * 100%);
+    gap: rem(4);
+  }
+
+  &--schema {
+    width: calc(148 / 386 * 100%);
+  }
+
+  &--chart {
+    display: flex;
+    align-items: flex-start;
+    padding: rem(8) rem(8) 0 rem(8);
+    width: 100%;
+    height: rem(67);
+  }
+}
+
+@media screen and (max-width: $laptop-small) {
+  .game-info {
+    &--chance {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .game-info {
+    &--chance {
+      width: calc((100% - rem(2)) / 2);
+    }
+
+    &--chart {
+      width: calc((100% - rem(2)) / 2);
+    }
+  }
+}
+
+.chart-goals {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  gap: rem(1);
+
+  &__item {
+    border-radius: rem(1) rem(1) 0 0;
+    width: rem(5);
+
+    &--team-1 {
+      background: linear-gradient(to top, rgb(101 76 200 / 0%), #654cc8);
+    }
+
+    &--team-2 {
+      background: linear-gradient(to top, rgb(73 199 154 / 0%), #49c79a);
+    }
+  }
+}

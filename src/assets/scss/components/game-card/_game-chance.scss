@@ -1,0 +1,17 @@
+.game-chance {
+  display: flex;
+  width: 100%;
+  gap: rem(2);
+}
+
+@media screen and (max-width: $laptop-small) {
+  .game-chance {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: $phablet) {
+  .game-chance {
+    flex-direction: row;
+  }
+}
