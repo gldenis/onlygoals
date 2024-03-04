@@ -70,18 +70,18 @@
   }
 }
 
-@media screen and (max-width: $phablet) {
-  .game-info:nth-child(3n) .info-score {
-    &:hover {
-      .average-liga {
-        left: auto;
-        right: 0;
-      }
-
-      .average-liga-lock {
-        left: auto;
-        right: 0;
-      }
-    }
-  }
-}
+//@media screen and (max-width: $phablet) {
+//  .game-info:nth-child(3n) .info-score {
+//    &:hover {
+//      .average-liga {
+//        left: auto;
+//        right: 0;
+//      }
+//
+//      .average-liga-lock {
+//        left: auto;
+//        right: 0;
+//      }
+//    }
+//  }
+//}
