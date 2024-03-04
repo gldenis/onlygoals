@@ -1,6 +1,6 @@
 .average-liga {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 100%;
   z-index: 2;
   display: none;
@@ -10,6 +10,7 @@
   border-radius: rem(8);
   padding: rem(8);
   background: rgb(77 80 87 / 32%);
+  transform: translateX(-50%);
   backdrop-filter: blur(20px);
   gap: rem(4);
 

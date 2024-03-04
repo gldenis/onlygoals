@@ -11,6 +11,7 @@ defineProps({
 
 import { useAuthStore } from '@/stores/auth.js'
 import IconGameInfo from '@/components/icons/IconGameInfo.vue'
+import IconStarFilled from '@/components/icons/IconStarFilled.vue'
 
 const authStore = useAuthStore()
 </script>

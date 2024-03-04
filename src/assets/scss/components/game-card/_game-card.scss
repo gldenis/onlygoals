@@ -1,5 +1,6 @@
 .game-card {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-areas:
     "main add charts"
@@ -45,6 +46,20 @@
     height: rem(24);
     background: rgb(255 255 255 / 12%);
     opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(255 255 255 / 24%);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+    &--active {
+      background: rgb(255 255 255 / 84%);
+    }
   }
 
   &__main {

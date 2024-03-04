@@ -23,12 +23,26 @@
     text-align: center;
     background: rgb(255 255 255 / 12%);
 
+    &:hover {
+      .average-liga {
+        display: flex;
+      }
+
+      .average-liga-lock {
+        display: flex;
+      }
+    }
+
     &--large {
       border-radius: rem(4);
       width: rem(25);
       height: rem(28);
       font-size: rem(15);
       line-height: 128%;
+    }
+
+    &--null {
+      color: rgb(255 255 255 / 32%);
     }
   }
 
@@ -51,16 +65,6 @@
     }
   }
 
-  &:hover {
-    .average-liga {
-      display: flex;
-    }
-
-    .average-liga-lock {
-      display: flex;
-    }
-  }
-
   &--large {
     justify-content: center;
     gap: rem(4);
@@ -70,19 +74,3 @@
     color: transparent;
   }
 }
-
-//@media screen and (max-width: $phablet) {
-//  .game-info:nth-child(3n) .info-score {
-//    &:hover {
-//      .average-liga {
-//        left: auto;
-//        right: 0;
-//      }
-//
-//      .average-liga-lock {
-//        left: auto;
-//        right: 0;
-//      }
-//    }
-//  }
-//}

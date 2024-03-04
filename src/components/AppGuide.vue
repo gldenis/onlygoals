@@ -12,7 +12,7 @@ const toggleStep = step => {
   if (openedSteps.value.includes(step)) {
     openedSteps.value = openedSteps.value.filter(mdiSitemap => mdiSitemap !== step)
   } else {
-    openedSteps.value.push(step)
+    openedSteps.value = [step]
   }
 }
 </script>
@@ -30,7 +30,7 @@ const toggleStep = step => {
       <div class="guide__progress-value"></div>
     </div>
     <div class="guide-steps">
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(1) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(1) }"
              @click="toggleStep(1)">
@@ -38,14 +38,14 @@ const toggleStep = step => {
             <IconCompleted />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(1) }">
           <div class="guide-steps__text">Description</div>
           <button class="btn btn--small guide-steps__btn">Подробнее</button>
         </div>
       </div>
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(2) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(2) }"
              @click="toggleStep(2)">
@@ -53,14 +53,14 @@ const toggleStep = step => {
             <IconTime />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(2) }">
           <div class="guide-steps__text">Description</div>
           <button class="btn btn--small guide-steps__btn">Подробнее</button>
         </div>
       </div>
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(3) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(3) }"
              @click="toggleStep(3)">
@@ -68,14 +68,14 @@ const toggleStep = step => {
             <IconLesson />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(3) }">
           <div class="guide-steps__text">Description</div>
           <button class="btn btn--small guide-steps__btn">Подробнее</button>
         </div>
       </div>
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(4) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(4) }"
              @click="toggleStep(4)">
@@ -83,14 +83,14 @@ const toggleStep = step => {
             <IconLesson />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(4) }">
           <div class="guide-steps__text">Description</div>
           <button class="btn btn--small guide-steps__btn">Подробнее</button>
         </div>
       </div>
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(5) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(5) }"
              @click="toggleStep(5)">
@@ -98,14 +98,14 @@ const toggleStep = step => {
             <IconLesson />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(5) }">
           <div class="guide-steps__text">Description</div>
           <button class="btn btn--small guide-steps__btn">Подробнее</button>
         </div>
       </div>
-      <div class="guide-steps__item">
+      <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(6) }">
         <div class="guide-steps__head"
              :class="{ 'guide-steps__head--opened': openedSteps.includes(1) }"
              @click="toggleStep(6)">
@@ -113,7 +113,7 @@ const toggleStep = step => {
             <IconLesson />
           </div>
           <div class="guide-steps__title">Регистрация</div>
-          <IconArrowDown />
+          <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(6) }">
           <div class="guide-steps__text">Description</div>
@@ -136,6 +136,11 @@ const toggleStep = step => {
     padding: rem(4) rem(16);
     flex-direction: column;
     border-bottom: rem(1) solid rgba(25, 27, 34, 0.32);
+    border-left: 2px solid transparent;
+
+    &--opened {
+      border-left: 2px solid rgba(255, 255, 255, 0.84);
+    }
 
     &:last-child {
       border-bottom: none;
@@ -149,7 +154,20 @@ const toggleStep = step => {
     gap: rem(16);
     cursor: pointer;
     padding: rem(10) 0;
+    color: rgba(255, 255, 255, 0.68);
 
+    &--opened {
+      color: #E9EAEC;
+
+      .guide-steps__head-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__arrow {
+    width: rem(20);
+    height: rem(20);
   }
 
   &__icon {
@@ -159,7 +177,7 @@ const toggleStep = step => {
 
   &__title {
     flex-grow: 1;
-    color: rgba(255, 255, 255, 0.68);
+
     font-size: rem(16);
     font-weight: 500;
     line-height: 128%; /* 20.48px */

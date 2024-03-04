@@ -87,6 +87,10 @@
     }
   }
 
+  &__lock-btn {
+    cursor: pointer;
+  }
+
   &--chance {
     width: calc((100% - 2px) / 2);
   }

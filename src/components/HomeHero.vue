@@ -5,6 +5,7 @@ import IconAcces from '@/components/icons/hero/IconAcces.vue'
 import IconHat from '@/components/icons/hero/IconHat.vue'
 import { useAuthStore } from '@/stores/auth.js'
 import { useGuideStore } from '@/stores/guide.js'
+import IconPlayBackground from '@/components/icons/IconPlayBackground.vue'
 
 const authStore = useAuthStore()
 const guideStore = useGuideStore()
@@ -45,8 +46,9 @@ const guideStore = useGuideStore()
           <IconHat />
           <div class="hero-tiles__title">Обучение по анализу</div>
         </div>
-        <div class="hero-tiles__item">
-          <IconCharts />
+        <div class="hero-tiles__item  hero-tiles__item--media">
+          <video class="hero-tiles__media" src="@/assets/video/video.mp4" muted autoplay loop></video>
+          <IconPlayBackground />
           <div class="hero-tiles__title">О нас за
             60 минут</div>
         </div>

@@ -68,6 +68,7 @@
   position: absolute;
   left: 0;
   bottom: 100%;
+  z-index: 4;
   display: none;
   column-gap: rem(8);
   grid-template-columns: rem(16) 1fr;

@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import IconMinus from '@/components/icons/IconMinus.vue'
+import IconPlus from '@/components/icons/IconPlus.vue'
 
 const counterValue = ref(1)
 
@@ -15,9 +17,13 @@ const decrement = () => {
 
 <template>
   <div class="counter">
-    <button class="counter__btn" @click="decrement">-</button>
+    <button class="counter__btn" @click="decrement">
+      <IconMinus />
+    </button>
     {{ counterValue }} месяц
-    <button class="counter__btn" @click="increment">+</button>
+    <button class="counter__btn" @click="increment">
+      <IconPlus />
+    </button>
   </div>
 </template>
 
@@ -42,6 +48,27 @@ const decrement = () => {
     background: rgba(255, 255, 255, 0.12);
     border: none;
     outline: none;
+    transition: 0.1s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+
+
+    svg {
+      width: rem(12);
+      height: rem(12);
+      color: #E9EAEC;
+
+      fill: currentColor;
+
+      path {
+        fill: currentColor;
+      }
+    }
   }
 }
 input {
