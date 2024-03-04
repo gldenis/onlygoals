@@ -49,6 +49,7 @@ const showNotification = () => {
   box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   overflow: hidden;
+  z-index: 3;
 
   :before {
     content: '';

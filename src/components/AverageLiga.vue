@@ -5,7 +5,9 @@ import { ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 const content = ref()
 onClickOutside(content, (e) => {
-  content.value.closest('.info-score__item').classList.remove('info-score__item--hovered')
+  content.value?.closest('.info-score__item')?.classList?.remove('info-score__item--hovered')
+  content.value?.closest('.last-games-status__item')?.classList?.remove('last-games-status__item--hovered')
+
   content.value.closest('.game-card').classList.remove('game-card--hovered')
 
 })

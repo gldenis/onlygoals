@@ -290,4 +290,26 @@
       width: 100%;
     }
   }
+
+  .last-games-status {
+    &__item {
+      &--hovered {
+        .average-liga {
+          display: flex;
+
+          &__wrapper {
+            display: flex;
+          }
+        }
+
+        .average-liga-lock {
+          display: flex;
+
+          &__wrapper {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
 }
