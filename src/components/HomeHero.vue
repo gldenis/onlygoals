@@ -47,7 +47,7 @@ const guideStore = useGuideStore()
           <div class="hero-tiles__title">Обучение по анализу</div>
         </div>
         <div class="hero-tiles__item  hero-tiles__item--media">
-          <video class="hero-tiles__media" src="@/assets/video/video.mp4" muted autoplay loop></video>
+          <video class="hero-tiles__media" src="@/assets/video/video.mp4" muted autoplay loop loading="lazy" width="100" height="100"></video>
           <IconPlayBackground />
           <div class="hero-tiles__title">О нас за
             60 минут</div>

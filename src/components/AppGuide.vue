@@ -19,15 +19,17 @@ const toggleStep = step => {
 
 <template>
   <div class="guide">
-    <div class="guide__head">
-      <div class="guide__title">Обучение</div>
-      <div class="guide__steps">
-        <IconHat />
-        1 / 6
+    <div class="guide__top">
+      <div class="guide__head">
+        <div class="guide__title">Обучение</div>
+        <div class="guide__steps">
+          <IconHat />
+          1 / 6
+        </div>
       </div>
-    </div>
-    <div class="guide__progress">
-      <div class="guide__progress-value"></div>
+      <div class="guide__progress">
+        <div class="guide__progress-value"></div>
+      </div>
     </div>
     <div class="guide-steps">
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(1) }">
@@ -121,6 +123,7 @@ const toggleStep = step => {
         </div>
       </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -129,7 +132,6 @@ const toggleStep = step => {
   border-radius: rem(8);
   background:  rgba(25, 27, 34, 0.32);
   padding: rem(8) 0;
-  margin-top: rem(36);
 
   &__item {
     display: flex;
@@ -221,6 +223,10 @@ const toggleStep = step => {
   box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
   backdrop-filter: blur(20px);
   padding: rem(16);
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+  flex-grow: 1;
 
   &__progress {
     border-radius: rem(8);

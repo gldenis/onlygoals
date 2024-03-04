@@ -46,8 +46,13 @@
     height: rem(24);
     background: rgb(255 255 255 / 12%);
     opacity: 0.5;
-    transition: 0.2s;
+    transition: all 0.1s;
     cursor: pointer;
+
+    svg {
+      width: rem(12);
+      height: rem(12);
+    }
 
     &:hover {
       background: rgb(255 255 255 / 24%);
