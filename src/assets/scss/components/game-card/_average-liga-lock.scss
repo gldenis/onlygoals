@@ -1,6 +1,6 @@
 .average-liga-lock {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 100%;
   z-index: 3;
   display: none;
@@ -12,6 +12,7 @@
   height: max-content;
   box-shadow: -20px 20px 60px -16px rgb(24 24 41 / 52%);
   background: rgb(77 80 87 / 32%);
+  transform: translateX(-50%);
   backdrop-filter: blur(20px);
   gap: rem(8);
 
@@ -57,16 +58,5 @@
     line-height: 132%; /* 17.16px */
     color: #fff;
     background: rgb(255 255 255 / 12%);
-  }
-}
-
-@media screen and (max-width: $phablet) {
-  .average-liga-lock {
-    position: fixed;
-    left: 50%;
-    right: auto;
-    top: 50%;
-    bottom: auto;
-    transform: translate(-50%, -50%);
   }
 }

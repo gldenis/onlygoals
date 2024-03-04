@@ -162,19 +162,19 @@ const openLastGameTooltip = e => {
           <div class="game-meta__inner">
             <div class="game-meta__name">Manchester United</div>
             <div class="game-meta__last-games-status last-games-status__list">
-              <div class="last-games-status__item last-games-status__item--lose" @click="openLastGameTooltip($event)">
+              <div class="last-games-status__item last-games-status__item--lose">
                 <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+              <div class="last-games-status__item last-games-status__item--win">
                 <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--draw" @click="openLastGameTooltip($event)">
+              <div class="last-games-status__item last-games-status__item--draw">
                 <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+              <div class="last-games-status__item last-games-status__item--win">
                 <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+              <div class="last-games-status__item last-games-status__item--win">
                 <LastGameTooltip />
               </div>
             </div>
@@ -266,22 +266,29 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Прессинг</div>
         <div class="info-score info-score--locked">
-          <div class="average-liga-lock">
-            <IconLock />
-            <div class="average-liga-lock__content">
-              <div class="average-liga-lock__text">Средний показатель</div>
-              <div class="average-liga-lock__btn">Подробнее</div>
-            </div>
-          </div>
           <div class="info-score__item">9
             <div class="info-score__lock">
               <IconLock />
+            </div>
+            <div class="average-liga-lock">
+              <IconLock />
+              <div class="average-liga-lock__content">
+                <div class="average-liga-lock__text">Средний показатель</div>
+                <div class="average-liga-lock__btn">Подробнее</div>
+              </div>
             </div>
           </div>
           :
           <div class="info-score__item">9
             <div class="info-score__lock">
               <IconLock />
+            </div>
+            <div class="average-liga-lock">
+              <IconLock />
+              <div class="average-liga-lock__content">
+                <div class="average-liga-lock__text">Средний показатель</div>
+                <div class="average-liga-lock__btn">Подробнее</div>
+              </div>
             </div>
           </div>
 
@@ -291,12 +298,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забивных матчей</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
@@ -306,12 +313,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Кол-во матчей в месяц</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
@@ -322,12 +329,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забив после 80/90 мин</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
@@ -337,12 +344,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Шанс контратаки</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
@@ -352,12 +359,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Характер</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
@@ -368,12 +375,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Интенсивность</div>
         <div class="info-score">
-          <div class="info-score__item info-score__item--null" @click="openAverageLiga($event)">
+          <div class="info-score__item info-score__item--null">
             0
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item info-score__item--null" @click="openAverageLiga($event)">
+          <div class="info-score__item info-score__item--null">
             0
             <AverageLiga />
           </div>
@@ -383,12 +390,12 @@ const openLastGameTooltip = e => {
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Удары в створ ворот</div>
         <div class="info-score">
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>
           :
-          <div class="info-score__item" @click="openAverageLiga($event)">
+          <div class="info-score__item">
             9
             <AverageLiga />
           </div>

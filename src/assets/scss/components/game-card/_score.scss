@@ -76,25 +76,6 @@
 }
 
 @media screen and (max-width: $phablet) {
-  .info-score {
-    &__item {
-      &--hovered {
-        .average-liga {
-          display: flex;
 
-          &__wrapper {
-            display: flex;
-          }
-        }
 
-        .average-liga-lock {
-          display: flex;
-
-          &__wrapper {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
 }
