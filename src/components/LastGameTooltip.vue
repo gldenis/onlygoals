@@ -1,14 +1,5 @@
 <script setup>
 
-import { onClickOutside } from '@vueuse/core'
-import { ref } from 'vue'
-const content = ref()
-onClickOutside(content, (e) => {
-  content.value?.closest('.last-games-status__item')?.classList?.remove('last-games-status__item--hovered')
-
-  content.value.closest('.game-card').classList.remove('game-card--hovered')
-
-})
 </script>
 
 <template>

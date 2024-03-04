@@ -2,20 +2,12 @@
 
 import IconBallEvent from '@/components/icons/IconBallEvent.vue'
 import IconChartRise from '@/components/icons/IconChartRise.vue'
-import IconChartDown from '@/components/icons/IconChartDown.vue'
 import IconGameInfo from '@/components/icons/IconGameInfo.vue'
 import IconLock from '@/components/icons/IconLock.vue'
 import IconInfo from '@/components/icons/IconInfo.vue'
 import IconStarFilled from '@/components/icons/IconStarFilled.vue'
 import AverageLiga from '@/components/AverageLiga.vue'
 import LastGameTooltip from '@/components/LastGameTooltip.vue'
-
-const openLastGameTooltip = e => {
-  if (!e.target.closest('.last-game-tooltip')) {
-    e.target.closest('.last-games-status__item').classList.add('last-games-status__item--hovered')
-    e.target.closest('.game-card').classList.add('game-card--hovered')
-  }
-}
 </script>
 
 <template>
