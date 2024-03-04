@@ -9,8 +9,18 @@
   border-radius: rem(4);
   padding: rem(2);
   background: rgb(25 27 34 / 84%);
-  backdrop-filter: blur(4px);
   gap: rem(2);
+
+  &::before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border-radius: rem(4);
+    backdrop-filter: blur(4px);
+  }
 
   &__column {
     display: flex;
