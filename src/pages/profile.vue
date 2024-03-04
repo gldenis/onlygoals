@@ -97,6 +97,10 @@ main {
     .page-head__title {
       width: 100%;
     }
+
+    .page-head__separator {
+      display: block;
+    }
   }
 }
 
