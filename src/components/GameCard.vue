@@ -8,18 +8,17 @@ import IconLock from '@/components/icons/IconLock.vue'
 import IconInfo from '@/components/icons/IconInfo.vue'
 import IconStarFilled from '@/components/icons/IconStarFilled.vue'
 import AverageLiga from '@/components/AverageLiga.vue'
+import LastGameTooltip from '@/components/LastGameTooltip.vue'
 
 const openAverageLiga = e => {
   if (!e.target.closest('.average-liga__wrapper')) {
-    if (e.target.closest('.info-score__item')) {
-      e.target.closest('.info-score__item').classList.add('info-score__item--hovered')
-    }
-
-
-    if (e.target.closest('.last-games-status__item')) {
-      e.target.closest('.last-games-status__item').classList.add('last-games-status__item--hovered')
-    }
-
+    e.target.closest('.info-score__item').classList.add('info-score__item--hovered')
+    e.target.closest('.game-card').classList.add('game-card--hovered')
+  }
+}
+const openLastGameTooltip = e => {
+  if (!e.target.closest('.last-game-tooltip')) {
+    e.target.closest('.last-games-status__item').classList.add('last-games-status__item--hovered')
     e.target.closest('.game-card').classList.add('game-card--hovered')
   }
 }
@@ -96,20 +95,20 @@ const openAverageLiga = e => {
           <div class="game-meta__inner">
             <div class="game-meta__name">Real Madrid</div>
             <div class="game-meta__last-games-status last-games-status__list">
-              <div class="last-games-status__item last-games-status__item--lose" @click="openAverageLiga($event)">
-                <AverageLiga />
+              <div class="last-games-status__item last-games-status__item--lose" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openAverageLiga($event)">
-                <AverageLiga />
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--draw" @click="openAverageLiga($event)">
-                <AverageLiga />
+              <div class="last-games-status__item last-games-status__item--draw" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openAverageLiga($event)">
-                <AverageLiga />
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win" @click="openAverageLiga($event)">
-                <AverageLiga />
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
             </div>
           </div>
@@ -129,95 +128,21 @@ const openAverageLiga = e => {
           <div class="game-meta__inner">
             <div class="game-meta__name">Manchester United</div>
             <div class="game-meta__last-games-status last-games-status__list">
-              <div class="last-games-status__item last-games-status__item--lose">
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
+              <div class="last-games-status__item last-games-status__item--lose" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win">
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--draw">
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
+              <div class="last-games-status__item last-games-status__item--draw" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win">
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-              <div class="last-games-status__item last-games-status__item--win">
-                <div class="average-liga">
-                  <div class="average-liga__head">
-                    <div class="average-liga__title">Средний показатель по лиге</div>
-                  </div>
-                  <div class="average-liga__content">
-                    <div class="game-meta__logo">
-                      <img src="@/assets/img/content/real-madrid.png" alt="">
-                    </div>
-                    <div class="average-liga__value">99,9</div>
-                    <IconChartDown class="average-liga__chart" />
-                    <div class="average-liga__changes average-liga__changes--negative">+12%</div>
-                  </div>
-                </div>
+              <div class="last-games-status__item last-games-status__item--win" @click="openLastGameTooltip($event)">
+                <LastGameTooltip />
               </div>
-
             </div>
           </div>
           <div class="team-rate team-rate--middle">
