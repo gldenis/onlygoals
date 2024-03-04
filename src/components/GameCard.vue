@@ -8,6 +8,14 @@ import IconGameInfo from '@/components/icons/IconGameInfo.vue'
 import IconLock from '@/components/icons/IconLock.vue'
 import IconInfo from '@/components/icons/IconInfo.vue'
 import IconStarFilled from '@/components/icons/IconStarFilled.vue'
+import AverageLiga from '@/components/AverageLiga.vue'
+
+const openAverageLiga = e => {
+  if (!e.target.closest('.average-liga__wrapper')) {
+    e.target.closest('.info-score__item').classList.add('info-score__item--hovered')
+    e.target.closest('.game-card').classList.add('game-card--hovered')
+  }
+}
 </script>
 
 <template>
@@ -377,38 +385,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забивных матчей</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -416,38 +400,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Кол-во матчей в месяц</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -456,38 +416,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забив после 80/90 мин</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -495,38 +431,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Шанс контратаки</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -534,38 +446,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Характер</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -574,38 +462,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Интенсивность</div>
         <div class="info-score">
-          <div class="info-score__item info-score__item--null">
+          <div class="info-score__item info-score__item--null" @click="openAverageLiga($event)">
             0
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item info-score__item--null">
+          <div class="info-score__item info-score__item--null" @click="openAverageLiga($event)">
             0
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>
@@ -613,38 +477,14 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Удары в створ ворот</div>
         <div class="info-score">
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
           :
-          <div class="info-score__item">
+          <div class="info-score__item" @click="openAverageLiga($event)">
             9
-            <div class="average-liga">
-              <div class="average-liga__head">
-                <div class="average-liga__title">Средний показатель по лиге</div>
-              </div>
-              <div class="average-liga__content">
-                <div class="game-meta__logo">
-                  <img src="@/assets/img/content/real-madrid.png" alt="">
-                </div>
-                <div class="average-liga__value">99,9</div>
-                <IconChartRise class="average-liga__chart" />
-                <div class="average-liga__changes">+12%</div>
-              </div>
-            </div>
+            <AverageLiga />
           </div>
         </div>
       </div>

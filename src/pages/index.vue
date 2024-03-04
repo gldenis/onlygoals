@@ -37,6 +37,7 @@ import GameCardSliced from '@/components/GameCardSliced.vue'
 <style lang="scss" scoped>
 .games {
   margin-top: rem(40);
+  position: relative;
 
   &__container {
     display: flex;

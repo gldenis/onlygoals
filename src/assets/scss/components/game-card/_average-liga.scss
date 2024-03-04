@@ -11,8 +11,20 @@
   padding: rem(8);
   background: rgb(77 80 87 / 32%);
   transform: translateX(-50%);
-  backdrop-filter: blur(20px);
   gap: rem(4);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    border-radius: rem(8);
+    backdrop-filter: blur(20px);
+  }
 
   &__head {
   }
@@ -87,9 +99,24 @@
 
 @media screen and (max-width: $phablet) {
   .average-liga {
-    position: fixed;
+    position: absolute;
     left: 50%;
     bottom: 50%;
+    display: none;
     transform: translate(-50%, 50%);
+
+    &__wrapper {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background: rgb(22 29 36 / 80%);
+      backdrop-filter: blur(4px);
+    }
   }
 }
