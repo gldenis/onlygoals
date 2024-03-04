@@ -37,7 +37,9 @@
   }
 
   &__title {
-    display: box;
+    /* stylelint-disable */
+    display: -webkit-box;
+    /* stylelint-enable */
     overflow: hidden;
     font-weight: 500;
     font-size: rem(12);
