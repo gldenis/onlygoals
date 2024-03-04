@@ -122,7 +122,24 @@
     width: rem(4);
     height: rem(4);
 
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      border-radius: 50%;
+      width: rem(12);
+      height: rem(12);
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+
     &:hover {
+      &::before {
+        opacity: 1;
+      }
+
       .average-liga {
         display: flex;
       }
@@ -130,14 +147,26 @@
 
     &--win {
       background: var(--green-5);
+
+      &::before {
+        background: rgb(31 168 78 / 32%);
+      }
     }
 
     &--lose {
       background: var(--cd3d00);
+
+      &::before {
+        background: rgb(216 70 38 / 32%);
+      }
     }
 
     &--draw {
       background: var(--gray-3);
+
+      &::before {
+        background: rgb(150 153 157 / 32%);
+      }
     }
   }
 }
