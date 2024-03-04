@@ -98,7 +98,11 @@
 }
 
 @media screen and (max-width: $phablet) {
-  .average-liga {
-
+  .game-info:nth-child(3n) {
+    .average-liga {
+      left: auto;
+      right: 0;
+      transform: translateX(0);
+    }
   }
 }

@@ -45,8 +45,7 @@
   padding: rem(8);
   position: absolute;
   bottom: calc(100% + rem(8));
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
 
   & > * {
     z-index: 2;
@@ -114,38 +113,12 @@
   }
 }
 
+
+
 @media screen and (max-width: $phablet){
-  .last-game-tooltip {
-
-    &__inner {
-    display: none;
-    }
-  }
-
-  .last-games-status__item--hovered {
-    .last-game-tooltip {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(22, 29, 36, 0.8);
-      backdrop-filter: blur(4px);
-      z-index: 5;
-
-      &__inner {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        bottom: auto;
-        transform: translate(0, 0);
-        display: flex;
-      }
-    }
+  .game-meta__part--revert .last-game-tooltip {
+    right: 0;
+    left: auto;
   }
 }
 </style>
