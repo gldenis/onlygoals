@@ -16,7 +16,7 @@ const authStore = useAuthStore()
 <template>
   <main>
     <div class="container">
-      <div class="page-head">
+      <div class="page-head page-profile__page-head">
         <h1 class="page-head__title">Okeymaxim@gmail.com</h1>
         <div class="page-head__separator"></div>
         <LangSwitcher />
@@ -92,5 +92,12 @@ main {
   padding-top: rem(40);
 }
 
+@media screen and (max-width: $tablet){
+  .page-profile__page-head {
+    .page-head__title {
+      width: 100%;
+    }
+  }
+}
 
 </style>
