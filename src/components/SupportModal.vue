@@ -10,7 +10,6 @@ import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import SupportIdeaForm from '@/components/support/SupportIdeaForm.vue'
 import SupportErrorForm from '@/components/support/SupportErrorForm.vue'
 import SupportHelpForm from '@/components/support/SupportHelpForm.vue'
-import IconSupportChat from '@/components/icons/IconSupportChat.vue'
 
 const supportWindowIsOpened = ref(false)
 const content = ref()
@@ -29,8 +28,7 @@ const supportHelpIsOpened = ref(false)
 
 <template>
   <div class="support">
-    <IconSupportChat />
-<!--    <img class="support__trigger" src="@/assets/img/support.png" alt="" @click="supportWindowIsOpened = true">-->
+    <img class="support__trigger" src="@/assets/img/support.png" alt="" @click="supportWindowIsOpened = true">
     <div class="support__content" ref="content">
       <AppGuide v-if="supportWindowIsOpened">
         <button class="btn btn--small support__btn" @click="supportModalIsOpened = true">
