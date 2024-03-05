@@ -1,10 +1,18 @@
 <script setup>
 
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
+import { onMounted, ref } from 'vue'
+
+const show = ref(true)
+onMounted(() => {
+  setTimeout(() => {
+    show.value = false
+  }, 10000)
+})
 </script>
 
 <template>
-  <div class="toast">
+  <div class="toast" v-show="show">
     <div class="toast__picture">
       <img src="@/assets/img/content/manchester.png" alt="" width="44" height="44">
     </div>
