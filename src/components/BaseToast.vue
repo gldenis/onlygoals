@@ -21,7 +21,7 @@ import IconArrowRight from '@/components/icons/IconArrowRight.vue'
   position: fixed;
   bottom: rem(200);
   right: rem(20);
-  z-index: 4;
+  z-index: 2;
   display: flex;
   max-width: rem(388);
   padding: rem(16);
