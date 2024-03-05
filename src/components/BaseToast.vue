@@ -7,12 +7,12 @@ const show = ref(true)
 onMounted(() => {
   setTimeout(() => {
     show.value = false
-  }, 10000)
+  }, 1000)
 })
 </script>
 
 <template>
-  <div class="toast" v-show="show">
+  <div class="toast" :class="{ 'toast--hidden': !show }">
     <div class="toast__picture">
       <img src="@/assets/img/content/manchester.png" alt="" width="44" height="44">
     </div>
@@ -39,6 +39,11 @@ onMounted(() => {
   background: #E9EAEC;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.10);
   backdrop-filter: blur(40px);
+  transition: right 2s;
+
+  &--hidden {
+    right: - rem(500);
+  }
 
   &__picture {
     width: rem(44);
