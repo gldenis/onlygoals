@@ -18,7 +18,7 @@ onClickOutside(content, () => {
   supportWindowIsOpened.value = false
 })
 
-const supportModalIsOpened = ref(true)
+const supportModalIsOpened = ref(false)
 const supportMessageIsOpened = ref(false)
 const supportIdeaIsOpened = ref(false)
 const supportErrorIsOpened = ref(false)
