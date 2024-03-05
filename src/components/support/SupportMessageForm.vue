@@ -2,9 +2,13 @@
 import { useForm } from 'vee-validate'
 import { object, string } from "yup"
 import BaseInput from '@/components/ui/BaseInput.vue'
+import BaseTextarea from '@/components/ui/BaseTextarea.vue'
+import { ref } from 'vue'
+import IconImage from '@/components/icons/IconImage.vue'
 
 const schema = object({
-  email: string().required('email не может быть пустым').email("введите валидный email")
+  email: string().required('email не может быть пустым').email("введите валидный email"),
+  message: string().required('не может быть пустым')
 })
 
 const { values, errors, defineField, handleSubmit } = useForm({
@@ -15,33 +19,48 @@ const [email, emailAttrs] = defineField('email', {
   validateOnModelUpdate: false,
 })
 
+const [message, messageAttrs] = defineField('message', {
+  validateOnModelUpdate: false,
+})
+
 
 
 const formSubmit = handleSubmit(values => {
 
 })
-
-import { useAuthStore } from '@/stores/auth.js'
-const authStore = useAuthStore()
-const toLogin = () => {
-  authStore.loginFormIsOpened = true
-  authStore.restorePasswordFormIsOpened = false
+const inputFile = ref()
+const file = ref()
+const changeFile = (event) => {
+  file.value = event.target.files[0]
 }
 </script>
 
 <template>
   <form class="form" @submit.prevent="formSubmit">
     <div class="form__head">
-      <div class="form__title">Восстановление пароля</div>
+      <div class="form__title form__title--centered">Написать
+        в поддержку</div>
     </div>
     <div class="form__group">
       <BaseInput type="text"
                  v-model="email"
                  v-bind="emailAttrs"
-                 placeholder="Email"
+                 placeholder="Ваш Email"
                  :error="errors.email"/>
+      <BaseTextarea
+                 v-model="message"
+                 v-bind="messageAttrs"
+                 placeholder="Ваше обращение"
+                 :error="errors.message"/>
+      <input type="file" hidden="hidden" ref="inputFile" accept=".jpg, .png" class="payment-check__input" @change="changeFile"/>
+      <button class="btn btn--gray btn--small" type="button" @click="inputFile.click()">
+        <IconImage />
+        {{ file ? file.name : 'Добавить скриншот (JPG, PNG до 2 мб)' }}
+      </button>
+
+
     </div>
-    <button class="btn btn--primary">Отправить ссылку на почту</button>
+    <button class="btn btn--primary">Отправить</button>
   </form>
 </template>
 

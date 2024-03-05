@@ -1,17 +1,25 @@
 <script setup>
 import { useForm } from 'vee-validate'
-import { object, string } from "yup"
-import BaseInput from '@/components/ui/BaseInput.vue'
+import { object, string,  } from "yup"
+import BaseTextarea from '@/components/ui/BaseTextarea.vue'
+import { ref } from 'vue'
+import IconImage from '@/components/icons/IconImage.vue'
+import BaseSelect from '@/components/ui/BaseSelect.vue'
 
 const schema = object({
-  email: string().required('email не может быть пустым').email("введите валидный email")
+  selectedCategory: object().required('Выберите категорию'),
+  message: string().required('не может быть пустым')
 })
 
 const { values, errors, defineField, handleSubmit } = useForm({
   validationSchema: schema,
 })
 
-const [email, emailAttrs] = defineField('email', {
+const [selectedCategory, selectedCategoryAttrs] = defineField('selectedCategory', {
+  validateOnModelUpdate: false,
+})
+
+const [message, messageAttrs] = defineField('message', {
   validateOnModelUpdate: false,
 })
 
@@ -20,28 +28,51 @@ const [email, emailAttrs] = defineField('email', {
 const formSubmit = handleSubmit(values => {
 
 })
-
-import { useAuthStore } from '@/stores/auth.js'
-const authStore = useAuthStore()
-const toLogin = () => {
-  authStore.loginFormIsOpened = true
-  authStore.restorePasswordFormIsOpened = false
+const inputFile = ref()
+const file = ref()
+const changeFile = (event) => {
+  file.value = event.target.files[0]
 }
+
+const categories = ref([
+  {
+    name: 'Категория 1',
+    value: 1
+  },
+  {
+    name: 'Категория 2',
+    value: 1
+  }
+])
 </script>
 
 <template>
   <form class="form" @submit.prevent="formSubmit">
     <div class="form__head">
-      <div class="form__title">Восстановление пароля</div>
+      <div class="form__title form__title--centered">Предложить идею</div>
     </div>
     <div class="form__group">
-      <BaseInput type="text"
-                 v-model="email"
-                 v-bind="emailAttrs"
-                 placeholder="Email"
-                 :error="errors.email"/>
+      <div class="form__field">
+        <BaseSelect :options="categories"
+                    v-model="selectedCategory"
+                    v-bind="selectedCategoryAttrs"
+                    placeholder="Выберите категорию"/>
+        <span v-if="errors.selectedCategory" class="form-field__error">{{ errors.selectedCategory }}</span>
+      </div>
+      <BaseTextarea
+        v-model="message"
+        v-bind="messageAttrs"
+        placeholder="О чем ваша идея?"
+        :error="errors.message"/>
+      <input type="file" hidden="hidden" ref="inputFile" accept=".jpg, .png" class="payment-check__input" @change="changeFile"/>
+      <button class="btn btn--gray btn--small" type="button" @click="inputFile.click()">
+        <IconImage />
+        {{ file ? file.name : 'Добавить скриншот (JPG, PNG до 2 мб)' }}
+      </button>
+
+
     </div>
-    <button class="btn btn--primary">Отправить ссылку на почту</button>
+    <button class="btn btn--primary">Отправить</button>
   </form>
 </template>
 

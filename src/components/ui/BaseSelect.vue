@@ -14,6 +14,9 @@ const props = defineProps({
   placeholder: {
     type: String,
     default: 'choose'
+  },
+  error: {
+    type: String
   }
 })
 
