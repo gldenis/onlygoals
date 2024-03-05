@@ -9,6 +9,7 @@ import HomeHero from '@/components/HomeHero.vue'
 import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
 import BaseToast from '@/components/BaseToast.vue'
+import TelegramNotification from '@/components/TelegramNotification.vue'
 </script>
 
 <template>
@@ -30,7 +31,8 @@ import BaseToast from '@/components/BaseToast.vue'
         <GameCardSliced unavailable />
       </div>
     </section>
-    <PremiumNotification />
+<!--    <PremiumNotification />-->
+    <TelegramNotification />
     <SupportModal />
     <BaseToast />
   </main>
