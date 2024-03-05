@@ -7,7 +7,7 @@ const show = ref(true)
 onMounted(() => {
   setTimeout(() => {
     show.value = false
-  }, 1000)
+  }, 10000)
 })
 </script>
 
