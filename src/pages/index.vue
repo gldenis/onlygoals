@@ -8,6 +8,7 @@ import SupportModal from '@/components/SupportModal.vue'
 import HomeHero from '@/components/HomeHero.vue'
 import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
+import BaseToast from '@/components/BaseToast.vue'
 </script>
 
 <template>
@@ -31,6 +32,7 @@ import GameCardSliced from '@/components/GameCardSliced.vue'
     </section>
     <PremiumNotification />
     <SupportModal />
+    <BaseToast />
   </main>
 </template>
 
