@@ -381,6 +381,7 @@ const share = async () => {
 .story-modal {
   position: relative;
   max-width: 100%;
+  max-height: calc(100vh - rem(200));
 
   &__control {
     border-radius: rem(40);

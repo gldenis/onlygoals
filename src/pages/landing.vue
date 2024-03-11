@@ -7,6 +7,7 @@ import AppStories from '@/components/AppStories.vue'
 import vueRecaptcha from 'vue3-recaptcha2'
 import GameCardSmall from '@/components/GameCardSmall.vue'
 import GameCardSmallSliced from '@/components/GameCardSmallSliced.vue'
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 
 const recaptchaVerified = (response) => {
 }
@@ -25,78 +26,80 @@ const recaptchaError = (reason) => {
   <main>
     <div class="container landing__container">
       <div class="landing__left">
-        <div class="landing__left-wrapper">
-          <RouterLink to="/" class="landing__logo">
-            <img src="../assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
-          </RouterLink>
-          <div class="hero__text">
-            <h1 class="hero__title">Атомы футбола</h1>
-            <div class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
-              и моментальные обновления всех футбольных матчей</div>
-          </div>
-          <div class="hero-tiles hero-tiles--row">
-            <div class="hero-tiles__item hero-tiles__item--wide">
-              <div class="hero-tiles__title">Параметров
-                анализа</div>
-              <div class="hero-tiles__value">100+</div>
+        <OverlayScrollbarsComponent>
+          <div class="landing__left-wrapper">
+            <RouterLink to="/" class="landing__logo">
+              <img src="../assets/img/logo-landing.png" alt="" loading="lazy" width="199" height="40">
+            </RouterLink>
+            <div class="hero__text">
+              <h1 class="hero__title">Атомы футбола</h1>
+              <div class="hero__slogan">Высокоточные статистические данные, стратегические обзоры
+                и моментальные обновления всех футбольных матчей</div>
             </div>
-            <div class="hero-tiles__item hero-tiles__item--wide">
-              <div class="hero-tiles__title">Обновление данных каждые</div>
-              <div class="hero-tiles__value">10 <span>сек</span></div>
-            </div>
-            <div class="hero-tiles__item">
-              <IconCharts />
-              <div class="hero-tiles__title">Наглядные графики</div>
-            </div>
-            <div class="hero-tiles__item">
-              <IconAcces />
-              <div class="hero-tiles__title">Быстрый
-                доступ</div>
-            </div>
-            <div class="hero-tiles__item">
-              <IconHat />
-              <div class="hero-tiles__title">Обучение по анализу</div>
-            </div>
-            <div class="hero-tiles__item">
-              <IconCharts />
-              <div class="hero-tiles__title">О нас за
-                60 минут</div>
-            </div>
-          </div>
-          <form class="landing-form" @submit.prevent>
-            <div class="landing-form__top">
-              <div class="landing-form__pic">
-                <img src="../assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
+            <div class="hero-tiles hero-tiles--row">
+              <div class="hero-tiles__item hero-tiles__item--wide">
+                <div class="hero-tiles__title">Параметров
+                  анализа</div>
+                <div class="hero-tiles__value">100+</div>
               </div>
-              <div class="landing-form__content">
-                <div class="landing-form__title">Гол в один клик</div>
-                <div class="landing-form__recaptcha">
-                  <vue-recaptcha v-show="true" sitekey="6Lf6QIIpAAAAAKpMIil4K90wrJE9uxDB1LqKb-cl"
-                                 size="normal"
-                                 theme="light"
-                                 hl="ru"
-                                 :loading-timeout="30000 "
-                                 @verify="recaptchaVerified"
-                                 @expire="recaptchaExpired"
-                                 @fail="recaptchaFailed"
-                                 @error="recaptchaError"
-                                 ref="vueRecaptchaEl">
-                  </vue-recaptcha>
+              <div class="hero-tiles__item hero-tiles__item--wide">
+                <div class="hero-tiles__title">Обновление данных каждые</div>
+                <div class="hero-tiles__value">10 <span>сек</span></div>
+              </div>
+              <div class="hero-tiles__item">
+                <IconCharts />
+                <div class="hero-tiles__title">Наглядные графики</div>
+              </div>
+              <div class="hero-tiles__item">
+                <IconAcces />
+                <div class="hero-tiles__title">Быстрый
+                  доступ</div>
+              </div>
+              <div class="hero-tiles__item">
+                <IconHat />
+                <div class="hero-tiles__title">Обучение по анализу</div>
+              </div>
+              <div class="hero-tiles__item">
+                <IconCharts />
+                <div class="hero-tiles__title">О нас за
+                  60 минут</div>
+              </div>
+            </div>
+            <form class="landing-form" @submit.prevent>
+              <div class="landing-form__top">
+                <div class="landing-form__pic">
+                  <img src="../assets/img/landing-form.png" class="landing-form__img" alt="" loading="lazy" width="103" height="138">
+                </div>
+                <div class="landing-form__content">
+                  <div class="landing-form__title">Гол в один клик</div>
+                  <div class="landing-form__recaptcha">
+                    <vue-recaptcha v-show="true" sitekey="6Lf6QIIpAAAAAKpMIil4K90wrJE9uxDB1LqKb-cl"
+                                   size="normal"
+                                   theme="light"
+                                   hl="ru"
+                                   :loading-timeout="30000 "
+                                   @verify="recaptchaVerified"
+                                   @expire="recaptchaExpired"
+                                   @fail="recaptchaFailed"
+                                   @error="recaptchaError"
+                                   ref="vueRecaptchaEl">
+                    </vue-recaptcha>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="landing-form__bottom">
-              <div class="landing-form__text">
-                3 дня премиум <br>
-                при регистрации
+              <div class="landing-form__bottom">
+                <div class="landing-form__text">
+                  3 дня премиум <br>
+                  при регистрации
+                </div>
+                <button class="btn btn--primary landing-form__btn">
+                  Зарегистрироваться
+                </button>
               </div>
-              <button class="btn btn--primary landing-form__btn">
-                Зарегистрироваться
-              </button>
-            </div>
-          </form>
-          <AppStories class="stories__left" />
-        </div>
+            </form>
+            <AppStories class="stories__left" />
+          </div>
+        </OverlayScrollbarsComponent>
       </div>
       <div class="landing__right">
         <h2 class="last-games__title">Последние игры</h2>

@@ -31,8 +31,8 @@ import TelegramNotification from '@/components/TelegramNotification.vue'
         <GameCardSliced unavailable />
       </div>
     </section>
-<!--    <PremiumNotification />-->
-    <TelegramNotification />
+    <PremiumNotification />
+<!--    <TelegramNotification />-->
     <SupportModal />
     <BaseToast />
   </main>

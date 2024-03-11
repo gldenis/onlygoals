@@ -169,3 +169,11 @@ const supportHelpIsOpened = ref(false)
   }
 }
 </style>
+
+<style lang="scss">
+@media screen and (max-width: $phablet) {
+  .premium-notification ~ .support {
+    bottom: rem(84);
+  }
+}
+</style>

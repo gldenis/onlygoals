@@ -56,6 +56,7 @@ const showNotification = () => {
     height: rem(40);
     padding: 0;
     justify-content: center;
+    cursor: pointer;
 
     svg {
       width: rem(24);

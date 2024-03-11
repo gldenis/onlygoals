@@ -115,7 +115,7 @@ const showNotification = () => {
 
 @media screen and (max-width: $phablet) {
   .premium-notification {
-    bottom: rem(106);
+    bottom: rem(20);
     right: 0;
     left: auto;
     transform: none;
