@@ -382,6 +382,7 @@ const share = async () => {
   position: relative;
   max-width: 100%;
   max-height: calc(100vh - rem(200));
+  overflow: hidden;
 
   &__control {
     border-radius: rem(40);
@@ -437,7 +438,8 @@ const share = async () => {
   }
 
   img {
-    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 }
 

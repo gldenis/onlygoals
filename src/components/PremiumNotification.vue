@@ -3,6 +3,7 @@
 import IconPremiumNotification from '@/components/icons/IconPremiumNotification.vue'
 import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 import { ref } from 'vue'
+import IconStoriesTrigger from '@/components/icons/IconStoriesTrigger.vue'
 
 const notificationIsShowed = ref(true)
 const hideNotification = () => {
@@ -18,7 +19,7 @@ const showNotification = () => {
     <template v-if="notificationIsShowed">
       <div class="premium-notification__left">
         <IconPremiumNotification />
-        <IconArrowDown class="premium-notification__trigger max-phablet" @click="hideNotification"/>
+        <IconStoriesTrigger class="premium-notification__trigger max-phablet" @click="hideNotification" />
       </div>
       <div class="premium-notification__text">
         Заканчивается премиум <br>
