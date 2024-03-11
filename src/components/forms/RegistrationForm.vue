@@ -32,16 +32,25 @@ const formSubmit = handleSubmit(values => {
 
 })
 import { useAuthStore } from '@/stores/auth.js'
+import { createConfirmDialog } from 'vuejs-confirm-dialog'
+import AgreementModal from '@/components/AgreementModal.vue'
 const authStore = useAuthStore()
 
 const toLogin = () => {
   authStore.registrationFormIsOpened = false
   authStore.loginFormIsOpened = true
 }
+
+const openAgreement = () => {
+
+  const { reveal } = createConfirmDialog(AgreementModal)
+
+  reveal()
+}
 </script>
 
 <template>
-  <form class="form" @submit.prevent="formSubmit">
+  <form v-bind="$attrs" class="form" @submit.prevent="formSubmit">
     <div class="form__head">
       <div class="form__title">Регистрация</div>
       <button class="btn btn--small btn--gray" type="button" @click="toLogin">Вход</button>
@@ -62,7 +71,7 @@ const toLogin = () => {
       <BaseCheckbox v-model="agreement"  v-bind="agreementAttrs" :error="errors.password">
         <p>
           Я согласен с
-          <a class="form__link" href="#">Пользовательскими соглашениями</a>,
+          <a class="form__link" href="#" @click.prevent="openAgreement">Пользовательскими соглашениями</a>,
           <a href="#" class="form__link">Правилами и Условиями</a>
           и подтверждаю, что мне исполнилось 18 лет.
         </p>

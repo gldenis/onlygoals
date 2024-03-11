@@ -56,7 +56,7 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
     </BaseModal>
   </teleport>
   <teleport to="body">
-    <BaseModal :opened="authStore.registrationFormIsOpened" v-if="authStore.registrationFormIsOpened" @close="authStore.registrationFormIsOpened = false">
+    <BaseModal :opened="authStore.registrationFormIsOpened" v-show="authStore.registrationFormIsOpened" @close="authStore.registrationFormIsOpened = false">
       <RegistrationForm />
     </BaseModal>
   </teleport>
