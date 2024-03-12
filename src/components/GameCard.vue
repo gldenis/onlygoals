@@ -8,6 +8,7 @@ import IconInfo from '@/components/icons/IconInfo.vue'
 import IconStarFilled from '@/components/icons/IconStarFilled.vue'
 import AverageLiga from '@/components/AverageLiga.vue'
 import LastGameTooltip from '@/components/LastGameTooltip.vue'
+import InfoValue from '@/components/InfoValue.vue'
 </script>
 
 <template>
@@ -235,9 +236,13 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
           </div>
         </div>
         <div class="info-score">
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
           :
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
         </div>
       </div>
       <div class="game-info game-info--chance">
@@ -251,9 +256,13 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
           </div>
         </div>
         <div class="info-score">
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
           :
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
         </div>
       </div>
     </div>
@@ -261,11 +270,8 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
       <div class="game-info">
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Прессинг</div>
-        <div class="info-score info-score--locked">
-          <div class="info-score__item">9
-            <div class="info-score__lock">
-              <IconLock />
-            </div>
+        <div class="info-score">
+          <InfoValue value="9" locked>
             <div class="average-liga-lock">
               <IconLock />
               <div class="average-liga-lock__content">
@@ -273,12 +279,9 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
                 <div class="average-liga-lock__btn">Подробнее</div>
               </div>
             </div>
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">9
-            <div class="info-score__lock">
-              <IconLock />
-            </div>
+          <InfoValue value="9" locked>
             <div class="average-liga-lock">
               <IconLock />
               <div class="average-liga-lock__content">
@@ -286,38 +289,33 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
                 <div class="average-liga-lock__btn">Подробнее</div>
               </div>
             </div>
-          </div>
-
+          </InfoValue>
         </div>
       </div>
       <div class="game-info">
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забивных матчей</div>
         <div class="info-score">
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
       <div class="game-info">
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Кол-во матчей в месяц</div>
         <div class="info-score">
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
 
@@ -325,15 +323,13 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Забив после 80/90 мин</div>
         <div class="info-score">
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
       <div class="game-info">
@@ -355,15 +351,13 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Характер</div>
         <div class="info-score">
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
 
@@ -371,52 +365,39 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Интенсивность</div>
         <div class="info-score">
-          <div class="info-score__item info-score__item--null">
-            0
+          <InfoValue value="0">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item info-score__item--null">
-            0
+          <InfoValue value="0">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
       <div class="game-info">
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Удары в створ ворот</div>
         <div class="info-score">
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
           :
-          <div class="info-score__item">
-            9
+          <InfoValue value="9">
             <AverageLiga />
-          </div>
+          </InfoValue>
         </div>
       </div>
       <div class="game-info game-info--locked">
         <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Кол-во матчей в месяц</div>
         <div class="info-score">
-          <div class="average-liga">
-            <div class="average-liga__head">
-              <div class="average-liga__title">Средний показатель по лиге</div>
-            </div>
-            <div class="average-liga__content">
-              <div class="game-meta__logo">
-                <img src="@/assets/img/content/real-madrid.png" alt="">
-              </div>
-              <div class="average-liga__value">99,9</div>
-              <IconChartRise class="average-liga__chart" />
-              <div class="average-liga__changes">+12%</div>
-            </div>
-          </div>
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
           :
-          <div class="info-score__item">9</div>
+          <InfoValue value="9">
+            <AverageLiga />
+          </InfoValue>
         </div>
 
         <div class="game-info__lock">
