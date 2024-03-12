@@ -15,6 +15,7 @@ import RestorePasswordForm from '@/components/forms/RestorePasswordForm.vue'
 import ModalPayment from '@/components/ModalPayment.vue'
 import { useModalStore } from '@/stores/modal.js'
 import { computed, defineAsyncComponent } from 'vue'
+import AgreementModal from '@/components/AgreementModal.vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
@@ -60,6 +61,15 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
       <RegistrationForm />
     </BaseModal>
   </teleport>
+  <teleport to="body">
+    <BaseModal :opened="authStore.agreementIsOpened" v-if="authStore.agreementIsOpened"
+               @close="authStore.agreementIsOpened = false"
+               @cancel="authStore.agreementIsOpened = false; authStore.registrationFormIsOpened = true;"
+    >
+      <AgreementModal />
+    </BaseModal>
+  </teleport>
+
   <teleport to="body">
     <BaseModal :opened="macrosStore.createModalIsOpened" class="modal--macros" v-if="macrosStore.createModalIsOpened" @close="macrosStore.createModalIsOpened = false">
       <MacrosCreate @cancel="macrosStore.createModalIsOpened = false" />

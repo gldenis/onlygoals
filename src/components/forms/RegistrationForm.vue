@@ -32,8 +32,6 @@ const formSubmit = handleSubmit(values => {
 
 })
 import { useAuthStore } from '@/stores/auth.js'
-import { createConfirmDialog } from 'vuejs-confirm-dialog'
-import AgreementModal from '@/components/AgreementModal.vue'
 const authStore = useAuthStore()
 
 const toLogin = () => {
@@ -42,10 +40,8 @@ const toLogin = () => {
 }
 
 const openAgreement = () => {
-
-  const { reveal } = createConfirmDialog(AgreementModal)
-
-  reveal()
+  authStore.registrationFormIsOpened = false
+  authStore.agreementIsOpened = true
 }
 </script>
 

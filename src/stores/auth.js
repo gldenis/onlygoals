@@ -9,6 +9,8 @@ export const useAuthStore = defineStore('loginForm', () => {
   const changeEmailFormIsOpened = ref(false)
   const changePasswordFormIsOpened = ref(false)
   const referralFormIsOpened = ref(false)
+  const agreementIsOpened = ref(false)
+  const policyIsOpened = ref(false)
 
   return {
     loginFormIsOpened,
@@ -17,6 +19,8 @@ export const useAuthStore = defineStore('loginForm', () => {
     verificationFormIsOpened,
     changeEmailFormIsOpened,
     changePasswordFormIsOpened,
-    referralFormIsOpened
+    referralFormIsOpened,
+    agreementIsOpened,
+    policyIsOpened
   }
 })
