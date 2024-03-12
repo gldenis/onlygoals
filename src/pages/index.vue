@@ -1,8 +1,6 @@
 <script setup>
 
-import IconStar from '@/components/icons/IconStar.vue'
 import AppStories from '@/components/AppStories.vue'
-import IconCardLock from '@/components/icons/IconCardLock.vue'
 import PremiumNotification from '@/components/PremiumNotification.vue'
 import SupportModal from '@/components/SupportModal.vue'
 import HomeHero from '@/components/HomeHero.vue'

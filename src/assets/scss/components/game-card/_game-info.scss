@@ -104,6 +104,13 @@
 
   &--schema {
     width: calc(148 / 386 * 100%);
+
+    &__wrapper {
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: rem(8);
+    }
   }
 
   &--chart {

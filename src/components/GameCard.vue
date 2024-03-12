@@ -194,22 +194,32 @@ import LastGameTooltip from '@/components/LastGameTooltip.vue'
           <div class="info-score">
             <div class="info-score__item">F</div>
             :
-            <div class="info-score__item">4</div>
+            <div class="info-score__item">
+              4
+              <div class="info-score__lock">
+                <IconLock />
+              </div>
+            </div>
           </div>
         </div>
         <div class="game-info game-info--schema">
           <div class="game-info__title">Схема</div>
-          <div class="game-goals">
-            <div class="game-goals__item">
-              <div class="game-goals__team game-goals__team--team-1"></div>
-              <div class="game-goals__author">9-9-9-9</div>
+          <div class="game-info--schema__wrapper">
+            <div class="game-goals">
+              <div class="game-goals__item">
+                <div class="game-goals__team game-goals__team--team-1"></div>
+                <div class="game-goals__author">9-9-9-9</div>
+              </div>
+              <div class="game-goals__item">
+                <div class="game-goals__team game-goals__team--team-2"></div>
+                <div class="game-goals__author">9-9-9-9</div>
+              </div>
             </div>
-            <div class="game-goals__item">
-              <div class="game-goals__team game-goals__team--team-2"></div>
-              <div class="game-goals__author">9-9-9-9</div>
+            <div class="game-info__add">+3</div>
+            <div class="info-score__lock">
+              <IconLock />
             </div>
           </div>
-          <div class="game-info__add">+3</div>
         </div>
       </div>
     </div>
