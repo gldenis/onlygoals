@@ -73,9 +73,12 @@ const toggleStep = step => {
           <div class="guide-steps__buttons">
             <button class="btn btn--small guide-steps__btn">Подробнее</button>
             <div class="guide-steps__price">
-
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
             </div>
-            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
           </div>
         </div>
       </div>
@@ -94,9 +97,12 @@ const toggleStep = step => {
           <div class="guide-steps__buttons">
             <button class="btn btn--small guide-steps__btn">Подробнее</button>
             <div class="guide-steps__price">
-
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
             </div>
-            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
           </div>
         </div>
       </div>
@@ -114,7 +120,13 @@ const toggleStep = step => {
           <div class="guide-steps__text">Description</div>
           <div class="guide-steps__buttons">
             <button class="btn btn--small guide-steps__btn">Подробнее</button>
-            <button class="btn btn--outlined-gradient btn--small guide-steps__price">35 USDT</button>
+            <div class="guide-steps__price">
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
+            </div>
           </div>
         </div>
       </div>
@@ -133,9 +145,12 @@ const toggleStep = step => {
           <div class="guide-steps__buttons">
             <button class="btn btn--small guide-steps__btn">Подробнее</button>
             <div class="guide-steps__price">
-
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
             </div>
-            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
           </div>
         </div>
       </div>
@@ -154,9 +169,12 @@ const toggleStep = step => {
           <div class="guide-steps__buttons">
             <button class="btn btn--small guide-steps__btn">Подробнее</button>
             <div class="guide-steps__price">
-
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
             </div>
-            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
           </div>
         </div>
       </div>
