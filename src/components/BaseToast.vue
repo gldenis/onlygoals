@@ -1,18 +1,25 @@
 <script setup>
 
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
-import { onMounted, ref } from 'vue'
+import { useToastStore } from '@/stores/toast.js'
 
-const show = ref(true)
-onMounted(() => {
-  setTimeout(() => {
-    show.value = false
-  }, 10000)
+const props = defineProps({
+  title: {
+    type: String
+  },
+  description: {
+    type: String
+  },
+  delay: {
+    default: 10000
+  }
 })
+
+const { clearToast } = useToastStore()
 </script>
 
 <template>
-  <div class="toast" :class="{ 'toast--hidden': !show }">
+  <div class="toast">
     <div class="toast__picture">
       <img src="@/assets/img/content/manchester.png" alt="" width="44" height="44">
     </div>
@@ -20,16 +27,21 @@ onMounted(() => {
       <div class="toast__title">Заголовок события</div>
       <div class="toast__description">Краткие детали события</div>
     </div>
-    <IconArrowRight class="toast__trigger" />
+    <IconArrowRight class="toast__trigger" @click="clearToast(title)" />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .toast {
-  position: fixed;
-  bottom: rem(200);
-  right: rem(20);
-  z-index: 2;
+  &__list {
+    position: fixed;
+    bottom: rem(200);
+    right: rem(20);
+    width: max-content;
+    z-index: 2;
+
+  }
+
   display: flex;
   max-width: rem(388);
   padding: rem(16);
@@ -40,10 +52,6 @@ onMounted(() => {
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.10);
   backdrop-filter: blur(40px);
   transition: right 2s;
-
-  &--hidden {
-    right: - rem(500);
-  }
 
   &__picture {
     width: rem(44);
@@ -75,6 +83,7 @@ onMounted(() => {
 
   &__trigger {
     color: #191B22;
+    cursor: pointer;
   }
 
 }

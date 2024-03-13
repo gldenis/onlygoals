@@ -7,7 +7,17 @@ import HomeHero from '@/components/HomeHero.vue'
 import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
 import BaseToast from '@/components/BaseToast.vue'
-import TelegramNotification from '@/components/TelegramNotification.vue'
+import { useToastStore } from '@/stores/toast.js'
+import { onMounted } from 'vue'
+
+const { toasts, addToast } = useToastStore()
+
+onMounted(() => {
+  addToast({
+    title: 'Заголовок события',
+    description: 'Краткие детали события',
+  })
+})
 </script>
 
 <template>
@@ -32,11 +42,30 @@ import TelegramNotification from '@/components/TelegramNotification.vue'
     <PremiumNotification />
 <!--    <TelegramNotification />-->
     <SupportModal />
-    <BaseToast />
+    <TransitionGroup name="toast">
+      <div class="toast__list">
+        <BaseToast v-for="toast of toasts"
+                   :key="toast.title"
+                   :title="toast.title"
+                   :description="toast.description"
+        />
+      </div>
+    </TransitionGroup>
   </main>
 </template>
 
 <style lang="scss" scoped>
+.toast-enter-active,
+.toast-leave-active {
+  transition: all 0.5s ease;
+}
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+
 .games {
   margin-top: rem(40);
   position: relative;
