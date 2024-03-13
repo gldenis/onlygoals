@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   gap: rem(2);
+  position: relative;
 
   &__item {
     position: relative;
@@ -67,6 +68,17 @@
     }
   }
 
+  &__game-time {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + rem(4));
+    display: none;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 128%; /* 15.36px */
+    color: rgb(255 255 255 / 68%);
+  }
+
   &:hover {
     .game-timeline__value {
       background: rgb(255 255 255 / 84%);
@@ -82,6 +94,10 @@
     }
 
     .game-timeline__fall {
+      display: block;
+    }
+
+    .game-timeline__game-time {
       display: block;
     }
   }

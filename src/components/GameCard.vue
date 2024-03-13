@@ -107,6 +107,7 @@ import InfoValue from '@/components/InfoValue.vue'
           <div class="game-timeline__value game-timeline__value--current" style="width: 50%;"></div>
           <div class="game-timeline__current-time"></div>
         </div>
+        <div class="game-timeline__game-time">99:99</div>
       </div>
       <div class="game-meta">
         <div class="game-meta__part">
