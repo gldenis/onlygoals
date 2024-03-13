@@ -84,6 +84,7 @@
     max-width: rem(378);
     background: #24262d;
     gap: rem(24);
+    flex-shrink: 0;
 
     &--base {
       position: relative;

@@ -32,10 +32,15 @@ const supportHelpIsOpened = ref(false)
     <IconSupportChat class="support__trigger" @click="supportWindowIsOpened = true"  />
     <div class="support__content" ref="content">
       <AppGuide v-if="supportWindowIsOpened">
-        <button class="btn btn--small support__btn" @click="supportModalIsOpened = true">
-          Overgoals поддержка
-          <IconSupportSend />
-        </button>
+        <div class="support__buttons">
+          <button class="btn btn--small btn--outlined-gradient">
+            Получите весь курс со скидкой!
+          </button>
+          <button class="btn btn--small btn--gray" @click="supportModalIsOpened = true">
+            Overgoals поддержка
+            <IconSupportSend />
+          </button>
+        </div>
       </AppGuide>
     </div>
     <Teleport to="body">
@@ -129,6 +134,12 @@ const supportHelpIsOpened = ref(false)
   bottom: rem(40);
   right: rem(40);
   z-index: 3;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+  }
 
   &__btn {
     border-radius: rem(24);

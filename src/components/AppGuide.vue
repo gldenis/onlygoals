@@ -44,7 +44,16 @@ const toggleStep = step => {
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(1) }">
           <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <div class="guide-steps__price">
+              <div class="coins">
+                <img src="@/assets/img/bitcoin.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+                <img src="@/assets/img/usdt.png" alt="" class="coins__item" loading="lazy" width="12" height="12">
+              </div>
+              <button class="btn btn--outlined-gradient btn--small guide-steps__price-btn">35 USDT</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(2) }">
@@ -54,12 +63,20 @@ const toggleStep = step => {
           <div class="guide-steps__icon">
             <IconTime />
           </div>
-          <div class="guide-steps__title">Регистрация</div>
+          <div class="guide-steps__title">Тактика и возможности</div>
           <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(2) }">
-          <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__text">Раскрывает основные принципы тактической игры в футбол, помогая понять
+            эффективные стратегии и принимать осмысленные решения на поле
+          </div>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <div class="guide-steps__price">
+
+            </div>
+            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
+          </div>
         </div>
       </div>
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(3) }">
@@ -69,12 +86,18 @@ const toggleStep = step => {
           <div class="guide-steps__icon">
             <IconLesson />
           </div>
-          <div class="guide-steps__title">Регистрация</div>
+          <div class="guide-steps__title">Анализ игр 1</div>
           <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(3) }">
           <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <div class="guide-steps__price">
+
+            </div>
+            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
+          </div>
         </div>
       </div>
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(4) }">
@@ -84,12 +107,15 @@ const toggleStep = step => {
           <div class="guide-steps__icon">
             <IconLesson />
           </div>
-          <div class="guide-steps__title">Регистрация</div>
+          <div class="guide-steps__title">Анализ игр 2</div>
           <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(4) }">
           <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <button class="btn btn--outlined-gradient btn--small guide-steps__price">35 USDT</button>
+          </div>
         </div>
       </div>
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(5) }">
@@ -99,12 +125,18 @@ const toggleStep = step => {
           <div class="guide-steps__icon">
             <IconLesson />
           </div>
-          <div class="guide-steps__title">Регистрация</div>
+          <div class="guide-steps__title">Показатели</div>
           <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(5) }">
           <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <div class="guide-steps__price">
+
+            </div>
+            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
+          </div>
         </div>
       </div>
       <div class="guide-steps__item" :class="{ 'guide-steps__item--opened': openedSteps.includes(6) }">
@@ -114,12 +146,18 @@ const toggleStep = step => {
           <div class="guide-steps__icon">
             <IconLesson />
           </div>
-          <div class="guide-steps__title">Регистрация</div>
+          <div class="guide-steps__title">Уведомления</div>
           <IconArrowDown class="guide-steps__head-arrow" />
         </div>
         <div class="guide-steps__content" :class="{ 'guide-steps__content--opened': openedSteps.includes(6) }">
           <div class="guide-steps__text">Description</div>
-          <button class="btn btn--small guide-steps__btn">Подробнее</button>
+          <div class="guide-steps__buttons">
+            <button class="btn btn--small guide-steps__btn">Подробнее</button>
+            <div class="guide-steps__price">
+
+            </div>
+            <button class="btn btn--outlined-gradient btn--small">35 USDT</button>
+          </div>
         </div>
       </div>
     </div>
@@ -130,7 +168,7 @@ const toggleStep = step => {
 <style scoped lang="scss">
 .guide-steps {
   border-radius: rem(8);
-  background:  rgba(25, 27, 34, 0.32);
+  background: rgba(25, 27, 34, 0.32);
   padding: rem(8) 0;
 
   &__item {
@@ -199,14 +237,22 @@ const toggleStep = step => {
   }
 
   &__text {
-    color:  rgba(255, 255, 255, 0.32);
+    color: rgba(255, 255, 255, 0.32);
     font-size: rem(12);
     font-weight: 500;
     line-height: 128%; /* 15.36px */
   }
 
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    justify-content: space-between;
+    width: 100%;
+  }
+
   &__btn {
-    color:  #E3861A;
+    color: #E3861A;
     height: rem(30);
     text-align: center;
     font-size: rem(13);
@@ -214,6 +260,28 @@ const toggleStep = step => {
     line-height: 132%; /* 17.16px */
     border-radius: rem(20);
     background: rgba(227, 134, 26, 0.12);
+    padding: rem(7) rem(12);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+  }
+
+  &__price-btn {
+    height: rem(30);
+  }
+}
+
+.coins {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+
+  &__item {
+    width: rem(12);
+    height: rem(12);
   }
 }
 

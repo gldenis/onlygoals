@@ -110,6 +110,14 @@
       position: relative;
       align-items: center;
       gap: rem(8);
+
+      .info-score__lock {
+        border-radius: rem(4);
+        top: - rem(4);
+        right: - rem(4);
+        bottom: - rem(4);
+        left: - rem(4);
+      }
     }
   }
 
