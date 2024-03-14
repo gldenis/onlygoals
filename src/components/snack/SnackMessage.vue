@@ -53,6 +53,8 @@ onClickOutside(snack, () => {
   &__icon {
     margin-left: auto;
     margin-right: auto;
+    width: rem(200);
+    height: rem(160);
   }
 
   &__title {
