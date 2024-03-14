@@ -14,8 +14,10 @@ const { toasts, addToast } = useToastStore()
 
 onMounted(() => {
   addToast({
+
     title: 'Заголовок события',
     description: 'Краткие детали события',
+    delay: 10000
   })
 })
 </script>
@@ -42,15 +44,16 @@ onMounted(() => {
     <PremiumNotification />
 <!--    <TelegramNotification />-->
     <SupportModal />
-    <TransitionGroup name="toast">
-      <div class="toast__list">
+    <div class="toast__list">
+      <TransitionGroup name="toast">
         <BaseToast v-for="toast of toasts"
                    :key="toast.title"
                    :title="toast.title"
                    :description="toast.description"
         />
-      </div>
-    </TransitionGroup>
+      </TransitionGroup>
+    </div>
+
   </main>
 </template>
 

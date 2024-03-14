@@ -24,8 +24,8 @@ const { clearToast } = useToastStore()
       <img src="@/assets/img/content/manchester.png" alt="" width="44" height="44">
     </div>
     <div class="toast__content">
-      <div class="toast__title">Заголовок события</div>
-      <div class="toast__description">Краткие детали события</div>
+      <div class="toast__title">{{ title }}</div>
+      <div class="toast__description" v-if="description">{{ description }}</div>
     </div>
     <IconArrowRight class="toast__trigger" @click="clearToast(title)" />
   </div>
@@ -39,7 +39,9 @@ const { clearToast } = useToastStore()
     right: rem(20);
     width: max-content;
     z-index: 2;
-
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
   }
 
   display: flex;
