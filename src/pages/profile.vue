@@ -20,8 +20,15 @@ const authStore = useAuthStore()
         <h1 class="page-head__title">Okeymaxim@gmail.com</h1>
         <div class="page-head__separator"></div>
         <LangSwitcher />
-        <button class="btn btn--small btn--outlined" @click="authStore.changeEmailFormIsOpened = true">Change Email</button>
-        <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
+        <template v-if="true">
+            <div class="profile-verification__label">Подтвердите аккаунт для
+              доступа ко всем функциям</div>
+            <button class="btn btn--small btn--light">Повторить отправку</button>
+        </template>
+        <template v-else>
+          <button class="btn btn--small btn--outlined" @click="authStore.changeEmailFormIsOpened = true">Change Email</button>
+          <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
+        </template>
       </div>
       <div class="referral__wrapper">
         <div class="referrals">
@@ -90,6 +97,15 @@ const authStore = useAuthStore()
 <style scoped lang="scss">
 main {
   padding-top: rem(40);
+}
+
+.profile-verification__label {
+  color: #E3861A;
+  text-align: right;
+  font-size: rem(13);
+  font-weight: 700;
+  line-height: 132%; /* 17.16px */
+  max-width: rem(176);
 }
 
 @media screen and (max-width: $tablet){
