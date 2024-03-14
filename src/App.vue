@@ -42,13 +42,13 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
 <template>
   <component :is="layout" />
 
-  <teleport to="body">
-    <BaseModal :opened="authStore.loginFormIsOpened" v-if="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal :opened="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
       <LoginForm />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="authStore.restorePasswordFormIsOpened" v-if="authStore.restorePasswordFormIsOpened"
+  <teleport to="#modal">
+    <BaseModal :opened="authStore.restorePasswordFormIsOpened"
                @close="authStore.restorePasswordFormIsOpened = false"
                @cancel="authStore.restorePasswordFormIsOpened = false; authStore.loginFormIsOpened = true;"
                :show-again-btn="true"
@@ -56,13 +56,13 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
       <RestorePasswordForm />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="authStore.registrationFormIsOpened" v-show="authStore.registrationFormIsOpened" @close="authStore.registrationFormIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal :opened="authStore.registrationFormIsOpened" @close="authStore.registrationFormIsOpened = false">
       <RegistrationForm />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="authStore.agreementIsOpened" v-if="authStore.agreementIsOpened"
+  <teleport to="#modal">
+    <BaseModal :opened="authStore.agreementIsOpened"
                @close="authStore.agreementIsOpened = false"
                @cancel="authStore.agreementIsOpened = false; authStore.registrationFormIsOpened = true;"
     >
@@ -70,33 +70,33 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
     </BaseModal>
   </teleport>
 
-  <teleport to="body">
-    <BaseModal :opened="macrosStore.createModalIsOpened" class="modal--macros" v-if="macrosStore.createModalIsOpened" @close="macrosStore.createModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal class="modal--macros" :opened="macrosStore.createModalIsOpened"  @close="macrosStore.createModalIsOpened = false">
       <MacrosCreate @cancel="macrosStore.createModalIsOpened = false" />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="macrosStore.editModalIsOpened" class="modal--macros" v-if="macrosStore.editModalIsOpened" @close="macrosStore.editModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal class="modal--macros" :opened="macrosStore.editModalIsOpened"  @close="macrosStore.editModalIsOpened = false">
       <MacrosEdit @cancel="macrosStore.editModalIsOpened = false;macrosStore.viewItemModalIsOpened = true" />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="macrosStore.viewModalIsOpened" class="modal--macros" v-if="macrosStore.viewModalIsOpened" @close="macrosStore.viewModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal class="modal--macros" :opened="macrosStore.viewModalIsOpened" @close="macrosStore.viewModalIsOpened = false">
       <MacrosView />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="macrosStore.viewItemModalIsOpened" class="modal--macros" v-if="macrosStore.viewItemModalIsOpened" @close="macrosStore.viewItemModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal class="modal--macros" :opened="macrosStore.viewItemModalIsOpened"  @close="macrosStore.viewItemModalIsOpened = false">
       <MacrosViewItem />
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="guideStore.guideModalIsOpened" class="modal--macros" v-if="guideStore.guideModalIsOpened" @close="guideStore.guideModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal class="modal--macros" :opened="guideStore.guideModalIsOpened" @close="guideStore.guideModalIsOpened = false">
       <GuideItem @close="guideStore.guideModalIsOpened = false"/>
     </BaseModal>
   </teleport>
-  <teleport to="body">
-    <BaseModal :opened="modalStore.paymentModalIsOpened" v-if="modalStore.paymentModalIsOpened" @close="modalStore.paymentModalIsOpened = false">
+  <teleport to="#modal">
+    <BaseModal :opened="modalStore.paymentModalIsOpened" @close="modalStore.paymentModalIsOpened = false">
       <ModalPayment />
     </BaseModal>
   </teleport>

@@ -11,7 +11,6 @@ html {
 #app {
   display: flex;
   flex-direction: column;
-  padding-top: rem(72);
   width: 100%;
 }
 
@@ -27,19 +26,7 @@ html {
   color: var(--text-color);
   background: url("@/assets/img/main-bg.png") top center / cover no-repeat, #191b22;
   background-attachment: fixed;
-  scrollbar-gutter: stable;
-
-  &:has(.modal--opened) {
-    overflow-y: hidden;
-    padding-right: 17px;
-    scrollbar-gutter: stable;
-  }
-
-  &--overflow {
-    overflow: hidden;
-    height: 100vh;
-    scrollbar-gutter: stable;
-  }
+  transition: background 3s;
 }
 
 .landing {
