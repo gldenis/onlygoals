@@ -1,7 +1,7 @@
 <script setup>
 
 import AppStories from '@/components/AppStories.vue'
-import PremiumNotification from '@/components/PremiumNotification.vue'
+import PremiumNotification from '@/components/notifications/PremiumNotification.vue'
 import SupportModal from '@/components/SupportModal.vue'
 import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
