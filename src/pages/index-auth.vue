@@ -10,8 +10,6 @@ import GameCardSliced from '@/components/GameCardSliced.vue'
 <template>
   <main>
     <AppStories class="page-auth__stories"/>
-
-
     <section class="games">
       <div class="container">
         <GameCard />

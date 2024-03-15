@@ -91,7 +91,7 @@ const cookiesAccepted = ref(false)
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  bottom: - rem(50);
+  transform: translate(-50%, rem(50));
   opacity: 0;
 }
 
