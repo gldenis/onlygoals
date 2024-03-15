@@ -1,7 +1,7 @@
 <script setup>
 
 import AppStories from '@/components/AppStories.vue'
-import PremiumNotification from '@/components/PremiumNotification.vue'
+import PremiumNotification from '@/components/notifications/PremiumNotification.vue'
 import SupportModal from '@/components/SupportModal.vue'
 import HomeHero from '@/components/HomeHero.vue'
 import GameCard from '@/components/GameCard.vue'
@@ -14,7 +14,6 @@ const { toasts, addToast } = useToastStore()
 
 onMounted(() => {
   addToast({
-
     title: 'Заголовок события',
     description: 'Краткие детали события',
     delay: 10000

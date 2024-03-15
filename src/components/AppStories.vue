@@ -234,8 +234,9 @@ const share = async () => {
         </div>
       </Swiper>
 
-      <Teleport to="body" >
-        <div v-show="storyModalIsOpened" class="modal" >
+      <Teleport to="#modal" >
+        <transition name="fade">
+          <div v-show="storyModalIsOpened" class="modal" >
           <div class="modal__overlay" @click="closeStory"></div>
           <div class="modal__content">
             <button class="btn btn--icon modal__close" @click="closeStory">
@@ -258,6 +259,7 @@ const share = async () => {
             </div>
           </div>
         </div>
+        </transition>
       </Teleport>
     </div>
   </section>

@@ -1,11 +1,14 @@
 <script setup>
 import { createConfirmDialog } from 'vuejs-confirm-dialog'
 import BaseConfirm from '@/components/ui/BaseConfirm.vue'
-import TelegramBotNotification from '@/components/TelegramBotNotification.vue'
+import TelegramBotNotification from '@/components/notifications/TelegramBotNotification.vue'
 import SnackMessage from '@/components/snack/SnackMessage.vue'
 import SnackSuccess from '@/components/snack/SnackSuccess.vue'
 import SnackError from '@/components/snack/SnackError.vue'
 import SnackExit from '@/components/snack/SnackExit.vue'
+import CookiesNotification from '@/components/notifications/CookiesNotification.vue'
+import VerificationNotification from '@/components/notifications/VerificationNotification.vue'
+import { ref } from 'vue'
 
 
 const openConfirm = severity => {
@@ -43,6 +46,8 @@ const openSnackExit = () => {
 
   reveal()
 }
+
+const cookiesAccepted = ref(false)
 </script>
 
 <template>
@@ -68,10 +73,28 @@ const openSnackExit = () => {
         <button class="btn btn--primary" @click="openSnackExit">exit</button>
       </div>
     </div>
+    <Transition name="slide-fade">
+      <CookiesNotification v-if="!cookiesAccepted" @accept="cookiesAccepted = true" />
+    </Transition>
+    <Transition name="slide-fade">
+      <VerificationNotification  v-if="cookiesAccepted" e/>
+    </Transition>
+
   </main>
 </template>
 
 <style scoped lang="scss">
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all .5s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  bottom: - rem(50);
+  opacity: 0;
+}
+
 main {
   padding: 60px 0;
 }

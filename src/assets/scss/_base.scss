@@ -26,7 +26,7 @@ html {
   color: var(--text-color);
   background: url("@/assets/img/main-bg.png") top center / cover no-repeat, #191b22;
   background-attachment: fixed;
-  transition: background 3s;
+  background-origin: content-box, content-box;
 }
 
 .landing {

@@ -21,6 +21,12 @@
     gap: rem(12);
   }
 
+  &--extra-small {
+    padding: rem(7) rem(12);
+    font-size: rem(13);
+    height: rem(32);
+  }
+
   &--primary {
     border: rem(1) solid transparent;
     background: var(--green-5);
@@ -116,5 +122,10 @@
     padding: rem(4);
     width: rem(40);
     height: rem(40);
+  }
+
+  &--icon.btn--extra-small {
+    width: rem(32);
+    height: rem(32);
   }
 }

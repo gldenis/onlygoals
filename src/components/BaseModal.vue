@@ -23,7 +23,6 @@ onClickOutside(modalContent, () => emit('close'))
 watch(() => props.opened, (value, prevValue) => {
   const body = document.querySelector('body')
   const paddingOffset = `${(window.innerWidth - body.offsetWidth)}px`;
-  console.log(value)
   if (value) {
     body.style.overflowY = 'hidden'
     body.style.paddingRight = paddingOffset
@@ -53,15 +52,7 @@ watch(() => props.opened, (value, prevValue) => {
 </template>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 
 </style>
 

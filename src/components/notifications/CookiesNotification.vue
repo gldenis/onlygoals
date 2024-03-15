@@ -1,0 +1,77 @@
+<script setup>
+
+import IconCookies from '@/components/icons/IconCookies.vue'
+import IconQuestion from '@/components/icons/IconQuestion.vue'
+
+const emit = defineEmits(['accept'])
+const setCookies = () => {
+  emit('accept')
+}
+</script>
+
+<template>
+    <div class="cookies-notification">
+      <IconCookies class="cookies-notification__icon" />
+      <div class="cookies-notification__text">Мы используем файлы cookie, чтобы вам было удобнее пользоваться этим сайтом.</div>
+      <div class="cookies-notification__actions">
+        <button class="btn btn--icon btn--extra-small btn--gray">
+          <IconQuestion />
+        </button>
+        <button class="btn btn--extra-small btn--light" @click="setCookies">Принять</button>
+      </div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+.cookies-notification {
+  border-radius: rem(4) rem(4) 0 0;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+  backdrop-filter: blur(20px);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: rem(16);
+  max-width: rem(455);
+  padding: rem(12) rem(16);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+
+  :before {
+    content: '';
+    display: block;
+    background: conic-gradient(from 0deg at 50% 50%, #3073FA 0.9259677026420832deg, #EF8641 121.87499642372131deg, #C4648F 232.49999284744263deg, #933CEA 333.9734101295471deg);
+    opacity: 0.8;
+    filter: blur(30px);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(100);
+    height: rem(100);
+    z-index: -1;
+  }
+
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    flex-shrink: 0;
+  }
+
+  &__text {
+    color: #191B22;
+    font-size: rem(11);
+    font-weight: 600;
+    line-height: 140%; /* 15.4px */
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+}
+</style>
