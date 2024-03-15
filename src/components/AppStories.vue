@@ -52,6 +52,8 @@ const share = async () => {
     url: route.fullPath,
   })
 }
+
+const media = ref()
 </script>
 
 <template>
@@ -217,10 +219,6 @@ const share = async () => {
                  height="100">
           </div>
         </SwiperSlide>
-
-
-
-
         <div class="swiper-navigation">
           <div ref="prev" v-show="!isStart" class="stories__btn stories__btn--prev">
             <IconSwiperPrev />
@@ -255,6 +253,7 @@ const share = async () => {
               <button class="btn btn--small btn--gray story-modal__control">
                 <IconPlay />
               </button>
+              <video v-show="false" src="@/assets/video/video.mp4" ref="media"></video>
               <img src="@/assets/img/stories/story-modal.png" alt="">
             </div>
           </div>
