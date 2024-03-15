@@ -54,6 +54,12 @@ const share = async () => {
 }
 
 const media = ref()
+const isPlayed = ref(false)
+const playPause = () => {
+  media.value.focus()
+  isPlayed.value ? media.value.pause() : media.value.play()
+  isPlayed.value = !isPlayed.value
+}
 </script>
 
 <template>
@@ -253,8 +259,15 @@ const media = ref()
               <button class="btn btn--small btn--gray story-modal__control">
                 <IconPlay />
               </button>
-              <video v-show="false" src="@/assets/video/video.mp4" ref="media"></video>
-              <img src="@/assets/img/stories/story-modal.png" alt="">
+              <video
+                src="@/assets/video/video.mp4"
+                tabindex="1"
+                ref="media"
+                poster="@/assets/img/stories/story-modal.png"
+                @click="playPause"
+                @keydown.space="playPause"
+              />
+<!--              <img src="@/assets/img/stories/story-modal.png" alt="">-->
             </div>
           </div>
         </div>
@@ -399,6 +412,7 @@ const media = ref()
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 
     &:before {
       content: "";
@@ -411,6 +425,10 @@ const media = ref()
       -webkit-mask-composite: xor;
       mask-composite: exclude;
     }
+  }
+
+  &:hover &__control {
+    opacity: 1;
   }
 
   &__favorite {
@@ -438,14 +456,14 @@ const media = ref()
     background: rgba(255, 255, 255, 0.12);
   }
 
-  img {
+  img, video {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
+    outline: none;
+    border: none;
   }
 }
-
-
 
 @media screen and (max-width: $phablet) {
   .swiper-slide {

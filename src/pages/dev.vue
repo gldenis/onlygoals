@@ -9,6 +9,7 @@ import SnackExit from '@/components/snack/SnackExit.vue'
 import CookiesNotification from '@/components/notifications/CookiesNotification.vue'
 import VerificationNotification from '@/components/notifications/VerificationNotification.vue'
 import { ref } from 'vue'
+import SnackRegistrationUnavailable from '@/components/snack/SnackRegistrationUnavailable.vue'
 
 
 const openConfirm = severity => {
@@ -47,6 +48,12 @@ const openSnackExit = () => {
   reveal()
 }
 
+const openSnackRegistrationUnavailable = () => {
+  const { reveal } = createConfirmDialog(SnackRegistrationUnavailable)
+
+  reveal()
+}
+
 const cookiesAccepted = ref(false)
 </script>
 
@@ -71,6 +78,7 @@ const cookiesAccepted = ref(false)
         <button class="btn btn--primary" @click="openSnackSuccess">success</button>
         <button class="btn btn--primary" @click="openSnackError">error</button>
         <button class="btn btn--primary" @click="openSnackExit">exit</button>
+        <button class="btn btn--primary" @click="openSnackRegistrationUnavailable">registration unavailable</button>
       </div>
     </div>
     <Transition name="slide-fade">
