@@ -84,6 +84,7 @@ const macrosStore = useMacrosStore()
     transform: translateX(-50%);
     display: none;
     padding: rem(8);
+    z-index: 2;
 
     &--opened {
       display: flex;
