@@ -1,103 +1,108 @@
 .premium-notification {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: rem(8) rem(8) 0 0;
+  padding: 8px 12px;
+  box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgb(24 24 41 / 52%);
+  background: rgb(255 255 255 / 68%);
+  transform: translateX(-50%);
+  backdrop-filter: blur(20px);
+  gap: rem(8);
+
+  ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    display: block;
+    width: rem(100);
+    height: rem(100);
+    background: conic-gradient(from 0deg at 50% 50%, #3073fa 0.9259677026420832deg, #ef8641 121.87499642372131deg, #c4648f 232.49999284744263deg, #933cea 333.9734101295471deg);
+    opacity: 0.8;
+    filter: blur(15px);
+    transform: translate(-50%, -50%);
+  }
+
+  &__left {
     display: flex;
-    gap: rem(8);
+    flex-direction: column;
     align-items: center;
-    padding: 8px 12px;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: rem(8) rem(8) 0 0;
-    background: rgba(255, 255, 255, 0.68);
-    box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
-    backdrop-filter: blur(20px);
-    overflow: hidden;
-    z-index: 3;
+    color: #191b22;
+    gap: rem(4);
+  }
 
-    :before {
-        content: '';
-        display: block;
-        background: conic-gradient(from 0deg at 50% 50%, #3073FA 0.9259677026420832deg, #EF8641 121.87499642372131deg, #C4648F 232.49999284744263deg, #933CEA 333.9734101295471deg);
-        opacity: 0.8;
-        filter: blur(15px);
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: rem(100);
-        height: rem(100);
-        z-index: -1;
+  &__text {
+    font-weight: 600;
+    font-size: rem(11);
+    line-height: 140%; /* 15.4px */
+    color: #191b22;
+  }
+
+  &__btn {
+    border-radius: rem(24);
+    padding: rem(7) rem(12);
+    height: rem(32);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: 132%; /* 17.16px */
+    text-align: center;
+    color: rgb(25 27 34 / 68%);
+    background: rgb(255 255 255 / 84%);
+  }
+
+  &__days {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: rem(11);
+    line-height: 140%; /* 15.4px */
+    color: #191b22;
+
+    svg {
+      transform: rotate(180deg);
     }
+  }
 
-    &__left {
-        display: flex;
-        flex-direction: column;
-        gap: rem(4);
-        align-items: center;
-        color: #191B22;
-    }
-
-    &__text {
-        color: #191B22;
-        font-size: rem(11);
-        font-weight: 600;
-        line-height: 140%; /* 15.4px */
-    }
-
-    &__btn {
-        padding: rem(7) rem(12);
-        height: rem(32);
-        border-radius: rem(24);
-        background: rgba(255, 255, 255, 0.84);
-        color: rgba(25, 27, 34, 0.68);
-        text-align: center;
-        font-size: rem(13);
-        font-weight: 700;
-        line-height: 132%; /* 17.16px */
-    }
-
-    &__days {
-        color: #191B22;
-        font-size: rem(11);
-        font-weight: 600;
-        line-height: 140%; /* 15.4px */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        svg {
-            transform: rotate(180deg);
-        }
-    }
-
-    &__trigger {
-        cursor: pointer;
-        color: rgba(25, 27, 34, 0.68);
-    }
+  &__trigger {
+    color: rgb(25 27 34 / 68%);
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: $phablet) {
-    .premium-notification {
-        bottom: rem(20);
-        right: 0;
-        left: auto;
-        transform: none;
-        width: max-content;
-        border-radius: rem(8) 0 0 rem(8);
+  .premium-notification {
+    left: auto;
+    right: 0;
+    bottom: rem(20);
+    border-radius: rem(8) 0 0 rem(8);
+    width: max-content;
+    transform: none;
 
-        &__trigger {
-            transform: rotate(-90deg);
-        }
-
-        &__days {
-            flex-direction: row;
-            font-size: rem(15);
-            font-weight: 700;
-            line-height: 128%; /* 19.2px */
-
-            svg {
-                transform: rotate(90deg);
-            }
-        }
+    &__trigger {
+      transform: rotate(-90deg);
     }
+
+    &__days {
+      flex-direction: row;
+      font-weight: 700;
+      font-size: rem(15);
+      line-height: 128%; /* 19.2px */
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--hidden {
+      width: rem(48);
+      height: rem(48);
+    }
+  }
 }

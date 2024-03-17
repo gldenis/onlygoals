@@ -15,7 +15,7 @@ const showNotification = () => {
 </script>
 
 <template>
-  <div class="premium-notification">
+  <div class="premium-notification" :class="{ 'premium-notification--hidden': !notificationIsShowed }">
     <template v-if="notificationIsShowed">
       <div class="premium-notification__left">
         <IconPremiumNotification />
@@ -26,11 +26,11 @@ const showNotification = () => {
         Осталось: 9 дней
       </div>
       <RouterLink to="/tariff" class="btn premium-notification__btn">Купить еще</RouterLink>
-      <IconArrowDown class="premium-notification__trigger min-phablet" @click="hideNotification"/>
+      <IconStoriesTrigger class="premium-notification__trigger min-phablet" @click="hideNotification"/>
     </template>
     <div v-else class="premium-notification__days">
       <IconArrowDown class="premium-notification__trigger" @click="showNotification"/>
-      9
+      <span>9</span>
     </div>
   </div>
 </template>
