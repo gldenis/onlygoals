@@ -1,7 +1,7 @@
 .average-liga {
   position: absolute;
   left: 50%;
-  bottom: 100%;
+  bottom: calc(100% + rem(4));
   z-index: 2;
   display: none;
   flex-direction: column;
@@ -30,6 +30,9 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     overflow: hidden;
     font-weight: 400;
     font-size: rem(13);
@@ -37,6 +40,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #e9eaec;
+    gap: rem(8);
   }
 
   &__content {
@@ -95,7 +99,16 @@
       }
     }
   }
+
+  &__info-icon {
+    flex-shrink: 0;
+    width: rem(16);
+    height: rem(16);
+    color: #e9eaec;
+    cursor: pointer;
+  }
 }
+
 @media screen and (max-width: $laptop-small) {
   .game-chance .average-liga {
     left: auto;
@@ -103,6 +116,7 @@
     transform: translate(0);
   }
 }
+
 @media screen and (max-width: $phablet) {
   .game-info:nth-child(3n) {
     .average-liga {

@@ -1,7 +1,7 @@
 .average-liga-lock {
   position: absolute;
   left: 50%;
-  bottom: 100%;
+  bottom: calc(100% + rem(4));
   z-index: 3;
   display: none;
   align-items: center;

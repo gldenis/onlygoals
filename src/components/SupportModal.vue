@@ -31,7 +31,7 @@ const supportHelpIsOpened = ref(false)
   <div class="support">
     <IconSupportChat class="support__trigger" @click="supportWindowIsOpened = true"  />
     <div class="support__content" ref="content">
-      <AppGuide v-if="supportWindowIsOpened">
+      <AppGuide v-if="supportWindowIsOpened" @close="supportWindowIsOpened = false" :show-close-btn="true">
         <div class="support__buttons">
           <button class="btn btn--small btn--outlined-gradient">
             Получите весь курс со скидкой!

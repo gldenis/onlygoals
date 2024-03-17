@@ -6,6 +6,7 @@ import IconCompleted from '@/components/icons/IconCompleted.vue'
 import { ref } from 'vue'
 import IconTime from '@/components/icons/IconTime.vue'
 import IconLesson from '@/components/icons/IconLesson.vue'
+import IconClose from '@/components/icons/IconClose.vue'
 
 const openedSteps = ref([])
 const toggleStep = step => {
@@ -15,6 +16,14 @@ const toggleStep = step => {
     openedSteps.value = [step]
   }
 }
+
+const props = defineProps({
+  showCloseBtn: {
+    type: Boolean,
+    default: false
+  }
+})
+const emit = defineEmits(['close'])
 </script>
 
 <template>
@@ -25,6 +34,9 @@ const toggleStep = step => {
         <div class="guide__steps">
           <IconHat />
           1 / 6
+        </div>
+        <div v-if="showCloseBtn" class="guide__close btn btn--icon" @click="emit('close')">
+          <IconClose width="16" height="16" />
         </div>
       </div>
       <div class="guide__progress">
@@ -314,6 +326,19 @@ const toggleStep = step => {
   gap: rem(32);
   flex-grow: 1;
 
+  &__close {
+    width: rem(24);
+    height: rem(24);
+    border-radius: 50%;
+    background:  rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+
+    svg {
+      width: rem(12);
+      height: rem(12);
+    }
+  }
+
   &__progress {
     border-radius: rem(8);
     background: rgba(255, 255, 255, 0.12);
@@ -332,6 +357,7 @@ const toggleStep = step => {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: rem(8);
   }
 
   &__steps {
@@ -340,6 +366,7 @@ const toggleStep = step => {
     gap: rem(8);
     font-size: rem(12);
     font-weight: 600;
+    margin-left: auto;
   }
 
   &__title {

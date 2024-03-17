@@ -8,6 +8,7 @@
   color: rgb(255 255 255 / 68%);
   user-select: none;
   gap: rem(2);
+  border: 1px dashed transparent;
 
   &__item {
     position: relative;
@@ -30,6 +31,17 @@
 
       .average-liga-lock {
         display: flex;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        display: block;
+        height: rem(6);
+        z-index: 5;
       }
     }
 
@@ -64,6 +76,11 @@
       width: rem(16);
       height: rem(16);
     }
+  }
+
+  &:hover {
+    border: 1px dashed rgb(255 255 255 / 68%);
+    border-radius: rem(4);
   }
 
   &--large {

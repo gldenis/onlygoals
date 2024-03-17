@@ -8,6 +8,7 @@ import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import ReferralBanner from '@/components/ReferralBanner.vue'
 import { useModalStore } from '@/stores/modal.js'
+import IconClose from '@/components/icons/IconClose.vue'
 
 const modalStore = useModalStore()
 </script>
@@ -17,6 +18,7 @@ const modalStore = useModalStore()
     <div class="container">
       <div class="tariff__list">
         <div class="tariff__item tariff__item--base">
+          <IconClose class="tariff__item-close" @click="$router.push('/')"/>
           <div class="tariff__title">Бесплатный тариф</div>
           <div class="tariff__info">
             <div class="tariff__info-top">
@@ -172,5 +174,20 @@ const modalStore = useModalStore()
 <style scoped lang="scss">
 main {
   padding-top: rem(40);
+}
+
+.tariff__item-close {
+  display: none;
+}
+
+@media screen and (max-width: $tablet){
+  .tariff__item-close {
+    display: block;
+    position:absolute;
+    top: rem(16);
+    right: rem(16);
+    width: rem(20);
+    height: rem(20);
+  }
 }
 </style>

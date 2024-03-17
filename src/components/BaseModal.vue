@@ -53,6 +53,5 @@ watch(() => props.opened, (value, prevValue) => {
 
 <style lang="scss">
 
-
 </style>
 
