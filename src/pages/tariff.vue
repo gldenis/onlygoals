@@ -9,8 +9,14 @@ import IconPlus from '@/components/icons/IconPlus.vue'
 import ReferralBanner from '@/components/ReferralBanner.vue'
 import { useModalStore } from '@/stores/modal.js'
 import IconClose from '@/components/icons/IconClose.vue'
+import { useRouter } from 'vue-router'
 
 const modalStore = useModalStore()
+
+const router = useRouter()
+const goHome = () => {
+  router.push('/')
+}
 </script>
 
 <template>
@@ -18,7 +24,7 @@ const modalStore = useModalStore()
     <div class="container">
       <div class="tariff__list">
         <div class="tariff__item tariff__item--base">
-          <IconClose class="tariff__item-close" @click="$router.push('/')"/>
+          <IconClose class="tariff__item-close" @click="goHome"/>
           <div class="tariff__title">Бесплатный тариф</div>
           <div class="tariff__info">
             <div class="tariff__info-top">
@@ -188,6 +194,8 @@ main {
     right: rem(16);
     width: rem(20);
     height: rem(20);
+    z-index: 2;
+    cursor: pointer;
   }
 }
 </style>
