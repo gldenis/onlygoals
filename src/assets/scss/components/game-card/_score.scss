@@ -78,11 +78,6 @@
     }
   }
 
-  &:hover {
-    border: 1px dashed rgb(255 255 255 / 68%);
-    border-radius: rem(4);
-  }
-
   &--large {
     justify-content: center;
     gap: rem(4);
@@ -94,6 +89,8 @@
 }
 
 @media screen and (max-width: $phablet) {
-
-
+  .info-score:hover {
+    border: 1px dashed rgb(255 255 255 / 68%);
+    border-radius: rem(4);
+  }
 }

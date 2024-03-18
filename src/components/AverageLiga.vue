@@ -4,7 +4,9 @@ import IconChartRise from '@/components/icons/IconChartRise.vue'
 import IconInfo from '@/components/icons/IconInfo.vue'
 import BaseModal from '@/components/BaseModal.vue'
 import { ref } from 'vue'
+import { useGuideStore } from '@/stores/guide.js'
 const openedInfo = ref(false)
+const guideStore = useGuideStore()
 </script>
 
 <template>
@@ -12,7 +14,7 @@ const openedInfo = ref(false)
     <div class="average-liga__head">
       <div class="average-liga__title">
         Средний показатель по лиге
-        <IconInfo class="average-liga__info-icon" @click="openedInfo = true"/>
+        <IconInfo class="average-liga__info-icon" @click="guideStore.guideModalIsOpened = true"/>
         <Teleport to="#modal">
           <BaseModal :opened="openedInfo" @close="openedInfo = false">
             <div class="modal__content--default">
