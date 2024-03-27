@@ -35,10 +35,10 @@ const { clearToast } = useToastStore()
 .toast {
   &__list {
     position: fixed;
-    bottom: rem(200);
+    top: rem(20);
     right: rem(20);
     width: max-content;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     gap: rem(16);
