@@ -10,6 +10,7 @@
   border-radius: rem(4);
   padding: rem(2);
   background: rgb(25 27 34 / 84%);
+  user-select: none;
   gap: rem(2);
 
   &::before {
@@ -84,6 +85,10 @@
     grid-area: charts;
   }
 
+  &:hover {
+    z-index: 4;
+  }
+
   &--unavailable {
     position: relative;
     min-height: rem(108);
@@ -104,10 +109,6 @@
 
   &--hovered {
     z-index: 2;
-  }
-
-  &:hover {
-    z-index: 4;
   }
 }
 
