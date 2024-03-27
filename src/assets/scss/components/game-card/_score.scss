@@ -89,7 +89,7 @@
 }
 
 @media screen and (max-width: $phablet) {
-  .info-score:not(.info-score--large):hover {
+  .info-score:not(.info-score--large):has(.info-score__item:hover):hover {
     border: 1px dashed rgb(255 255 255 / 68%);
     border-radius: rem(4);
   }
