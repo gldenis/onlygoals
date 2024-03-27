@@ -105,6 +105,10 @@
   &--hovered {
     z-index: 2;
   }
+
+  &:hover {
+    z-index: 4;
+  }
 }
 
 .last-games-status {

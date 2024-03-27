@@ -134,6 +134,10 @@ main {
       display: block;
     }
   }
+
+  .profile-verification__label {
+    text-align: left;
+  }
 }
 
 </style>

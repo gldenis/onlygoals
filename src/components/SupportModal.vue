@@ -44,7 +44,7 @@ const supportHelpIsOpened = ref(false)
       </AppGuide>
     </div>
     <Teleport to="body">
-      <BaseModal v-if="supportModalIsOpened" :opened="supportModalIsOpened" @close="supportModalIsOpened = false">
+      <BaseModal :opened="supportModalIsOpened" @close="supportModalIsOpened = false">
         <div class="form">
           <div class="form__head">
             <div class="form__title form__title--centered">Overgoals поддержка</div>
@@ -133,7 +133,7 @@ const supportHelpIsOpened = ref(false)
   position: fixed;
   bottom: rem(40);
   right: rem(40);
-  z-index: 3;
+  z-index: 4;
 
   &__buttons {
     display: flex;

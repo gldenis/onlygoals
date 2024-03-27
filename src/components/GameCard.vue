@@ -227,6 +227,7 @@ import InfoValue from '@/components/InfoValue.vue'
     </div>
     <div class="game-chance game-card__chance">
       <div class="game-info game-info--chance">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Шанс на гол</div>
         <div class="game-info__chance">
           <div class="progress">
@@ -247,6 +248,7 @@ import InfoValue from '@/components/InfoValue.vue'
         </div>
       </div>
       <div class="game-info game-info--chance">
+        <IconGameInfo class="game-info__icon" />
         <div class="game-info__title">Ш. Промах</div>
         <div class="game-info__chance">
           <div class="progress">

@@ -95,13 +95,25 @@ onClickOutside(select, () => open.value = false)
     left: 0;
     border-radius: rem(8);
     background: rgba(255, 255, 255, 0.12);
+    background: rgba(25, 27, 34, 0.84);
     padding: rem(4);
 
     /* Dropdown */
     box-shadow: - rem(20) rem(20) rem(60) (- rem(16)) rgba(24, 24, 41, 0.52);
-    backdrop-filter: blur(20px);
     overflow: hidden;
     z-index: 1;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(20px);
+
+    }
   }
 
   &__option {
