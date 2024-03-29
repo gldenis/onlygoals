@@ -20,7 +20,7 @@ const authStore = useAuthStore()
       <div class="page-head page-profile__page-head">
         <h1 class="page-head__title">Профиль</h1>
         <div class="page-head__separator"></div>
-        <LangSwitcher />
+        <LangSwitcher class="page-profile__lang-switcher"/>
         <template v-if="true">
             <div class="settings__education">
               <BaseCheckbox />
@@ -138,6 +138,17 @@ main {
   .profile-verification__label {
     text-align: left;
   }
+
 }
 
+</style>
+
+<style lang="scss">
+@media screen and (max-width: $laptop){
+  .page-profile__lang-switcher .lang-switcher__body {
+    left: auto;
+    right: 0;
+  }
+
+}
 </style>

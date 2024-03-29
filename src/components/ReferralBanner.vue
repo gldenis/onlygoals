@@ -15,7 +15,7 @@ const authStore = useAuthStore()
   </div>
 
   <teleport to="body">
-    <BaseModal v-if="authStore.referralFormIsOpened" @close="authStore.referralFormIsOpened = false">
+    <BaseModal :opened="authStore.referralFormIsOpened" @close="authStore.referralFormIsOpened = false">
       <ReferralForm />
     </BaseModal>
   </teleport>

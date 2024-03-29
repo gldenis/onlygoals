@@ -45,7 +45,7 @@ const selectedSort = ref(sortOption[0])
           </div>
         </div>
         <MacrosDropdown />
-        <button class="dropdown__trigger dropdown__trigger--icon header__settings" @click="openedFilter = !openedFilter">
+        <button class="dropdown__trigger dropdown__trigger--icon header__settings" :class="{ 'header__settings--opened': openedFilter }" @click="openedFilter = !openedFilter">
           <IconSettings />
         </button>
       </div>

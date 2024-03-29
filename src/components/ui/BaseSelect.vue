@@ -125,6 +125,7 @@ onClickOutside(select, () => open.value = false)
     border-bottom: rem(1) solid rgba(255, 255, 255, 0.12);
     box-sizing: border-box;
     position: relative;
+    padding: 0 rem(5);
 
     &:hover {
       &:before {

@@ -212,6 +212,10 @@
       width: rem(40);
       height: rem(40);
     }
+
+    &__settings--opened {
+      border: 1px dashed rgb(255 255 255 / 68%);
+    }
   }
 }
 

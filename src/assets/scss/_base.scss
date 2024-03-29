@@ -105,6 +105,10 @@ main {
   .page-content {
     padding-top: calc(var(--header-height) + rem(32));
   }
+
+  * {
+    user-select: none;
+  }
 }
 
 @media screen and (max-width: $mobile) {
