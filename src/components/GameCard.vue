@@ -139,9 +139,9 @@ import InfoValue from '@/components/InfoValue.vue'
           </div>
         </div>
         <div class="game-meta__current-score info-score info-score--large">
-          <div class="info-score__item info-score__item--large">3</div>
+          <div class="info-score__item info-score__item--large info-score__item--friendly">3</div>
           :
-          <div class="info-score__item info-score__item--large">2</div>
+          <div class="info-score__item info-score__item--large info-score__item--friendly">2</div>
         </div>
         <div class="game-meta__part game-meta__part--revert">
           <div class="game-meta__logo">
