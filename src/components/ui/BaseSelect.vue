@@ -17,6 +17,9 @@ const props = defineProps({
   },
   error: {
     type: String
+  },
+  size: {
+    default: 'normal'
   }
 })
 
@@ -41,7 +44,7 @@ onClickOutside(select, () => open.value = false)
 
 <template>
   <div class="custom-select" ref="select">
-    <div class="custom-select__trigger" @click="open = !open">
+    <div class="custom-select__trigger" :class="[`custom-select__trigger--${props.size}`]" @click="open = !open">
       <slot name="icon"></slot>
       {{ mappedSelectedOption }}
       <IconArrowDown class="custom-select__arrow" width="20" height="20" />
@@ -80,6 +83,10 @@ onClickOutside(select, () => open.value = false)
     align-items: center;
     gap: rem(8);
     overflow: hidden;
+
+    &--small {
+      height: rem(30);
+    }
   }
 
   &__arrow {

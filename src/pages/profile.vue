@@ -11,6 +11,7 @@ import ChangePasswordForm from '@/components/forms/ChangePasswordForm.vue'
 import LangSwitcher from '@/components/LangSwitcher.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
+import ThinSettings from '@/components/ThinSettings.vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
 </script>
@@ -92,7 +93,7 @@ const { width } = useWindowSize()
             </div>
           </div>
         </div>
-        <ReferralBanner />
+        <ThinSettings />
       </div>
     </div>
 

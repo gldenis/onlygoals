@@ -54,7 +54,7 @@ defineEmits(['toggle'])
   display: flex;
   align-items: center;
   position: relative;
-  width: 42px;
+  width: rem(42);
   height: rem(28);
   background-color: var(--switch-off);
   flex-shrink: 0;
