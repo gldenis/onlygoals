@@ -1,6 +1,5 @@
 <script setup>
 
-import IconArrowDown from '@/components/icons/IconArrowDown.vue'
 import IconLetter from '@/components/icons/IconLetter.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import BannerVerification from '@/components/BannerVerification.vue'
@@ -11,7 +10,9 @@ import ChangeEmailForm from '@/components/forms/ChangeEmailForm.vue'
 import ChangePasswordForm from '@/components/forms/ChangePasswordForm.vue'
 import LangSwitcher from '@/components/LangSwitcher.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
+import { useWindowSize } from '@vueuse/core'
 const authStore = useAuthStore()
+const { width } = useWindowSize()
 </script>
 
 <template>
@@ -39,7 +40,18 @@ const authStore = useAuthStore()
         <div class="referrals">
           <div class="referrals__head">
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
-            <div class="referral__limit">Лимит в сутки: <span>2 из 10</span></div>
+            <div class="referrals__head-right">
+              <div class="referral__limit">Лимит в сутки: <span>2 из 10</span></div>
+              <Teleport to="body" :disabled="width >= 640">
+                <div class="referrals-invite">
+                  <div class="referrals-invite__label">
+                    Премиум +3 дня
+                    за каждого друга
+                  </div>
+                  <button class="btn btn--primary btn--small" @click.prevent="authStore.referralFormIsOpened = true">Пригласить</button>
+                </div>
+              </Teleport>
+            </div>
           </div>
           <div class="referral__list">
             <div class="referral__item">
@@ -124,6 +136,26 @@ main {
   gap: rem(12);
 }
 
+.referrals__head-right {
+  display: flex;
+  align-items: center;
+  gap: rem(32);
+}
+
+.referrals-invite {
+  display: flex;
+  align-items: center;
+  gap: rem(16);
+
+  &__label {
+    color: #EEE;
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+    max-width: rem(117);
+  }
+}
+
 @media screen and (max-width: $laptop){
   .page-profile__page-head {
     .settings__education {
@@ -139,6 +171,19 @@ main {
     text-align: left;
   }
 
+}
+
+@media screen and (max-width: $phablet){
+  .referrals-invite {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(16);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    backdrop-filter: blur(20px);
+  }
 }
 
 </style>
