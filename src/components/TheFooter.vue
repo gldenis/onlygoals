@@ -3,6 +3,14 @@
 import LangSwitcher from '@/components/LangSwitcher.vue'
 import IconAppStore from '@/components/icons/IconAppStore.vue'
 import IconGooglePlay from '@/components/icons/IconGooglePlay.vue'
+import BaseModal from '@/components/BaseModal.vue'
+import { ref } from 'vue'
+import DonatModal from '@/components/DonatModal.vue'
+
+const modalDonatIsOpened = ref(false)
+const openDonat = () => {
+  modalDonatIsOpened.value = true
+}
 </script>
 
 <template>
@@ -21,11 +29,16 @@ import IconGooglePlay from '@/components/icons/IconGooglePlay.vue'
       </div>
     </div>
     <div class="footer-links">
-      <div class="footer-links__item">Донат</div>
+      <div class="footer-links__item" @click="openDonat">Донат</div>
       <div class="footer-links__item">Написать там</div>
     </div>
     <div class="copyright">© 2019 Lift Media. All rights reserved.</div>
   </div>
+  <Teleport to="body">
+    <BaseModal :opened="modalDonatIsOpened" @close="modalDonatIsOpened = false">
+      <DonatModal @close="modalDonatIsOpened = false" />
+    </BaseModal>
+  </Teleport>
 </footer>
 </template>
 
@@ -103,5 +116,8 @@ import IconGooglePlay from '@/components/icons/IconGooglePlay.vue'
   .apps__list {
     margin-left: auto;
   }
+}
+:deep(.modal__close) {
+  display: none;
 }
 </style>
