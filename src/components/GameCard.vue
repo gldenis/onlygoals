@@ -9,6 +9,9 @@ import IconStarFilled from '@/components/icons/IconStarFilled.vue'
 import AverageLiga from '@/components/AverageLiga.vue'
 import LastGameTooltip from '@/components/LastGameTooltip.vue'
 import InfoValue from '@/components/InfoValue.vue'
+import IconLive from '@/components/icons/IconLive.vue'
+import IconBell from '@/components/icons/IconBell.vue'
+import IconStar from '@/components/icons/IconStar.vue'
 </script>
 
 <template>
@@ -413,48 +416,46 @@ import InfoValue from '@/components/InfoValue.vue'
     <div class="game-card__column game-card__charts game-card__column--charts">
       <div class="game-info game-info--chart">
         <div class="game-info__content">
-          <div class="game-info__title">Голосование</div>
-          <div class="info-score">
-            <div class="info-score__item">35%</div>
-            :
-            <div class="info-score__item">35%</div>
+          <div class="game-info__row">
+            <div class="game-info__title">Голосование</div>
+            <div class="game-card__actions">
+              <div class="game-card__action-item game-card__action-item--active">
+                <IconLive />
+              </div>
+              <div class="game-card__action-item">
+                <IconBell />
+              </div>
+              <div class="game-card__action-item">
+                <IconStar />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="game-chart">
-          <div class="game-chart__item">
-            <div class="game-chart__value game-chart__value--team-1"></div>
-          </div>
-          <div class="game-chart__item">
-            <div class="game-chart__value game-chart__value--team-2"></div>
+          <div class="correlation">
+            <div class="correlation__item">
+              35%
+              <div class="correlation-scale"></div>
+            </div>
+            <div class="correlation__item">
+              <div class="correlation-scale"></div>
+              65%
+            </div>
           </div>
         </div>
       </div>
       <div class="game-info game-info--chart">
         <div class="game-info__content">
-          <div class="game-info__title">Голов за месяц</div>
-          <div class="info-score">
-            <div class="info-score__item">35%</div>
-            :
-            <div class="info-score__item">35%</div>
+          <div class="correlation">
+            <div class="correlation__item">
+              35%
+              <div class="correlation-scale"></div>
+            </div>
+            <div class="correlation__item">
+              <div class="correlation-scale"></div>
+              65%
+            </div>
           </div>
         </div>
-        <div class="game-info__chart-goals chart-goals">
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 100%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 25%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
-        </div>
       </div>
-    </div>
-    <div class="game-card__favorite game-card__favorite--active">
-<!--      <IconStar />-->
-      <IconStarFilled />
     </div>
   </div>
 </template>
