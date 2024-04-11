@@ -12,6 +12,8 @@ import InfoValue from '@/components/InfoValue.vue'
 import IconLive from '@/components/icons/IconLive.vue'
 import IconBell from '@/components/icons/IconBell.vue'
 import IconStar from '@/components/icons/IconStar.vue'
+import IconShield from '@/components/icons/IconShield.vue'
+import IconAtack from '@/components/icons/IconAtack.vue'
 </script>
 
 <template>
@@ -436,7 +438,7 @@ import IconStar from '@/components/icons/IconStar.vue'
               <div class="correlation-scale"></div>
             </div>
             <div class="correlation__item">
-              <div class="correlation-scale"></div>
+              <div class="correlation-scale correlation-scale--team-2"></div>
               65%
             </div>
           </div>
@@ -446,12 +448,12 @@ import IconStar from '@/components/icons/IconStar.vue'
         <div class="game-info__content">
           <div class="correlation">
             <div class="correlation__item">
-              35%
+              <IconShield />
               <div class="correlation-scale"></div>
             </div>
             <div class="correlation__item">
-              <div class="correlation-scale"></div>
-              65%
+              <div class="correlation-scale correlation-scale--team-2"></div>
+              <IconAtack />
             </div>
           </div>
         </div>

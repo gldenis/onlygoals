@@ -2,12 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: rem(4) 0;
   font-weight: 700;
   font-size: rem(13);
   line-height: 132%; /* 17.16px */
   text-align: center;
   color: #e9eaec;
   gap: rem(4);
+  width: rem(114);
 
   &__item {
     display: flex;
@@ -19,8 +21,14 @@
 .correlation-scale {
   border: 1px solid #49c79a;
   border-radius: rem(4);
-  width: rem(60);
+  width: rem(40);
   height: rem(8);
-  background: linear-gradient(90deg, #49c79a 100%, rgb(73 199 154 / 0%) 0%);
+  background: linear-gradient(to left, #49c79a, rgb(73 199 154 / 0%));
   opacity: 0.6;
+
+  &--team-2 {
+    width: rem(70);
+    border: 1px solid #654cc8;
+    background: linear-gradient(to right, #654cc8, rgb(101 76 200 / 0%));
+  }
 }
