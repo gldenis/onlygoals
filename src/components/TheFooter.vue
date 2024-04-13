@@ -31,6 +31,8 @@ const openDonat = () => {
     <div class="footer-links">
       <div class="footer-links__item" @click="openDonat">Донат</div>
       <div class="footer-links__item">Написать там</div>
+      <div class="footer-links__item">О нас</div>
+      <RouterLink to="/tariff" class="footer-links__item">О тарифах</RouterLink>
     </div>
     <div class="copyright">© 2019 Lift Media. All rights reserved.</div>
   </div>
