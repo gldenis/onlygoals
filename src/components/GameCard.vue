@@ -14,6 +14,7 @@ import IconBell from '@/components/icons/IconBell.vue'
 import IconStar from '@/components/icons/IconStar.vue'
 import IconShield from '@/components/icons/IconShield.vue'
 import IconAtack from '@/components/icons/IconAtack.vue'
+import IconFire from '@/components/icons/IconFire.vue'
 </script>
 
 <template>
@@ -435,10 +436,12 @@ import IconAtack from '@/components/icons/IconAtack.vue'
           <div class="correlation">
             <div class="correlation__item">
               35%
+            </div>
+            <div class="correlation-scale__wrapper">
+              <div class="correlation-scale correlation-scale--team-2"></div>
               <div class="correlation-scale"></div>
             </div>
             <div class="correlation__item">
-              <div class="correlation-scale correlation-scale--team-2"></div>
               65%
             </div>
           </div>
@@ -446,13 +449,24 @@ import IconAtack from '@/components/icons/IconAtack.vue'
       </div>
       <div class="game-info game-info--chart">
         <div class="game-info__content">
+          <div class="goal-scale">
+            <div class="goal-scale__label">2333</div>
+            <div class="goal-scale__value">
+              <div class="goal-scale__value-label">
+                <IconFire />
+                43%
+              </div>
+            </div>
+          </div>
           <div class="correlation">
             <div class="correlation__item">
               <IconShield />
-              <div class="correlation-scale"></div>
+            </div>
+            <div class="correlation-scale__wrapper">
+              <div class="correlation-scale correlation-scale--protection"></div>
+              <div class="correlation-scale correlation-scale--attack"></div>
             </div>
             <div class="correlation__item">
-              <div class="correlation-scale correlation-scale--team-2"></div>
               <IconAtack />
             </div>
           </div>

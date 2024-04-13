@@ -3,13 +3,13 @@
   align-items: center;
   justify-content: space-between;
   padding: rem(4) 0;
+  width: 100%;
   font-weight: 700;
   font-size: rem(13);
   line-height: 132%; /* 17.16px */
   text-align: center;
   color: #e9eaec;
   gap: rem(4);
-  width: rem(114);
 
   &__item {
     display: flex;
@@ -21,14 +21,77 @@
 .correlation-scale {
   border: 1px solid #49c79a;
   border-radius: rem(4);
-  width: rem(40);
+  width: 65%;
   height: rem(8);
   background: linear-gradient(to left, #49c79a, rgb(73 199 154 / 0%));
   opacity: 0.6;
 
+  &__wrapper {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: rem(4);
+  }
+
   &--team-2 {
-    width: rem(70);
     border: 1px solid #654cc8;
+    width: 35%;
     background: linear-gradient(to right, #654cc8, rgb(101 76 200 / 0%));
+  }
+
+  &--protection {
+    border: 1px solid #00eaff;
+    background: linear-gradient(to left, #00eaff, rgb(0 234 255 / 0%));
+  }
+
+  &--attack {
+    border: 1px solid #c25120;
+    background: linear-gradient(to right, #c25120, rgb(0 234 255 / 0%));
+  }
+}
+
+.goal-scale {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: rem(4);
+  width: 100%;
+  height: rem(20);
+  background: rgb(255 255 255 / 12%);
+
+  &__label {
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 128%; /* 15.36px */
+    color: rgb(255 255 255 / 68%);
+  }
+
+  &__value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(227 134 26 / 84%);
+    border-radius: rem(4);
+    padding: 0 rem(2);
+    width: 30%;
+    height: 100%;
+    background: rgb(227 134 26 / 24%);
+  }
+
+  &__value-label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 1; /* 15.36px */
+    color: #e9eaec;
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+    }
   }
 }
