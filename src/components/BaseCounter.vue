@@ -34,9 +34,9 @@ const decrement = () => {
   gap: rem(4);
   color: rgba(255, 255, 255, 0.68);
   text-overflow: ellipsis;
-  font-size: rem(15);
+  font-size: rem(13);
   font-weight: 700;
-  line-height: 128%; /* 19.2px */
+  line-height: 132%; /* 19.2px */
 
   &__btn {
     width: rem(20);

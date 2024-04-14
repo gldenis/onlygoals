@@ -10,6 +10,7 @@ import ReferralBanner from '@/components/ReferralBanner.vue'
 import { useModalStore } from '@/stores/modal.js'
 import IconClose from '@/components/icons/IconClose.vue'
 import { useRouter } from 'vue-router'
+import IconBolt from '@/components/icons/IconBolt.vue'
 
 const modalStore = useModalStore()
 
@@ -101,11 +102,16 @@ const goHome = () => {
             </div>
             <div class="tariff__info-bottom">
               <div class="tariff__add">
-                <div>
-                  <IconBoltFilled /> 31
+                <div class="tariff-add__label">
+                  <IconBolt class="tariff-add__label-icon" />
+                  <span>+10</span>
+                  за покупку
                 </div>
                 <div class="tariff__add-btn">
                   <IconPlus width="16" height="16" />
+                </div>
+                <div class="tariff__add-value">
+                  <IconBoltFilled /> 31
                 </div>
               </div>
               <div class="tariff__notice">Активировать 10 дней</div>
