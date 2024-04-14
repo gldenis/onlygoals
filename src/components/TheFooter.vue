@@ -17,13 +17,12 @@ const openDonat = () => {
 <footer class="footer">
   <div class="container footer__container">
     <div class="footer__main">
-      <img src="@/assets/img/footer-logo.png" class="footer__logo" alt="">
       <LangSwitcher />
       <div class="apps__list">
-        <div class="apps__item">
+        <div class="apps__item apps__item--disabled">
           <IconAppStore />
         </div>
-        <div class="apps__item">
+        <div class="apps__item apps__item--disabled">
           <IconGooglePlay />
         </div>
       </div>
@@ -34,7 +33,7 @@ const openDonat = () => {
       <div class="footer-links__item">О нас</div>
       <RouterLink to="/tariff" class="footer-links__item">О тарифах</RouterLink>
     </div>
-    <div class="copyright">© 2019 Lift Media. All rights reserved.</div>
+    <div class="copyright">© 2019 Overgoals</div>
   </div>
   <Teleport to="body">
     <BaseModal :opened="modalDonatIsOpened" @close="modalDonatIsOpened = false">
@@ -57,6 +56,29 @@ const openDonat = () => {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
+
+    &--disabled {
+      svg {
+        opacity: 0.2;
+      }
+
+      &:hover {
+        &:before {
+          display: block;
+          content: 'В разработке';
+          border-radius: rem(4);
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          white-space: nowrap;
+          background: rgba(77, 80, 87, 0.32);
+          font-size: rem(14);
+          font-weight: 400;
+          padding: rem(8);
+        }
+      }
+    }
   }
 }
 .footer {
@@ -86,7 +108,6 @@ const openDonat = () => {
   font-weight: 700;
   line-height: 132%; /* 17.16px */
 }
-
 .footer-links {
   display: flex;
   align-items: center;
@@ -101,18 +122,27 @@ const openDonat = () => {
   }
 }
 
+.footer__lang-switcher {
+  border-radius: 16px;
+  background: var(--neutral-left-12, rgba(255, 255, 255, 0.12));
+}
+
+:deep(.lang-switcher__trigger) {
+  border-radius: rem(16);
+  background: rgba(255, 255, 255, 0.12);
+  padding: rem(4) rem(8);
+}
+
 @media screen and (max-width: $tablet) {
   .footer {
     &__container {
       flex-wrap: wrap;
       gap: rem(20);
     }
-    &__main {
-      width: 100%;
-    }
   }
   .footer-links {
-    order: 3;
+    order: -1;
+    width: 100%;
   }
 
   .apps__list {
