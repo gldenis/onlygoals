@@ -48,9 +48,9 @@ const authStore = useAuthStore()
           </div>
         </div>
         <div class="info-score info-score--large">
-          <div class="info-score__item info-score__item--large">3</div>
+          <div class="info-score__item info-score__item--large info-score__item--women">3</div>
           :
-          <div class="info-score__item info-score__item--large">2</div>
+          <div class="info-score__item info-score__item--large info-score__item--women">2</div>
         </div>
         <div class="game-meta__part game-meta__part--revert">
 

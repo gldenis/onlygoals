@@ -16,6 +16,18 @@
     align-items: center;
     gap: rem(4);
   }
+
+  &--disabled {
+    .correlation-scale {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      opacity: 0.6;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    svg path{
+      fill: rgba(255, 255, 255, 0.12);
+    }
+  }
 }
 
 .correlation-scale {
@@ -61,10 +73,15 @@
   background: rgb(255 255 255 / 12%);
 
   &__label {
+    padding: rem(0) rem(4);
     font-weight: 500;
     font-size: rem(12);
     line-height: 128%; /* 15.36px */
     color: rgb(255 255 255 / 68%);
+
+    &--disabled {
+      display: none;
+    }
   }
 
   &__value {
@@ -79,6 +96,11 @@
     width: 30%;
     height: 100%;
     background: rgb(227 134 26 / 24%);
+
+    &--disabled {
+      border: none;
+      background: none;
+    }
   }
 
   &__value-label {
@@ -92,6 +114,12 @@
     svg {
       width: rem(16);
       height: rem(16);
+    }
+
+    &--disabled {
+      span {
+        display: none;
+      }
     }
   }
 }

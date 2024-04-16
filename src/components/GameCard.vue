@@ -448,17 +448,20 @@ import IconFire from '@/components/icons/IconFire.vue'
         </div>
       </div>
       <div class="game-info game-info--chart">
-        <div class="game-info__content">
+        <div class="game-info__content game-info__content--fetching">
+          <div class="game-info__content-loading">
+            Обновление данных..
+          </div>
           <div class="goal-scale">
-            <div class="goal-scale__label">2333</div>
-            <div class="goal-scale__value">
-              <div class="goal-scale__value-label">
+            <div class="goal-scale__label goal-scale__label--disabled">2333</div>
+            <div class="goal-scale__value goal-scale__value--disabled">
+              <div class="goal-scale__value-label goal-scale__value-label--disabled">
                 <IconFire />
-                43%
+                <span>43%</span>
               </div>
             </div>
           </div>
-          <div class="correlation">
+          <div class="correlation correlation--disabled">
             <div class="correlation__item">
               <IconShield />
             </div>

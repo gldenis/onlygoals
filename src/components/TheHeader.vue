@@ -37,7 +37,6 @@ const selectedSort = ref(sortOption[0])
             <img src="@/assets/img/only-goals.png" alt="" width="122" height="24">
           </div>
           <div class="header__left-inner">
-            <LangSwitcher />
             <div class="header-games">
               <IconBall />
               375 (21)

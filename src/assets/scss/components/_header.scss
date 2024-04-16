@@ -65,6 +65,7 @@
       gap: rem(4);
       flex-direction: column;
       padding-right: rem(8);
+      margin-left: rem(4);
     }
 
     &-inner {
@@ -119,7 +120,6 @@
 .header-games {
   display: flex;
   align-items: center;
-  margin-left: auto;
   font-weight: 600;
   font-style: normal;
   font-size: rem(11);

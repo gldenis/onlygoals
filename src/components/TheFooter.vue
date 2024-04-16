@@ -139,6 +139,12 @@ const openDonat = () => {
       flex-wrap: wrap;
       gap: rem(20);
     }
+    &__main {
+      order: 3
+    }
+    .copyright {
+      order: 2;
+    }
   }
   .footer-links {
     order: -1;
