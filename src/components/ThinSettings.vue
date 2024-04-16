@@ -29,92 +29,109 @@ const selectedOption = ref({ name: 'Jump',  value: 'jump'})
         <IconInfo class="thin-settings__info-icon" />
       </div>
     </div>
-    <div class="thin-settings__item">
+    <div class="thin-settings__item thin-settings__item--lock">
       <div class="thin-settings__head">
-        <div class="thin-settings__name">Title</div>
         <div class="thin-settings__item-part">
-          <IconGear class="thin-settings__gear-icon"/>
-          <BaseSwitch />
+          <IconLock class="thin-settings__lock-icon" />
+          <div class="thin-settings__name">Title</div>
         </div>
-      </div>
-      <div class="thin-settings__group">
-        Настройка
-        <BaseSelect :options="[
-          { name: 'Подборка 1',  value: 1},
-          { name: 'Подборка 22',  value: 2},
-          ]"
-                    size="small"
-        v-model="selectedSettingsGroup"
-        />
-      </div>
-      <div class="thin-settings__body">
-        <div class="settings__item">
-          <BaseCheckbox label="Цели" />
-          <div class="settings__item-actions">
-            <div class="settings__actions">
-              <IconUpload class="settings__actions-icon" />
-            </div>
-            <div class="settings__actions">
-              <IconVolume class="settings__actions-icon" />
-            </div>
-            <BaseSelect :options="[
-               { name: 'Jump',  value: 'jump'},
-               { name: 'Bubble',  value: 'Bubble'},
-               { name: 'Crystal',  value: 'Crystal'},
-               { name: 'Breeze',  value: 'Breeze'},
-               { name: 'Funky',  value: 'Funky'},
-              ]"
-              v-model="selectedOption"
-                        size="small"
-            />
-          </div>
-        </div>
-        <div class="settings__item">
-          <BaseCheckbox label="Подать мяч" />
-          <div class="settings__item-actions">
-            <div class="settings__actions">
-              <IconUpload class="settings__actions-icon" />
-            </div>
-            <div class="settings__actions">
-              <IconVolume class="settings__actions-icon" />
-            </div>
-            <BaseSelect :options="[
-               { name: 'Jump',  value: 'jump'},
-               { name: 'Bubble',  value: 'Bubble'},
-               { name: 'Crystal',  value: 'Crystal'},
-               { name: 'Breeze',  value: 'Breeze'},
-               { name: 'Funky',  value: 'Funky'},
-              ]"
-                        v-model="selectedOption"
-                        size="small"
-            />
-          </div>
-        </div>
-        <div class="settings__item">
-          <BaseCheckbox label="Красные карточки" />
-          <div class="settings__item-actions">
-            <div class="settings__actions">
-              <IconUpload class="settings__actions-icon" />
-            </div>
-            <div class="settings__actions">
-              <IconVolume class="settings__actions-icon" />
-            </div>
-            <BaseSelect :options="[
-               { name: 'Jump',  value: 'jump'},
-               { name: 'Bubble',  value: 'Bubble'},
-               { name: 'Crystal',  value: 'Crystal'},
-               { name: 'Breeze',  value: 'Breeze'},
-               { name: 'Funky',  value: 'Funky'},
-              ]"
-                        v-model="selectedOption"
-                        size="small"
-            />
-          </div>
-        </div>
+        <IconInfo class="thin-settings__info-icon" />
       </div>
     </div>
+    <div class="thin-settings__item thin-settings__item--lock">
+      <div class="thin-settings__head">
+        <div class="thin-settings__item-part">
+          <IconLock class="thin-settings__lock-icon" />
+          <div class="thin-settings__name">Title</div>
+        </div>
+        <IconInfo class="thin-settings__info-icon" />
+      </div>
+    </div>
+<!--    <div class="thin-settings__item">-->
+<!--      <div class="thin-settings__head">-->
+<!--        <div class="thin-settings__name">Title</div>-->
+<!--        <div class="thin-settings__item-part">-->
+<!--          <IconGear class="thin-settings__gear-icon"/>-->
+<!--          <BaseSwitch />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="thin-settings__group">-->
+<!--        Настройка-->
+<!--        <BaseSelect :options="[-->
+<!--          { name: 'Подборка 1',  value: 1},-->
+<!--          { name: 'Подборка 22',  value: 2},-->
+<!--          ]"-->
+<!--                    size="small"-->
+<!--        v-model="selectedSettingsGroup"-->
+<!--        />-->
+<!--      </div>-->
+<!--      <div class="thin-settings__body">-->
+<!--        <div class="settings__item">-->
+<!--          <BaseCheckbox label="Цели" />-->
+<!--          <div class="settings__item-actions">-->
+<!--            <div class="settings__actions">-->
+<!--              <IconUpload class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <div class="settings__actions">-->
+<!--              <IconVolume class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <BaseSelect :options="[-->
+<!--               { name: 'Jump',  value: 'jump'},-->
+<!--               { name: 'Bubble',  value: 'Bubble'},-->
+<!--               { name: 'Crystal',  value: 'Crystal'},-->
+<!--               { name: 'Breeze',  value: 'Breeze'},-->
+<!--               { name: 'Funky',  value: 'Funky'},-->
+<!--              ]"-->
+<!--              v-model="selectedOption"-->
+<!--                        size="small"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="settings__item">-->
+<!--          <BaseCheckbox label="Подать мяч" />-->
+<!--          <div class="settings__item-actions">-->
+<!--            <div class="settings__actions">-->
+<!--              <IconUpload class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <div class="settings__actions">-->
+<!--              <IconVolume class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <BaseSelect :options="[-->
+<!--               { name: 'Jump',  value: 'jump'},-->
+<!--               { name: 'Bubble',  value: 'Bubble'},-->
+<!--               { name: 'Crystal',  value: 'Crystal'},-->
+<!--               { name: 'Breeze',  value: 'Breeze'},-->
+<!--               { name: 'Funky',  value: 'Funky'},-->
+<!--              ]"-->
+<!--                        v-model="selectedOption"-->
+<!--                        size="small"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="settings__item">-->
+<!--          <BaseCheckbox label="Красные карточки" />-->
+<!--          <div class="settings__item-actions">-->
+<!--            <div class="settings__actions">-->
+<!--              <IconUpload class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <div class="settings__actions">-->
+<!--              <IconVolume class="settings__actions-icon" />-->
+<!--            </div>-->
+<!--            <BaseSelect :options="[-->
+<!--               { name: 'Jump',  value: 'jump'},-->
+<!--               { name: 'Bubble',  value: 'Bubble'},-->
+<!--               { name: 'Crystal',  value: 'Crystal'},-->
+<!--               { name: 'Breeze',  value: 'Breeze'},-->
+<!--               { name: 'Funky',  value: 'Funky'},-->
+<!--              ]"-->
+<!--                        v-model="selectedOption"-->
+<!--                        size="small"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
-
 </div>
 </template>
 
@@ -221,6 +238,8 @@ const selectedOption = ref({ name: 'Jump',  value: 'jump'})
   &__info-icon {
     width: rem(16);
     height: rem(16);
+    fill: #fff;
+    fill-opacity: 0.32;
   }
 
   &__gear-icon {
