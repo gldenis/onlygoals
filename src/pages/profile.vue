@@ -12,8 +12,14 @@ import LangSwitcher from '@/components/LangSwitcher.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
 import ThinSettings from '@/components/ThinSettings.vue'
+import { ref } from 'vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
+const isPro = ref(false)
+
+const togglePro = () => {
+  isPro.value = true
+}
 </script>
 
 <template>
@@ -93,7 +99,7 @@ const { width } = useWindowSize()
             </div>
           </div>
         </div>
-        <ThinSettings />
+        <ThinSettings @togglePro="togglePro" :locked="!isPro" />
       </div>
     </div>
 
