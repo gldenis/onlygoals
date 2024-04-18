@@ -9,6 +9,8 @@ import { ref } from 'vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import IconUpload from '@/components/icons/IconUpload.vue'
 import IconVolume from '@/components/icons/IconVolume.vue'
+import IconRemove from '@/components/icons/IconRemove.vue'
+import InputFileSelect from '@/components/InputFileSelect.vue'
 
 const selectedSettingsGroup = ref( { name: 'Подборка 1',  value: 1})
 const selectedOption = ref({ name: 'Jump',  value: 'jump'})
@@ -67,19 +69,44 @@ const emit = defineEmits(['togglePro'])
             <BaseSwitch />
           </div>
         </div>
-        <div class="thin-settings__group">
-          Настройка
-          <BaseSelect :options="[
-          { name: 'Подборка 1',  value: 1},
-          { name: 'Подборка 22',  value: 2},
-          ]"
-                      size="small"
-                      v-model="selectedSettingsGroup"
-          />
-        </div>
+<!--        <div class="thin-settings__group">-->
+<!--          Настройка-->
+<!--          <BaseSelect :options="[-->
+<!--          { name: 'Подборка 1',  value: 1},-->
+<!--          { name: 'Подборка 22',  value: 2},-->
+<!--          ]"-->
+<!--                      size="small"-->
+<!--                      v-model="selectedSettingsGroup"-->
+<!--          />-->
+<!--        </div>-->
         <div class="thin-settings__body">
           <div class="settings__item">
-            <BaseCheckbox label="Цели" />
+            Цели
+<!--            <BaseCheckbox label="Цели" />-->
+            <div class="settings__item-actions">
+              <div class="settings__actions">
+                <IconUpload class="settings__actions-icon" />
+              </div>
+              <div class="settings__actions">
+                <IconVolume class="settings__actions-icon" />
+              </div>
+              <BaseSelect :options="[
+               { name: 'Jump',  value: 'jump'},
+               { name: 'Bubble',  value: 'Bubble'},
+               { name: 'Crystal',  value: 'Crystal'},
+               { name: 'Breeze',  value: 'Breeze'},
+               { name: 'Funky',  value: 'Funky'},
+              ]"
+                          v-model="selectedOption"
+                          size="small"
+              >
+                <InputFileSelect />
+              </BaseSelect>
+            </div>
+          </div>
+          <div class="settings__item">
+            Подать мяч
+<!--            <BaseCheckbox label="Подать мяч" />-->
             <div class="settings__item-actions">
               <div class="settings__actions">
                 <IconUpload class="settings__actions-icon" />
@@ -100,28 +127,8 @@ const emit = defineEmits(['togglePro'])
             </div>
           </div>
           <div class="settings__item">
-            <BaseCheckbox label="Подать мяч" />
-            <div class="settings__item-actions">
-              <div class="settings__actions">
-                <IconUpload class="settings__actions-icon" />
-              </div>
-              <div class="settings__actions">
-                <IconVolume class="settings__actions-icon" />
-              </div>
-              <BaseSelect :options="[
-               { name: 'Jump',  value: 'jump'},
-               { name: 'Bubble',  value: 'Bubble'},
-               { name: 'Crystal',  value: 'Crystal'},
-               { name: 'Breeze',  value: 'Breeze'},
-               { name: 'Funky',  value: 'Funky'},
-              ]"
-                          v-model="selectedOption"
-                          size="small"
-              />
-            </div>
-          </div>
-          <div class="settings__item">
-            <BaseCheckbox label="Красные карточки" />
+            Красные карточки
+<!--            <BaseCheckbox label="Красные карточки" />-->
             <div class="settings__item-actions">
               <div class="settings__actions">
                 <IconUpload class="settings__actions-icon" />
@@ -149,6 +156,7 @@ const emit = defineEmits(['togglePro'])
 </template>
 
 <style scoped lang="scss">
+
 .thin-settings {
   width: rem(320);
   padding: rem(12);
@@ -284,6 +292,7 @@ const emit = defineEmits(['togglePro'])
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: rem(14);
 
   &-actions {
     display: flex;
