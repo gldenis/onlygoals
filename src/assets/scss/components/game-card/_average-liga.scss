@@ -125,4 +125,12 @@
       transform: translateX(0);
     }
   }
+
+  .game-info--chance:nth-child(1) {
+    .average-liga {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
 }

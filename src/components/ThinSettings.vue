@@ -318,7 +318,12 @@ const emit = defineEmits(['togglePro'])
   font-size: rem(14);
 }
 
-@media screen and (max-width: $phablet) {
+:deep(.custom-select__list) {
+  left: auto;
+  right: 0;
+}
+
+@media screen and (max-width: $laptop) {
   .thin-settings {
     width: 100%;
   }
