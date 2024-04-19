@@ -261,6 +261,7 @@ const isAuth = computed(() => (route.name === 'tariff'))
               <IconBoltFilled /> 31
             </div>
           </div>
+          <div class="header__tariff-add">31</div>
           <RouterLink to="/tariff" class="header__bolt" :class="{'header__bolt--small': isAuth}">
             <IconBolt />
             <span>Функции</span>
