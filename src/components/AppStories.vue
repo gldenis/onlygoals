@@ -328,6 +328,8 @@ const playPause = () => {
 }
 
 .stories {
+  position: relative;
+  z-index: 0;
 
   &__favorite-btn {
     width: rem(20);

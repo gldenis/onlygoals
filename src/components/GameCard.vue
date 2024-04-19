@@ -15,6 +15,19 @@ import IconStar from '@/components/icons/IconStar.vue'
 import IconShield from '@/components/icons/IconShield.vue'
 import IconAtack from '@/components/icons/IconAtack.vue'
 import IconFire from '@/components/icons/IconFire.vue'
+import { ref } from 'vue'
+import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
+import { onClickOutside } from '@vueuse/core'
+
+const isOpenedGameCardNotification = ref(false)
+const isOpenedGameCardNotificationDropdown = ref(false)
+const toggleGameCardNotification = () => {
+  isOpenedGameCardNotification.value = !isOpenedGameCardNotification.value
+  isOpenedGameCardNotificationDropdown.value = !!isOpenedGameCardNotification.value
+}
+const dropdown = ref()
+onClickOutside(dropdown, () => isOpenedGameCardNotificationDropdown.value = false)
 </script>
 
 <template>
@@ -422,11 +435,53 @@ import IconFire from '@/components/icons/IconFire.vue'
           <div class="game-info__row">
             <div class="game-info__title">Голосование</div>
             <div class="game-card__actions">
-              <div class="game-card__action-item game-card__action-item--active">
+              <div class="game-card__action-item game-card__action-item--live">
                 <IconLive />
               </div>
-              <div class="game-card__action-item">
+              <div class="game-card__action-item" :class="{ 'game-card__action-item--active': isOpenedGameCardNotification }" @click="toggleGameCardNotification">
                 <IconBell />
+                <div ref="dropdown" class="dropdown__body" :class="{ 'dropdown__body--opened': isOpenedGameCardNotificationDropdown }">
+                  <OverlayScrollbarsComponent defer
+                                              :options="{
+                                    overflow: {
+                                      x: 'hidden',
+                                    },
+                                  }">
+                    <div class="dropdown-list">
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                    </div>
+                  </OverlayScrollbarsComponent>
+
+                </div>
               </div>
               <div class="game-card__action-item">
                 <IconStar />

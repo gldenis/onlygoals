@@ -6,6 +6,7 @@
   }
 
   &__action-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,10 +17,38 @@
     opacity: 0.5;
     cursor: pointer;
 
-    &--active {
+    .dropdown__body {
+      left: auto;
+      right: 0;
+      z-index: 10;
+      width: rem(200);
+      color: #fff;
+    }
+
+    .dropdown-list {
+      max-height: rem(200);
+    }
+
+    &--live {
       color: #099853;
       background: rgb(31 168 78 / 16%);
       opacity: 1;
+    }
+
+    &--active {
+      color: rgb(25 27 34 / 68%);
+      background: #e9eaec;
+      opacity: 1;
+    }
+  }
+}
+
+
+@media screen and (max-width: $phablet) {
+  .game-card__action-item {
+    .dropdown__body {
+      left: 0;
+      right: auto;
     }
   }
 }
