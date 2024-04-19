@@ -23,6 +23,16 @@
     width: rem(40);
     height: rem(40);
     background: #099853;
+
+    svg {
+      width: rem(20);
+      height: rem(20);
+    }
+
+    &--auth {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.68);
+    }
   }
 
   &__bolt {
@@ -51,6 +61,15 @@
       padding: rem(2);
       background: linear-gradient(to right, #3f45ce, #3f45ce 25%, #ef6f38 50%, #7841bd 75%, #7841bd);
       inset: 0;
+    }
+
+    &--small {
+      width: rem(40);
+      height: rem(40);
+
+      span {
+        display: none;
+      }
     }
   }
 

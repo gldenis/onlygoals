@@ -13,13 +13,19 @@ import IconSettings from '@/components/icons/IconSettings.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import BaseDropdown from '@/components/ui/BaseDropdown.vue'
 import MacrosDropdown from '@/components/MacrosDropdown.vue'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import BaseSelect from '@/components/ui/BaseSelect.vue'
 import LangSwitcher from '@/components/LangSwitcher.vue'
+import IconPlus from '@/components/icons/IconPlus.vue'
+import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
+import { useRoute } from 'vue-router'
 
 const openedFilter = ref(false)
 const sortOption = [{ name: 'По дате', value: 'date' }, { name: 'Другая сортировка', value: 'other' }]
 const selectedSort = ref(sortOption[0])
+
+const route = useRoute()
+const isAuth = computed(() => (route.name === 'tariff'))
 </script>
 
 <template>
@@ -180,7 +186,7 @@ const selectedSort = ref(sortOption[0])
           <template v-slot:trigger>
             <IconLock class="dropdown__trigger-icon" />
             История
-            <IconArrowDown class="dropdown__trigger-arrow"/>
+            <IconArrowDown v-if="!isAuth" class="dropdown__trigger-arrow"/>
           </template>
           <template v-slot:body>
             <div class="dropdown-list">
@@ -246,13 +252,32 @@ const selectedSort = ref(sortOption[0])
       <div class="header__separator"></div>
 
       <div class="header__right">
-        <RouterLink to="/tariff" class="header__bolt">
-          <IconBolt />
-          <span>Функции</span>
-        </RouterLink>
-        <RouterLink to="/profile" class="header__profile-link">
-          <IconProfile />
-        </RouterLink>
+        <template v-if="isAuth">
+          <div class="tariff__add">
+            <div class="tariff__add-btn">
+              <IconPlus width="16" height="16" />
+            </div>
+            <div class="tariff__add-value">
+              <IconBoltFilled /> 31
+            </div>
+          </div>
+          <RouterLink to="/tariff" class="header__bolt" :class="{'header__bolt--small': isAuth}">
+            <IconBolt />
+            <span>Функции</span>
+          </RouterLink>
+          <RouterLink to="/profile" class="header__profile-link header__profile-link--auth">
+            <IconProfile />
+          </RouterLink>
+        </template>
+        <template v-else>
+          <RouterLink to="/tariff" class="header__bolt">
+            <IconBolt />
+            <span>Функции</span>
+          </RouterLink>
+          <RouterLink to="/profile" class="header__profile-link">
+            <IconProfile />
+          </RouterLink>
+        </template>
       </div>
     </div>
   </header>
