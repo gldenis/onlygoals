@@ -35,6 +35,8 @@ onMounted(() => {
     <AppStories />
     <section class="games">
       <div class="container games__container">
+        <GameCard type="friendly"/>
+        <GameCard type="women" chart-state="loading" />
         <GameCard />
         <GameCardSliced />
         <GameCardSliced unavailable />

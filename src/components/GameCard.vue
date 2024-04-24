@@ -28,6 +28,13 @@ const toggleGameCardNotification = () => {
 }
 const dropdown = ref()
 onClickOutside(dropdown, () => isOpenedGameCardNotificationDropdown.value = false)
+
+const props = defineProps({
+  type: {
+    type: String
+  },
+  chartState: {type: String}
+})
 </script>
 
 <template>
@@ -158,9 +165,9 @@ onClickOutside(dropdown, () => isOpenedGameCardNotificationDropdown.value = fals
           </div>
         </div>
         <div class="game-meta__current-score info-score info-score--large">
-          <div class="info-score__item info-score__item--large info-score__item--friendly">3</div>
+          <div class="info-score__item info-score__item--large" :class="[ type ? 'info-score__item--' + type : '']">3</div>
           :
-          <div class="info-score__item info-score__item--large info-score__item--friendly">2</div>
+          <div class="info-score__item info-score__item--large" :class="[ type ? 'info-score__item--' + type : '']">2</div>
         </div>
         <div class="game-meta__part game-meta__part--revert">
           <div class="game-meta__logo">
@@ -504,19 +511,19 @@ onClickOutside(dropdown, () => isOpenedGameCardNotificationDropdown.value = fals
       </div>
       <div class="game-info game-info--chart">
         <div class="game-info__content game-info__content--fetching">
-          <div class="game-info__content-loading">
+          <div v-if="chartState === 'loading'" class="game-info__content-loading">
             Обновление данных..
           </div>
           <div class="goal-scale">
-            <div class="goal-scale__label goal-scale__label--disabled">2333</div>
-            <div class="goal-scale__value goal-scale__value--disabled">
-              <div class="goal-scale__value-label goal-scale__value-label--disabled">
+            <div class="goal-scale__label" :class="{ 'goal-scale__label--disabled': chartState === 'loading' }">2333</div>
+            <div class="goal-scale__value" :class="{ 'goal-scale__value--disabled': chartState === 'loading' }">
+              <div class="goal-scale__value-label" :class="{ 'goal-scale__value-label--disabled': chartState === 'loading' }">
                 <IconFire />
                 <span>43%</span>
               </div>
             </div>
           </div>
-          <div class="correlation correlation--disabled">
+          <div class="correlation" :class="{ 'correlation--disabled': chartState === 'loading' }">
             <div class="correlation__item">
               <IconShield />
             </div>
