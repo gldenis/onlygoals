@@ -9,12 +9,12 @@
   backdrop-filter: blur(rem(8));
 
   &__tariff-add {
+    display: none;
+    align-self: flex-start;
     font-weight: 800;
     font-size: rem(12);
     line-height: 128%; /* 15.36px */
     color: rgb(255 255 255 / 68%);
-    align-self: flex-start;
-    display: none;
   }
 
   &__container {
@@ -32,15 +32,24 @@
     width: rem(40);
     height: rem(40);
     background: #099853;
+    transition: 0.3s;
 
     svg {
       width: rem(20);
       height: rem(20);
     }
 
+    &:hover {
+      background: #32b760;
+    }
+
     &--auth {
-      border: 2px solid rgb(255 255 255 / 68%);
-      background: transparent;
+      border: none;
+      background: rgb(255 255 255 / 12%);
+
+      &:hover {
+
+      }
     }
   }
 
@@ -70,6 +79,12 @@
       padding: rem(2);
       background: linear-gradient(to right, #3f45ce, #3f45ce 25%, #ef6f38 50%, #7841bd 75%, #7841bd);
       inset: 0;
+    }
+
+    &:hover {
+      &::before {
+        padding: rem(3);
+      }
     }
 
     &--small {

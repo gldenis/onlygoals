@@ -54,6 +54,11 @@
     text-align: center;
     color: rgb(25 27 34 / 68%);
     background: rgb(255 255 255 / 84%);
+
+    &:hover {
+      background: #e9eaec;
+
+    }
   }
 
   &__days {

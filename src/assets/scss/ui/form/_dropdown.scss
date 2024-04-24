@@ -14,11 +14,16 @@
     background: var(--neutral-left-12);
     cursor: pointer;
     gap: rem(8);
+    transition: .2s;
 
     &--icon {
       padding: rem(10);
       width: rem(40);
       height: rem(40);
+    }
+
+    &:hover {
+      background: rgb(255 255 255 / 32%);
     }
   }
 

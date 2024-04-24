@@ -140,7 +140,8 @@ const openDonat = () => {
       gap: rem(20);
     }
     &__main {
-      order: 3
+      order: 3;
+      margin-right: rem(20);
     }
     .copyright {
       order: 2;

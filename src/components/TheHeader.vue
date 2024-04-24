@@ -19,6 +19,7 @@ import LangSwitcher from '@/components/LangSwitcher.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import IconBoltFilled from '@/components/icons/IconBoltFilled.vue'
 import { useRoute } from 'vue-router'
+import IconUserFilled from '@/components/icons/IconUserFilled.vue'
 
 const openedFilter = ref(false)
 const sortOption = [{ name: 'По дате', value: 'date' }, { name: 'Другая сортировка', value: 'other' }]
@@ -267,7 +268,7 @@ const isAuth = computed(() => (route.name === 'tariff'))
             <span>Функции</span>
           </RouterLink>
           <RouterLink to="/profile" class="header__profile-link header__profile-link--auth">
-            <IconProfile />
+            <IconUserFilled />
           </RouterLink>
         </template>
         <template v-else>

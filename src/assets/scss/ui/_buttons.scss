@@ -23,42 +23,45 @@
 
   &--extra-small {
     padding: rem(7) rem(12);
-    font-size: rem(13);
     height: rem(32);
+    font-size: rem(13);
   }
 
   &--primary {
     border: rem(1) solid transparent;
     background: var(--green-5);
 
-    //&:hover {
-    //    border: rem(1) solid rgba(255, 255, 255, 0.20);
-    //    box-shadow: 0px 8px 16px 0px rgba(65, 70, 207, 0.64);
-    //}
+    &:hover {
+      background: #32b760;
+    }
   }
 
   &--secondary {
     border: rem(1) solid transparent;
     background: #009dbd;
 
-    //&:hover {
-    //    border: rem(1) solid rgba(255, 255, 255, 0.20);
-    //    box-shadow: 0px 8px 16px 0px rgba(0, 157, 189, 0.64);
-    //}
+    &:hover {
+      border: rem(1) solid rgb(255 255 255 / 20%);
+      box-shadow: 0 8px 16px 0 rgb(0 157 189 / 64%);
+    }
   }
 
   &--gray {
     background: rgb(255 255 255 / 12%);
+
+    &:hover {
+      background: rgb(255 255 255 / 32%);
+    }
   }
 
   &--accent {
     border: rem(1) solid transparent;
     background: var(--accent);
 
-    //&:hover {
-    //    border: rem(1) solid rgba(255, 255, 255, 0.20);
-    //    box-shadow: 0px 8px 16px 0px rgba(35, 156, 98, 0.64);
-    //}
+    &:hover {
+      border: rem(1) solid rgb(255 255 255 / 20%);
+      box-shadow: 4px -4px 8px 0 rgb(121 41 234 / 24%), -4px -4px 8px 0 rgb(0 209 255 / 24%), -4px 4px 8px 0 rgb(251 86 7 / 24%), 4px 4px 8px 0 rgb(255 190 11 / 24%);
+    }
   }
 
   &--outlined {
@@ -83,6 +86,12 @@
       background: linear-gradient(to right, #3f45ce, #3f45ce 25%, #ef6f38 50%, #7841bd 75%, #7841bd);
       inset: 0;
     }
+
+    &:hover {
+      &::before {
+        padding: rem(3);
+      }
+    }
   }
 
   &--gray {
@@ -97,6 +106,10 @@
   &--light {
     color: rgb(25 27 34 / 68%);
     background: rgb(255 255 255 / 84%);
+
+    &:hover {
+      background: #E9EAEC;
+    }
   }
 
   &--transparent {

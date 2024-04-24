@@ -170,6 +170,10 @@ const macrosStore = useMacrosStore()
     font-style: normal;
     font-weight: 700;
     line-height: 132%; /* 17.16px */
+
+    &:hover {
+      background: rgba(31, 168, 78, 0.32);
+    }
   }
 }
 
