@@ -101,6 +101,14 @@
       color: #eee;
     }
   }
+
+  &__mobile-invite-btn {
+    padding: 0;
+    width: rem(32);
+    height: rem(32);
+    background: rgb(31 168 78 / 16%);
+    display: none;
+  }
 }
 
 .referrals {
@@ -144,15 +152,41 @@
 @media screen and (max-width: $phablet) {
   .referral {
     &__item {
-      flex-direction: column;
-      align-items: flex-start;
       gap: rem(16);
     }
 
     &__info {
-      flex-direction: column;
-      align-items: flex-start;
       text-align: left;
+      gap: rem(16);
+    }
+
+    &__bonus {
+      min-width: 0;
+
+      span {
+        display: none;
+      }
+    }
+
+    &__resending {
+      padding: rem(4);
+      width: rem(32);
+      height: rem(32);
+      min-width: 0;
+
+      span {
+        display: none;
+      }
+    }
+
+    &__limit {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__mobile-invite-btn {
+      display: flex;
     }
   }
 

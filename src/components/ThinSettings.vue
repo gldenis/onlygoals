@@ -36,7 +36,7 @@ const emit = defineEmits(['togglePro'])
         <div class="thin-settings__head">
           <div class="thin-settings__item-part">
             <IconLock class="thin-settings__lock-icon" />
-            <div class="thin-settings__name">Title</div>
+            <div class="thin-settings__name">Скрыть футер</div>
           </div>
           <IconInfo class="thin-settings__info-icon" />
         </div>
@@ -45,7 +45,7 @@ const emit = defineEmits(['togglePro'])
         <div class="thin-settings__head">
           <div class="thin-settings__item-part">
             <IconLock class="thin-settings__lock-icon" />
-            <div class="thin-settings__name">Title</div>
+            <div class="thin-settings__name">Уведомления</div>
           </div>
           <IconInfo class="thin-settings__info-icon" />
         </div>
@@ -54,7 +54,7 @@ const emit = defineEmits(['togglePro'])
         <div class="thin-settings__head">
           <div class="thin-settings__item-part">
             <IconLock class="thin-settings__lock-icon" />
-            <div class="thin-settings__name">Title</div>
+            <div class="thin-settings__name">Цветовая схема</div>
           </div>
           <IconInfo class="thin-settings__info-icon" />
         </div>
@@ -238,7 +238,7 @@ const emit = defineEmits(['togglePro'])
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: rem(12);
+    padding: rem(10) rem(20) rem(10) rem(10);
   }
 
   &__item-part {

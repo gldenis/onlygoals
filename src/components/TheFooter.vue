@@ -159,4 +159,11 @@ const openDonat = () => {
 :deep(.modal__close) {
   display: none;
 }
+
+@media screen and (max-width: $tablet) {
+  .footer__container {
+    padding-left: rem(24);
+    padding-right: rem(24);
+  }
+}
 </style>

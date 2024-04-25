@@ -13,6 +13,8 @@ import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
 import ThinSettings from '@/components/ThinSettings.vue'
 import { ref } from 'vue'
+import IconPlusInCircle from '@/components/icons/IconPlusInCircle.vue'
+import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
 const isPro = ref(false)
@@ -48,7 +50,10 @@ const togglePro = () => {
           <div class="referrals__head">
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
             <div class="referrals__head-right">
-              <div class="referral__limit">Лимит в сутки: <span>2 из 10</span></div>
+              <div class="referral__limit">Лимит в день: <span>2 из 10</span></div>
+              <div class="referral__mobile-invite-btn btn btn--icon">
+                <IconPlusInCircleFilled />
+              </div>
               <Teleport to="body" :disabled="width >= 640">
                 <div class="referrals-invite">
                   <div class="referrals-invite__label">
@@ -62,37 +67,37 @@ const togglePro = () => {
           </div>
           <div class="referral__list">
             <div class="referral__item">
-              <div class="referral__title">curtis.weaver@example.com</div>
+              <div class="referral__title">ca**r@e.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
                 <div class="referral__bonus">
                   <IconPlus width="16" height="16" />
-                  3 дня премиум
+                  3 дня <span>премиум</span>
                 </div>
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">nathan.roberts@example.com</div>
+              <div class="referral__title">ni**s@e.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
                 <div class="referral__bonus">
                   <IconPlus width="16" height="16" />
-                  3 дня премиум
+                  3 дня <span>премиум</span>
                 </div>
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">tim.jennings@example.com</div>
+              <div class="referral__title">tw**s@e.com</div>
               <div class="referral__info">
                 <div class="referral__pending">Ожидание верификации</div>
                 <div class="referral__resending">
                   <IconLetter />
-                  Отправить снова
+                  <span>Отправить снова</span>
                 </div>
               </div>
             </div>
             <div class="referral__item">
-              <div class="referral__title">willie.jennings@example.com</div>
+              <div class="referral__title">wi**s@e.com</div>
               <div class="referral__info">
                 <div class="referral__date">10.10.2019</div>
               </div>
@@ -190,6 +195,10 @@ main {
     background: rgba(255, 255, 255, 0.12);
     box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
+  }
+
+  .referrals__head-right {
+    gap: rem(12);
   }
 }
 
