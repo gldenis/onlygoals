@@ -106,17 +106,17 @@ const recaptchaError = (reason) => {
         <div class="games-container">
           <GameCardSmall />
           <AppStories class="stories__right" />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
-          <GameCardSmallSliced />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
+          <GameCardSmall />
         </div>
       </div>
     </div>

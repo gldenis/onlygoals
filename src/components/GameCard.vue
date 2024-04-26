@@ -33,7 +33,10 @@ const props = defineProps({
   type: {
     type: String
   },
-  chartState: {type: String}
+  chartState: {type: String},
+  chartLight: {
+    type: String
+  }
 })
 </script>
 
@@ -516,7 +519,13 @@ const props = defineProps({
           </div>
           <div class="goal-scale">
             <div class="goal-scale__label" :class="{ 'goal-scale__label--disabled': chartState === 'loading' }">2333</div>
-            <div class="goal-scale__value" :class="{ 'goal-scale__value--disabled': chartState === 'loading' }">
+            <div class="goal-scale__value"
+                 :class="{
+                          'goal-scale__value--disabled': chartState === 'loading',
+                          'goal-scale__value--second': chartLight === 'second',
+                          'goal-scale__value--thirty': chartLight === 'thirty',
+                  }"
+            >
               <div class="goal-scale__value-label" :class="{ 'goal-scale__value-label--disabled': chartState === 'loading' }">
                 <IconFire />
                 <span>43%</span>

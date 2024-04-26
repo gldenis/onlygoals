@@ -37,7 +37,8 @@ onMounted(() => {
       <div class="container games__container">
         <GameCard type="friendly"/>
         <GameCard type="women" chart-state="loading" />
-        <GameCard />
+        <GameCard chart-light="second" />
+        <GameCard chart-light="thirty" />
         <GameCardSliced />
         <GameCardSliced unavailable />
       </div>
