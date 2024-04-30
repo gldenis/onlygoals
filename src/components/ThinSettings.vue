@@ -63,26 +63,33 @@ const emit = defineEmits(['togglePro'])
     <template v-else>
       <div class="thin-settings__item">
         <div class="thin-settings__head">
-          <div class="thin-settings__name">Title</div>
+          <div class="thin-settings__name">Скрыть футер</div>
           <div class="thin-settings__item-part">
-            <IconGear class="thin-settings__gear-icon"/>
             <BaseSwitch />
           </div>
         </div>
-<!--        <div class="thin-settings__group">-->
-<!--          Настройка-->
-<!--          <BaseSelect :options="[-->
-<!--          { name: 'Подборка 1',  value: 1},-->
-<!--          { name: 'Подборка 22',  value: 2},-->
-<!--          ]"-->
-<!--                      size="small"-->
-<!--                      v-model="selectedSettingsGroup"-->
-<!--          />-->
-<!--        </div>-->
+      </div>
+      <div class="thin-settings__item">
+        <div class="thin-settings__head">
+          <div class="thin-settings__name">Уведомления</div>
+          <div class="thin-settings__item-part">
+            <IconGear class="thin-settings__gear-icon"/>
+          </div>
+        </div>
+        <!--        <div class="thin-settings__group">-->
+        <!--          Настройка-->
+        <!--          <BaseSelect :options="[-->
+        <!--          { name: 'Подборка 1',  value: 1},-->
+        <!--          { name: 'Подборка 22',  value: 2},-->
+        <!--          ]"-->
+        <!--                      size="small"-->
+        <!--                      v-model="selectedSettingsGroup"-->
+        <!--          />-->
+        <!--        </div>-->
         <div class="thin-settings__body">
           <div class="settings__item">
             Цели
-<!--            <BaseCheckbox label="Цели" />-->
+            <!--            <BaseCheckbox label="Цели" />-->
             <div class="settings__item-actions">
               <div class="settings__actions">
                 <IconUpload class="settings__actions-icon" />
@@ -106,7 +113,7 @@ const emit = defineEmits(['togglePro'])
           </div>
           <div class="settings__item">
             Подать мяч
-<!--            <BaseCheckbox label="Подать мяч" />-->
+            <!--            <BaseCheckbox label="Подать мяч" />-->
             <div class="settings__item-actions">
               <div class="settings__actions">
                 <IconUpload class="settings__actions-icon" />
@@ -128,7 +135,7 @@ const emit = defineEmits(['togglePro'])
           </div>
           <div class="settings__item">
             Красные карточки
-<!--            <BaseCheckbox label="Красные карточки" />-->
+            <!--            <BaseCheckbox label="Красные карточки" />-->
             <div class="settings__item-actions">
               <div class="settings__actions">
                 <IconUpload class="settings__actions-icon" />
@@ -239,6 +246,7 @@ const emit = defineEmits(['togglePro'])
     align-items: center;
     justify-content: space-between;
     padding: rem(10) rem(20) rem(10) rem(10);
+    min-height: rem(48);border-radius: rem(8) rem(8) 0 0;
   }
 
   &__item-part {

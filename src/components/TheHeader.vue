@@ -267,7 +267,7 @@ const isAuth = computed(() => (route.name === 'tariff'))
             <IconBolt />
             <span>Функции</span>
           </RouterLink>
-          <RouterLink to="/profile" class="header__profile-link header__profile-link--auth">
+          <RouterLink to="/profile" class="header__profile-link header__profile-link--auth header__profile-link--active">
             <IconUserFilled />
           </RouterLink>
         </template>

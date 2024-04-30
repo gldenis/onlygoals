@@ -155,6 +155,21 @@ const supportHelpIsOpened = ref(false)
     cursor: pointer;
     clip-path: url("@/assets/img/ask.svg");
     overflow: hidden;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      backdrop-filter: blur(4px);
+      width: rem(44);
+      height: rem(44);
+      border-radius: 50%;
+      filter: blur(4px);
+      background: #000;
+    }
   }
 
   &__content {
@@ -164,8 +179,6 @@ const supportHelpIsOpened = ref(false)
     bottom: 0;
   }
 }
-
-
 
 .form {
   &:before {
@@ -182,6 +195,20 @@ const supportHelpIsOpened = ref(false)
     background: conic-gradient(from 0deg at 50% 50%, #3073FA 0.9259677026420832deg, #EF8641 121.87499642372131deg, #C4648F 232.49999284744263deg, #933CEA 333.9734101295471deg);
     filter: blur(40px);
     z-index: -1;
+  }
+}
+
+
+
+@media screen and (max-width: $desktop) {
+  .support {
+    right: rem(20);
+  }
+}
+
+@media screen and (max-width: $mobile-xs) {
+  .support {
+    right: rem(16);
   }
 }
 </style>

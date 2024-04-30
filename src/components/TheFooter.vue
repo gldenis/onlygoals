@@ -133,6 +133,11 @@ const openDonat = () => {
   padding: rem(4) rem(8);
 }
 
+:deep(.lang-switcher__body) {
+  top: auto;
+  bottom: 100%;
+}
+
 @media screen and (max-width: $tablet) {
   .footer {
     &__container {
