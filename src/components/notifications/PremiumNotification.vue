@@ -2,7 +2,7 @@
 
 import IconPremiumNotification from '@/components/icons/IconPremiumNotification.vue'
 import IconArrowDown from '@/components/icons/IconArrowDown.vue'
-import { ref } from 'vue'
+import { onUnmounted, ref } from 'vue'
 import IconStoriesTrigger from '@/components/icons/IconStoriesTrigger.vue'
 
 const notificationIsShowed = ref(true)
@@ -12,6 +12,26 @@ const hideNotification = () => {
 const showNotification = () => {
   notificationIsShowed.value = true
 }
+
+const scrollHandler = e => {
+  const windowHeight = window.innerHeight
+  const fullHeight = document.body.offsetHeight
+  const scrollTop = window.scrollY
+
+  console.log(window.scrollY, windowHeight, fullHeight)
+
+  if (scrollTop + windowHeight + 60 >= fullHeight) {
+    notificationIsShowed.value = false
+  } else {
+    notificationIsShowed.value = true
+  }
+}
+
+document.addEventListener('scroll', scrollHandler)
+
+onUnmounted(() => {
+  document.removeEventListener('scroll', scrollHandler)
+})
 </script>
 
 <template>

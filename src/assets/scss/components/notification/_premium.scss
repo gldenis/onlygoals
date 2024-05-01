@@ -57,7 +57,6 @@
 
     &:hover {
       background: #e9eaec;
-
     }
   }
 
@@ -87,8 +86,10 @@
     right: 0;
     bottom: rem(20);
     border-radius: rem(8) 0 0 rem(8);
-    width: max-content;
+    width: rem(325);
     transform: none;
+    transition: 0.3s;
+    max-height: rem(48);
 
     &__trigger {
       transform: rotate(-90deg);
