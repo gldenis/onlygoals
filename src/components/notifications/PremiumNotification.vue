@@ -17,10 +17,10 @@ const scrollHandler = e => {
   const windowHeight = window.innerHeight
   const fullHeight = document.body.offsetHeight
   const scrollTop = window.scrollY
+  const windowWidth = window.innerWidth
 
-  console.log(window.scrollY, windowHeight, fullHeight)
 
-  if (scrollTop + windowHeight + 60 >= fullHeight) {
+  if (scrollTop + windowHeight + 60 >= fullHeight && windowWidth <= 640) {
     notificationIsShowed.value = false
   } else {
     notificationIsShowed.value = true
