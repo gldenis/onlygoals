@@ -11,6 +11,7 @@ import IconUpload from '@/components/icons/IconUpload.vue'
 import IconVolume from '@/components/icons/IconVolume.vue'
 import IconRemove from '@/components/icons/IconRemove.vue'
 import InputFileSelect from '@/components/InputFileSelect.vue'
+import IconArrowTop from '@/components/icons/IconArrowTop.vue'
 
 const selectedSettingsGroup = ref( { name: 'Подборка 1',  value: 1})
 const selectedOption = ref({ name: 'Jump',  value: 'jump'})
@@ -23,6 +24,12 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['togglePro'])
+
+const openedSettings = ref()
+
+const toggleSettingsItem = val => {
+  openedSettings.value = openedSettings.value === val ? null : val
+}
 </script>
 
 <template>
@@ -69,11 +76,12 @@ const emit = defineEmits(['togglePro'])
           </div>
         </div>
       </div>
-      <div class="thin-settings__item">
-        <div class="thin-settings__head">
+      <div class="thin-settings__item" :class="{ 'thin-settings__item--opened': openedSettings === 1 }" >
+        <div class="thin-settings__head" >
           <div class="thin-settings__name">Уведомления</div>
           <div class="thin-settings__item-part">
-            <IconGear class="thin-settings__gear-icon"/>
+            <IconArrowTop v-if="openedSettings === 1"  class="thin-settings__arrow-icon" @click="toggleSettingsItem(1)"/>
+            <IconGear v-else class="thin-settings__gear-icon" @click="toggleSettingsItem(1)"/>
           </div>
         </div>
         <!--        <div class="thin-settings__group">-->
@@ -86,7 +94,97 @@ const emit = defineEmits(['togglePro'])
         <!--                      v-model="selectedSettingsGroup"-->
         <!--          />-->
         <!--        </div>-->
-        <div class="thin-settings__body">
+        <div class="thin-settings__body" :class="{ 'thin-settings__body--opened': openedSettings === 1 }">
+          <div class="settings__item">
+            Цели
+            <!--            <BaseCheckbox label="Цели" />-->
+            <div class="settings__item-actions">
+              <div class="settings__actions">
+                <IconUpload class="settings__actions-icon" />
+              </div>
+              <div class="settings__actions">
+                <IconVolume class="settings__actions-icon" />
+              </div>
+              <BaseSelect :options="[
+               { name: 'Jump',  value: 'jump'},
+               { name: 'Bubble',  value: 'Bubble'},
+               { name: 'Crystal',  value: 'Crystal'},
+               { name: 'Breeze',  value: 'Breeze'},
+               { name: 'Funky',  value: 'Funky'},
+              ]"
+                          v-model="selectedOption"
+                          size="small"
+              >
+                <InputFileSelect />
+              </BaseSelect>
+            </div>
+          </div>
+          <div class="settings__item">
+            Подать мяч
+            <!--            <BaseCheckbox label="Подать мяч" />-->
+            <div class="settings__item-actions">
+              <div class="settings__actions">
+                <IconUpload class="settings__actions-icon" />
+              </div>
+              <div class="settings__actions">
+                <IconVolume class="settings__actions-icon" />
+              </div>
+              <BaseSelect :options="[
+               { name: 'Jump',  value: 'jump'},
+               { name: 'Bubble',  value: 'Bubble'},
+               { name: 'Crystal',  value: 'Crystal'},
+               { name: 'Breeze',  value: 'Breeze'},
+               { name: 'Funky',  value: 'Funky'},
+              ]"
+                          v-model="selectedOption"
+                          size="small"
+              />
+            </div>
+          </div>
+          <div class="settings__item">
+            Красные карточки
+            <!--            <BaseCheckbox label="Красные карточки" />-->
+            <div class="settings__item-actions">
+              <div class="settings__actions">
+                <IconUpload class="settings__actions-icon" />
+              </div>
+              <div class="settings__actions">
+                <IconVolume class="settings__actions-icon" />
+              </div>
+              <BaseSelect :options="[
+               { name: 'Jump',  value: 'jump'},
+               { name: 'Bubble',  value: 'Bubble'},
+               { name: 'Crystal',  value: 'Crystal'},
+               { name: 'Breeze',  value: 'Breeze'},
+               { name: 'Funky',  value: 'Funky'},
+              ]"
+                          v-model="selectedOption"
+                          size="small"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thin-settings__item" :class="{ 'thin-settings__item--opened': openedSettings === 2 }">
+        <div class="thin-settings__head" >
+          <div class="thin-settings__name">Цветовая схема</div>
+          <div class="thin-settings__item-part">
+            <IconArrowTop v-if="openedSettings === 2"  class="thin-settings__arrow-icon" @click="toggleSettingsItem(2)"/>
+            <IconGear v-else class="thin-settings__gear-icon" @click="toggleSettingsItem(2)"/>
+          </div>
+        </div>
+        <!--        <div class="thin-settings__group">-->
+        <!--          Настройка-->
+        <!--          <BaseSelect :options="[-->
+        <!--          { name: 'Подборка 1',  value: 1},-->
+        <!--          { name: 'Подборка 22',  value: 2},-->
+        <!--          ]"-->
+        <!--                      size="small"-->
+        <!--                      v-model="selectedSettingsGroup"-->
+        <!--          />-->
+        <!--        </div>-->
+        <div class="thin-settings__body" :class="{ 'thin-settings__body--opened': openedSettings === 2 }">
           <div class="settings__item">
             Цели
             <!--            <BaseCheckbox label="Цели" />-->
@@ -228,6 +326,10 @@ const emit = defineEmits(['togglePro'])
     padding: rem(7) rem(12);
     width: rem(52);
     height: rem(32);
+    color: #E9EAEC;
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
   }
 
   &__item {
@@ -238,6 +340,32 @@ const emit = defineEmits(['togglePro'])
 
     &--lock {
       background: rgba(25, 27, 34, 0.12);
+      backdrop-filter: none;
+      box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
+    }
+
+    &--opened {
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        width: rem(160);
+        height: rem(160);
+        background: #1fa84e;
+        opacity: 0.2;
+        filter: blur(rem(64));
+        position: absolute;
+        top: - rem(80);
+        left: - rem(80);
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+
+    &--opened {
+      display: block;
     }
   }
 
@@ -279,10 +407,16 @@ const emit = defineEmits(['togglePro'])
     height: rem(16);
     opacity: 0.32;
     cursor: pointer;
+    transition: .3s;
 
     &:hover {
       opacity: 1;
     }
+  }
+  &__arrow-icon {
+    width: rem(16);
+    height: rem(16);
+    cursor: pointer;
   }
 
   &__group {

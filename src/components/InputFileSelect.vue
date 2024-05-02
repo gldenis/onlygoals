@@ -22,9 +22,9 @@ const removeFile = () => {
     <IconUpload />
     <div>Загрузить файл <span>(макс. 100 кб)</span></div>
   </div>
-  <div v-if="file" class="custom-select__option custom-select__option-file custom-select__option-file--remove" @click="removeFile">
+  <div class="custom-select__option custom-select__option-file custom-select__option-file--remove" @click="removeFile">
     <IconRemove />
-    <div class="custom-select__option-file-name">{{ file.name }}</div>
+    <div class="custom-select__option-file-name">{{ file?.name || 'Старый файл'}}</div>
   </div>
 </template>
 
