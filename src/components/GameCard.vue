@@ -38,6 +38,8 @@ const props = defineProps({
     type: String
   }
 })
+
+const favorite = ref()
 </script>
 
 <template>
@@ -493,8 +495,8 @@ const props = defineProps({
 
                 </div>
               </div>
-              <div class="game-card__action-item">
-                <IconStar />
+              <div class="game-card__action-item" :class="{ 'game-card__action-item--active': favorite }">
+                <IconStar @click="favorite = !favorite"/>
               </div>
             </div>
           </div>
