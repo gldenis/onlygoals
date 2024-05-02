@@ -345,7 +345,6 @@ const toggleSettingsItem = val => {
     }
 
     &--opened {
-      overflow: hidden;
       &:before {
         content: '';
         display: block;
@@ -358,6 +357,8 @@ const toggleSettingsItem = val => {
         top: - rem(80);
         left: - rem(80);
       }
+
+      z-index: 2;
     }
   }
 

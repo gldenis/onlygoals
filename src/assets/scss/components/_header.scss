@@ -224,8 +224,7 @@
 
   .sort__wrapper {
     display: block;
-    border-top: rem(1) solid rgb(255 255 255 / 12%);
-    padding-top: rem(16);
+
   }
 
   .header__sort--desktop {
@@ -285,5 +284,8 @@
 
   .sort__wrapper {
     width: 100%;
+    border-top: rem(1) solid rgb(255 255 255 / 12%);
+    padding-top: rem(16);
+
   }
 }
