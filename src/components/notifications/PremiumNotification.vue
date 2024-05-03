@@ -6,11 +6,14 @@ import { onUnmounted, ref } from 'vue'
 import IconStoriesTrigger from '@/components/icons/IconStoriesTrigger.vue'
 
 const notificationIsShowed = ref(true)
+const notificationIsShowedManual = ref(true)
 const hideNotification = () => {
   notificationIsShowed.value = false
+  notificationIsShowedManual.value = false
 }
 const showNotification = () => {
   notificationIsShowed.value = true
+  notificationIsShowedManual.value = true
 }
 
 const scrollHandler = e => {
@@ -19,6 +22,7 @@ const scrollHandler = e => {
   const scrollTop = window.scrollY
   const windowWidth = window.innerWidth
 
+  if (!notificationIsShowedManual.value) return
 
   if (scrollTop + windowHeight + 60 >= fullHeight && windowWidth <= 640) {
     notificationIsShowed.value = false
