@@ -176,7 +176,7 @@ const favorite = ref()
         </div>
         <div class="game-meta__part game-meta__part--revert">
           <div class="game-meta__logo">
-            <img src="@/assets/img/content/manchester.png" alt="">
+            <img src="@/assets/img/content/manchester.png" alt="" height="28" width="28">
           </div>
           <div class="game-meta__inner">
             <div class="game-meta__name">Manchester United</div>
