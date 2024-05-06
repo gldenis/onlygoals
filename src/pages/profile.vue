@@ -15,6 +15,8 @@ import ThinSettings from '@/components/ThinSettings.vue'
 import { ref } from 'vue'
 import IconPlusInCircle from '@/components/icons/IconPlusInCircle.vue'
 import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vue'
+import IconCopy from '@/components/icons/IconCopy.vue'
+import IconUserAdd from '@/components/icons/IconUserAdd.vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
 const isPro = ref(false)
@@ -51,16 +53,18 @@ const togglePro = () => {
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
             <div class="referrals__head-right">
               <div class="referral__limit">Лимит в день: <span>2 из 10</span></div>
-              <div class="referral__mobile-invite-btn btn btn--icon">
-                <IconPlusInCircleFilled />
-              </div>
               <Teleport to="body" :disabled="width >= 640">
                 <div class="referrals-invite">
                   <div class="referrals-invite__label">
                     Премиум +3 дня
                     за каждого друга
                   </div>
-                  <button class="btn btn--primary btn--small" @click.prevent="authStore.referralFormIsOpened = true">Пригласить</button>
+                  <button class="btn btn--gray btn--icon">
+                    <IconCopy />
+                  </button>
+                  <button class="btn btn--primary btn--icon" @click.prevent="authStore.referralFormIsOpened = true">
+                    <IconUserAdd />
+                  </button>
                 </div>
               </Teleport>
             </div>
@@ -158,6 +162,7 @@ main {
   display: flex;
   align-items: center;
   gap: rem(16);
+  z-index: 2;
 
   &__label {
     color: #EEE;

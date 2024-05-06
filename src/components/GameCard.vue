@@ -143,7 +143,7 @@ const favorite = ref()
       <div class="game-meta">
         <div class="game-meta__part">
           <div class="game-meta__logo">
-            <img src="@/assets/img/content/real-madrid.png" alt="">
+            <img src="@/assets/img/content/real-madrid.png" alt="" height="28" width="28">
           </div>
           <div class="game-meta__inner">
             <div class="game-meta__name">Real Madrid</div>
