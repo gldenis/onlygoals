@@ -153,23 +153,11 @@ const supportHelpIsOpened = ref(false)
 
   &__trigger {
     cursor: pointer;
-    clip-path: url("@/assets/img/ask.svg");
+    mask: url("@/assets/img/ask.svg");
+    backdrop-filter: blur(4px);
     overflow: hidden;
     position: relative;
-
-    &:before {
-      display: block;
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      backdrop-filter: blur(4px);
-      width: rem(44);
-      height: rem(44);
-      border-radius: 50%;
-      filter: blur(4px);
-      background: #000;
-    }
+    background: rgba(255, 255, 255, 0.12);
   }
 
   &__content {

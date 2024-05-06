@@ -77,6 +77,7 @@ const toggleSettingsItem = val => {
         </div>
       </div>
       <div class="thin-settings__item" :class="{ 'thin-settings__item--opened': openedSettings === 1 }" >
+        <div class="thin-settings__item-decor"></div>
         <div class="thin-settings__head" >
           <div class="thin-settings__name">Уведомления</div>
           <div class="thin-settings__item-part">
@@ -345,20 +346,35 @@ const toggleSettingsItem = val => {
     }
 
     &--opened {
+      .thin-settings__item-decor {
+        display: block;
+      }
+
+      z-index: 2;
+    }
+
+    &-decor {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      width: rem(160);
+      height: rem(160);
+      top: 0;
+      left: 0;
+
+
       &:before {
+        background: #1fa84e;
+        opacity: 0.2;
+        filter: blur(rem(64));
         content: '';
         display: block;
         width: rem(160);
         height: rem(160);
-        background: #1fa84e;
-        opacity: 0.2;
-        filter: blur(rem(64));
-        position: absolute;
         top: - rem(80);
         left: - rem(80);
+        position: absolute;
       }
-
-      z-index: 2;
     }
   }
 
