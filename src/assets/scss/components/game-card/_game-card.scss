@@ -180,6 +180,14 @@
   .game-info--chart {
     align-items: center;
     height: rem(44);
+    padding: rem(1) rem(8);
+
+    .game-info__content {
+      gap: 0;
+    }
+
+    .correlation {
+      padding: 0;}
 
     .info-score__item {
       height: rem(17);

@@ -12,6 +12,13 @@ defineProps({
 import { useAuthStore } from '@/stores/auth.js'
 import IconGameInfo from '@/components/icons/IconGameInfo.vue'
 import IconStarFilled from '@/components/icons/IconStarFilled.vue'
+import IconBell from '@/components/icons/IconBell.vue'
+import IconShield from '@/components/icons/IconShield.vue'
+import IconAtack from '@/components/icons/IconAtack.vue'
+import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
+import IconLive from '@/components/icons/IconLive.vue'
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
+import IconFire from '@/components/icons/IconFire.vue'
 
 const authStore = useAuthStore()
 </script>
@@ -169,47 +176,110 @@ const authStore = useAuthStore()
     <div class="game-card__column game-card__charts game-card__column--charts">
       <div class="game-info game-info--chart">
         <div class="game-info__content">
-          <div class="game-info__title">Голосование</div>
-          <div class="info-score">
-            <div class="info-score__item">35%</div>
-            :
-            <div class="info-score__item">35%</div>
+          <div class="game-info__row">
+            <div class="game-info__title">Голосование</div>
+            <div class="game-card__actions">
+              <div class="game-card__action-item game-card__action-item--live">
+                <IconLive />
+              </div>
+              <div class="game-card__action-item" :class="{ 'game-card__action-item--active': isOpenedGameCardNotification }" @click="toggleGameCardNotification">
+                <IconBell />
+                <div ref="dropdown" class="dropdown__body" :class="{ 'dropdown__body--opened': isOpenedGameCardNotificationDropdown }">
+                  <OverlayScrollbarsComponent defer
+                                              :options="{
+                                    overflow: {
+                                      x: 'hidden',
+                                    },
+                                  }">
+                    <div class="dropdown-list">
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                      <div class="dropdown-list__item">
+                        <BaseCheckbox label="title" />
+                      </div>
+                    </div>
+                  </OverlayScrollbarsComponent>
+
+                </div>
+              </div>
+              <div class="game-card__action-item" :class="{ 'game-card__action-item--active': favorite }">
+                <IconStar @click="favorite = !favorite"/>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="game-chart">
-          <div class="game-chart__item">
-            <div class="game-chart__value game-chart__value--team-1"></div>
-          </div>
-          <div class="game-chart__item">
-            <div class="game-chart__value game-chart__value--team-2"></div>
+          <div class="correlation">
+            <div class="correlation__item">
+              35%
+            </div>
+            <div class="correlation-scale__wrapper">
+              <div class="correlation-scale correlation-scale--team-2"></div>
+              <div class="correlation-scale"></div>
+            </div>
+            <div class="correlation__item">
+              65%
+            </div>
           </div>
         </div>
       </div>
       <div class="game-info game-info--chart">
-        <div class="game-info__content">
-          <div class="game-info__title">Голосование</div>
-          <div class="info-score">
-            <div class="info-score__item">35%</div>
-            :
-            <div class="info-score__item">35%</div>
+        <div class="game-info__content game-info__content--fetching">
+          <div v-if="chartState === 'loading'" class="game-info__content-loading">
+            Обновление данных..
+          </div>
+          <div class="goal-scale">
+            <div class="goal-scale__label" :class="{ 'goal-scale__label--disabled': chartState === 'loading' }">2333</div>
+            <div class="goal-scale__value"
+                 :class="{
+                          'goal-scale__value--disabled': chartState === 'loading',
+                          'goal-scale__value--second': chartLight === 'second',
+                          'goal-scale__value--thirty': chartLight === 'thirty',
+                  }"
+            >
+              <div class="goal-scale__value-label" :class="{ 'goal-scale__value-label--disabled': chartState === 'loading' }">
+                <IconFire />
+                <span>43%</span>
+              </div>
+            </div>
+          </div>
+          <div class="correlation" :class="{ 'correlation--disabled': chartState === 'loading' }">
+            <div class="correlation__item">
+              <IconShield />
+            </div>
+            <div class="correlation-scale__wrapper">
+              <div class="correlation-scale correlation-scale--protection"></div>
+              <div class="correlation-scale correlation-scale--attack"></div>
+            </div>
+            <div class="correlation__item">
+              <IconAtack />
+            </div>
           </div>
         </div>
-        <div class="game-info__chart-goals chart-goals">
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 100%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 25%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 75%"></div>
-          <div class="chart-goals__item chart-goals__item--team-1" style="height: 50%"></div>
-          <div class="chart-goals__item chart-goals__item--team-2" style="height: 100%"></div>
-        </div>
       </div>
-    </div>
-    <div class="game-card__favorite">
-      <IconStar />
     </div>
 
     <div v-if="unavailable" class="unavailable-card">
