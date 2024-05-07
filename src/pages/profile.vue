@@ -18,6 +18,7 @@ import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vu
 import IconCopy from '@/components/icons/IconCopy.vue'
 import IconUserAdd from '@/components/icons/IconUserAdd.vue'
 import IconExit from '@/components/icons/IconExit.vue'
+import ReferralForm from '@/components/forms/ReferralForm.vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
 const isPro = ref(false)
@@ -129,6 +130,11 @@ const togglePro = () => {
     <teleport to="body">
       <BaseModal v-if="authStore.changePasswordFormIsOpened" @close="authStore.changePasswordFormIsOpened = false">
         <ChangePasswordForm />
+      </BaseModal>
+    </teleport>
+    <teleport to="body">
+      <BaseModal :opened="authStore.referralFormIsOpened" @close="authStore.referralFormIsOpened = false">
+        <ReferralForm />
       </BaseModal>
     </teleport>
   </main>
