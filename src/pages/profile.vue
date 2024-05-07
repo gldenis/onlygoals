@@ -17,6 +17,7 @@ import IconPlusInCircle from '@/components/icons/IconPlusInCircle.vue'
 import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vue'
 import IconCopy from '@/components/icons/IconCopy.vue'
 import IconUserAdd from '@/components/icons/IconUserAdd.vue'
+import IconExit from '@/components/icons/IconExit.vue'
 const authStore = useAuthStore()
 const { width } = useWindowSize()
 const isPro = ref(false)
@@ -109,6 +110,12 @@ const togglePro = () => {
           </div>
         </div>
         <ThinSettings @togglePro="togglePro" :locked="!isPro" />
+        <div class="profile__actions">
+          <button class="btn btn--gray btn--small profile__logout-btn">Сменить пароль</button>
+          <button class="btn btn--icon">
+            <IconExit />
+          </button>
+        </div>
       </div>
     </div>
 
@@ -128,6 +135,18 @@ const togglePro = () => {
 </template>
 
 <style scoped lang="scss">
+.profile__actions {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  grid-column: 2/3;
+}
+
+.profile__logout-btn {
+  min-width: rem(200);
+}
+
+
 main {
   padding-top: rem(40);
 }
@@ -204,6 +223,10 @@ main {
 
   .referrals__head-right {
     gap: rem(12);
+  }
+
+  .profile__actions {
+    order: -1;
   }
 }
 
