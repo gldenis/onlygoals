@@ -25,6 +25,9 @@ const formSubmit = handleSubmit(values => {
 })
 
 import { useAuthStore } from '@/stores/auth.js'
+import IconEye from '@/components/icons/IconEye.vue'
+import IconEyeClosed from '@/components/icons/IconEyeClosed.vue'
+import { ref } from 'vue'
 const authStore = useAuthStore()
 const toRegistration = () => {
   authStore.loginFormIsOpened = false
@@ -35,6 +38,8 @@ const toRestorePassword = () => {
   authStore.loginFormIsOpened = false
   authStore.restorePasswordFormIsOpened = true
 }
+
+const showPassword = ref(false)
 </script>
 
 <template>
@@ -49,11 +54,14 @@ const toRestorePassword = () => {
                  v-bind="emailAttrs"
                  placeholder="Email"
                  :error="errors.email"/>
-      <BaseInput type="password"
+      <BaseInput :type="showPassword ? 'text': 'password'"
                  v-model="password"
                  v-bind="passwordAttrs"
                  placeholder="Пароль"
-                 :error="errors.password"/>
+                 :error="errors.password">
+        <IconEyeClosed v-if="showPassword" class="form-field__icon" @click="showPassword = false" />
+        <IconEye v-else class="form-field__icon" @click="showPassword = true" />
+      </BaseInput>
       <a href="#" class="form__link" @click.prevent="toRestorePassword">Забыли пароль?</a>
     </div>
     <button class="btn btn--primary">Войти</button>

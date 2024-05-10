@@ -38,5 +38,18 @@ import GameCardSliced from '@/components/GameCardSliced.vue'
 </template>
 
 <style lang="scss">
+.games {
+  position: relative;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+}
+
+.page-auth__stories {
+  margin-bottom: rem(40);
+  margin-top: rem(40);
+}
 </style>

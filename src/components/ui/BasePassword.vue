@@ -2,7 +2,7 @@
 defineProps({
   type: {
     type: String,
-    default: 'text'
+    default: 'password'
   },
   placeholder: {
     type: String,
@@ -27,7 +27,6 @@ defineProps({
            @input="$emit('update:modelValue', $event.target.value)"
            v-bind="$attrs"
     >
-    <slot></slot>
     <span v-if="error" class="form-field__error">{{ error }}</span>
   </label>
 </template>

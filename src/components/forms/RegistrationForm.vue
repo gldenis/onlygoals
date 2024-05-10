@@ -32,6 +32,9 @@ const formSubmit = handleSubmit(values => {
 
 })
 import { useAuthStore } from '@/stores/auth.js'
+import { ref } from 'vue'
+import IconEye from '@/components/icons/IconEye.vue'
+import IconEyeClosed from '@/components/icons/IconEyeClosed.vue'
 const authStore = useAuthStore()
 
 const toLogin = () => {
@@ -43,6 +46,8 @@ const openAgreement = () => {
   authStore.registrationFormIsOpened = false
   authStore.agreementIsOpened = true
 }
+
+const showPassword = ref(false)
 </script>
 
 <template>
@@ -57,11 +62,14 @@ const openAgreement = () => {
                  v-bind="emailAttrs"
                  placeholder="Email"
                  :error="errors.email"/>
-      <BaseInput type="password"
+      <BaseInput :type="showPassword ? 'text': 'password'"
                  v-model="password"
                  v-bind="passwordAttrs"
                  placeholder="Пароль"
-                 :error="errors.password"/>
+                 :error="errors.password">
+        <IconEyeClosed v-if="showPassword" class="form-field__icon" @click="showPassword = false" />
+        <IconEye v-else class="form-field__icon" @click="showPassword = true" />
+      </BaseInput>
     </div>
     <div class="form__agreement">
       <BaseCheckbox v-model="agreement"  v-bind="agreementAttrs" :error="errors.password">

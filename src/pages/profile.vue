@@ -12,7 +12,7 @@ import LangSwitcher from '@/components/LangSwitcher.vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
 import ThinSettings from '@/components/ThinSettings.vue'
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import IconPlusInCircle from '@/components/icons/IconPlusInCircle.vue'
 import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vue'
 import IconCopy from '@/components/icons/IconCopy.vue'
@@ -26,6 +26,35 @@ const isPro = ref(false)
 const togglePro = () => {
   isPro.value = true
 }
+
+const copied = ref(false)
+const copy = async () => {
+  copied.value = true
+
+  setTimeout(() => {
+    copied.value = false
+  }, 3000)
+}
+
+const hiddenInvite = ref(false)
+const scrollHandler = e => {
+  const windowHeight = window.innerHeight
+  const fullHeight = document.body.offsetHeight
+  const scrollTop = window.scrollY
+  const windowWidth = window.innerWidth
+
+  if (scrollTop + windowHeight + 80 >= fullHeight && windowWidth <= 640) {
+    hiddenInvite.value = true
+  } else {
+    hiddenInvite.value = false
+  }
+}
+
+document.addEventListener('scroll', scrollHandler)
+
+onUnmounted(() => {
+  document.removeEventListener('scroll', scrollHandler)
+})
 </script>
 
 <template>
@@ -56,12 +85,12 @@ const togglePro = () => {
             <div class="referrals__head-right">
               <div class="referral__limit">Лимит в день: <span>2 из 10</span></div>
               <Teleport to="body" :disabled="width >= 640">
-                <div class="referrals-invite">
+                <div class="referrals-invite" :class="{ 'referrals-invite--hidden': hiddenInvite }">
                   <div class="referrals-invite__label">
                     Премиум +3 дня
                     за каждого друга
                   </div>
-                  <button class="btn btn--gray btn--icon">
+                  <button class="btn btn--gray btn--icon copied__btn" :class="{ 'copied__btn--active': copied }" @click="copy" data-tooltip="скопировано">
                     <IconCopy />
                   </button>
                   <button class="btn btn--primary btn--icon" @click.prevent="authStore.referralFormIsOpened = true">
@@ -225,6 +254,11 @@ main {
     background: rgba(255, 255, 255, 0.12);
     box-shadow: -20px 20px 60px -16px rgba(24, 24, 41, 0.52);
     backdrop-filter: blur(20px);
+    transition: .3s;
+
+    &--hidden {
+      transform: translateY(100%);
+    }
   }
 
   .referrals__head-right {
@@ -245,5 +279,37 @@ main {
     right: 0;
   }
 
+}
+
+.copied__btn {
+  position: relative;
+  transition: .3s;
+
+  &:before {
+    display: none;
+    content: attr(data-tooltip);
+    padding: rem(5) rem(10);
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: 128%; /* 15.36px */
+    border-radius: rem(8);
+  }
+
+  &--active {
+    &:before {
+      display: block;
+
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 </style>
