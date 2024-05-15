@@ -128,3 +128,10 @@ main {
     font-size: 12.8px;
   }
 }
+
+
+@media screen and (max-width: $mobile-xxs) {
+  html {
+    font-size: 12px;
+  }
+}

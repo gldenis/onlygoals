@@ -19,6 +19,7 @@ import { ref } from 'vue'
 import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 import { onClickOutside } from '@vueuse/core'
+import GameTimeline from '@/components/GameTimeline.vue'
 
 const isOpenedGameCardNotification = ref(false)
 const isOpenedGameCardNotificationDropdown = ref(false)
@@ -45,101 +46,7 @@ const favorite = ref()
 <template>
   <div class="game-card">
     <div class="game-card__column game-card__column--wide game-card__main">
-      <div class="game-timeline">
-        <div class="game-timeline__item">
-          <div class="game-timeline__value" style="width: 100%;"></div>
-          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 10%;">
-            <div class="game-timeline-event">
-              <div class="game-timeline-event__icon game-timeline-event__icon--team-1">
-                <IconBallEvent />
-              </div>
-              <div class="game-timeline-event__time">13:26</div>
-              <div class="game-timeline-event__author">
-                <img src="../assets/img/event1.png"
-                     class="game-timeline-event__author-pic"
-                     alt=""
-                     loading="lazy"
-                     width="16"
-                     height="16">
-                <div class="game-timeline-event__author-name">Jude Bellingham</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-timeline__goal game-timeline__goal--team-2" style="left: 30%;">
-            <div class="game-timeline-event">
-              <div class="game-timeline-event__icon game-timeline-event__icon--team-2">
-                <IconBallEvent />
-              </div>
-              <div class="game-timeline-event__time">13:26</div>
-              <div class="game-timeline-event__author">
-                <img src="../assets/img/event1.png"
-                     class="game-timeline-event__author-pic"
-                     alt=""
-                     loading="lazy"
-                     width="16"
-                     height="16">
-                <div class="game-timeline-event__author-name">Jude Bellingham</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-timeline__goal game-timeline__goal--team-1" style="left: 50%;">
-            <div class="game-timeline-event">
-              <div class="game-timeline-event__icon game-timeline-event__icon--team-1">
-                <IconBallEvent />
-              </div>
-              <div class="game-timeline-event__time">13:26</div>
-              <div class="game-timeline-event__author">
-                <img src="../assets/img/event1.png"
-                     class="game-timeline-event__author-pic"
-                     alt=""
-                     loading="lazy"
-                     width="16"
-                     height="16">
-                <div class="game-timeline-event__author-name">Jude Bellingham</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="game-timeline__item">
-          <div class="game-timeline__fall game-timeline__fall--team-2" style="left: 10%;">
-            <div class="game-timeline-event">
-              <div class="game-timeline-event__icon game-timeline-event__icon--team-2">
-                <IconBallEvent />
-              </div>
-              <div class="game-timeline-event__time">13:26</div>
-              <div class="game-timeline-event__author">
-                <img src="../assets/img/event1.png"
-                     class="game-timeline-event__author-pic"
-                     alt=""
-                     loading="lazy"
-                     width="16"
-                     height="16">
-                <div class="game-timeline-event__author-name">Jude Bellingham</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-timeline__fall game-timeline__fall--team-1" style="left: 30%;">
-            <div class="game-timeline-event">
-              <div class="game-timeline-event__icon game-timeline-event__icon--team-2">
-                <IconBallEvent />
-              </div>
-              <div class="game-timeline-event__time">13:26</div>
-              <div class="game-timeline-event__author">
-                <img src="../assets/img/event1.png"
-                     class="game-timeline-event__author-pic"
-                     alt=""
-                     loading="lazy"
-                     width="16"
-                     height="16">
-                <div class="game-timeline-event__author-name">Jude Bellingham</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-timeline__value game-timeline__value--current" style="width: 50%;"></div>
-          <div class="game-timeline__current-time"></div>
-        </div>
-        <div class="game-timeline__game-time">99:99</div>
-      </div>
+      <GameTimeline />
       <div class="game-meta">
         <div class="game-meta__part">
           <div class="game-meta__logo">
