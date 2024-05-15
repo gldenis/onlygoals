@@ -13,8 +13,6 @@ import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
 import ThinSettings from '@/components/ThinSettings.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
-import IconPlusInCircle from '@/components/icons/IconPlusInCircle.vue'
-import IconPlusInCircleFilled from '@/components/icons/IconPlusInCircleFilled.vue'
 import IconCopy from '@/components/icons/IconCopy.vue'
 import IconUserAdd from '@/components/icons/IconUserAdd.vue'
 import IconExit from '@/components/icons/IconExit.vue'
@@ -55,17 +53,6 @@ document.addEventListener('scroll', scrollHandler)
 onUnmounted(() => {
   document.removeEventListener('scroll', scrollHandler)
 })
-import { useToastStore } from '@/stores/toast.js'
-const { addToast } = useToastStore()
-
-const testToast = () => {
-  console.log('testToast')
-  addToast({
-    title: 'title',
-    description: 'description',
-    delay: 3000
-  })
-}
 
 </script>
 
