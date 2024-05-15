@@ -16,6 +16,7 @@ import ModalPayment from '@/components/ModalPayment.vue'
 import { useModalStore } from '@/stores/modal.js'
 import { computed, defineAsyncComponent } from 'vue'
 import AgreementModal from '@/components/AgreementModal.vue'
+import BaseToast from '@/components/BaseToast.vue'
 
 const authStore = useAuthStore()
 const macrosStore = useMacrosStore()
@@ -37,10 +38,24 @@ const layouts = {
 
 const route = useRoute()
 const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
+
+import { useToastStore } from '@/stores/toast.js'
+const { toasts } = useToastStore()
+
 </script>
 
 <template>
   <component :is="layout" />
+
+  <div class="toast__list">
+    <TransitionGroup name="toast">
+      <BaseToast v-for="toast of toasts"
+                 :key="toast.title"
+                 :title="toast.title"
+                 :description="toast.description"
+      />
+    </TransitionGroup>
+  </div>
 
   <teleport to="#modal">
     <BaseModal :opened="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
@@ -103,5 +118,13 @@ const layout = computed(() => layouts[route.meta?.layout] || defaultLayout)
 </template>
 
 <style scoped lang="scss">
-
+.toast-enter-active,
+.toast-leave-active {
+  transition: all 0.5s ease;
+}
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
 </style>

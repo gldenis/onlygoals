@@ -6,11 +6,10 @@ import SupportModal from '@/components/SupportModal.vue'
 import HomeHero from '@/components/HomeHero.vue'
 import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
-import BaseToast from '@/components/BaseToast.vue'
 import { useToastStore } from '@/stores/toast.js'
 import { onMounted } from 'vue'
 
-const { toasts, addToast } = useToastStore()
+const { addToast } = useToastStore()
 
 onMounted(() => {
   addToast({
@@ -46,29 +45,13 @@ onMounted(() => {
     <PremiumNotification />
 <!--    <TelegramNotification />-->
     <SupportModal />
-    <div class="toast__list">
-      <TransitionGroup name="toast">
-        <BaseToast v-for="toast of toasts"
-                   :key="toast.title"
-                   :title="toast.title"
-                   :description="toast.description"
-        />
-      </TransitionGroup>
-    </div>
+
 
   </main>
 </template>
 
 <style lang="scss" scoped>
-.toast-enter-active,
-.toast-leave-active {
-  transition: all 0.5s ease;
-}
-.toast-enter-from,
-.toast-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
-}
+
 
 
 .games {

@@ -55,6 +55,18 @@ document.addEventListener('scroll', scrollHandler)
 onUnmounted(() => {
   document.removeEventListener('scroll', scrollHandler)
 })
+import { useToastStore } from '@/stores/toast.js'
+const { addToast } = useToastStore()
+
+const testToast = () => {
+  console.log('testToast')
+  addToast({
+    title: 'title',
+    description: 'description',
+    delay: 3000
+  })
+}
+
 </script>
 
 <template>
@@ -78,6 +90,7 @@ onUnmounted(() => {
           <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
         </template>
       </div>
+      <button @click="testToast">test</button>
       <div class="referral__wrapper">
         <div class="referrals">
           <div class="referrals__head">
