@@ -39,7 +39,8 @@
     width: rem(6);
     height: rem(6);
     transition: 0.3s;
-    transform: translateY(-1px);
+    top: 50%;
+    transform: translate(-1px, -50%);
 
     &--team-1 {
       background: #49c79a;
