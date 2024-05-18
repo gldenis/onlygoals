@@ -22,6 +22,7 @@ defineProps({
   <label class="form-field">
     <input :type="type"
            class="form-field__input"
+           :class="{ 'form-field__input--fail':  error}"
            :placeholder="placeholder"
            :value="modelValue"
            @input="$emit('update:modelValue', $event.target.value)"

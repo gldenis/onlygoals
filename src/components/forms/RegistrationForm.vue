@@ -72,7 +72,7 @@ const showPassword = ref(false)
       </BaseInput>
     </div>
     <div class="form__agreement">
-      <BaseCheckbox v-model="agreement"  v-bind="agreementAttrs" :error="errors.password">
+      <BaseCheckbox v-model="agreement" class="form__agreement-field"  v-bind="agreementAttrs" :error="errors.password">
         <p>
           Я согласен с
           <a class="form__link" href="#" @click.prevent="openAgreement">Пользовательскими соглашениями</a>,
@@ -87,5 +87,7 @@ const showPassword = ref(false)
 </template>
 
 <style scoped lang="scss">
-
+.form__agreement-field {
+  align-items: flex-start;
+}
 </style>

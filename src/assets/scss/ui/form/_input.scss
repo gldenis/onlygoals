@@ -16,6 +16,11 @@
     &::placeholder {
       color: rgb(157 162 173);
     }
+
+    &--fail {
+      border: 2px solid #D84626;
+      background: rgba(25, 27, 34, 0.68);
+    }
   }
 
   &__error {
@@ -29,7 +34,9 @@
   &__icon {
     position: absolute;
     right: rem(20);
-    top: 50%;
+    top: rem(28);
     transform: translateY(-50%);
   }
+
+
 }
