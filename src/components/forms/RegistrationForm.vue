@@ -83,11 +83,51 @@ const showPassword = ref(false)
       <div v-if="errors.agreement" class="form-field__error">{{ errors.agreement }}</div>
     </div>
     <button class="btn btn--primary" type="submit">Зарегистрироваться</button>
+    <div class="form__separator"><span>Или</span></div>
+    <button class="btn btn--gray" type="button">Вход по приглашению</button>
   </form>
 </template>
 
 <style scoped lang="scss">
 .form__agreement-field {
   align-items: flex-start;
+}
+
+.form {
+  &__separator {
+    text-align: center;
+    color: #FFF;
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: 132%; /* 17.16px */
+    gap: rem(8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      background: rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: rem(20);
+      padding: rem(4) rem(8);    border-radius: rem(12);
+
+    }
+
+    &::before, &::after {
+      display: inline-block;
+      content: '';
+      opacity: 0.12;
+      height: 1px;
+      background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+      flex-grow: 1;
+    }
+
+    &:before {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    }
+
+  }
 }
 </style>
