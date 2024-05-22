@@ -117,14 +117,22 @@
   background: #24262d;
   gap: rem(24);
   grid-row: 1/3;
-  max-height: rem(340);
-  overflow: auto;
 
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: rem(40);
+  }
+
+
+  &--active-scroll {
+    overflow: auto;
+    max-height: rem(320);
+  }
+
+  &__more-btn {
+    display: none;
   }
 }
 
@@ -188,5 +196,11 @@
 
   .referral__wrapper {
     flex-direction: column-reverse;
+  }
+
+  .referrals {
+    &__more-btn {
+      display: flex;
+    }
   }
 }

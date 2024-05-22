@@ -23,6 +23,8 @@ const togglePro = () => {
   isPro.value = true
 }
 
+const referralList = ref([])
+
 const copied = ref(false)
 const copy = async () => {
   copied.value = true
@@ -71,7 +73,7 @@ onUnmounted(() => {
         </template>
       </div>
       <div class="referral__wrapper">
-        <div class="referrals">
+        <div class="referrals" :class="{ 'referrals__active-scroll': referralList.length > 4 }">
           <div class="referrals__head">
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
             <div class="referrals__head-right">
@@ -130,43 +132,47 @@ onUnmounted(() => {
               </div>
             </div>
 
-            <div class="referral__item">
-              <div class="referral__title">ca**r@e.com</div>
-              <div class="referral__info">
-                <div class="referral__date">10.10.2019</div>
-                <div class="referral__bonus">
-                  <IconPlus width="16" height="16" />
-                  3 дня <span>премиум</span>
+            <template v-if="referralList.length > 4">
+              <div class="referral__item">
+                <div class="referral__title">ca**r@e.com</div>
+                <div class="referral__info">
+                  <div class="referral__date">10.10.2019</div>
+                  <div class="referral__bonus">
+                    <IconPlus width="16" height="16" />
+                    3 дня <span>премиум</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="referral__item">
-              <div class="referral__title">ni**s@e.com</div>
-              <div class="referral__info">
-                <div class="referral__date">10.10.2019</div>
-                <div class="referral__bonus">
-                  <IconPlus width="16" height="16" />
-                  3 дня <span>премиум</span>
+              <div class="referral__item">
+                <div class="referral__title">ni**s@e.com</div>
+                <div class="referral__info">
+                  <div class="referral__date">10.10.2019</div>
+                  <div class="referral__bonus">
+                    <IconPlus width="16" height="16" />
+                    3 дня <span>премиум</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="referral__item">
-              <div class="referral__title">tw**s@e.com</div>
-              <div class="referral__info">
-                <div class="referral__pending">Ожидание верификации</div>
-                <div class="referral__resending">
-                  <IconLetter />
-                  <span>Отправить снова</span>
+              <div class="referral__item">
+                <div class="referral__title">tw**s@e.com</div>
+                <div class="referral__info">
+                  <div class="referral__pending">Ожидание верификации</div>
+                  <div class="referral__resending">
+                    <IconLetter />
+                    <span>Отправить снова</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="referral__item">
-              <div class="referral__title">wi**s@e.com</div>
-              <div class="referral__info">
-                <div class="referral__date">10.10.2019</div>
+              <div class="referral__item">
+                <div class="referral__title">wi**s@e.com</div>
+                <div class="referral__info">
+                  <div class="referral__date">10.10.2019</div>
+                </div>
               </div>
-            </div>
+            </template>
+
           </div>
+          <button class="btn btn--gray btn--small referrals__more-btn" @click="referralList = [,,,,,,]">Показать всех рефералов</button>
         </div>
         <ThinSettings @togglePro="togglePro" :locked="!isPro" />
         <div class="profile__actions">
