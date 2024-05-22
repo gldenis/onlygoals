@@ -39,15 +39,16 @@
     width: rem(6);
     height: rem(6);
     transition: 0.3s;
-    top: 50%;
     transform: translate(-1px, -50%);
 
     &--team-1 {
       background: #49c79a;
+      top: calc(50% - rem(2));
     }
 
     &--team-2 {
       background: #6f63ff;
+      top: calc(50% + rem(2));
     }
   }
 
@@ -93,6 +94,7 @@
       width: rem(12);
       height: rem(12);
       transform: rotate(45deg) translateY(- rem(6));
+      top: 50%;
     }
 
     .game-timeline__fall {
