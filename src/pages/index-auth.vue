@@ -52,4 +52,11 @@ import GameCardSliced from '@/components/GameCardSliced.vue'
   margin-bottom: rem(40);
   margin-top: rem(40);
 }
+
+@media screen and (max-width: $phablet) {
+  .page-auth__stories {
+    margin-bottom: rem(8);
+    margin-top: rem(20);
+  }
+}
 </style>
