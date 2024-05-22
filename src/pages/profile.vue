@@ -3,13 +3,11 @@
 import IconLetter from '@/components/icons/IconLetter.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
 import BannerVerification from '@/components/BannerVerification.vue'
-import ReferralBanner from '@/components/ReferralBanner.vue'
 import BaseModal from '@/components/BaseModal.vue'
 import { useAuthStore } from '@/stores/auth.js'
 import ChangeEmailForm from '@/components/forms/ChangeEmailForm.vue'
 import ChangePasswordForm from '@/components/forms/ChangePasswordForm.vue'
 import LangSwitcher from '@/components/LangSwitcher.vue'
-import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { useWindowSize } from '@vueuse/core'
 import ThinSettings from '@/components/ThinSettings.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
@@ -62,12 +60,7 @@ onUnmounted(() => {
       <div class="page-head page-profile__page-head">
         <h1 class="page-head__title">Профиль</h1>
         <div class="page-head__separator"></div>
-        <LangSwitcher class="page-profile__lang-switcher"/>
         <template v-if="true">
-            <div class="settings__education">
-              <BaseCheckbox />
-              Скрыть блок обучения с главной
-            </div>
             <div class="profile-verification__label">Подтвердите аккаунт для
               доступа ко всем функциям</div>
             <button class="btn btn--small btn--light">Повторить отправку</button>
@@ -77,7 +70,6 @@ onUnmounted(() => {
           <button class="btn btn--small btn--outlined" @click="authStore.changePasswordFormIsOpened = true">Change Password</button>
         </template>
       </div>
-      <button @click="testToast">test</button>
       <div class="referral__wrapper">
         <div class="referrals">
           <div class="referrals__head">
@@ -101,6 +93,43 @@ onUnmounted(() => {
             </div>
           </div>
           <div class="referral__list">
+            <div class="referral__item">
+              <div class="referral__title">ca**r@e.com</div>
+              <div class="referral__info">
+                <div class="referral__date">10.10.2019</div>
+                <div class="referral__bonus">
+                  <IconPlus width="16" height="16" />
+                  3 дня <span>премиум</span>
+                </div>
+              </div>
+            </div>
+            <div class="referral__item">
+              <div class="referral__title">ni**s@e.com</div>
+              <div class="referral__info">
+                <div class="referral__date">10.10.2019</div>
+                <div class="referral__bonus">
+                  <IconPlus width="16" height="16" />
+                  3 дня <span>премиум</span>
+                </div>
+              </div>
+            </div>
+            <div class="referral__item">
+              <div class="referral__title">tw**s@e.com</div>
+              <div class="referral__info">
+                <div class="referral__pending">Ожидание верификации</div>
+                <div class="referral__resending">
+                  <IconLetter />
+                  <span>Отправить снова</span>
+                </div>
+              </div>
+            </div>
+            <div class="referral__item">
+              <div class="referral__title">wi**s@e.com</div>
+              <div class="referral__info">
+                <div class="referral__date">10.10.2019</div>
+              </div>
+            </div>
+
             <div class="referral__item">
               <div class="referral__title">ca**r@e.com</div>
               <div class="referral__info">
@@ -195,17 +224,6 @@ main {
   max-width: rem(176);
 }
 
-.settings__education {
-  color: #FFF;
-  font-size: rem(14);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 142.857%;
-  display: flex;
-  align-items: center;
-  gap: rem(12);
-}
-
 .referrals__head-right {
   display: flex;
   align-items: center;
@@ -229,10 +247,6 @@ main {
 
 @media screen and (max-width: $laptop){
   .page-profile__page-head {
-    .settings__education {
-      width: 100%;
-    }
-
     .page-head__separator {
       display: block;
     }
@@ -241,7 +255,6 @@ main {
   .profile-verification__label {
     text-align: left;
   }
-
 }
 
 @media screen and (max-width: $phablet){
@@ -268,19 +281,21 @@ main {
   .profile__actions {
     order: -1;
   }
+
+  .page-profile__page-head {
+    .page-head__title {
+      width: 100%;
+    }
+
+    .page-head__separator {
+      display: none;
+    }
+  }
 }
 
 </style>
 
 <style lang="scss">
-@media screen and (max-width: $laptop){
-  .page-profile__lang-switcher .lang-switcher__body {
-    left: auto;
-    right: 0;
-  }
-
-}
-
 .copied__btn {
   position: relative;
   transition: .3s;
