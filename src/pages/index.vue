@@ -35,6 +35,7 @@ onMounted(() => {
     <section class="games">
       <div class="container games__container">
         <GameCard type="friendly"/>
+        <GameCard type="friendly" :kind="2"/>
         <GameCard type="women" chart-state="loading" />
         <GameCard chart-light="second" />
         <GameCard chart-light="thirty" />

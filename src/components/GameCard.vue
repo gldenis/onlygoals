@@ -34,6 +34,10 @@ const props = defineProps({
   type: {
     type: String
   },
+  kind: {
+    type: Number,
+    default: 1
+  },
   chartState: {type: String},
   chartLight: {
     type: String
@@ -260,47 +264,47 @@ const favorite = ref()
         </div>
       </div>
 
-      <div class="game-info">
-        <IconGameInfo class="game-info__icon" />
-        <div class="game-info__title">Забив после 80/90 мин</div>
-        <div class="info-score">
-          <InfoValue value="9">
-            <AverageLiga />
-          </InfoValue>
-          :
-          <InfoValue value="9">
-            <AverageLiga />
-          </InfoValue>
-        </div>
-      </div>
-      <div class="game-info">
-        <IconGameInfo class="game-info__icon" />
-        <div class="game-info__title">Шанс контратаки</div>
-        <div class="info-score">
-          <div class="info-score__item">
-            9
-            <AverageLiga />
-          </div>
-          :
-          <div class="info-score__item">
-            9
-            <AverageLiga />
+        <div class="game-info" :class="{ 'game-info--hidden':  props.kind !== 1  }">
+          <IconGameInfo class="game-info__icon" />
+          <div class="game-info__title">Забив после 80/90 мин</div>
+          <div class="info-score">
+            <InfoValue value="9">
+              <AverageLiga />
+            </InfoValue>
+            :
+            <InfoValue value="9">
+              <AverageLiga />
+            </InfoValue>
           </div>
         </div>
-      </div>
-      <div class="game-info">
-        <IconGameInfo class="game-info__icon" />
-        <div class="game-info__title">Характер</div>
-        <div class="info-score">
-          <InfoValue value="9">
-            <AverageLiga />
-          </InfoValue>
-          :
-          <InfoValue value="9">
-            <AverageLiga />
-          </InfoValue>
+        <div class="game-info" :class="{ 'game-info--hidden':  props.kind !== 1  }">
+          <IconGameInfo class="game-info__icon" />
+          <div class="game-info__title">Шанс контратаки</div>
+          <div class="info-score">
+            <div class="info-score__item">
+              9
+              <AverageLiga />
+            </div>
+            :
+            <div class="info-score__item">
+              9
+              <AverageLiga />
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="game-info" :class="{ 'game-info--hidden':  props.kind !== 1  }">
+          <IconGameInfo class="game-info__icon" />
+          <div class="game-info__title">Характер</div>
+          <div class="info-score">
+            <InfoValue value="9">
+              <AverageLiga />
+            </InfoValue>
+            :
+            <InfoValue value="9">
+              <AverageLiga />
+            </InfoValue>
+          </div>
+        </div>
 
       <div class="game-info">
         <IconGameInfo class="game-info__icon" />

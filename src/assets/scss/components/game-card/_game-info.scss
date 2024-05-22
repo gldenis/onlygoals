@@ -175,6 +175,10 @@
     &--chart {
       width: calc((100% - rem(2)) / 2);
     }
+
+    &--hidden {
+      display: none;
+    }
   }
 }
 
