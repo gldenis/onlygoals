@@ -220,11 +220,11 @@
       display: block;
 
       &--team-1 {
-        bottom: calc(100% - rem(2));
+        bottom: calc(100% - rem(4));
       }
 
       &--team-2 {
-        top: calc(100% - rem(3));
+        top: calc(100% - rem(4));
         z-index: 2;
       }
     }

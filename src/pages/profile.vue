@@ -73,7 +73,7 @@ onUnmounted(() => {
         </template>
       </div>
       <div class="referral__wrapper">
-        <div class="referrals" :class="{ 'referrals__active-scroll': referralList.length > 4 }">
+        <div class="referrals" :class="{ 'referrals--active-scroll': referralList.length > 4 }">
           <div class="referrals__head">
             <div class="referral__title referral__title--head">Мои рефералы (32)</div>
             <div class="referrals__head-right">
@@ -172,7 +172,7 @@ onUnmounted(() => {
             </template>
 
           </div>
-          <button class="btn btn--gray btn--small referrals__more-btn" @click="referralList = [,,,,,,]">Показать всех рефералов</button>
+          <button v-show="referralList.length < 4" class="btn btn--gray btn--small referrals__more-btn" @click="referralList = [,,,,,,]">Показать всех рефералов</button>
         </div>
         <ThinSettings @togglePro="togglePro" :locked="!isPro" />
         <div class="profile__actions">
@@ -290,11 +290,12 @@ main {
 
   .page-profile__page-head {
     .page-head__title {
-      width: 100%;
+      width: auto;
     }
 
     .page-head__separator {
-      display: none;
+      flex-grow: 1;
+      min-width: 20%;
     }
   }
 }
