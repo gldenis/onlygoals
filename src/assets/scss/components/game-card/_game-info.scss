@@ -91,6 +91,11 @@
     text-align: center;
     color: #099853;
     background: rgb(31 168 78 / 16%);
+
+    &--negative {
+      background: rgba(216, 70, 38, 0.16);
+      color: #D84626;
+    }
   }
 
   &__lock {

@@ -20,6 +20,7 @@ import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 import { onClickOutside } from '@vueuse/core'
 import GameTimeline from '@/components/GameTimeline.vue'
+import IconBolt from '@/components/icons/IconBolt.vue'
 
 const isOpenedGameCardNotification = ref(false)
 const isOpenedGameCardNotificationDropdown = ref(false)
@@ -41,6 +42,10 @@ const props = defineProps({
   chartState: {type: String},
   chartLight: {
     type: String
+  },
+  schemaBoolean: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -159,8 +164,9 @@ const favorite = ref()
                 <div class="game-goals__author">9-9-9-9</div>
               </div>
             </div>
-            <div class="game-info__add">+3</div>
-            <div class="info-score__lock">
+            <div class="game-info__add" :class="schemaBoolean ? '' : 'game-info__add--negative'">-3</div>
+<!--            v-if only for demonstration -->
+            <div v-if="schemaBoolean" class="info-score__lock">
               <IconLock />
             </div>
           </div>
