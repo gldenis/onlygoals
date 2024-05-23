@@ -31,9 +31,7 @@ const openTelegramBotNotification = () => {
 <template>
   <main>
     <HomeHero />
-    <div class="buttons buttons-group">
-      <button class="btn btn--primary" @click="openTelegramBotNotification">telegram bot notification</button>
-    </div>
+
     <section class="games">
       <div class="container">
         <GameCard />
@@ -54,6 +52,9 @@ const openTelegramBotNotification = () => {
         <GameCardSliced unavailable />
       </div>
     </section>
+    <div class="buttons buttons-group">
+      <button class="btn btn--primary" @click="openTelegramBotNotification">telegram bot notification</button>
+    </div>
     <PremiumNotification />
 <!--    <TelegramNotification />-->
     <SupportModal />
