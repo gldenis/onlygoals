@@ -8,6 +8,8 @@ import GameCard from '@/components/GameCard.vue'
 import GameCardSliced from '@/components/GameCardSliced.vue'
 import { useToastStore } from '@/stores/toast.js'
 import { onMounted } from 'vue'
+import { createConfirmDialog } from 'vuejs-confirm-dialog'
+import TelegramBotNotification from '@/components/notifications/TelegramBotNotification.vue'
 
 const { addToast } = useToastStore()
 
@@ -18,11 +20,20 @@ onMounted(() => {
     delay: 10000
   })
 })
+
+const openTelegramBotNotification = () => {
+  const { reveal } = createConfirmDialog(TelegramBotNotification)
+
+  reveal()
+}
 </script>
 
 <template>
   <main>
     <HomeHero />
+    <div class="buttons buttons-group">
+      <button class="btn btn--primary" @click="openTelegramBotNotification">telegram bot notification</button>
+    </div>
     <section class="games">
       <div class="container">
         <GameCard />

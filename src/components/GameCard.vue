@@ -41,7 +41,8 @@ const props = defineProps({
   },
   chartState: {type: String},
   chartLight: {
-    type: String
+    type: String,
+    default: ''
   },
   schemaBoolean: {
     type: Boolean,

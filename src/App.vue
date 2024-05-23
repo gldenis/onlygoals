@@ -56,7 +56,7 @@ const { toasts } = useToastStore()
       />
     </TransitionGroup>
   </div>
-
+  <DialogsWrapper />
   <teleport to="#modal">
     <BaseModal :opened="authStore.loginFormIsOpened" @close="authStore.loginFormIsOpened = false">
       <LoginForm />

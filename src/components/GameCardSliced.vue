@@ -3,10 +3,17 @@
 import IconStar from '@/components/icons/IconStar.vue'
 import IconCardLock from '@/components/icons/IconCardLock.vue'
 
+const favorite = ref()
+
 defineProps({
   unavailable: {
     type: Boolean
-  }
+  },
+  chartLight: {
+    type: String,
+    default: ''
+  },
+  chartState: {type: String},
 })
 
 import { useAuthStore } from '@/stores/auth.js'
@@ -19,8 +26,16 @@ import BaseCheckbox from '@/components/ui/BaseCheckbox.vue'
 import IconLive from '@/components/icons/IconLive.vue'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 import IconFire from '@/components/icons/IconFire.vue'
+import { ref } from 'vue'
 
 const authStore = useAuthStore()
+
+const isOpenedGameCardNotification = ref(false)
+const isOpenedGameCardNotificationDropdown = ref(false)
+const toggleGameCardNotification = () => {
+  isOpenedGameCardNotification.value = !isOpenedGameCardNotification.value
+  isOpenedGameCardNotificationDropdown.value = !!isOpenedGameCardNotification.value
+}
 </script>
 
 <template>
