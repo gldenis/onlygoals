@@ -4,13 +4,13 @@ import IconBallEvent from '@/components/icons/IconBallEvent.vue'
 import { computed } from 'vue'
 
 const props = defineProps({
-  percent: {
+  time: {
     type: Number,
-    default: 75
+    default: 80
   }
 })
 const secondTime = computed(() => {
-  return props.percent >= 50
+  return props.time > 45
 })
 
 </script>
@@ -18,12 +18,22 @@ const secondTime = computed(() => {
 <template>
   <div class="game-timeline">
     <div class="game-timeline__item">
-      <div class="game-timeline__value" :class="{ 'game-timeline__value--current': !secondTime }" :style="{ width: secondTime ? '100%' : ((props.percent - 50) * 2) + '%' }" ></div>
-      <div v-if="!secondTime" class="game-timeline__current-time" :style="{ left: props.time + '%' }"></div>
+      <div class="game-timeline__value"
+           :class="{ 'game-timeline__value--current': !secondTime }"
+           :style="{ width: secondTime ? '100%' : (props.time / 45 * 100) + '%' }">
+      </div>
+      <div v-if="!secondTime"
+           class="game-timeline__current-time"
+           :style="{ left: (props.time / 45 * 100 + '%') }">
+      </div>
     </div>
     <div class="game-timeline__item">
-      <div v-if="secondTime" class="game-timeline__value" :class="{ 'game-timeline__value--current': secondTime }" :style="{ width: ((props.percent - 50) * 2) + '%' }" ></div>
-      <div v-if="secondTime" class="game-timeline__current-time" :style="{ left: props.time + '%' }"></div>
+      <div v-if="secondTime"
+           class="game-timeline__value"
+           :class="{ 'game-timeline__value--current': secondTime }"
+           :style="{ width: ((props.time - 45) / 45 * 100 + '%') }"></div>
+      <div v-if="secondTime" class="game-timeline__current-time"
+           :style="{ left: ((props.time - 45) / 45 * 100 + '%') }"></div>
     </div>
     <div class="game-timeline__game-time">99:99</div>
     <div class="game-timeline__events">
