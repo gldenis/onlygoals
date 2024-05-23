@@ -65,19 +65,8 @@ const playPause = () => {
 <template>
   <section class="stories">
     <div class="container">
-      <template v-if="!storiesOpened">
-        <div class="stories-line">
-          <div class="stories-line__item"></div>
-          <div class="stories-line__item"></div>
-          <div class="stories-line__item"></div>
-          <div v-for="item of 11" :key="item" class="stories-line__item stories-line__item--watched"></div>
-
-          <div class="stories-line__trigger" @click="toggleStories">
-            <IconStoriesTrigger />
-          </div>
-        </div>
-      </template>
-      <Swiper v-else class="stories__list"
+      <Swiper class="stories__list"
+              :class="{ 'stories__list--short': !storiesOpened }"
               @swiper="onSwiper"
               @slideChange="onSlideChange"
               :modules="modules"
@@ -126,7 +115,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-4.png"
                  alt=""
@@ -136,7 +125,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-5.png"
                  alt=""
@@ -146,7 +135,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-6.png"
                  alt=""
@@ -156,7 +145,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-7.png"
                  alt=""
@@ -166,7 +155,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-8.png"
                  alt=""
@@ -176,7 +165,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-9.png"
                  alt=""
@@ -186,7 +175,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-10.png"
                  alt=""
@@ -196,7 +185,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-11.png"
                  alt=""
@@ -206,7 +195,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-1.png"
                  alt=""
@@ -216,7 +205,7 @@ const playPause = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="stories__item" @click="openStory">
+          <div class="stories__item stories__item--watched" @click="openStory">
             <img class="stories__poster"
                  src="@/assets/img/stories/story-2.png"
                  alt=""
@@ -233,7 +222,7 @@ const playPause = () => {
             <IconSwiperNext />
           </div>
         </div>
-        <div class="stories-line__trigger stories-line__trigger--opened" @click="toggleStories">
+        <div class="stories__trigger" :class="{ 'stories__trigger--opened': storiesOpened }" @click="toggleStories">
           <IconStoriesTrigger />
         </div>
       </Swiper>
@@ -278,16 +267,15 @@ const playPause = () => {
 </template>
 
 <style lang="scss">
-.stories-line {
-  border-radius: rem(10);
-  background: rgba(19, 25, 31, 0.80);
-  backdrop-filter: blur(4px);
-  height: rem(20);
-  padding: rem(4) rem(8);
-  display: flex;
-  align-items: center;
-  gap: rem(2);
+
+.swiper-slide {
+  width: rem(100);
+  height: rem(100);
+}
+
+.stories {
   position: relative;
+  z-index: 0;
 
   &__trigger {
     width: rem(20);
@@ -307,29 +295,6 @@ const playPause = () => {
       transform: rotate(180deg);
     }
   }
-
-  &__item {
-    height: rem(3);
-    width: rem(80);
-    border-radius: rem(3);
-    background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
-
-    &--watched {
-      height: rem(1);
-      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
-      background-size: rem(4) rem(1);
-    }
-  }
-}
-
-.swiper-slide {
-  width: rem(100);
-  height: rem(100);
-}
-
-.stories {
-  position: relative;
-  z-index: 0;
 
   &__favorite-btn {
     width: rem(20);
@@ -351,6 +316,29 @@ const playPause = () => {
     backdrop-filter: blur(4px);
     padding: rem(8);
     user-select: none;
+
+    &--short {
+      border-radius: rem(8);
+
+      .swiper-slide {
+        height: rem(2);
+      }
+
+      .stories__poster {
+        display: none;
+      }
+
+      .stories__item {
+        background: linear-gradient(to right, #3F45CE, #3F45CE 25%, #EF6F38 50%, #7841BD 75%, #7841BD);
+        height: rem(3);
+
+        &--watched {
+          height: 1px;
+          background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32) 50%, transparent 50%, transparent 100%);
+          background-size: rem(4) rem(1);
+        }
+      }
+    }
   }
 
   &__item {
